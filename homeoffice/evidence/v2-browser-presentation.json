@@ -1,0 +1,37 @@
+{
+  "environment": "Two independent Chromium processes, actual WebRTC local signaling, CDP Korean composition (automated; not human typing)",
+  "results": [
+    {
+      "name": "Actual two-browser WebRTC and two private rooms",
+      "passed": true
+    },
+    {
+      "name": "Walk from entrance to actual meeting desk and open report",
+      "passed": true
+    },
+    {
+      "name": "Actual uploaded PDF renders and page changes",
+      "passed": true
+    },
+    {
+      "name": "Second browser receives PDF bytes and synchronized page",
+      "passed": true
+    },
+    {
+      "name": "Unapproved guest cannot turn presenter pages",
+      "passed": true
+    },
+    {
+      "name": "Presenter ink is shared with actual page annotation",
+      "passed": true
+    },
+    {
+      "name": "Presenter laser position synchronizes to second browser",
+      "passed": true
+    },
+    {
+      "name": "Download includes actual original PDF bytes",
+      "passed": true
+    }
+  ]
+}

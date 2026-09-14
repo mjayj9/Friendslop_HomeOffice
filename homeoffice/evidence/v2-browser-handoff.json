@@ -1,0 +1,30 @@
+{
+  "environment": "Two actual Chromium processes, WebRTC local signaling; browser import and acknowledged handoff, combined prior real-download fixture",
+  "results": [
+    {
+      "name": "Actual file validation preview then restore report and embedded PDF",
+      "passed": true
+    },
+    {
+      "name": "Late join receives restored rooms and Korean report",
+      "passed": true
+    },
+    {
+      "name": "Two real browsers transfer world, report, private slots and host authority",
+      "passed": true
+    },
+    {
+      "name": "Player positions survive transfer without respawn",
+      "passed": true
+    },
+    {
+      "name": "Former host sends movement to new authority",
+      "passed": true
+    },
+    {
+      "name": "New host exports report, byte-complete PDF, current page and annotations after transfer",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

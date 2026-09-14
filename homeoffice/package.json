@@ -1,0 +1,29 @@
+{
+  "name": "moyeo-house-godot",
+  "version": "0.2.0-dev",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node tools/serve.mjs --local-signaling",
+    "preview": "node tools/serve.mjs",
+    "test": "node --test tests/save-v2.test.mjs tests/arcade-rules.test.mjs",
+    "test:browser": "node tests/browser-life.mjs",
+    "test:connection": "node tests/browser-2p.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0",
+    "esbuild": "0.25.12",
+    "pdfjs-dist": "6.3.289",
+    "peerjs": "1.5.5",
+    "quill": "2.0.3",
+    "y-quill": "1.0.0",
+    "yjs": "13.6.27"
+  },
+  "devDependencies": {
+    "peer": "1.0.2",
+    "playwright": "1.63.0"
+  }
+}

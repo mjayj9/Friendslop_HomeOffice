@@ -1,0 +1,15 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Korean text becomes authoritative board object
+PASS Second user moves a board object by version
+PASS Stale concurrent delete is rejected
+PASS Old author undo does not erase other user's update
+PASS Mover can undo their own latest operation
+PASS Selected board object is deleted
+PASS Delete undo restores Korean text
+PASS Occupied chair is protected from movement/deletion
+PASS Checkpoint changes engine authority and epoch
+PASS Checkpoint retains exact player position and seat
+PASS Checkpoint retains private-room assignment and board
+PASS Previous epoch action is rejected

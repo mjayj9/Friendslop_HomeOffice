@@ -1,0 +1,123 @@
+{
+  "environment": "Actual Chromium 1280x720 Godot WebGL2; keyboard walking and camera; no teleport or injected player coordinates",
+  "results": [
+    {
+      "name": "entrance",
+      "position": [
+        0.0499999821186066,
+        -0.00500000035390258,
+        11
+      ],
+      "zone": "hall"
+    },
+    {
+      "name": "living",
+      "position": [
+        -5.88032627105713,
+        -0.00429689884185791,
+        10.7511568069458
+      ],
+      "zone": "living"
+    },
+    {
+      "name": "exterior",
+      "position": [
+        -9.9886646270752,
+        -0.0246920585632324,
+        20.1449413299561
+      ],
+      "zone": "garden"
+    },
+    {
+      "name": "basketball",
+      "position": [
+        -7.1043381690979,
+        -0.00399497151374817,
+        23.8937377929688
+      ],
+      "zone": "basketball"
+    },
+    {
+      "name": "football",
+      "position": [
+        25.0195007324219,
+        -0.00358550250530243,
+        24.874137878418
+      ],
+      "zone": "football"
+    },
+    {
+      "name": "kitchen",
+      "position": [
+        -7.00175428390503,
+        -0.00493921339511871,
+        -6.48043012619019
+      ],
+      "zone": "kitchen"
+    },
+    {
+      "name": "dining",
+      "position": [
+        -6.7874927520752,
+        -0.00413845479488373,
+        -0.100734770298004
+      ],
+      "zone": "dining"
+    },
+    {
+      "name": "meeting",
+      "position": [
+        2.96039032936096,
+        -0.00413849949836731,
+        9.89324760437012
+      ],
+      "zone": "meeting"
+    },
+    {
+      "name": "stairs",
+      "position": [
+        -4.17066669464111,
+        1.79560744762421,
+        6.53535890579224
+      ],
+      "zone": "garden"
+    },
+    {
+      "name": "upper-hall",
+      "position": [
+        -0.234160542488098,
+        3.59521460533142,
+        11.0388965606689
+      ],
+      "zone": "upper_hall"
+    },
+    {
+      "name": "private-office",
+      "position": [
+        -2.58200573921204,
+        3.5959153175354,
+        -14.7156171798706
+      ],
+      "zone": "office-1"
+    },
+    {
+      "name": "sleep",
+      "position": [
+        -8.79180335998535,
+        3.59532618522644,
+        -7.99159049987793
+      ],
+      "zone": "sleep"
+    },
+    {
+      "name": "reading",
+      "position": [
+        -9.92365550994873,
+        3.59500956535339,
+        -0.00891297124326229
+      ],
+      "zone": "reading"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,212 @@
+{
+  "environment": "8 independent Chromium processes on one Windows PC, actual WebRTC with loopback signaling. Host 1920×1080, guests 640×360. Shared hardware contention; no human microphone or STT during this test.",
+  "results": [
+    {
+      "name": "Actual 2 WebRTC browsers: same nicknames, unique rooms, first desk unchanged",
+      "passed": true
+    },
+    {
+      "name": "Actual 4 WebRTC browsers: same nicknames, unique rooms, first desk unchanged",
+      "passed": true
+    },
+    {
+      "name": "Actual 8 WebRTC browsers: same nicknames, unique rooms, first desk unchanged",
+      "passed": true
+    },
+    {
+      "name": "Leaving peers do not delete expanded rooms",
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "players": 2,
+      "host": {
+        "drawCalls": 545,
+        "fps": 29,
+        "frameMs": 34.4827586206897,
+        "objects": 63,
+        "players": 2,
+        "staticMemory": 0
+      },
+      "guest": {
+        "drawCalls": 519,
+        "fps": 49,
+        "frameMs": 20.4081632653061,
+        "objects": 63,
+        "players": 2,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 4,
+      "host": {
+        "drawCalls": 685,
+        "fps": 17,
+        "frameMs": 58.8235294117647,
+        "objects": 69,
+        "players": 4,
+        "staticMemory": 0
+      },
+      "guest": {
+        "drawCalls": 600,
+        "fps": 47,
+        "frameMs": 21.2765957446809,
+        "objects": 69,
+        "players": 4,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 7,
+        "frameMs": 142.857142857143,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      },
+      "guest": {
+        "drawCalls": 749,
+        "fps": 23,
+        "frameMs": 43.4782608695652,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 6,
+        "frameMs": 166.666666666667,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 6,
+        "frameMs": 166.666666666667,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 6,
+        "frameMs": 166.666666666667,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 7,
+        "frameMs": 142.857142857143,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 7,
+        "frameMs": 142.857142857143,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 7,
+        "frameMs": 142.857142857143,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 7,
+        "frameMs": 142.857142857143,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 5,
+        "frameMs": 200,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 5,
+        "frameMs": 200,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 6,
+        "frameMs": 166.666666666667,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 6,
+        "frameMs": 166.666666666667,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    },
+    {
+      "players": 8,
+      "host": {
+        "drawCalls": 965,
+        "fps": 6,
+        "frameMs": 166.666666666667,
+        "objects": 81,
+        "players": 8,
+        "staticMemory": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1845 @@
+{
+  "version": 2,
+  "units": "metres; Godot Y up; north is -Z",
+  "site": [
+    -23,
+    -38,
+    43,
+    48
+  ],
+  "rooms": [
+    {
+      "id": "hall",
+      "name": "현관 · 계단 홀",
+      "rect": [
+        -5,
+        -12,
+        1.4,
+        12
+      ],
+      "y": 0,
+      "finish": "stone",
+      "ceiling": true
+    },
+    {
+      "id": "living",
+      "name": "거실",
+      "rect": [
+        -15,
+        3,
+        -5,
+        12
+      ],
+      "y": 0,
+      "finish": "oak",
+      "ceiling": true
+    },
+    {
+      "id": "dining",
+      "name": "식당",
+      "rect": [
+        -15,
+        -3,
+        -5,
+        3
+      ],
+      "y": 0,
+      "finish": "oak",
+      "ceiling": true
+    },
+    {
+      "id": "kitchen",
+      "name": "주방",
+      "rect": [
+        -15,
+        -10,
+        -5,
+        -3
+      ],
+      "y": 0,
+      "finish": "tile",
+      "ceiling": true
+    },
+    {
+      "id": "pantry",
+      "name": "팬트리",
+      "rect": [
+        -15,
+        -12,
+        -5,
+        -10
+      ],
+      "y": 0,
+      "finish": "tile",
+      "ceiling": true
+    },
+    {
+      "id": "meeting",
+      "name": "회의실",
+      "rect": [
+        1.4,
+        4,
+        11.4,
+        12
+      ],
+      "y": 0,
+      "finish": "carpet",
+      "ceiling": true
+    },
+    {
+      "id": "resources",
+      "name": "자료 · 토론",
+      "rect": [
+        11.4,
+        4,
+        15,
+        12
+      ],
+      "y": 0,
+      "finish": "carpet",
+      "ceiling": true
+    },
+    {
+      "id": "free",
+      "name": "자유 작업방",
+      "rect": [
+        1.4,
+        -6,
+        15,
+        4
+      ],
+      "y": 0,
+      "finish": "concrete",
+      "ceiling": true
+    },
+    {
+      "id": "utility",
+      "name": "수납 · 다용도",
+      "rect": [
+        1.4,
+        -12,
+        9,
+        -6
+      ],
+      "y": 0,
+      "finish": "tile",
+      "ceiling": true
+    },
+    {
+      "id": "bath_ground",
+      "name": "화장실",
+      "rect": [
+        9,
+        -12,
+        15,
+        -6
+      ],
+      "y": 0,
+      "finish": "tile",
+      "ceiling": true
+    },
+    {
+      "id": "vestibule",
+      "name": "별동 연결 전실",
+      "rect": [
+        15,
+        -1.5,
+        20,
+        1.5
+      ],
+      "y": 0,
+      "finish": "stone",
+      "ceiling": true
+    },
+    {
+      "id": "game",
+      "name": "태그 · 사격",
+      "rect": [
+        20,
+        -6,
+        36,
+        2
+      ],
+      "y": 0,
+      "finish": "rubber",
+      "ceiling": true
+    },
+    {
+      "id": "arcade",
+      "name": "아케이드 · 관전",
+      "rect": [
+        20,
+        2,
+        36,
+        6
+      ],
+      "y": 0,
+      "finish": "rubber",
+      "ceiling": true
+    },
+    {
+      "id": "upper_hall",
+      "name": "2층 갤러리",
+      "rect": [
+        -5,
+        -12,
+        1.4,
+        12
+      ],
+      "y": 3.6,
+      "finish": "oak",
+      "ceiling": true
+    },
+    {
+      "id": "sleep",
+      "name": "수면실",
+      "rect": [
+        -15,
+        -12,
+        -5,
+        -4
+      ],
+      "y": 3.6,
+      "finish": "carpet",
+      "ceiling": true
+    },
+    {
+      "id": "reading",
+      "name": "독서 · 휴식",
+      "rect": [
+        -15,
+        -4,
+        -5,
+        5
+      ],
+      "y": 3.6,
+      "finish": "oak",
+      "ceiling": true
+    },
+    {
+      "id": "bath_upper",
+      "name": "욕실 · 린넨",
+      "rect": [
+        -15,
+        5,
+        -5,
+        12
+      ],
+      "y": 3.6,
+      "finish": "tile",
+      "ceiling": true
+    },
+    {
+      "id": "roof_terrace",
+      "name": "2층 테라스",
+      "rect": [
+        1.4,
+        -12,
+        15,
+        12
+      ],
+      "y": 3.6,
+      "finish": "deck",
+      "ceiling": false
+    },
+    {
+      "id": "terrace",
+      "name": "정원 데크",
+      "rect": [
+        -15,
+        12,
+        -5,
+        17
+      ],
+      "y": 0,
+      "finish": "deck",
+      "ceiling": false
+    },
+    {
+      "id": "basketball",
+      "name": "농구",
+      "rect": [
+        -18,
+        23,
+        6,
+        37
+      ],
+      "y": 0,
+      "finish": "court_blue",
+      "ceiling": false
+    },
+    {
+      "id": "football",
+      "name": "축구",
+      "rect": [
+        10,
+        22,
+        40,
+        42
+      ],
+      "y": 0,
+      "finish": "court_green",
+      "ceiling": false
+    }
+  ],
+  "walls": [
+    {
+      "id": "south",
+      "a": [
+        -15,
+        12
+      ],
+      "b": [
+        15,
+        12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 5,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 13.2,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 22,
+          "width": 4,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "north",
+      "a": [
+        -15,
+        -12
+      ],
+      "b": [
+        15,
+        -12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 6,
+          "width": 3,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        },
+        {
+          "at": 15,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 25,
+          "width": 2.4,
+          "sill": 1.2,
+          "height": 1.4,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "west",
+      "a": [
+        -15,
+        -12
+      ],
+      "b": [
+        -15,
+        12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 5,
+          "width": 2.4,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        },
+        {
+          "at": 11,
+          "width": 3,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        },
+        {
+          "at": 19,
+          "width": 4.6,
+          "sill": 0.6,
+          "height": 2.1,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "east",
+      "a": [
+        15,
+        -12
+      ],
+      "b": [
+        15,
+        12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 12,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 20,
+          "width": 3.6,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "west_spine",
+      "a": [
+        -5,
+        -12
+      ],
+      "b": [
+        -5,
+        12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 5.5,
+          "width": 2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 12,
+          "width": 2.6,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 22.5,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "east_spine",
+      "a": [
+        1.4,
+        -12
+      ],
+      "b": [
+        1.4,
+        12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 3,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 10,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 19,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "kitchen_dining",
+      "a": [
+        -15,
+        -3
+      ],
+      "b": [
+        -5,
+        -3
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 7.2,
+          "width": 3.4,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "living_dining",
+      "a": [
+        -15,
+        3
+      ],
+      "b": [
+        -5,
+        3
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 6.4,
+          "width": 5.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "pantry",
+      "a": [
+        -15,
+        -10
+      ],
+      "b": [
+        -5,
+        -10
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 7.5,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "utility",
+      "a": [
+        1.4,
+        -6
+      ],
+      "b": [
+        15,
+        -6
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 4,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 10.5,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "bath_divide",
+      "a": [
+        9,
+        -12
+      ],
+      "b": [
+        9,
+        -6
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [],
+      "material": "plaster"
+    },
+    {
+      "id": "meeting_free",
+      "a": [
+        1.4,
+        4
+      ],
+      "b": [
+        15,
+        4
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 11,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "sage"
+    },
+    {
+      "id": "resource_glass",
+      "a": [
+        11.4,
+        4
+      ],
+      "b": [
+        11.4,
+        12
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 2,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 5.5,
+          "width": 3,
+          "sill": 0.9,
+          "height": 2,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "vest_n",
+      "a": [
+        15,
+        -1.5
+      ],
+      "b": [
+        20,
+        -1.5
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 2.5,
+          "width": 3.6,
+          "sill": 0.8,
+          "height": 1.9,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "vest_s",
+      "a": [
+        15,
+        1.5
+      ],
+      "b": [
+        20,
+        1.5
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 2.5,
+          "width": 3.6,
+          "sill": 0.8,
+          "height": 1.9,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "game_w",
+      "a": [
+        20,
+        -6
+      ],
+      "b": [
+        20,
+        6
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 6,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "game_e",
+      "a": [
+        36,
+        -6
+      ],
+      "b": [
+        36,
+        6
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 9,
+          "width": 3,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "game_n",
+      "a": [
+        20,
+        -6
+      ],
+      "b": [
+        36,
+        -6
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 4,
+          "width": 3,
+          "sill": 1.6,
+          "height": 1.1,
+          "kind": "window"
+        },
+        {
+          "at": 12,
+          "width": 3,
+          "sill": 1.6,
+          "height": 1.1,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "game_s",
+      "a": [
+        20,
+        6
+      ],
+      "b": [
+        36,
+        6
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 4,
+          "width": 2.2,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        },
+        {
+          "at": 11,
+          "width": 4,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "arcade_divider",
+      "a": [
+        23,
+        2
+      ],
+      "b": [
+        36,
+        2
+      ],
+      "y": 0,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 3,
+          "width": 3.5,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "upper_w",
+      "a": [
+        -15,
+        -12
+      ],
+      "b": [
+        -15,
+        12
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 4,
+          "width": 3,
+          "sill": 1,
+          "height": 1.7,
+          "kind": "window"
+        },
+        {
+          "at": 13,
+          "width": 4,
+          "sill": 0.7,
+          "height": 2,
+          "kind": "window"
+        },
+        {
+          "at": 20,
+          "width": 2,
+          "sill": 1.2,
+          "height": 1.5,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "upper_s",
+      "a": [
+        -15,
+        12
+      ],
+      "b": [
+        1.4,
+        12
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 6,
+          "width": 3,
+          "sill": 1.2,
+          "height": 1.5,
+          "kind": "window"
+        },
+        {
+          "at": 13.3,
+          "width": 3,
+          "sill": 0.8,
+          "height": 1.9,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "upper_n",
+      "a": [
+        -15,
+        -12
+      ],
+      "b": [
+        1.4,
+        -12
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 4,
+          "width": 3,
+          "sill": 1.2,
+          "height": 1.5,
+          "kind": "window"
+        },
+        {
+          "at": 15,
+          "width": 2.6,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "upper_e",
+      "a": [
+        1.4,
+        -12
+      ],
+      "b": [
+        1.4,
+        12
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 6,
+          "width": 3,
+          "sill": 0.6,
+          "height": 2.1,
+          "kind": "window"
+        },
+        {
+          "at": 14,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 20,
+          "width": 3,
+          "sill": 0.6,
+          "height": 2.1,
+          "kind": "window"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "upper_spine",
+      "a": [
+        -5,
+        -12
+      ],
+      "b": [
+        -5,
+        12
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [
+        {
+          "at": 4,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 12,
+          "width": 2.2,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        },
+        {
+          "at": 20,
+          "width": 1.8,
+          "sill": 0,
+          "height": 2.5,
+          "kind": "passage"
+        }
+      ],
+      "material": "plaster"
+    },
+    {
+      "id": "sleep_read",
+      "a": [
+        -15,
+        -4
+      ],
+      "b": [
+        -5,
+        -4
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [],
+      "material": "plaster"
+    },
+    {
+      "id": "read_bath",
+      "a": [
+        -15,
+        5
+      ],
+      "b": [
+        -5,
+        5
+      ],
+      "y": 3.6,
+      "height": 3.3,
+      "thickness": 0.22,
+      "openings": [],
+      "material": "plaster"
+    }
+  ],
+  "doors": [
+    {
+      "id": "terrace-door",
+      "p": [
+        -11.1,
+        0,
+        12
+      ],
+      "yaw": 0,
+      "width": 2.2,
+      "open": true,
+      "secure": false
+    },
+    {
+      "id": "front-door",
+      "p": [
+        -2.9,
+        0,
+        12
+      ],
+      "yaw": 0,
+      "width": 2.2,
+      "open": true,
+      "secure": false
+    },
+    {
+      "id": "meeting-door",
+      "p": [
+        1.4,
+        0,
+        5.9
+      ],
+      "yaw": -1.570796,
+      "width": 2.2,
+      "open": true,
+      "secure": false
+    },
+    {
+      "id": "game-gate",
+      "p": [
+        20,
+        0,
+        -1.1
+      ],
+      "yaw": -1.570796,
+      "width": 2.2,
+      "open": false,
+      "secure": true
+    },
+    {
+      "id": "sleep-door",
+      "p": [
+        -5,
+        3.6,
+        -8.9
+      ],
+      "yaw": -1.570796,
+      "width": 1.8,
+      "open": true,
+      "secure": false
+    }
+  ],
+  "furniture": [
+    {
+      "id": "living-sofa-a",
+      "kind": "sofa",
+      "p": [
+        -11,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "living-sofa-b",
+      "kind": "sofa",
+      "p": [
+        -13,
+        0,
+        6
+      ],
+      "yaw": -1.570796
+    },
+    {
+      "id": "living-sofa-c",
+      "kind": "sofa",
+      "p": [
+        -7,
+        0,
+        6
+      ],
+      "yaw": 1.570796
+    },
+    {
+      "id": "living-low-table",
+      "kind": "low_table",
+      "p": [
+        -10.4,
+        0,
+        6.3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "living-book",
+      "kind": "book",
+      "p": [
+        -10.4,
+        0.48,
+        6.3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "living-chair",
+      "kind": "chair",
+      "p": [
+        -7,
+        0,
+        10.1
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "dining-table",
+      "kind": "table",
+      "p": [
+        -10,
+        0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "dining-chair-0",
+      "kind": "chair",
+      "p": [
+        -11.1,
+        0,
+        1.05
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "dining-chair-1",
+      "kind": "chair",
+      "p": [
+        -10.379999999999999,
+        0,
+        1.05
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "dining-chair-2",
+      "kind": "chair",
+      "p": [
+        -9.66,
+        0,
+        1.05
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "dining-chair-3",
+      "kind": "chair",
+      "p": [
+        -8.94,
+        0,
+        1.05
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "dining-chair-4",
+      "kind": "chair",
+      "p": [
+        -11.1,
+        0,
+        -1.05
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "dining-chair-5",
+      "kind": "chair",
+      "p": [
+        -10.379999999999999,
+        0,
+        -1.05
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "dining-chair-6",
+      "kind": "chair",
+      "p": [
+        -9.66,
+        0,
+        -1.05
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "dining-chair-7",
+      "kind": "chair",
+      "p": [
+        -8.94,
+        0,
+        -1.05
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "meeting-table-0",
+      "kind": "table",
+      "p": [
+        6.5,
+        0,
+        7
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "meeting-table-1",
+      "kind": "table",
+      "p": [
+        6.5,
+        0,
+        9.4
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "meeting-chair-0",
+      "kind": "chair",
+      "p": [
+        4.4,
+        0,
+        5.6
+      ],
+      "yaw": -1.570796
+    },
+    {
+      "id": "meeting-chair-1",
+      "kind": "chair",
+      "p": [
+        4.4,
+        0,
+        7.1
+      ],
+      "yaw": -1.570796
+    },
+    {
+      "id": "meeting-chair-2",
+      "kind": "chair",
+      "p": [
+        4.4,
+        0,
+        8.6
+      ],
+      "yaw": -1.570796
+    },
+    {
+      "id": "meeting-chair-3",
+      "kind": "chair",
+      "p": [
+        4.4,
+        0,
+        10.1
+      ],
+      "yaw": -1.570796
+    },
+    {
+      "id": "meeting-chair-4",
+      "kind": "chair",
+      "p": [
+        8.6,
+        0,
+        5.6
+      ],
+      "yaw": 1.570796
+    },
+    {
+      "id": "meeting-chair-5",
+      "kind": "chair",
+      "p": [
+        8.6,
+        0,
+        7.1
+      ],
+      "yaw": 1.570796
+    },
+    {
+      "id": "meeting-chair-6",
+      "kind": "chair",
+      "p": [
+        8.6,
+        0,
+        8.6
+      ],
+      "yaw": 1.570796
+    },
+    {
+      "id": "meeting-chair-7",
+      "kind": "chair",
+      "p": [
+        8.6,
+        0,
+        10.1
+      ],
+      "yaw": 1.570796
+    },
+    {
+      "id": "meeting-marker",
+      "kind": "marker",
+      "p": [
+        6.5,
+        1.02,
+        4.25
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "free-table",
+      "kind": "table",
+      "p": [
+        8,
+        0,
+        -3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "free-crate-0",
+      "kind": "crate",
+      "p": [
+        6.0,
+        0.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "free-crate-1",
+      "kind": "crate",
+      "p": [
+        6.58,
+        0.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "free-crate-2",
+      "kind": "crate",
+      "p": [
+        7.16,
+        0.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "free-crate-3",
+      "kind": "crate",
+      "p": [
+        7.74,
+        0.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "free-book",
+      "kind": "book",
+      "p": [
+        7.6,
+        0.9,
+        -3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "kitchen-fridge",
+      "kind": "fridge",
+      "p": [
+        -13.8,
+        0,
+        -8.6
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "cook-station",
+      "kind": "cooker",
+      "p": [
+        -11,
+        0,
+        -8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "sink-station",
+      "kind": "sink",
+      "p": [
+        -7.8,
+        0,
+        -8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "kitchen-island",
+      "kind": "counter",
+      "p": [
+        -10.2,
+        0,
+        -5.7
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "plate-1",
+      "kind": "plate",
+      "p": [
+        -9.8,
+        1.04,
+        -5.7
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "pan-1",
+      "kind": "pan",
+      "p": [
+        -11,
+        1.03,
+        -8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "bed-0",
+      "kind": "bed",
+      "p": [
+        -13.7,
+        3.6,
+        -10.3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "bed-1",
+      "kind": "bed",
+      "p": [
+        -11.299999999999999,
+        3.6,
+        -10.3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "bed-2",
+      "kind": "bed",
+      "p": [
+        -8.899999999999999,
+        3.6,
+        -10.3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "bed-3",
+      "kind": "bed",
+      "p": [
+        -6.5,
+        3.6,
+        -10.3
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "bed-4",
+      "kind": "bed",
+      "p": [
+        -13.7,
+        3.6,
+        -5.7
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "bed-5",
+      "kind": "bed",
+      "p": [
+        -11.299999999999999,
+        3.6,
+        -5.7
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "bed-6",
+      "kind": "bed",
+      "p": [
+        -8.899999999999999,
+        3.6,
+        -5.7
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "bed-7",
+      "kind": "bed",
+      "p": [
+        -6.5,
+        3.6,
+        -5.7
+      ],
+      "yaw": 3.141593
+    },
+    {
+      "id": "reading-sofa",
+      "kind": "sofa",
+      "p": [
+        -12,
+        3.6,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "reading-table",
+      "kind": "low_table",
+      "p": [
+        -12,
+        3.6,
+        -1
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "reading-book",
+      "kind": "book",
+      "p": [
+        -12,
+        4.08,
+        -1
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "basketball",
+      "kind": "basketball",
+      "p": [
+        -7,
+        0.3,
+        30
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "football",
+      "kind": "football",
+      "p": [
+        25,
+        0.28,
+        32
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "tag-gun-1",
+      "kind": "gun",
+      "p": [
+        23,
+        0.9,
+        -3.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "tag-gun-2",
+      "kind": "gun",
+      "p": [
+        24,
+        0.9,
+        -3.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "tag-shield",
+      "kind": "shield",
+      "p": [
+        25,
+        0.9,
+        -3.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "toy-rack",
+      "kind": "table",
+      "p": [
+        24,
+        0,
+        -3.8
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "arcade-maze",
+      "kind": "arcade",
+      "p": [
+        29,
+        0,
+        4.9
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "arcade-runner",
+      "kind": "arcade",
+      "p": [
+        32,
+        0,
+        4.9
+      ],
+      "yaw": 0
+    }
+  ],
+  "protected": [
+    {
+      "id": "terrace-door",
+      "p": [
+        -11.1,
+        0,
+        12
+      ],
+      "radius": 2
+    },
+    {
+      "id": "front-door",
+      "p": [
+        -2.9,
+        0,
+        12
+      ],
+      "radius": 2
+    },
+    {
+      "id": "meeting-door",
+      "p": [
+        1.4,
+        0,
+        5.9
+      ],
+      "radius": 2
+    },
+    {
+      "id": "game-gate",
+      "p": [
+        20,
+        0,
+        -1.1
+      ],
+      "radius": 2
+    },
+    {
+      "id": "sleep-door",
+      "p": [
+        -5,
+        3.6,
+        -8.9
+      ],
+      "radius": 2
+    },
+    {
+      "id": "spawn",
+      "p": [
+        -1.8,
+        0,
+        10.6
+      ],
+      "radius": 2
+    },
+    {
+      "id": "stairs",
+      "rect": [
+        -4.9,
+        5.5,
+        -1.45,
+        10.4
+      ]
+    },
+    {
+      "id": "gallery_extension",
+      "rect": [
+        -1.4,
+        -34.4,
+        1.4,
+        -12
+      ]
+    },
+    {
+      "id": "basketball",
+      "rect": [
+        -19,
+        22,
+        7,
+        38
+      ]
+    },
+    {
+      "id": "football",
+      "rect": [
+        9,
+        21,
+        41,
+        43
+      ]
+    }
+  ],
+  "spawn": [
+    -0.4,
+    0,
+    11.0
+  ],
+  "board": [
+    4.4,
+    1.76,
+    4.14
+  ],
+  "stairs": {
+    "rect": [
+      -4.9,
+      5.7,
+      -1.5,
+      10.2
+    ],
+    "rise": 3.6,
+    "steps": 20,
+    "riser": 0.18,
+    "tread": 0.3,
+    "flightWidth": 1.5,
+    "landingDepth": 1.5
+  },
+  "officeExpansion": {
+    "maxRooms": 8,
+    "startZ": -12,
+    "moduleDepth": 5.4,
+    "corridorWidth": 2.8,
+    "roomWidth": 4.8,
+    "floorY": 3.6,
+    "bounds": [
+      -6.2,
+      -33.6,
+      6.2,
+      -12
+    ]
+  },
+  "voice": {
+    "zones": "room IDs + generated office IDs",
+    "floorSeparation": 3.6,
+    "closedDoorTransmission": 0.22,
+    "wallTransmission": 0.1
+  },
+  "weaponZones": [
+    "game"
+  ]
+}

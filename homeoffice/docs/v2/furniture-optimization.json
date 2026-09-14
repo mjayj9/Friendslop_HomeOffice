@@ -1,0 +1,50 @@
+[
+  {
+    "asset": "chair",
+    "sourceMeshes": 2,
+    "outputMeshes": 1,
+    "materials": 2,
+    "triangles": 864,
+    "sourceUnchanged": true
+  },
+  {
+    "asset": "table",
+    "sourceMeshes": 2,
+    "outputMeshes": 1,
+    "materials": 2,
+    "triangles": 540,
+    "sourceUnchanged": true
+  },
+  {
+    "asset": "sofa",
+    "sourceMeshes": 4,
+    "outputMeshes": 1,
+    "materials": 4,
+    "triangles": 1916,
+    "sourceUnchanged": true
+  },
+  {
+    "asset": "book",
+    "sourceMeshes": 3,
+    "outputMeshes": 1,
+    "materials": 3,
+    "triangles": 444,
+    "sourceUnchanged": true
+  },
+  {
+    "asset": "crate",
+    "sourceMeshes": 2,
+    "outputMeshes": 1,
+    "materials": 2,
+    "triangles": 756,
+    "sourceUnchanged": true
+  },
+  {
+    "asset": "marker",
+    "sourceMeshes": 2,
+    "outputMeshes": 1,
+    "materials": 2,
+    "triangles": 344,
+    "sourceUnchanged": true
+  }
+]

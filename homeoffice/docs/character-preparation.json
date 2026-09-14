@@ -1,0 +1,32 @@
+{
+  "source": "quaternius_cc0-male-character-1157.glb",
+  "selected": "Male_Standing",
+  "originalHeight": 3.831854250282049,
+  "scale": 0.4645270628101214,
+  "heightM": 1.78,
+  "origin": "feet centered, grounded",
+  "forward": "Blender -Y, glTF +Z; runtime rotates PI",
+  "originalSkeleton": false,
+  "originalAnimations": [],
+  "newSkeletonBones": [
+    "Hips",
+    "Spine",
+    "Head",
+    "Thigh.L",
+    "Shin.L",
+    "Foot.L",
+    "UpperArm.L",
+    "Forearm.L",
+    "Thigh.R",
+    "Shin.R",
+    "Foot.R",
+    "UpperArm.R",
+    "Forearm.R"
+  ],
+  "method": "new coarse rigid anatomical weights + procedural walk/run/jump/hold; supplied static seated mesh",
+  "limitations": [
+    "coarse rig, no smooth shoulder retargeting",
+    "seated source uses separate mesh",
+    "lie, get-up, basketball, aim are deferred"
+  ]
+}

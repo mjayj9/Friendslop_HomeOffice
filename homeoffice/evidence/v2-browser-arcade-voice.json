@@ -1,0 +1,42 @@
+{
+  "environment": "Two independent Chromium processes; real keyboard movement and WebRTC, synthetic microphone. No real human speech-quality measurement.",
+  "results": [
+    {
+      "name": "Actual RTC synthetic microphone packets received near another character",
+      "passed": true
+    },
+    {
+      "name": "Walking beyond speaking range closes actual outgoing media route",
+      "passed": true
+    },
+    {
+      "name": "Host-authorized session broadcast transmits beyond proximity range",
+      "passed": true
+    },
+    {
+      "name": "Stopping microphone closes capture and outgoing route",
+      "passed": true
+    },
+    {
+      "name": "Physical maze cabinet opens and host game collects seeds from real keyboard input",
+      "passed": true
+    },
+    {
+      "name": "Leaving arcade restores unchanged character position",
+      "passed": true
+    },
+    {
+      "name": "Physical runner cabinet supports jump, collision failure and result",
+      "passed": true
+    },
+    {
+      "name": "Runner restarts with host-authoritative game state",
+      "passed": true
+    },
+    {
+      "name": "Forced host close recovers confirmed room slots into a new authoritative session",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

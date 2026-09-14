@@ -1,0 +1,13 @@
+{
+  "source": "provided 1157 static male standing + seated",
+  "originalClips": [],
+  "walkRun": "coarse new skeleton with runtime gait",
+  "sit": "provided seated static mesh",
+  "lieSleep": "standing mesh rotated in vertex space to bed anchor; new static pose",
+  "firstPersonArms": "original male arm vertices extracted with same skeleton; runtime procedural grip",
+  "stillRequired": [
+    "smooth sit/stand/lie transitions",
+    "precise two-bone hand IK and foot placement",
+    "authored/validated sport/cooking/shield/reload gestures"
+  ]
+}
