@@ -1,6 +1,6 @@
 {
   "url": "https://mjayj9.github.io/Friendslop_HomeOffice/",
-  "time": "2026-09-14T15:56:53.136Z",
+  "time": "2026-09-14T16:35:54.494Z",
   "environment": "Actual GitHub Pages HTTPS URL, public PeerServer/STUN, two independent Chromium processes on one Windows PC. Same-device P2P; not separate WAN PCs, not human microphone quality.",
   "results": [
     {
@@ -37,9 +37,9 @@
       },
       "performance": {
         "drawCalls": 244,
-        "fps": 37,
-        "frameMs": 27.027027027027,
-        "objects": 63,
+        "fps": 35,
+        "frameMs": 28.5714285714286,
+        "objects": 66,
         "players": 2,
         "staticMemory": 0
       }
@@ -49,8 +49,8 @@
     {
       "url": "https://mjayj9.github.io/Friendslop_HomeOffice/index.pck",
       "mime": "application/octet-stream",
-      "bytes": 7275064,
-      "sha256": "848badc7022d5837276a2c26b8b96986311f450154d0ff9440d993842555b009"
+      "bytes": 7908968,
+      "sha256": "b85acfc2229bb8a570d790b9aee4c852fbe2159d887179df8887c0ae71acd74b"
     },
     {
       "url": "https://mjayj9.github.io/Friendslop_HomeOffice/index.wasm",
@@ -59,5 +59,6 @@
       "sha256": "99962b29677e42f3ba0258bd90fdc52ad90295954c4473e816ad02cfe5ff1d4f"
     }
   ],
-  "errors": []
+  "errors": [],
+  "testedSourceCommit": "0bd5e4daec18f5997eb6fbe5dee47ddf324547b9"
 }

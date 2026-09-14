@@ -17,3 +17,5 @@
 GitHub Pro가 무제한 호스팅을 뜻하지 않습니다. [공식 Pages 제한](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)을 따릅니다. 예약 실행이나 유료 리소스를 생성하지 않습니다.
 
 키 재설정·실제 수납함/서랍/조명·저장 참조 검사·원격 소품 보간을 추가한 실행 빌드를 같은 개발 브랜치의 `/docs`에 갱신한다. main과 이전 프로젝트는 유지한다. `deployment/github-pages.yml`은 선택적 수동 재빌드 예제이며 현재 실제 배포는 Pages 브랜치 배포다.
+
+실제 공개 빌드 검사: 커밋 `0bd5e4daec18f5997eb6fbe5dee47ddf324547b9`의 GitHub Pages 빌드가 `built`임을 확인하고 HTTPS/P2P 두 브라우저 검사 6개를 통과했다. WASM/PCK 해시는 `evidence/pages-validation.json`과 `docs/v2/web-build-manifest.json`에서 비교한다. 이 시험은 같은 PC의 독립 Chromium 두 개이며 실제 사람 마이크·서로 다른 WAN의 검증이 아니다.
