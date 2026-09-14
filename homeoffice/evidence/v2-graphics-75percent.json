@@ -1,0 +1,149 @@
+{
+  "environment": "Two actual Chromium processes, host 1920x1080, guest 1280x720, same PC D3D11 integrated Intel GPU. Stationary spawn, no STT; not a full 8-player performance guarantee.",
+  "samples": [
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 14,
+      "frameMs": 71.4285714285714,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 14,
+      "frameMs": 71.4285714285714,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 14,
+      "frameMs": 71.4285714285714,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 13,
+      "frameMs": 76.9230769230769,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 14,
+      "frameMs": 71.4285714285714,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 14,
+      "frameMs": 71.4285714285714,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 13,
+      "frameMs": 76.9230769230769,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "balanced",
+      "drawCalls": 545,
+      "fps": 13,
+      "frameMs": 76.9230769230769,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 26,
+      "frameMs": 38.4615384615385,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 26,
+      "frameMs": 38.4615384615385,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 25,
+      "frameMs": 40,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 25,
+      "frameMs": 40,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 25,
+      "frameMs": 40,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 25,
+      "frameMs": 40,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 25,
+      "frameMs": 40,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "drawCalls": 244,
+      "fps": 25,
+      "frameMs": 40,
+      "objects": 63,
+      "players": 2,
+      "staticMemory": 0
+    }
+  ]
+}

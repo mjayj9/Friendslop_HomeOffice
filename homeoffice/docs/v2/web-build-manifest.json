@@ -3,7 +3,7 @@
   "engine": "4.6.1.stable.official.14d19694e",
   "sourceBranch": "codex/godot-homeoffice-v2",
   "initialGameWeightsExcluded": true,
-  "totalHostedBytes": 112332461,
+  "totalHostedBytes": 113023855,
   "files": [
     {
       "file": ".nojekyll",
@@ -32,8 +32,8 @@
     },
     {
       "file": "bridge.mjs",
-      "bytes": 39774,
-      "sha256": "7983c140e442daa2992c4cee78199d07722290d004ac456d81df3f354573ae0b"
+      "bytes": 40293,
+      "sha256": "11e5e81977920306ee9822fad072252c774e511249e4d37b4e96287ec79090fb"
     },
     {
       "file": "captions.mjs",
@@ -78,7 +78,7 @@
     {
       "file": "index.html",
       "bytes": 5201,
-      "sha256": "d665177ebe23bc9c4f8d9c66de081ec278bf15497448a213aac2070abf5bddb3"
+      "sha256": "cc1fb251ffc355eab6070bbf4282d72d9b97c4118cfda8df11b861d00f1db4a0"
     },
     {
       "file": "index.js",
@@ -87,8 +87,8 @@
     },
     {
       "file": "index.pck",
-      "bytes": 7271464,
-      "sha256": "9e5649be7092be9b19d56a68b4f57669ecc8eaceb261bc6aff3986bdd74f6682"
+      "bytes": 7275064,
+      "sha256": "848badc7022d5837276a2c26b8b96986311f450154d0ff9440d993842555b009"
     },
     {
       "file": "index.png",
@@ -162,8 +162,8 @@
     },
     {
       "file": "stt-worker.mjs",
-      "bytes": 522876,
-      "sha256": "33a69f137b8ee99e27c959c96f4ff9a1c7d00f2778eaff40e574e87fc6018c32"
+      "bytes": 1210151,
+      "sha256": "eb31c1e08184aeac7e9f1aba1c65575e55f60214635dd603a566263ee9a3c9d6"
     },
     {
       "file": "stt-worker.mjs.LEGAL.txt",

@@ -1,4 +1,5 @@
 extends Node3D
+var sunlight:DirectionalLight3D
 var slide_laser:MeshInstance3D
 var slide_laser_until=0
 
@@ -133,6 +134,7 @@ func setup_environment():
 	env.environment=e
 	add_child(env)
 	var sun=DirectionalLight3D.new()
+	sunlight=sun
 	sun.rotation_degrees=Vector3(-48,-35,0)
 	sun.light_color=Color("fff0d3")
 	sun.light_energy=.62

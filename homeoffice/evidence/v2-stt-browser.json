@@ -81,9 +81,9 @@
     }
   },
   "baseline": {
-    "drawCalls": 971,
-    "fps": 37,
-    "frameMs": 27.027027027027,
+    "drawCalls": 481,
+    "fps": 46,
+    "frameMs": 21.7391304347826,
     "objects": 60,
     "players": 1,
     "staticMemory": 0
@@ -96,20 +96,20 @@
         "type": "result",
         "generation": 1,
         "text": " 안녕하세요 오늘 회의를 시작하겠습니다.",
-        "elapsedMs": 1390.300000011921,
+        "elapsedMs": 1293.5,
         "duration": 4.463875,
         "sequence": 1
       },
       "error": null,
       "performance": {
-        "drawCalls": 971,
-        "fps": 38,
-        "frameMs": 26.3157894736842,
+        "drawCalls": 481,
+        "fps": 46,
+        "frameMs": 21.7391304347826,
         "objects": 60,
         "players": 1,
         "staticMemory": 0
       },
-      "heap": 26000000
+      "heap": 31200000
     },
     {
       "id": "ko-02",
@@ -118,20 +118,20 @@
         "type": "result",
         "generation": 1,
         "text": " 민수님은 보고서를 쓰고 지언니们 발표 자료를 준비해 주세요.",
-        "elapsedMs": 1685,
+        "elapsedMs": 1500.5999999940395,
         "duration": 5.1035,
         "sequence": 1
       },
       "error": null,
       "performance": {
-        "drawCalls": 971,
-        "fps": 37,
-        "frameMs": 27.027027027027,
+        "drawCalls": 481,
+        "fps": 47,
+        "frameMs": 21.2765957446809,
         "objects": 60,
         "players": 1,
         "staticMemory": 0
       },
-      "heap": 26000000
+      "heap": 31200000
     },
     {
       "id": "ko-03",
@@ -140,20 +140,20 @@
         "type": "result",
         "generation": 1,
         "text": " 다음 후에는 9월 14일 5월 13일 30분입니다.",
-        "elapsedMs": 1585.699999988079,
+        "elapsedMs": 1305.7000000178814,
         "duration": 4.5336875,
         "sequence": 1
       },
       "error": null,
       "performance": {
-        "drawCalls": 971,
-        "fps": 37,
-        "frameMs": 27.027027027027,
+        "drawCalls": 481,
+        "fps": 46,
+        "frameMs": 21.7391304347826,
         "objects": 60,
         "players": 1,
         "staticMemory": 0
       },
-      "heap": 26000000
+      "heap": 31200000
     },
     {
       "id": "ko-04",
@@ -162,20 +162,20 @@
         "type": "result",
         "generation": 1,
         "text": " 이번 스프린트의 API Test와 코드립을 마무리하겠습니다.",
-        "elapsedMs": 1476.5999999940395,
+        "elapsedMs": 1400.5999999940395,
         "duration": 5.2984375,
         "sequence": 1
       },
       "error": null,
       "performance": {
-        "drawCalls": 971,
-        "fps": 32,
-        "frameMs": 31.25,
+        "drawCalls": 481,
+        "fps": 46,
+        "frameMs": 21.7391304347826,
         "objects": 60,
         "players": 1,
         "staticMemory": 0
       },
-      "heap": 26000000
+      "heap": 31200000
     },
     {
       "id": "ko-05",
@@ -184,20 +184,20 @@
         "type": "result",
         "generation": 1,
         "text": " 농구를 한 다음 주방에서 함께 전역을 만들자",
-        "elapsedMs": 1407.7999999821186,
+        "elapsedMs": 1319,
         "duration": 4.183625,
         "sequence": 1
       },
       "error": null,
       "performance": {
-        "drawCalls": 971,
-        "fps": 38,
-        "frameMs": 26.3157894736842,
+        "drawCalls": 481,
+        "fps": 46,
+        "frameMs": 21.7391304347826,
         "objects": 60,
         "players": 1,
         "staticMemory": 0
       },
-      "heap": 26000000
+      "heap": 31200000
     },
     {
       "id": "ko-06",
@@ -206,20 +206,20 @@
         "type": "result",
         "generation": 1,
         "text": " 예산은 12만 5천 원이고 참석자는 8명입니다.",
-        "elapsedMs": 1353.800000011921,
+        "elapsedMs": 1331.199999988079,
         "duration": 4.538625,
         "sequence": 1
       },
       "error": null,
       "performance": {
-        "drawCalls": 971,
-        "fps": 37,
-        "frameMs": 27.027027027027,
+        "drawCalls": 481,
+        "fps": 46,
+        "frameMs": 21.7391304347826,
         "objects": 60,
         "players": 1,
         "staticMemory": 0
       },
-      "heap": 26000000
+      "heap": 31200000
     }
   ]
 }

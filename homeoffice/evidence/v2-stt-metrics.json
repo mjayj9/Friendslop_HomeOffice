@@ -6,9 +6,9 @@
   "wer": 0.2972972972972973,
   "modelBytes": 43613734,
   "baseline": {
-    "drawCalls": 971,
-    "fps": 37,
-    "frameMs": 27.027027027027,
+    "drawCalls": 481,
+    "fps": 46,
+    "frameMs": 21.7391304347826,
     "objects": 60,
     "players": 1,
     "staticMemory": 0
@@ -20,8 +20,8 @@
       "recognized": " 안녕하세요 오늘 회의를 시작하겠습니다.",
       "cer": 0.0,
       "wer": 0.0,
-      "inferenceMs": 1390.300000011921,
-      "gameFPS": 38
+      "inferenceMs": 1293.5,
+      "gameFPS": 46
     },
     {
       "id": "ko-02",
@@ -29,8 +29,8 @@
       "recognized": " 민수님은 보고서를 쓰고 지언니们 발표 자료를 준비해 주세요.",
       "cer": 0.12,
       "wer": 0.125,
-      "inferenceMs": 1685,
-      "gameFPS": 37
+      "inferenceMs": 1500.5999999940395,
+      "gameFPS": 47
     },
     {
       "id": "ko-03",
@@ -38,8 +38,8 @@
       "recognized": " 다음 후에는 9월 14일 5월 13일 30분입니다.",
       "cer": 0.3,
       "wer": 0.42857142857142855,
-      "inferenceMs": 1585.699999988079,
-      "gameFPS": 37
+      "inferenceMs": 1305.7000000178814,
+      "gameFPS": 46
     },
     {
       "id": "ko-04",
@@ -47,8 +47,8 @@
       "recognized": " 이번 스프린트의 API Test와 코드립을 마무리하겠습니다.",
       "cer": 0.25925925925925924,
       "wer": 0.42857142857142855,
-      "inferenceMs": 1476.5999999940395,
-      "gameFPS": 32
+      "inferenceMs": 1400.5999999940395,
+      "gameFPS": 46
     },
     {
       "id": "ko-05",
@@ -56,8 +56,8 @@
       "recognized": " 농구를 한 다음 주방에서 함께 전역을 만들자",
       "cer": 0.1111111111111111,
       "wer": 0.14285714285714285,
-      "inferenceMs": 1407.7999999821186,
-      "gameFPS": 38
+      "inferenceMs": 1319,
+      "gameFPS": 46
     },
     {
       "id": "ko-06",
@@ -65,8 +65,8 @@
       "recognized": " 예산은 12만 5천 원이고 참석자는 8명입니다.",
       "cer": 0.19047619047619047,
       "wer": 0.75,
-      "inferenceMs": 1353.800000011921,
-      "gameFPS": 37
+      "inferenceMs": 1331.199999988079,
+      "gameFPS": 46
     }
   ],
   "memory": "Godot web MEMORY_STATIC returned 0 (unavailable); JS heap is not WASM/GPU/process memory. Total model/runtime memory not yet measured."

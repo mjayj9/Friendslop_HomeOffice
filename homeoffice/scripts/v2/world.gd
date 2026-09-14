@@ -1,4 +1,5 @@
 extends Node3D
+var sunlight:DirectionalLight3D
 var slide_laser:MeshInstance3D
 var slide_laser_until=0
 
@@ -133,6 +134,7 @@ func setup_environment():
 	env.environment=e
 	add_child(env)
 	var sun=DirectionalLight3D.new()
+	sunlight=sun
 	sun.rotation_degrees=Vector3(-48,-35,0)
 	sun.light_color=Color("fff0d3")
 	sun.light_energy=.62
@@ -1663,7 +1665,9 @@ func update_room_lighting(dt:float):
 	var eye=player.eye()
 	room_lights.sort_custom(func(a,b):return a.position.distance_squared_to(eye)<b.position.distance_squared_to(eye))
 	var low=bridge and String(bridge.graphics_quality())=="low"
-	get_viewport().scaling_3d_scale=.75 if low else 1.0
+	get_viewport().scaling_3d_scale=.65 if low else 1.0
+	get_viewport().msaa_3d=Viewport.MSAA_DISABLED if low else Viewport.MSAA_2X
+	if sunlight:sunlight.shadow_enabled=not low
 	for i in range(room_lights.size()):
 		var light=room_lights[i]
 		var active=i<(2 if low else 4) and light.position.distance_to(eye)<16
