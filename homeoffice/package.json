@@ -9,9 +9,9 @@
   "scripts": {
     "dev": "node tools/serve.mjs --local-signaling",
     "preview": "node tools/serve.mjs",
-    "test": "node --test tests/save-v2.test.mjs tests/arcade-rules.test.mjs",
-    "test:browser": "node tests/browser-life.mjs",
-    "test:connection": "node tests/browser-2p.mjs"
+    "test": "node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs",
+    "test:browser": "cd .. && node homeoffice/tests/v2-browser-walk.mjs",
+    "test:connection": "cd .. && node homeoffice/tests/v2-bindings-ownership.mjs"
   },
   "dependencies": {
     "@huggingface/transformers": "4.2.0",

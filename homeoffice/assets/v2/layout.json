@@ -1701,6 +1701,47 @@
         4.9
       ],
       "yaw": 0
+    },
+    {
+      "id": "living-storage",
+      "kind": "storage",
+      "p": [
+        -5.85,
+        0,
+        8.15
+      ],
+      "yaw": -1.57079632679,
+      "state": {
+        "open": false,
+        "contents": []
+      }
+    },
+    {
+      "id": "living-drawer",
+      "kind": "drawer",
+      "p": [
+        -13.6,
+        0,
+        10.75
+      ],
+      "yaw": 1.57079632679,
+      "state": {
+        "open": false,
+        "contents": []
+      }
+    },
+    {
+      "id": "living-lamp",
+      "kind": "floor_lamp",
+      "p": [
+        -13.7,
+        0,
+        4.15
+      ],
+      "yaw": 0,
+      "state": {
+        "on": true
+      }
     }
   ],
   "protected": [

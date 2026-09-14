@@ -129,3 +129,5 @@ for floor,name in [('site','site-plan'),(0,'ground-floor'),(1,'upper-floor')]: (
 상태: 설계/구현 중. 전체 보행 검사 전에는 동선 검증완료가 아니다. 작동하지 않는 스포츠/생활/협업 물건은 필수 미완료로 유지한다.
 ''',encoding='utf8')
 print('Wrote layout, 3 dimensioned plans and architectural decisions:',len(rooms),'zones;',len(furniture),'gameplay objects')
+
+# Interactive living furniture extension is applied by living_layout_v2.py after regeneration.

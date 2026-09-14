@@ -15,3 +15,5 @@
 수동 재빌드: README의 Godot/동일 템플릿 준비 → `tools/build.ps1` → build 결과를 저장소 docs에 복사(시험용 `_qa`/합성 원음 제외) → 변경 브랜치에 커밋/푸시합니다. 기존 Pages source가 있다면 목적과 경로를 확인한 뒤 갱신합니다. `.runtime`, node_modules, .godot, 개인 복구본, 기존 Firebase 파일은 공개하지 않습니다.
 
 GitHub Pro가 무제한 호스팅을 뜻하지 않습니다. [공식 Pages 제한](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)을 따릅니다. 예약 실행이나 유료 리소스를 생성하지 않습니다.
+
+키 재설정·실제 수납함/서랍/조명·저장 참조 검사·원격 소품 보간을 추가한 실행 빌드를 같은 개발 브랜치의 `/docs`에 갱신한다. main과 이전 프로젝트는 유지한다. `deployment/github-pages.yml`은 선택적 수동 재빌드 예제이며 현재 실제 배포는 Pages 브랜치 배포다.

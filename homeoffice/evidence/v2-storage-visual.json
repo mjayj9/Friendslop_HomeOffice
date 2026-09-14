@@ -1,0 +1,22 @@
+{
+  "environment": "Actual Chromium/Godot WebGL. Continuous keyboard walking, live interaction, screenshot, download and strict container decoding.",
+  "results": [
+    {
+      "name": "Walked to relocated chest, stored actual book, captured open model",
+      "passed": true
+    },
+    {
+      "name": "Actual relocated lid closes and preserves stored book",
+      "passed": true
+    },
+    {
+      "name": "Final browser download passes container and storage reference validation",
+      "passed": true
+    },
+    {
+      "name": "Walked to drawer and opened the actual sliding mesh",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

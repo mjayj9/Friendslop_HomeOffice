@@ -181,7 +181,7 @@ func update_hint():
 	elif id=="board":label="E 보드 확대 · 마카를 들고 클릭해 쓰기"
 	elif objects.has(id):
 		var kind=definitions[id].kind
-		var labels={"chair":"E 앉기","sofa":"E 좌석에 앉기 · Z 눕기","bed":"E 눕기","table":"E 공동 보고서","fridge":"E 재료 꺼내기","cooker":"E 재료 조리 / 완성 음식 꺼내기","sink":"E 접시 정리","arcade":"E 아케이드 시작","counter":"E 음식 담기"}
+		var labels={"chair":"E 앉기","sofa":"E 좌석에 앉기 · Z 눕기","bed":"E 눕기","table":"E 공동 보고서","fridge":"E 재료 꺼내기","cooker":"E 재료 조리 / 완성 음식 꺼내기","sink":"E 접시 정리","arcade":"E 아케이드 시작","counter":"E 음식 담기","storage":"E 열기 / 넣기 / 꺼내기 · R 뚜껑","drawer":"E 열기 / 넣기 / 꺼내기 · R 서랍","floor_lamp":"E 조명 켜기 / 끄기"}
 		label=labels.get(kind,"E 집기")
 	if p.seated!="" and p.holding!="" and definitions[p.holding].kind=="plate":label+=" · Z 먹기"
 	if p.holding!="":
@@ -198,27 +198,30 @@ func update_hint():
 	if bridge:bridge.hint(label)
 
 func _unhandled_input(event):
-	if event is InputEventKey and event.keycode==KEY_F and not event.pressed and playing():
+	if event is InputEventKey and not event.pressed:
+		blocked_keys.erase(event.physical_keycode)
+		if key_event(event,"jump"):last_jump_down=false
+	if event is InputEventKey and key_event(event,"read") and not event.pressed and playing():
 		if players.has(local_id) and players[local_id].holding=="":request_action("kick");return
 	if build_kind!="":
 		if event is InputEventKey and event.pressed and not event.echo:
-			if event.keycode==KEY_R:build_angle+=PI/4;return
-			if event.keycode in [KEY_ESCAPE,KEY_B]:end_build()
+			if key_event(event,"secondary"):build_angle+=PI/4;return
+			if (event.keycode==KEY_ESCAPE or key_event(event,"build")):end_build()
 		if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT and playing():
 			if build_valid:request_action("place",{"kind":build_kind,"p":arr(build_point),"yaw":build_angle,"objectId":build_move_id})
 			return
 	if event is InputEventKey and event.pressed and not event.echo and playing():
-		if event.keycode==KEY_G:
+		if key_event(event,"move"):
 			var object_id=target(players[local_id]).get("id","")
 			if objects.has(object_id):begin_build(definitions[object_id].kind,object_id)
 			return
-		if event.keycode==KEY_DELETE:request_action("remove_object");return
-		if event.keycode==KEY_Z:request_action("eat" if players.has(local_id) and players[local_id].seated!="" and players[local_id].holding!="" and definitions[players[local_id].holding].kind=="plate" else "rest");return
-		if event.keycode==KEY_R:request_action("secondary");return
-		if event.keycode==KEY_B:
+		if key_event(event,"remove"):request_action("remove_object");return
+		if key_event(event,"rest"):request_action("eat" if players.has(local_id) and players[local_id].seated!="" and players[local_id].holding!="" and definitions[players[local_id].holding].kind=="plate" else "rest");return
+		if key_event(event,"secondary"):request_action("secondary");return
+		if key_event(event,"build"):
 			if bridge:bridge.open_tool("catalog")
 			return
-		if event.keycode==KEY_F and players.has(local_id) and players[local_id].holding=="":request_action("kick_start");return
+		if key_event(event,"read") and players.has(local_id) and players[local_id].holding=="":request_action("kick_start");return
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and playing():
 		var p=players.get(local_id)
 		if p and p.holding!="" and definitions[p.holding].kind in ["basketball","gun"]:
@@ -316,7 +319,7 @@ func perform(id:String,m:Dictionary):
 	if action=="place":place_object(id,data);return
 	if action=="remove_object":
 		var object_id=target(p).get("id","")
-		if not objects.has(object_id) or not definitions[object_id].kind in ["chair","table","sofa","bed","book","crate","marker","plate","gun","shield"]:return
+		if not objects.has(object_id) or not definitions[object_id].kind in ["chair","table","sofa","bed","book","crate","marker","plate","gun","shield","storage","drawer","floor_lamp"]:return
 		if object_in_use(object_id):return reject(id,"사용 중인 가구와 소품은 철거할 수 없습니다")
 		var o=objects[object_id]
 		remove_child(o);o.queue_free();objects.erase(object_id);definitions.erase(object_id);revision+=1
@@ -348,6 +351,8 @@ func perform(id:String,m:Dictionary):
 			ball.linear_velocity=p.direction()*(5+strength*5)+Vector3.UP*2.4
 		return
 	if action=="secondary":
+		var focused=target(p).get("id","")
+		if definitions.has(focused) and definitions[focused].kind in ["storage","drawer"]:use_storage(p,focused,true);return
 		if p.holding!="":
 			var o=objects[p.holding]
 			if definitions[p.holding].kind=="basketball":
@@ -388,6 +393,9 @@ func perform(id:String,m:Dictionary):
 	if not objects.has(target_id):return
 	var o=objects[target_id]
 	var kind=definitions[target_id].kind
+	if kind in ["storage","drawer"]:use_storage(p,target_id);return
+	if kind=="floor_lamp":
+		var st=o.get_meta("state",{});st.on=not st.get("on",true);o.set_meta("state",st);revision+=1;return
 	if kind in ["chair","sofa","bed"]:
 		var seats=o.get_meta("seats",{})
 		var seat_index=clampi(int(round((o.to_local(p.position).x+.77)/.77)),0,2) if kind=="sofa" else 0
@@ -546,7 +554,7 @@ func fire_tag(id:String):
 		reject(id,"명중 · "+str(tag_score[id])+"점")
 
 func placement_size(kind:String) -> Vector3:
-	var sizes={"chair":Vector3(.58,1.18,.58),"table":Vector3(2.8,.84,1.2),"sofa":Vector3(2.65,1.15,1.1),"bed":Vector3(1.2,1.3,2.15)}
+	var sizes={"chair":Vector3(.58,1.18,.58),"table":Vector3(2.8,.84,1.2),"sofa":Vector3(2.65,1.15,1.1),"bed":Vector3(1.2,1.3,2.15),"storage":Vector3(1.28,1.65,1.05),"drawer":Vector3(.96,.86,1.10),"floor_lamp":Vector3(.5,1.7,.5)}
 	return sizes.get(kind,Vector3(.48,.48,.48))
 
 func placement_ok(p,kind:String,point:Vector3,angle:float,move_id:String="") -> bool:
@@ -574,7 +582,7 @@ func place_object(id:String,data:Dictionary):
 	var kind=String(data.get("kind",""))
 	var move_id=String(data.get("objectId",""))
 	if move_id!="" and (not objects.has(move_id) or definitions[move_id].kind!=kind or object_in_use(move_id)):return reject(id,"사용 중이거나 없는 가구는 옮길 수 없습니다")
-	if not kind in ["chair","table","sofa","book","crate","marker","gun","shield","bed","plate"] or not data.get("p") is Array or data.p.size()!=3:return
+	if not kind in ["chair","table","sofa","book","crate","marker","gun","shield","bed","plate","storage","drawer","floor_lamp"] or not data.get("p") is Array or data.p.size()!=3:return
 	for n in data.p:
 		if not (n is int or n is float) or not is_finite(float(n)) or absf(n)>110:return
 	if not (data.get("yaw") is int or data.get("yaw") is float) or not is_finite(float(data.yaw)):return
@@ -595,7 +603,7 @@ func place_object(id:String,data:Dictionary):
 	revision+=1
 
 func begin_build(kind:String,move_id:String=""):
-	if not kind in ["chair","table","sofa","book","crate","marker","gun","shield","bed","plate"]:return
+	if not kind in ["chair","table","sofa","book","crate","marker","gun","shield","bed","plate","storage","drawer","floor_lamp"]:return
 	end_build()
 	build_kind=kind
 	build_move_id=move_id
@@ -842,6 +850,8 @@ func board_action(id:String,order:int,action:String,data:Dictionary):
 func object_in_use(object_id:String) -> bool:
 	var object=objects.get(object_id)
 	if not object:return true
+	if not object.get_meta("state",{}).get("contents",[]).is_empty() or object.get_meta("state",{}).get("open",false):return true
+	if object.get_meta("stored_in","")!="":return true
 	if object.get_meta("owner","")!="" or not object.get_meta("seats",{}).is_empty():return true
 	for player in players.values():
 		if player.seated==object_id or player.holding==object_id:return true
@@ -871,16 +881,18 @@ func update_room_lighting(dt:float):
 	if slide_laser and Time.get_ticks_msec()>slide_laser_until:slide_laser.visible=false
 	var player=players.get(local_id)
 	if not player:return
-	room_lights=room_lights.filter(func(light):return is_instance_valid(light))
+	room_lights=room_lights.filter(func(light):return is_instance_valid(light) and light.is_inside_tree())
 	var eye=player.eye()
-	room_lights.sort_custom(func(a,b):return a.position.distance_squared_to(eye)<b.position.distance_squared_to(eye))
+	room_lights.sort_custom(func(a,b):return a.global_position.distance_squared_to(eye)<b.global_position.distance_squared_to(eye))
 	var low=bridge and String(bridge.graphics_quality())=="low"
 	get_viewport().scaling_3d_scale=.65 if low else 1.0
 	get_viewport().msaa_3d=Viewport.MSAA_DISABLED if low else Viewport.MSAA_2X
 	if sunlight:sunlight.shadow_enabled=not low
 	for i in range(room_lights.size()):
 		var light=room_lights[i]
-		var active=i<(2 if low else 4) and light.position.distance_to(eye)<16
+		var active=i<(2 if low else 4) and light.global_position.distance_to(eye)<16
+		var furniture=String(light.get_meta("furniture",""))
+		if objects.has(furniture):active=active and objects[furniture].get_meta("state",{}).get("on",true)
 		light.light_energy=lerpf(light.light_energy,float(light.get_meta("base_energy",.32)) if active else 0.0,minf(1.0,dt*5))
 		light.visible=light.light_energy>.005
 
@@ -896,3 +908,72 @@ func set_slide_pointer(uv):
 		sphere.material=mat;slide_laser.mesh=sphere;add_child(slide_laser)
 	slide_laser.position=Vector3(9+(float(uv[0])-.5)*3.6,1.85+(.5-float(uv[1]))*2.025,4.18)
 	slide_laser.visible=true;slide_laser_until=Time.get_ticks_msec()+500
+
+func setup_living_prop(body:PhysicsBody3D,kind:String):
+	if kind in ["storage","drawer"]:
+		var part=AnimatableBody3D.new()
+		part.name="MovingPart";part.sync_to_physics=false;part.collision_layer=1;part.collision_mask=7
+		part.set_meta("object_id",body.name)
+		part.add_child(model("storage_lid" if kind=="storage" else "drawer_slide"))
+		if kind=="storage":
+			part.position=Vector3(0,.68,-.43)
+			collision(part,Vector3(0,.025,.43),Vector3(1.28,.05,.94))
+		else:
+			part.position.y=.57
+			collision(part,Vector3(0,-.02,0),Vector3(.85,.26,.6))
+		body.add_child(part)
+	if kind=="floor_lamp":
+		var light=OmniLight3D.new();light.name="Bulb";light.position=Vector3(0,1.3,0)
+		light.light_color=Color("ffe3b1");light.omni_range=4;light.light_energy=.45
+		light.set_meta("base_energy",.45);light.set_meta("furniture",body.name)
+		body.add_child(light);room_lights.append(light)
+		var bulb=MeshInstance3D.new();bulb.name="BulbIndicator"
+		var sphere=SphereMesh.new();sphere.radius=.055;sphere.height=.11;bulb.mesh=sphere;bulb.position=Vector3(0,1.24,0)
+		var mat=StandardMaterial3D.new();mat.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED;mat.albedo_color=Color("ffe7b7");bulb.material_override=mat;body.add_child(bulb)
+
+func use_storage(p,object_id:String,toggle=false):
+	var o=objects[object_id];var kind=definitions[object_id].kind;var st=o.get_meta("state",{}).duplicate(true)
+	var contents=st.get("contents",[])
+	if toggle or not st.get("open",false) or (p.holding=="" and contents.is_empty()):
+		# Refuse moving the lid/drawer through a body in its swept volume.
+		for other in players.values():
+			var at=o.to_local(other.position)
+			if absf(at.x)<.95 and at.y<1.65 and at.y>-.3 and at.z>-.8 and at.z<1.1:return reject(p.actor_id,"가구에서 한 걸음 물러나 주세요")
+		st.open=not st.get("open",false);o.set_meta("state",st);revision+=1;return
+	if p.holding!="":
+		var item_id=String(p.holding);var item_kind=definitions[item_id].kind
+		var allowed=["book","marker","crate","plate","pan","ingredient","meal"] if kind=="storage" else ["book","marker","plate","ingredient","meal"]
+		if not item_kind in allowed:return reject(p.actor_id,"이 물건은 여기에 수납할 수 없습니다")
+		if contents.size()>=(4 if kind=="storage" else 2):return reject(p.actor_id,"수납 공간이 가득 찼습니다")
+		release(p,false);contents.append(item_id)
+	else:
+		var item_id=String(contents.pop_back());var item=objects.get(item_id)
+		if not item:return
+		item.freeze=false;item.collision_layer=4;item.collision_mask=7;item.visible=true
+		item.set_meta("stored_in","");item.set_meta("owner",p.actor_id);item.gravity_scale=0
+		item.position=p.eye()+p.direction()*.72;item.linear_velocity=Vector3.ZERO
+		item.add_collision_exception_with(p);p.add_collision_exception_with(item);p.holding=item_id
+	st.contents=contents;o.set_meta("state",st);revision+=1
+
+func update_living_props(dt:float):
+	var stored={}
+	for id in objects:
+		var o=objects[id];var kind=definitions[id].kind;var st=o.get_meta("state",{})
+		if kind in ["storage","drawer"]:
+			var part=o.get_node("MovingPart");var opened=bool(st.get("open",false))
+			if kind=="storage":part.rotation.x=move_toward(part.rotation.x,-1.75 if opened else 0.0,dt*2.8)
+			else:part.position.z=move_toward(part.position.z,.42 if opened else 0.0,dt*.8)
+			var items=st.get("contents",[])
+			for i in range(items.size()):
+				if not objects.has(items[i]):continue
+				var offset=Vector3((i%2-.5)*.58,.37,(floori(i/2.0)-.5)*.43) if kind=="storage" else Vector3((i-.5)*.4,.54,part.position.z)
+				stored[items[i]]={"id":id,"p":o.global_transform*offset,"open":opened,"yaw":o.rotation.y}
+		if kind=="floor_lamp":o.get_node("BulbIndicator").visible=bool(st.get("on",true))
+	for id in objects:
+		var o=objects[id]
+		if not o is RigidBody3D:continue
+		if stored.has(id):
+			var s=stored[id];o.set_meta("stored_in",s.id);o.freeze=true;o.visible=s.open;o.collision_layer=0;o.collision_mask=0
+			o.position=s.p;o.rotation=Vector3(0,s.yaw,0);o.linear_velocity=Vector3.ZERO;o.angular_velocity=Vector3.ZERO
+		elif o.get_meta("stored_in","")!="":
+			o.set_meta("stored_in","");o.freeze=not host or frozen;o.visible=true;o.collision_layer=4;o.collision_mask=7

@@ -1,0 +1,464 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "pattern": "^[^\\u0000-\\u001f<>]+$"
+    },
+    "assetPack": {
+      "const": 2
+    },
+    "layoutVersion": {
+      "const": 2
+    },
+    "roomSlots": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/roomSlot"
+      },
+      "maxItems": 8,
+      "minItems": 0
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/object"
+      },
+      "maxItems": 256,
+      "minItems": 0
+    },
+    "doors": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^(front-door|terrace-door|meeting-door|game-gate|sleep-door|office-[1-8]-door)$"
+      },
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "maxProperties": 20
+    },
+    "board": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/stroke"
+      },
+      "maxItems": 512,
+      "minItems": 0
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "results": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "basketball": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMaximum": 10000000
+          },
+          "maxItems": 2,
+          "minItems": 2
+        },
+        "football": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMaximum": 10000000
+          },
+          "maxItems": 2,
+          "minItems": 2
+        },
+        "arcade": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/result"
+          },
+          "maxItems": 64,
+          "minItems": 0
+        }
+      },
+      "required": [
+        "basketball",
+        "football"
+      ]
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxPlayers": {
+          "const": 8
+        }
+      },
+      "required": [
+        "maxPlayers"
+      ]
+    },
+    "collaboration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "update": {
+          "type": "string",
+          "maxLength": 3000000,
+          "pattern": "^[A-Za-z0-9+/]*={0,2}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "update",
+        "revision"
+      ]
+    },
+    "presentation": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/attachment"
+      },
+      "maxItems": 64,
+      "minItems": 0
+    },
+    "presentationView": {
+      "type": "object",
+      "description": "Additional validation in web/presentation-view.mjs: presenter-free selected asset/page and bounded annotations."
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "worldId",
+    "assetPack",
+    "layoutVersion",
+    "roomSlots",
+    "objects",
+    "doors",
+    "board",
+    "revision",
+    "results",
+    "settings"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mjayj9.github.io/Friendslop_HomeOffice/schemas/world-v2.schema.json",
+  "title": "Moyeo Homeworld V2 structural interchange schema",
+  "$defs": {
+    "position": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": -110,
+        "maximum": 110
+      },
+      "maxItems": 3,
+      "minItems": 3
+    },
+    "point": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "maxItems": 2,
+      "minItems": 2
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "food": {
+          "type": "boolean"
+        },
+        "dirty": {
+          "type": "boolean"
+        },
+        "ready": {
+          "type": "boolean"
+        },
+        "open": {
+          "type": "boolean"
+        },
+        "on": {
+          "type": "boolean"
+        },
+        "recipe": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        },
+        "stage": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        },
+        "cooking": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000000000.0
+        },
+        "ammo": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000000000.0
+        },
+        "reloadUntil": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000000000.0
+        },
+        "nextShot": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000000000.0
+        },
+        "contents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "pattern": "^[^\\u0000-\\u001f<>]+$"
+          },
+          "maxItems": 4,
+          "minItems": 0
+        }
+      },
+      "required": []
+    },
+    "object": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        },
+        "kind": {
+          "enum": [
+            "chair",
+            "table",
+            "sofa",
+            "book",
+            "crate",
+            "marker",
+            "low_table",
+            "bed",
+            "counter",
+            "cooker",
+            "sink",
+            "fridge",
+            "plate",
+            "pan",
+            "basketball",
+            "football",
+            "ingredient",
+            "meal",
+            "gun",
+            "shield",
+            "arcade",
+            "storage",
+            "drawer",
+            "floor_lamp"
+          ]
+        },
+        "p": {
+          "$ref": "#/$defs/position"
+        },
+        "yaw": {
+          "type": "number",
+          "minimum": -100000,
+          "maximum": 100000
+        },
+        "state": {
+          "$ref": "#/$defs/state"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "p",
+        "yaw",
+        "state"
+      ]
+    },
+    "roomSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "personalRoomId": {
+          "type": "string",
+          "pattern": "^office-[1-8]$"
+        },
+        "memberSlotId": {
+          "type": "string",
+          "pattern": "^slot-[1-8]$"
+        },
+        "moduleIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "side": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        }
+      },
+      "required": [
+        "personalRoomId",
+        "memberSlotId",
+        "moduleIndex",
+        "side",
+        "label"
+      ]
+    },
+    "stroke": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "maxItems": 256,
+          "minItems": 2
+        },
+        "color": {
+          "enum": [
+            "#183b32",
+            "#bd5737",
+            "#305ea2",
+            "#f4f4ed"
+          ]
+        },
+        "width": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "kind": {
+          "const": "text"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "fontSize": {
+          "const": 28
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "id",
+        "author",
+        "points",
+        "color",
+        "width"
+      ]
+    },
+    "attachment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[^\\u0000-\\u001f<>]+$"
+        },
+        "mime": {
+          "enum": [
+            "image/png",
+            "image/jpeg",
+            "application/pdf"
+          ]
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16777216
+        }
+      },
+      "required": [
+        "id",
+        "sha256",
+        "name",
+        "mime",
+        "bytes"
+      ]
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "game": {
+          "enum": [
+            "maze",
+            "runner"
+          ]
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "exclusiveMaximum": 10000000
+        },
+        "won": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "game",
+        "score",
+        "won"
+      ]
+    }
+  },
+  "$comment": "Structural documentation only. Runtime save-v2.mjs and presentation-view.mjs additionally enforce reference consistency, unique IDs, exact room slot ordering, valid storage types/capacity, world and attachment checksums, ZIP paths/limits and materialized Yjs/PDF validation."
+}

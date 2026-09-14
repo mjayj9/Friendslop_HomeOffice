@@ -32,6 +32,10 @@ Godot 4.6.1 / GDScript로 만든 집+오피스 소셜 공간입니다. 기본 �
 
 게임 별동은 방장 메뉴에서 문을 열고 사용자별 출입을 승인합니다. 무기 사용 승인은 별도입니다. 자체 제작 정원 미로는 씨앗 수집/로봇 회피, 공룡 러너는 장애물 점프 게임입니다. 기계 앞에서 E로 실행하고 닫으면 원래 캐릭터 위치로 돌아옵니다.
 
+Esc 메뉴의 **키 재설정**에서 이동·상호작용·음성·아케이드 키를 바꾸고 기본값으로 복원할 수 있습니다. Esc는 항상 탈출 키입니다.
+
+거실의 수납함/서랍장은 E로 열고, 손에 든 책·마카·접시 등을 E로 넣습니다. 빈손으로 E를 누르면 마지막으로 넣은 물건을 꺼냅니다. R은 열기/닫기입니다. 물건이 들었거나 열린 가구는 이동/철거할 수 없습니다. 스탠드 조명은 E로 켜고 끕니다. 모두 호스트 동기화와 파일 저장에 연결되어 있습니다.
+
 ## 내보내고 다시 만나기
 
 방장이 Esc → **공간 내보내기**로 `.homeworld` 파일을 내려받습니다. 파일을 실제 보관했는지 확인하세요. 다음 모임 때 한 사람이 빈 호스트 세션에서 **파일 가져오기** → 검증 미리보기 → 복원을 실행하고 새 초대 코드를 공유합니다. 복원 전 현재 세계/문서의 백업 다운로드가 먼저 완료되도록 순서를 분리했습니다.
@@ -44,6 +48,7 @@ Godot 4.6.1 / GDScript로 만든 집+오피스 소셜 공간입니다. 기본 �
 
 | 증거 | 범위 |
 |---|---|
+| `evidence/v2-bindings-ownership.json`, `v2-storage-visual.json` | 실제 키 재설정, 두 사용자 물건/좌석 경합, 책 수납·뚜껑·서랍·다운로드 |
 | `evidence/v2-browser-walk.json`, `v2-walk-video/` | 실제 Chromium에서 키보드 연속 보행과 게임 캡처 |
 | `evidence/v2-multiplayer-scale.json` | 독립 Chromium 2/4/8명, 개인실/동일 이름/기존 책상/퇴장 보존 |
 | `evidence/v2-browser-collaboration.json` | 두 브라우저 Yjs 동시 한국어 CDP 조합 입력·메모·마인드맵 |
@@ -53,15 +58,17 @@ Godot 4.6.1 / GDScript로 만든 집+오피스 소셜 공간입니다. 기본 �
 | `evidence/v2-interactions.json`, `v2-authority.json`, `v2-dribble.json` | 실제 Godot 엔진의 제어된 위치/행동·권위·물리 시험. 사람 플레이와 구분 |
 | `docs/v2/korean-stt-measurement.md` | 로컬 한국어 Whisper의 합성 6문장 CER/WER/추론/FPS. 실제 사람 품질 아님 |
 
-한 PC에 브라우저 8개를 실행한 시험에서 호스트 6~7fps로 목표 성능에 못 미쳤습니다. 실제 사람 음성·여러 마이크의 한국어 인식, 자연스러운 전체 캐릭터 동작/손·발 그립, 수납/서랍/조명, 팀 경기 규칙, 모든 기능을 함께 쓰는 회의·생활·저장 인수, 다른 WAN의 두 PC와 장시간 성능 검증이 남았습니다.
+한 PC의 브라우저 8개에서 이전 기본 설정 6~7fps, 최신 저사양 설정 12~14fps로 목표 성능에 못 미쳤습니다. 실제 사람 음성·여러 마이크의 한국어 인식, 자연스러운 전체 캐릭터 동작/손·발 그립, 수납을 포함한 장시간 통합 인수, 팀 경기 규칙, 모든 기능을 함께 쓰는 회의·생활·저장 인수, 다른 WAN의 두 PC와 장시간 성능 검증이 남았습니다.
 
 전체 필수 범위는 [U01~U56](docs/v2/requirements-traceability.md), [80개 인수](docs/v2/acceptance-80.md), [필수 미완료](docs/v2/required-remaining.md)에 기록했습니다. 버튼이나 씬만 있는 기능을 검증완료로 표시하지 않습니다.
 
 ## 다시 빌드 / 제작
 
-Godot 공식 **4.6.1 stable** 실행 파일과 같은 버전의 `web_nothreads_debug.zip` / `web_nothreads_release.zip`을 `.runtime/godot/` 및 `.runtime/templates/`에 준비합니다. `tools/build.ps1 -Godot <실행 파일>`이 import 후 웹 export와 JS/선택적 ONNX 런타임 복사를 실행합니다. 기본 제공 바이너리 빌드는 npm 재번들 없이 실행됩니다. 소스 수정 시 `node tools/bundle_collaboration.mjs`와 `node tools/bundle_stt.mjs`를 사용합니다.
+Godot 공식 **4.6.1 stable** 실행 파일과 같은 버전의 `web_nothreads_debug.zip` / `web_nothreads_release.zip`을 `.runtime/godot/` 및 `.runtime/templates/`에 준비합니다. `tools/build.ps1 -Godot <실행 파일>`이 import 후 웹 export와 JS/선택적 ONNX 런타임 복사를 실행합니다. 기본 제공 바이너리 빌드는 npm 재번들 없이 실행됩니다. Godot 템플릿 수정 시 `python tools/assemble_v2.py`로 실행 스크립트를 다시 조합합니다. 소스 수정 시 `node tools/bundle_collaboration.mjs`와 `node tools/bundle_stt.mjs`를 사용합니다.
 
-Blender 원본은 `art/moyeo-v2.blend`, `art/furniture-v2.blend`, `art/male-character-v2.blend`입니다. `.blend`를 열고 Python에서 `os.environ['MOYEO_PROJECT']=r'<프로젝트 절대 경로>'`를 지정해 해당 `art/*.py`를 실행하면 새 제작 씬을 생성합니다. `art/v2-blender-exterior-preview.png`는 **Blender 프리뷰**입니다. `evidence/v2-game-*.png`가 **실제 게임 화면**입니다. 배포 게임은 제작용 9876 포트에 접근하지 않습니다.
+건축을 다시 생성할 때 `python tools/design_v2.py` 다음 `python tools/living_layout_v2.py`를 실행하고, Blender의 `art/build_v2.py` 다음 `art/living_props_v2.py`를 실행합니다. 최종 저장소의 에셋을 사용하는 경우 이 재제작은 필요하지 않습니다.
+
+Blender 원본은 `art/moyeo-v2.blend`, `art/furniture-v2.blend`, `art/male-character-v2.blend`, `art/v2-living-props.blend`입니다. `.blend`를 열고 Python에서 `os.environ['MOYEO_PROJECT']=r'<프로젝트 절대 경로>'`를 지정해 해당 `art/*.py`를 실행하면 새 제작 씬을 생성합니다. `art/v2-blender-exterior-preview.png`는 **Blender 프리뷰**입니다. `evidence/v2-game-*.png`가 **실제 게임 화면**입니다. 배포 게임은 제작용 9876 포트에 접근하지 않습니다.
 
 테스트는 저장소 상위 폴더에서 `node homeoffice/tests/v2-browser-*.mjs` 중 원하는 파일 하나씩 실행합니다. 여러 GPU 브라우저 시험을 병렬 실행하면 측정이 섞입니다. 이 폴더에서 `npm test`는 Node 저장/아케이드 규칙 시험입니다. GDScript 시험은 Godot `--headless --path homeoffice --script res://tests/v2-interactions.gd` 등을 사용합니다.
 

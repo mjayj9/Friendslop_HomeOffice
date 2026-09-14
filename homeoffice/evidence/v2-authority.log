@@ -12,4 +12,6 @@ PASS Occupied chair is protected from movement/deletion
 PASS Checkpoint changes engine authority and epoch
 PASS Checkpoint retains exact player position and seat
 PASS Checkpoint retains private-room assignment and board
-PASS Previous epoch action is rejected
+PASS Previous epoch action is rejected without unseating or consuming sequence
+PASS Out-of-range client movement cannot replace authoritative input
+PASS Previous epoch movement cannot change new host state

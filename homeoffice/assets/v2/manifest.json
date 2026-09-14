@@ -4978,6 +4978,126 @@
         ]
       },
       "meshTriangles": 36
+    },
+    "storage": {
+      "assetId": "storage",
+      "version": 2,
+      "collisions": [
+        {
+          "position": [
+            0,
+            0.36,
+            0
+          ],
+          "size": [
+            1.24,
+            0.72,
+            0.9
+          ],
+          "yaw": 0
+        }
+      ],
+      "anchors": {
+        "lid_hinge": [
+          0,
+          0.68,
+          -0.43
+        ],
+        "handle": [
+          0,
+          0.51,
+          0.48
+        ],
+        "interior": [
+          0,
+          0.31,
+          0
+        ]
+      },
+      "meshTriangles": 248
+    },
+    "storage_lid": {
+      "assetId": "storage_lid",
+      "version": 2,
+      "collisions": [],
+      "anchors": {},
+      "meshTriangles": 36
+    },
+    "drawer": {
+      "assetId": "drawer",
+      "version": 2,
+      "collisions": [
+        {
+          "position": [
+            0,
+            0.43,
+            0
+          ],
+          "size": [
+            0.96,
+            0.86,
+            0.66
+          ],
+          "yaw": 0
+        }
+      ],
+      "anchors": {
+        "drawer_track": [
+          0,
+          0.57,
+          0
+        ],
+        "handle": [
+          0,
+          0.57,
+          0.365
+        ],
+        "interior": [
+          0,
+          0.54,
+          0
+        ]
+      },
+      "meshTriangles": 108
+    },
+    "drawer_slide": {
+      "assetId": "drawer_slide",
+      "version": 2,
+      "collisions": [],
+      "anchors": {},
+      "meshTriangles": 96
+    },
+    "floor_lamp": {
+      "assetId": "floor_lamp",
+      "version": 2,
+      "collisions": [
+        {
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "size": [
+            0.5,
+            1.7,
+            0.5
+          ],
+          "yaw": 0
+        }
+      ],
+      "anchors": {
+        "switch": [
+          0,
+          0.92,
+          0.06
+        ],
+        "bulb": [
+          0,
+          1.36,
+          0
+        ]
+      },
+      "meshTriangles": 552
     }
   }
 }

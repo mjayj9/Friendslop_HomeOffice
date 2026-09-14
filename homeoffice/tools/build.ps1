@@ -4,8 +4,10 @@ $projectRoot = (Resolve-Path -LiteralPath "$PSScriptRoot/..").Path
 $version = & $Godot --version
 if ($version -notmatch '^4\.6\.1\.stable') { throw "Expected Godot 4.6.1 stable, received $version" }
 New-Item -ItemType Directory -Path "$projectRoot/build" -Force | Out-Null
-& $Godot --headless --path $projectRoot --editor --import --quit
-if ($LASTEXITCODE -ne 0) { throw 'Godot import failed' }
+$importOutput = & $Godot --headless --path $projectRoot --editor --import --quit 2>&1
+$importExit = $LASTEXITCODE
+$importOutput | Write-Output
+if ($importExit -ne 0 -or ($importOutput -match "SCRIPT ERROR|Parse Error|ERROR: Failed to load")) { throw 'Godot import failed' }
 & $Godot --headless --path $projectRoot --export-release Web "$projectRoot/build/index.html"
 if ($LASTEXITCODE -ne 0) { throw 'Godot export failed' }
 Get-ChildItem -LiteralPath "$projectRoot/web" -File | Where-Object { $_.Extension -in '.mjs','.css' -or $_.Name -eq 'peerjs.min.js' -or $_.Name -like '*.LEGAL.txt' } | Copy-Item -Destination "$projectRoot/build"

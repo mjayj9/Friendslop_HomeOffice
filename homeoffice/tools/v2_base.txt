@@ -1,4 +1,7 @@
 extends Node3D
+var key_bindings={"forward":KEY_W,"back":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"run":KEY_SHIFT,"crouch":KEY_C,"interact":KEY_E,"drop":KEY_Q,"read":KEY_F,"secondary":KEY_R,"rest":KEY_Z,"build":KEY_B,"move":KEY_G,"remove":KEY_DELETE,"look_left":KEY_LEFT,"look_right":KEY_RIGHT,"look_up":KEY_UP,"look_down":KEY_DOWN}
+var blocked_keys={}
+var last_jump_down=false
 var sunlight:DirectionalLight3D
 var slide_laser:MeshInstance3D
 var slide_laser_until=0
@@ -209,6 +212,7 @@ func spawn_object(d:Dictionary):
 	body.position=vec(d.p)
 	body.rotation.y=float(d.yaw)
 	body.add_child(model(kind))
+	setup_living_prop(body,kind)
 	if movable:
 		if kind in ["basketball","football","ingredient","meal"]:
 			var c=CollisionShape3D.new()
@@ -287,9 +291,9 @@ func _unhandled_input(event):
 			Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
 			if bridge:bridge.menu()
 		if not playing():return
-		if event.keycode==KEY_E:request_action("interact")
-		if event.keycode==KEY_Q:request_action("drop")
-		if event.keycode==KEY_F:request_action("read")
+		if key_event(event,"interact"):request_action("interact")
+		if key_event(event,"drop"):request_action("drop")
+		if key_event(event,"read"):request_action("read")
 	if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT and playing():
 		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 		if players.has(local_id) and players[local_id].holding!="":
@@ -306,10 +310,16 @@ func _physics_process(dt):
 	if p:
 		seq+=1
 		var enabled=playing()
+		for code in blocked_keys.keys():
+			if not Input.is_physical_key_pressed(code):blocked_keys.erase(code)
+		if not enabled:
+			for code in key_bindings.values():
+				if Input.is_physical_key_pressed(code):blocked_keys[code]=true
 		if enabled:
-			yaw+=(float(Input.is_physical_key_pressed(KEY_LEFT))-float(Input.is_physical_key_pressed(KEY_RIGHT)))*dt*1.5
-			pitch=clampf(pitch+(float(Input.is_physical_key_pressed(KEY_UP))-float(Input.is_physical_key_pressed(KEY_DOWN)))*dt*1.2,-1.35,1.35)
-		var cmd={"x":float(Input.is_physical_key_pressed(KEY_D))-float(Input.is_physical_key_pressed(KEY_A)) if enabled else 0.0,"z":float(Input.is_physical_key_pressed(KEY_S))-float(Input.is_physical_key_pressed(KEY_W)) if enabled else 0.0,"yaw":yaw,"pitch":pitch,"jump":enabled and Input.is_physical_key_pressed(KEY_SPACE) and not p.command.jump,"run":enabled and Input.is_physical_key_pressed(KEY_SHIFT),"crouch":enabled and (Input.is_physical_key_pressed(KEY_C) or Input.is_physical_key_pressed(KEY_CTRL)),"seq":seq}
+			yaw+=(float(key_down("look_left"))-float(key_down("look_right")))*dt*1.5
+			pitch=clampf(pitch+(float(key_down("look_up"))-float(key_down("look_down")))*dt*1.2,-1.35,1.35)
+		var cmd={"x":float(key_down("right"))-float(key_down("left")) if enabled else 0.0,"z":float(key_down("back"))-float(key_down("forward")) if enabled else 0.0,"yaw":yaw,"pitch":pitch,"jump":enabled and key_down("jump") and not last_jump_down,"run":enabled and key_down("run"),"crouch":enabled and key_down("crouch"),"seq":seq}
+		last_jump_down=key_down("jump")
 		p.command=cmd
 		p.last_input_ms=Time.get_ticks_msec()
 		if not host and tick%2==0:send({"type":"input","epoch":epoch,"command":cmd})
@@ -341,6 +351,11 @@ func _physics_process(dt):
 			if id==local_id:continue
 			players[id].position=players[id].position.lerp(players[id].remote_target,1-exp(-dt*18))
 			players[id].rotation.y=lerp_angle(players[id].rotation.y,players[id].remote_yaw,1-exp(-dt*18))
+		for o in objects.values():
+			if o is RigidBody3D and o.has_meta("remote_position") and o.get_meta("stored_in","")=="":
+				var goal:Vector3=o.get_meta("remote_position")
+				o.position=goal if o.position.distance_to(goal)>1.6 else o.position.lerp(goal,1-exp(-dt*20))
+				o.quaternion=o.quaternion.slerp(Quaternion.from_euler(o.get_meta("remote_rotation")),1-exp(-dt*20))
 		if Time.get_ticks_msec()-last_snapshot_ms>2500:
 			frozen=true
 			if bridge:bridge.status("호스트 응답 대기 · 마지막 확인 상태 보존 중")
@@ -359,6 +374,7 @@ func _physics_process(dt):
 		send({"type":"world","epoch":epoch,"world":save_world(),"strokes":strokes})
 	update_build_preview()
 	update_object_visuals()
+	update_living_props(dt)
 	update_room_lighting(dt)
 	update_hint()
 	board_cooldown-=dt
@@ -635,6 +651,10 @@ func handle_event(e:Dictionary):
 		"slide_texture":set_slide(String(e.get("image","")))
 		"slide_pointer":set_slide_pointer(e.get("uv"))
 		"build":begin_build(String(e.get("kind","")))
+		"bindings":
+			for action in key_bindings:
+				var code=OS.find_keycode_from_string(String(e.get("bindings",{}).get(action,"")))
+				if code!=KEY_NONE and code!=KEY_ESCAPE:key_bindings[action]=code
 		"resume":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 		"visibility":
 			if host:
@@ -718,8 +738,10 @@ func handle_packet(sender:String,m):
 			for s in m.objects:
 				if not objects.has(s.id):spawn_object({"id":s.id,"kind":s.kind,"p":s.p,"yaw":s.r[1],"state":s.get("state",{})})
 				if objects.has(s.id):
-					objects[s.id].position=vec(s.p)
-					objects[s.id].rotation=vec(s.r)
+					if objects[s.id] is RigidBody3D:
+						objects[s.id].set_meta("remote_position",vec(s.p));objects[s.id].set_meta("remote_rotation",vec(s.r))
+					else:
+						objects[s.id].position=vec(s.p);objects[s.id].rotation=vec(s.r)
 					objects[s.id].set_meta("owner",s.owner)
 					objects[s.id].set_meta("occupant",s.occupant)
 					objects[s.id].set_meta("state",s.get("state",{}))
@@ -770,3 +792,11 @@ func restore_world(w:Dictionary):
 		p.position=vec(layout.spawn)
 		if host:assign_room(p.actor_id)
 	refresh_board()
+
+
+func key_down(action:String) -> bool:
+	var code=int(key_bindings.get(action,KEY_NONE))
+	return not blocked_keys.has(code) and Input.is_physical_key_pressed(code)
+
+func key_event(event:InputEventKey,action:String) -> bool:
+	return event.physical_keycode==int(key_bindings.get(action,KEY_NONE)) and not blocked_keys.has(event.physical_keycode)

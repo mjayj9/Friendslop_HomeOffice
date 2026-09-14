@@ -46,7 +46,15 @@
       "passed": true
     },
     {
-      "name": "Previous epoch action is rejected",
+      "name": "Previous epoch action is rejected without unseating or consuming sequence",
+      "passed": true
+    },
+    {
+      "name": "Out-of-range client movement cannot replace authoritative input",
+      "passed": true
+    },
+    {
+      "name": "Previous epoch movement cannot change new host state",
       "passed": true
     }
   ]
