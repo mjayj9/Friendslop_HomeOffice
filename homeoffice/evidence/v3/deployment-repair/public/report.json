@@ -1,0 +1,33 @@
+{
+  "url": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "startedAt": "2026-09-16T14:04:59.329Z",
+  "environment": "Actual Chromium WebGL/WASM and WebRTC; keyboard and HTML controls; two independent browser processes on one PC. No injected world state.",
+  "buildId": "52b4edbc-4abd-4619-bea4-463db1278f2b",
+  "manifest": {
+    "buildId": "52b4edbc-4abd-4619-bea4-463db1278f2b",
+    "protocol": 3,
+    "files": 67
+  },
+  "completed": true,
+  "finishedAt": "2026-09-16T14:05:27.837Z",
+  "results": [
+    {
+      "name": "Published V3 shell, verified PCK and solo world start",
+      "passed": true
+    },
+    {
+      "name": "Two published clients join the same invite and instantiate both avatars",
+      "passed": true
+    },
+    {
+      "name": "Real keyboard movement and a visible remote body synchronize",
+      "passed": true
+    },
+    {
+      "name": "Published game exports a real world file",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": []
+}
