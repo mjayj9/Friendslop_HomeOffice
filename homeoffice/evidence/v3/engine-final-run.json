@@ -1,0 +1,64 @@
+{
+  "environment": "Godot/Jolt headless; controlled fixtures, not browser input",
+  "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+  "sourceDigest": "81c6f8fff1d90ed4ea96ebbb7d20790b77fdb5169faffd6abcc779986bc063dd",
+  "completed": true,
+  "runs": [
+    {
+      "test": "gameplay",
+      "startedAt": "2026-09-15T16:30:11.9626822Z",
+      "finishedAt": "2026-09-15T16:30:15.1038646Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-gameplay.log"
+    },
+    {
+      "test": "authority-physics",
+      "startedAt": "2026-09-15T16:30:15.1132167Z",
+      "finishedAt": "2026-09-15T16:30:16.3105443Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-authority-physics.log"
+    },
+    {
+      "test": "physics-lab",
+      "startedAt": "2026-09-15T16:30:16.3116055Z",
+      "finishedAt": "2026-09-15T16:30:22.5214581Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-physics-lab.log"
+    },
+    {
+      "test": "dribble",
+      "startedAt": "2026-09-15T16:30:22.5220968Z",
+      "finishedAt": "2026-09-15T16:30:30.2960535Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-dribble.log"
+    },
+    {
+      "test": "living-props",
+      "startedAt": "2026-09-15T16:30:30.2966124Z",
+      "finishedAt": "2026-09-15T16:30:31.0248562Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-living-props.log"
+    },
+    {
+      "test": "legacy-interactions",
+      "startedAt": "2026-09-15T16:30:31.0255714Z",
+      "finishedAt": "2026-09-15T16:30:38.3371439Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-legacy-interactions.log"
+    },
+    {
+      "test": "legacy-authority",
+      "startedAt": "2026-09-15T16:30:38.3378078Z",
+      "finishedAt": "2026-09-15T16:30:38.8911449Z",
+      "exitCode": 0,
+      "passed": true,
+      "log": "engine-final-legacy-authority.log"
+    }
+  ]
+}

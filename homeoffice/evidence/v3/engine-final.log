@@ -1,0 +1,80 @@
+PASS Movable chair has floor collision and remains stable
+PASS Imported real male mesh has opaque visible materials
+PASS 62 authored Blender animation clips load
+PASS Default tag is immediately Practice
+PASS Practice accepts >12 shots without reloading
+PASS Revoked permission rejects fire
+PASS Four accepted hits cause KO and one kill
+PASS KO cannot be scored twice
+PASS Timed respawn restores HP and adds protection
+PASS Kill gauge decays after inactivity
+PASS Basketball collider radius 0.12m
+PASS Charged release frees ball and applies real backspin
+PASS Hoop accepts descending centre and rejects rising/edge
+PASS Document tab switch does not deliberately freeze host
+PASS Duplicate F command toggles tap exactly once and returns cached response
+PASS Forged actor and retired epoch reject without changing facilities
+PASS Flush has real cooldown and sound state
+PASS Newly placed ball is registered with shared sport rules
+PASS Restore clears removed ball metadata and never replays an old flush
+PASS Football in court cannot be picked up with E
+PASS Q passes football by real velocity without hand ownership
+PASS Football crossing scores and restarts at midfield
+PASS Facing nearby dribble can be contested and becomes a loose physical ball
+PASS Descending basket gives exactly two points once
+PASS Actual world muzzle ray applies HP damage and KO
+PASS Frontal shield blocks physical weapon ray
+PASS Shield does not protect an exposed back
+PASS Physical presentation ray maps to surface-centre UV
+PASS Physical laser stops at an intervening solid object
+PASS Basketball bounces without gaining energy
+PASS Football has lower restitution than basketball
+PASS 14m/s CCD ball stays on near side of 6cm wall
+PASS Both balls remain above the floor after 6 seconds
+PASS Host ray reaches the physical storage chest
+PASS F opens actual hinged chest
+PASS Held book becomes a unique persisted container reference
+PASS Open chest shows its stored original book model
+PASS Closing lid hides contents and retains them
+PASS Full chest cannot be moved or removed
+PASS Whole world restore retains the open chest and physical contents
+PASS Two contenders cannot extract the same stored object twice
+PASS Extracted item regains collision and is held with bounded physics
+PASS Drawer slides along its model anchor
+PASS Lamp interaction changes shared persisted power state
+PASS Powered-off lamp emits no local light
+PASS fridge gives one visible held ingredient {  }
+PASS cooker consumes ingredient once and starts cooking {  }
+PASS actual cooking timer reaches ready {  }
+PASS cooked physical food appears {  }
+PASS cooked food can be picked up {  }
+PASS counter plates food as shared object state {  }
+PASS plate can be carried {  }
+PASS sit while carrying food {  }
+PASS food consumed only once leaves dirty plate {  }
+PASS F stands before table interaction while holding a plate {  }
+PASS sink clears dirty physical plate {  }
+PASS bed enters lying state {  }
+PASS sleep is an individual explicit state {  }
+PASS wake finds safe standing location {  }
+PASS basket downward crossing scores once {  }
+PASS duplicate basket sample does not score {  }
+PASS upward crossing rejected {  }
+PASS unapproved toy gun pickup rejected {  }
+PASS approved game-zone pickup succeeds {  }
+PASS permission revoke releases already-held gun {  }
+PASS grant does not allow meeting-room firing {  }
+PASS Korean text becomes authoritative board object
+PASS Second user moves a board object by version
+PASS Stale concurrent delete is rejected
+PASS Old author undo does not erase other user's update
+PASS Mover can undo their own latest operation
+PASS Selected board object is deleted
+PASS Delete undo restores Korean text
+PASS Occupied chair is protected from movement/deletion
+PASS Checkpoint changes engine authority and epoch
+PASS Checkpoint retains exact player position and seat
+PASS Checkpoint retains private-room assignment and board
+PASS Previous epoch action is rejected without unseating or consuming sequence
+PASS Out-of-range client movement cannot replace authoritative input
+PASS Previous epoch movement cannot change new host state

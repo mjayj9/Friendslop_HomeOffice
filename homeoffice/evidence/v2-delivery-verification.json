@@ -1,0 +1,41 @@
+{
+  "sourceCommit": "0bd5e4daec18f5997eb6fbe5dee47ddf324547b9",
+  "completeProduct": false,
+  "checks": [
+    {
+      "evidence": "v2-bindings-ownership.json",
+      "type": "actual-two-browser-controls-ownership",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "evidence": "v2-storage-visual.json",
+      "type": "actual-browser-storage-drawer",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "evidence": "v2-living-props.json",
+      "type": "engine-storage-light-fixtures",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "evidence": "v2-authority.json",
+      "type": "engine-authority-fixtures",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "evidence": "pages-validation.json",
+      "type": "public-two-browser-rtc-synthetic-microphone",
+      "passed": 6,
+      "failed": 0
+    }
+  ],
+  "notes": [
+    "Passing subset checks are not 80 full acceptance tests.",
+    "No real-person microphone or separate-WAN-PC claim.",
+    "Eight Chromium processes on one PC: latest low graphics host 12–14 FPS, target not met."
+  ]
+}

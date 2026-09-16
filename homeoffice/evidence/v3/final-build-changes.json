@@ -1,0 +1,12 @@
+{
+  "soakBuildId": "007ca110-991d-4e1c-bb93-a09a7523896a",
+  "finalBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+  "changesAfterSoakBuild": [
+    "Holding a book gives storage/drawer target priority for F, preserving book storage.",
+    "Seated F always stands/wakes before table or held-book actions. Seated R opens meeting documents or held book.",
+    "Blender-authored laser-pointer GLB, matching collider, and visible grip/hold anchor.",
+    "Build manifest records production source-file SHA256 digests."
+  ],
+  "validation": "Engine regression and user/tools/session browser suites are run on the final build; 30-minute load/voice/life/arcade evidence retains earlier explicit build IDs.",
+  "scope": "No networking/replication/voice/physics profile changes after the 30-minute soak build."
+}

@@ -1,0 +1,4 @@
+export function validatePresentationView(v,assets=[]){
+ if(!v||!Number.isSafeInteger(v.selected)||v.selected<0||v.selected>=Math.max(1,assets.length)||!Number.isSafeInteger(v.page)||v.page<1||v.page>200||!Array.isArray(v.annotations)||v.annotations.length>128||Object.keys(v).some(k=>!['selected','page','annotations'].includes(k)))throw Error('발표 보기 상태가 올바르지 않습니다');
+ const ids=new Set();for(const s of v.annotations){if(!s||typeof s.id!=='string'||s.id.length>80||ids.has(s.id)||!assets.some(a=>a.id===s.asset)||!Number.isSafeInteger(s.page)||s.page<1||s.page>200||!['#c94c36','#315eac','#2b7258'].includes(s.color)||!Array.isArray(s.points)||s.points.length<2||s.points.length>128||s.points.some(p=>!Array.isArray(p)||p.length!==2||p.some(n=>!Number.isFinite(n)||n<0||n>1))||Object.keys(s).some(k=>!['id','asset','page','color','points'].includes(k)))throw Error('발표 주석이 올바르지 않습니다');ids.add(s.id)}return structuredClone(v);
+}

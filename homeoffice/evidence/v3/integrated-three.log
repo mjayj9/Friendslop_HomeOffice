@@ -1,0 +1,270 @@
+{
+  "completed": true,
+  "errors": [],
+  "views": [
+    {
+      "id": "ho3-user-658e9988-d353-4fa6-afb7-14a5f67f9bd1",
+      "players": [
+        {
+          "ack": 935,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-658e9988-d353-4fa6-afb7-14a5f67f9bd1",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            11
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.10818529129028,
+          "zone": "hall"
+        },
+        {
+          "ack": 618,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-2de0b8d9-80dd-4fdb-a440-2e86b5d29135",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            10.1499996185303
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "zone": "hall"
+        },
+        {
+          "ack": 236,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-5a83f586-e28d-4866-bcc5-e40792083127",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            9.30000019073486
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "zone": "hall"
+        }
+      ],
+      "fps": {
+        "drawCalls": 173,
+        "fps": 55,
+        "frameMs": 18.1818181818182,
+        "objects": 70,
+        "players": 3,
+        "staticMemory": 0
+      }
+    },
+    {
+      "id": "ho3-user-2de0b8d9-80dd-4fdb-a440-2e86b5d29135",
+      "players": [
+        {
+          "ack": 1150,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-658e9988-d353-4fa6-afb7-14a5f67f9bd1",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            11
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.10818529129028,
+          "zone": "hall"
+        },
+        {
+          "ack": 834,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-2de0b8d9-80dd-4fdb-a440-2e86b5d29135",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            10.1499996185303
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.10818529129028,
+          "zone": "hall"
+        },
+        {
+          "ack": 452,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-5a83f586-e28d-4866-bcc5-e40792083127",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            9.30000019073486
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "zone": "hall"
+        }
+      ],
+      "fps": {
+        "drawCalls": 46,
+        "fps": 44,
+        "frameMs": 22.7272727272727,
+        "objects": 70,
+        "players": 3,
+        "staticMemory": 0
+      }
+    },
+    {
+      "id": "ho3-user-5a83f586-e28d-4866-bcc5-e40792083127",
+      "players": [
+        {
+          "ack": 1365,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-658e9988-d353-4fa6-afb7-14a5f67f9bd1",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            11
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.10818529129028,
+          "zone": "hall"
+        },
+        {
+          "ack": 1050,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-2de0b8d9-80dd-4fdb-a440-2e86b5d29135",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            10.1499996185303
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.10818529129028,
+          "zone": "hall"
+        },
+        {
+          "ack": 666,
+          "crouch": false,
+          "displayName": "같은이름",
+          "gesture": "",
+          "hold": "",
+          "id": "ho3-user-5a83f586-e28d-4866-bcc5-e40792083127",
+          "p": [
+            0.0499999821186066,
+            -0.00500000035390258,
+            9.30000019073486
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.13318514823914,
+          "zone": "hall"
+        }
+      ],
+      "fps": {
+        "drawCalls": 109,
+        "fps": 60,
+        "frameMs": 16.6666666666667,
+        "objects": 70,
+        "players": 3,
+        "staticMemory": 0
+      }
+    }
+  ]
+}

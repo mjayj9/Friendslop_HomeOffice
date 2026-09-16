@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {atBroadcastConsole,broadcastAudience} from '../web/broadcast.mjs';
+test('Physical broadcast access requires a player near the microphone',()=>{assert.equal(atBroadcastConsole({p:[5,0,-9.7]}),true);assert.equal(atBroadcastConsole({p:[5,3.6,-9.7]}),false);assert.equal(atBroadcastConsole({p:[5,0,8]}),false);assert.equal(atBroadcastConsole(null),false);});
+test('HOME/OFFICE/PLAY announcements follow explicit recipient scopes',()=>{assert.ok(broadcastAudience('home',{zone:'sleep'}));assert.ok(broadcastAudience('office',{zone:'office-4'}));assert.ok(broadcastAudience('play',{zone:'football'}));assert.equal(broadcastAudience('home',{zone:'meeting'}),false);assert.equal(broadcastAudience('office',{zone:'living'}),false);assert.equal(broadcastAudience('play',{zone:'hall'}),false);assert.equal(broadcastAudience('unknown',{zone:'hall'}),false);});

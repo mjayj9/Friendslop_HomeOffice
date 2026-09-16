@@ -1,0 +1,28 @@
+{
+  "environment": "Two independent Chromium processes on one Windows PC and local PeerJS. Actual signaling claims and WebRTC data channels; no WAN claim.",
+  "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+  "completed": true,
+  "results": [
+    {
+      "name": "Simultaneous empty classroom claims produce one host and two real peers",
+      "passed": true
+    },
+    {
+      "name": "Orderly classroom handoff preserves fixed address and transfers authority",
+      "passed": true
+    },
+    {
+      "name": "Host departure stops stale session rather than claiming persistent state",
+      "passed": true
+    },
+    {
+      "name": "Same fixed classroom address reopens a fresh empty session",
+      "passed": true
+    },
+    {
+      "name": "Mismatched PCK hash is rejected before joining",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

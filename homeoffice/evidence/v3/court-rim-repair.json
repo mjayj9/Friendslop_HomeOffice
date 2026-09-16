@@ -1,0 +1,11 @@
+{
+  "sourceSHA256": "f100d3de467ad3d1448a9e401ee1abab7295bf4d402ebe2bfd177b412a4e57db",
+  "outputSHA256": "c424f8a6ee6557d76cfe27a0aa49ba90d6760ffdc27e770b2b7a700341c565ab",
+  "changedVertices": 2016,
+  "rimColliders": 48,
+  "replacedStaticNetTriangles": 480,
+  "centrelineRadius": 0.245,
+  "radialThickness": 0.04,
+  "innerRadius": 0.225,
+  "basketballRadius": 0.12
+}

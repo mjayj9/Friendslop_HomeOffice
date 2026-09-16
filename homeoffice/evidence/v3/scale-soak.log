@@ -1,0 +1,38 @@
+PASS 2 real browsers, same nicknames, unique private rooms, existing desk preserved
+PASS 4 real browsers, same nicknames, unique private rooms, existing desk preserved
+PASS 8 real browsers, same nicknames, unique private rooms, existing desk preserved
+ACTIVE 0 min; peers=8, loops=1, errors=0
+ACTIVE 1 min; peers=8, loops=12, errors=0
+ACTIVE 2 min; peers=8, loops=23, errors=0
+ACTIVE 3 min; peers=8, loops=34, errors=0
+ACTIVE 4 min; peers=8, loops=45, errors=0
+ACTIVE 5 min; peers=8, loops=56, errors=0
+ACTIVE 6 min; peers=8, loops=67, errors=0
+ACTIVE 7 min; peers=8, loops=78, errors=0
+ACTIVE 8 min; peers=8, loops=89, errors=0
+ACTIVE 9 min; peers=8, loops=100, errors=0
+ACTIVE 10 min; peers=8, loops=111, errors=0
+PASS Active session guest leave/rejoin 1 preserves eight room slots
+ACTIVE 11 min; peers=8, loops=117, errors=0
+ACTIVE 12 min; peers=8, loops=128, errors=0
+ACTIVE 13 min; peers=8, loops=138, errors=0
+ACTIVE 14 min; peers=8, loops=149, errors=0
+ACTIVE 15 min; peers=8, loops=160, errors=0
+ACTIVE 16 min; peers=8, loops=171, errors=0
+ACTIVE 17 min; peers=8, loops=182, errors=0
+ACTIVE 18 min; peers=8, loops=193, errors=0
+ACTIVE 19 min; peers=8, loops=204, errors=0
+ACTIVE 20 min; peers=8, loops=215, errors=0
+PASS Active session guest leave/rejoin 2 preserves eight room slots
+ACTIVE 21 min; peers=8, loops=221, errors=0
+ACTIVE 22 min; peers=8, loops=232, errors=0
+ACTIVE 23 min; peers=8, loops=243, errors=0
+ACTIVE 24 min; peers=8, loops=254, errors=0
+ACTIVE 25 min; peers=8, loops=265, errors=0
+ACTIVE 26 min; peers=8, loops=276, errors=0
+ACTIVE 27 min; peers=8, loops=287, errors=0
+ACTIVE 28 min; peers=8, loops=298, errors=0
+ACTIVE 29 min; peers=8, loops=309, errors=0
+PASS At least 30 minutes of active 8-browser movement, jumps and continuous host simulation
+PASS Actual downloaded save contains all eight expanded rooms
+PASS After all guests leave, actual file restore rebuilds all eight rooms

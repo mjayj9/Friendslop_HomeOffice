@@ -1,0 +1,20 @@
+param([string]$Godot = "$PSScriptRoot/../.runtime/godot/Godot_v4.6.1-stable_win64_console.exe")
+$ErrorActionPreference = 'Stop'
+$projectRoot = (Resolve-Path -LiteralPath "$PSScriptRoot/..").Path
+$version = & $Godot --version
+if ($version -notmatch '^4\.6\.1\.stable') { throw "Expected Godot 4.6.1 stable, received $version" }
+& python "$PSScriptRoot/write_build_info.py" prepare
+if ($LASTEXITCODE -ne 0) { throw 'Build identity failed' }
+New-Item -ItemType Directory -Path "$projectRoot/build" -Force | Out-Null
+$importOutput = & $Godot --headless --path $projectRoot --editor --import --quit 2>&1
+$importExit = $LASTEXITCODE
+$importOutput | Write-Output
+if ($importExit -ne 0 -or ($importOutput -match "SCRIPT ERROR|Parse Error|ERROR: Failed to load")) { throw 'Godot import failed' }
+& $Godot --headless --path $projectRoot --export-release Web "$projectRoot/build/index.html"
+if ($LASTEXITCODE -ne 0) { throw 'Godot export failed' }
+Get-ChildItem -LiteralPath "$projectRoot/web" -File | Where-Object { $_.Extension -in '.mjs','.css' -or $_.Name -eq 'peerjs.min.js' -or $_.Name -like '*.LEGAL.txt' } | Copy-Item -Destination "$projectRoot/build"
+Copy-Item -LiteralPath "$projectRoot/web/onnx" -Destination "$projectRoot/build" -Recurse -Force
+New-Item -ItemType File -Path "$projectRoot/build/.nojekyll" -Force | Out-Null
+& python "$PSScriptRoot/write_build_info.py" finalize
+if ($LASTEXITCODE -ne 0) { throw "Build manifest failed" }
+Get-ChildItem -LiteralPath "$projectRoot/build" -File | Select-Object Name,Length

@@ -1,0 +1,391 @@
+prepare 3917a711-5220-4ddb-8334-e6b3f0518c8d
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started 프로젝트 초기화 (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | 파일 구조 스캔 중...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | 전역 클래스 이름을 불러오는 중...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | GDExtensions 검증 중...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | 오토로드 스크립트를 만드는 중...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | 플러그인을 초기화 중...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | 파일 스캔 시작 중...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started 전역 클래스를 등록하는 중... (3 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started 편집기를 불러오는 중 (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | 편집기 레이아웃을 불러오는 중...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | 독을 불러오는 중...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started 프로젝트 초기화 (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | 파일 구조 스캔 중...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | 전역 클래스 이름을 불러오는 중...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | GDExtensions 검증 중...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | 오토로드 스크립트를 만드는 중...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | 플러그인을 초기화 중...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | 파일 스캔 시작 중...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started 패킹 중 (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/bath-flush-v3.wav-b64dcc5be9ad8170b1c8c43ef2bc873d.sample[39m[0m
+[   1% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/audio/bath-flush-v3.wav.import[39m[0m
+[   1% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/bath-water-v3.wav-10151635a44ede50448c767fe15c5f2e.sample[39m[0m
+[   1% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/audio/bath-water-v3.wav.import[39m[0m
+[   2% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/toy-pop.wav-2b00d06df45814ea30c1b5bade7080c0.sample[39m[0m
+[   2% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/audio/toy-pop.wav.import[39m[0m
+[   2% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/animation-manifest-v3.json[39m[0m
+[   3% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-animated-v3.glb-219362f540e048c8ce991624fea801e2.scn[39m[0m
+[   3% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-animated-v3.glb.import[39m[0m
+[   4% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-arms-v3.glb-483289ccaa96148fc22698425427ff91.scn[39m[0m
+[   4% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-arms-v3.glb.import[39m[0m
+[   4% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-arms.glb-87a061ec994846eb5adc4f5afa1f9f71.scn[39m[0m
+[   4% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-arms.glb.import[39m[0m
+[   5% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-lying-v3.glb-3e3f29234717a7619474bf253b95acba.scn[39m[0m
+[   5% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-lying-v3.glb.import[39m[0m
+[   6% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-lying.glb-811f0a6f50cdb954c6481ed479c6a158.scn[39m[0m
+[   6% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-lying.glb.import[39m[0m
+[   6% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-rigged-v3.glb-7267280daadfe31cc678b38d3b3e1a27.scn[39m[0m
+[   6% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-rigged-v3.glb.import[39m[0m
+[   7% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-rigged.glb-ca31287548ba465d87db8251407e6cb6.scn[39m[0m
+[   7% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-rigged.glb.import[39m[0m
+[   8% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-seated-v3.glb-41d2c7102a2ed7e00f909b57db8cc678.scn[39m[0m
+[   8% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-seated-v3.glb.import[39m[0m
+[   8% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/male-seated.glb-745304c77c6d5e7453a3fd1d684d7ef5.scn[39m[0m
+[   8% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/characters/male-seated.glb.import[39m[0m
+[   9% ] [90m[1msavepack[22m | 파일 저장 중: res://package.json[39m[0m
+[  10% ] [90m[1msavepack[22m | 파일 저장 중: res://package-lock.json[39m[0m
+[  10% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/avatar.gdc[39m[0m
+[  11% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/board.gdc[39m[0m
+[  11% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/world.gdc[39m[0m
+[  12% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/architecture.glb-5c9c0938f9e5b853baa90c1c13791c87.scn[39m[0m
+[  12% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/architecture.glb.import[39m[0m
+[  13% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/book.glb-7eab28fac2e8eb6adcd24bcbe0337c46.scn[39m[0m
+[  13% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/book.glb.import[39m[0m
+[  13% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/chair.glb-f2452394425d2b0e1fdca0f0b2630d0f.scn[39m[0m
+[  13% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/chair.glb.import[39m[0m
+[  14% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/crate.glb-da97771fc458a3d5a3efce254fa83e52.scn[39m[0m
+[  14% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/crate.glb.import[39m[0m
+[  15% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/door.glb-aec79045cd101dccc354da0e51965234.scn[39m[0m
+[  15% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/door.glb.import[39m[0m
+[  15% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/marker.glb-925d7d36d17f60690b0243de3be51f75.scn[39m[0m
+[  15% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/marker.glb.import[39m[0m
+[  16% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/sofa.glb-7e4c9a4675ca9234dc50374f2127105d.scn[39m[0m
+[  16% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/sofa.glb.import[39m[0m
+[  17% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/table.glb-7d1839eed1e418415b09f6666941725e.scn[39m[0m
+[  17% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/environment/table.glb.import[39m[0m
+[  17% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/NotoSansKR-game.ttf-dcd2cab1e6bc0dc9aa4f3b2236a22450.fontdata[39m[0m
+[  17% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/fonts/NotoSansKR-game.ttf.import[39m[0m
+[  18% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/carpet.png-014b7e077c1a19273e7ba4714b0c73b2.ctex[39m[0m
+[  18% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/carpet.png.import[39m[0m
+[  19% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/cloth.png-9802a95e0a073fe4d8675ab00cece48a.ctex[39m[0m
+[  19% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/cloth.png.import[39m[0m
+[  19% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/deck.png-a5f79bdb9acf4527e09629db1e29e3e7.ctex[39m[0m
+[  19% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/deck.png.import[39m[0m
+[  20% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/oak2.png-43630dde864c71d44477ed0fafcc039c.ctex[39m[0m
+[  20% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/oak2.png.import[39m[0m
+[  21% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/oak.png-e394b563476457f2006a29110e003d15.ctex[39m[0m
+[  21% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/oak.png.import[39m[0m
+[  21% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/plaster.png-5794b3e7b5be8ef035970bdcfc779623.ctex[39m[0m
+[  21% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/plaster.png.import[39m[0m
+[  22% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/stone.png-53ca7cffaeda9d68c69f8c5f2b32a3b6.ctex[39m[0m
+[  22% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/stone.png.import[39m[0m
+[  22% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/tile.png-4be95aedf597f69a1d2ccfcec16a9f68.ctex[39m[0m
+[  22% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/tile.png.import[39m[0m
+[  23% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/walnut.png-39e81476d6dc4f388b8c252cc066a72e.ctex[39m[0m
+[  23% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/textures/v2/walnut.png.import[39m[0m
+[  24% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/arcade.glb-b8d67ec29cfd32a835d004d34389f809.scn[39m[0m
+[  24% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/arcade.glb.import[39m[0m
+[  24% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/arcade_walnut.png-7442cba71056fc9069e87d54f7ceb680.ctex[39m[0m
+[  24% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/arcade_walnut.png.import[39m[0m
+[  25% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/basketball.glb-8bd9400449a5ba49045437b65c35e87c.scn[39m[0m
+[  25% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/basketball.glb.import[39m[0m
+[  26% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn[39m[0m
+[  26% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/bed.glb.import[39m[0m
+[  26% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/bed_cloth.png-c6a933c6d60d4b638f45df94058ca23c.ctex[39m[0m
+[  26% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/bed_cloth.png.import[39m[0m
+[  27% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/bed_oak.png-40d6f94af620ea09e2520676b0652e48.ctex[39m[0m
+[  27% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/bed_oak.png.import[39m[0m
+[  28% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/bed_walnut.png-b80fa893ffc667e47a4f715f73fd9d3c.ctex[39m[0m
+[  28% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/bed_walnut.png.import[39m[0m
+[  28% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/book.glb-6696d746811e9e61009d2a263d3a223f.scn[39m[0m
+[  28% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/book.glb.import[39m[0m
+[  29% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/campus-details-v3.glb-806c45a2dd97947b829e06868be37ec0.scn[39m[0m
+[  29% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/campus-details-v3.glb.import[39m[0m
+[  30% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn[39m[0m
+[  30% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/chair.glb.import[39m[0m
+[  30% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/cooker.glb-e65671a4a3254c6f3afc5a3b5abfe62c.scn[39m[0m
+[  30% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/cooker.glb.import[39m[0m
+[  31% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/cooker_cloth.png-53d8a90f50230c68dcbd4db1fea80d39.ctex[39m[0m
+[  31% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/cooker_cloth.png.import[39m[0m
+[  31% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/cooker_stone.png-3b868578cad52cab1111934b64b1f308.ctex[39m[0m
+[  31% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/cooker_stone.png.import[39m[0m
+[  32% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/counter.glb-f0c4510f0b84fad845800028cbf404ef.scn[39m[0m
+[  32% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/counter.glb.import[39m[0m
+[  33% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/counter_cloth.png-b11794ec7b8f608686297593c53617bc.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/counter_cloth.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/counter_stone.png-1130078e14824afc9494f28cfb2a41c4.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/counter_stone.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/crate.glb-a7f6ad7fceffd8b322c0b4f2ae97aa00.scn[39m[0m
+[  33% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/crate.glb.import[39m[0m
+[  34% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/drawer.glb-571672af4946688905f93234ab90d81d.scn[39m[0m
+[  34% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/drawer.glb.import[39m[0m
+[  34% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/drawer_oak.png-3db7994051615dc89ecf232dabc7d562.ctex[39m[0m
+[  34% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/drawer_oak.png.import[39m[0m
+[  35% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/drawer_slide.glb-6727e989fdafb051b8dbe404acf23215.scn[39m[0m
+[  35% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/drawer_slide.glb.import[39m[0m
+[  36% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/drawer_slide_oak.png-6ffcf4af4e963d0afecae8403e158a28.ctex[39m[0m
+[  36% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/drawer_slide_oak.png.import[39m[0m
+[  36% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/drawer_slide_walnut.png-feee32675f3abec8f6f796565cf87f45.ctex[39m[0m
+[  36% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/drawer_slide_walnut.png.import[39m[0m
+[  37% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/drawer_walnut.png-a26ac15347714fb181782f4ff87e3775.ctex[39m[0m
+[  37% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/drawer_walnut.png.import[39m[0m
+[  38% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/floor_lamp.glb-0a4ddc7f155d0718491f91ef4147632c.scn[39m[0m
+[  38% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/floor_lamp.glb.import[39m[0m
+[  38% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/floor_lamp_cloth.png-41f0649d43a406811477330ccd7ca663.ctex[39m[0m
+[  38% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/floor_lamp_cloth.png.import[39m[0m
+[  39% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/floor_lamp_walnut.png-34adbf4726c923f234ef3ad7aeef711f.ctex[39m[0m
+[  39% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/floor_lamp_walnut.png.import[39m[0m
+[  40% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/football.glb-80d3aa889af44e07ddd61d6841d1b3a5.scn[39m[0m
+[  40% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/football.glb.import[39m[0m
+[  40% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/fridge.glb-17dbeacbe20d5281fb4c9ed7a2210d99.scn[39m[0m
+[  40% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/fridge.glb.import[39m[0m
+[  41% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/fridge_cloth.png-3b58b937a19cc27ccd3f45c6825236cc.ctex[39m[0m
+[  41% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/fridge_cloth.png.import[39m[0m
+[  41% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/gallery.glb-fc26336697ff1de58787ec8ba5c88050.scn[39m[0m
+[  41% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/gallery.glb.import[39m[0m
+[  42% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/gallery_oak.png-77105651ece67dc0bd1736822e466805.ctex[39m[0m
+[  42% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/gallery_oak.png.import[39m[0m
+[  43% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/gallery_plaster.png-6d05475c95dbeecd17c388adb4266b6c.ctex[39m[0m
+[  43% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/gallery_plaster.png.import[39m[0m
+[  43% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/gallery_walnut.png-4c739bba2e2e74b1443bcc3f2dc59091.ctex[39m[0m
+[  43% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/gallery_walnut.png.import[39m[0m
+[  44% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds-collisions-v3.json[39m[0m
+[  45% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/grounds-v3.glb-0d77eae8172e3de3dd1750dbbdd8de5d.scn[39m[0m
+[  45% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds-v3.glb.import[39m[0m
+[  45% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/grounds-v3_oak.png-40cafd50cde571b88bbcebf91f41e85d.ctex[39m[0m
+[  45% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds-v3_oak.png.import[39m[0m
+[  46% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/grounds-v3_stone.png-875c3985fa3cbd118aeeb4bb486b5341.ctex[39m[0m
+[  46% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds-v3_stone.png.import[39m[0m
+[  47% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/grounds.glb-b85770d462dedb8f42997bf6f1237801.scn[39m[0m
+[  47% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds.glb.import[39m[0m
+[  47% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/grounds_oak.png-feda05c8973a7ef45914e976e6afab0f.ctex[39m[0m
+[  47% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds_oak.png.import[39m[0m
+[  48% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/grounds_stone.png-2dc3f293d8f6be3644460fad2a144682.ctex[39m[0m
+[  48% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/grounds_stone.png.import[39m[0m
+[  49% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/gun.glb-c306fca19e5b2ad957fcd003323375e0.scn[39m[0m
+[  49% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/gun.glb.import[39m[0m
+[  49% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-collisions-v3.json[39m[0m
+[  50% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3.glb-78c68906bf0316fd8965b243d145def3.scn[39m[0m
+[  50% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3.glb.import[39m[0m
+[  50% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_carpet.png-64dcd2cd47a811b9d35c7c3f629c7aa3.ctex[39m[0m
+[  50% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_carpet.png.import[39m[0m
+[  51% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_cloth.png-75952b01bd4854e65abbfa641a480a63.ctex[39m[0m
+[  51% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_cloth.png.import[39m[0m
+[  52% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_deck.png-2f4753fd3b4c0448be693c66ba19c8e0.ctex[39m[0m
+[  52% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_deck.png.import[39m[0m
+[  52% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_oak2.png-395e7362dc62904d94265cc29574e159.ctex[39m[0m
+[  52% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_oak2.png.import[39m[0m
+[  53% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_oak.png-aad6c63bfa180fc6941bbbb43285eb24.ctex[39m[0m
+[  53% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_oak.png.import[39m[0m
+[  54% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_plaster.png-366b6d00d3eafa01bf93f74fc97ecd6c.ctex[39m[0m
+[  54% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_plaster.png.import[39m[0m
+[  54% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_stone.png-04fdb37eb29b330ad18015dacc458aef.ctex[39m[0m
+[  54% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_stone.png.import[39m[0m
+[  55% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_tile.png-297419446803301057ade8987debfad6.ctex[39m[0m
+[  55% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_tile.png.import[39m[0m
+[  56% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house-v3_walnut.png-0fa16c45caa8dc4aada7a309b3b9f21c.ctex[39m[0m
+[  56% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house-v3_walnut.png.import[39m[0m
+[  56% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house.glb-4958f2874d309ccb698b26525156cceb.scn[39m[0m
+[  56% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house.glb.import[39m[0m
+[  57% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_carpet.png-0b94cb77b1e900b9cc2b05cc741d95d5.ctex[39m[0m
+[  57% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_carpet.png.import[39m[0m
+[  58% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_cloth.png-19eb1d31cbffe44a7f9a5b2d79067ddf.ctex[39m[0m
+[  58% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_cloth.png.import[39m[0m
+[  58% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_deck.png-a0fea3539394294696b61585ace4f3c4.ctex[39m[0m
+[  58% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_deck.png.import[39m[0m
+[  59% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_oak2.png-8d35141e1879595cb484e86997ef9d4c.ctex[39m[0m
+[  59% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_oak2.png.import[39m[0m
+[  60% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_oak.png-d304585e8bfbc940af015d818472ee49.ctex[39m[0m
+[  60% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_oak.png.import[39m[0m
+[  60% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_plaster.png-92162932a70b9f58e665ed772ea9453c.ctex[39m[0m
+[  60% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_plaster.png.import[39m[0m
+[  61% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_stone.png-ebf7d65daa80fab87612489dd36605d2.ctex[39m[0m
+[  61% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_stone.png.import[39m[0m
+[  61% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_tile.png-9ab26ccad1aa98c6ffde931417385372.ctex[39m[0m
+[  61% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_tile.png.import[39m[0m
+[  62% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/house_walnut.png-b92dc89c492c4f65bd9b0ee7fb341961.ctex[39m[0m
+[  62% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/house_walnut.png.import[39m[0m
+[  63% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/ingredient.glb-f0c08befb2074f6fcffbd8e9365be6aa.scn[39m[0m
+[  63% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/ingredient.glb.import[39m[0m
+[  63% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/layout.json[39m[0m
+[  64% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/low_table.glb-0d0ca544862d8c10635d2d5f26f91641.scn[39m[0m
+[  64% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/low_table.glb.import[39m[0m
+[  65% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/low_table_oak.png-260a42b62ea6dad72964e77c801a709b.ctex[39m[0m
+[  65% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/low_table_oak.png.import[39m[0m
+[  65% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/low_table_walnut.png-2b8cdf6e48389a5beae6424242b20d57.ctex[39m[0m
+[  65% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/low_table_walnut.png.import[39m[0m
+[  66% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/manifest.json[39m[0m
+[  66% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/marker.glb-112cdbf5e6b1ad05c36139fcc5c8beaf.scn[39m[0m
+[  66% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/marker.glb.import[39m[0m
+[  66% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/meal.glb-5b87e7f813a0d747ffca5f8856a3de72.scn[39m[0m
+[  66% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/meal.glb.import[39m[0m
+[  67% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_left.glb-d1a6eb9f9c67abd59a99c704559ffe54.scn[39m[0m
+[  67% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_left.glb.import[39m[0m
+[  68% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_left_cloth.png-883a7a12045bd27ed102cb312b4f1041.ctex[39m[0m
+[  68% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_left_cloth.png.import[39m[0m
+[  68% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_left_oak.png-f35913c25bb6df056800537f867f9542.ctex[39m[0m
+[  68% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_left_oak.png.import[39m[0m
+[  69% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_left_plaster.png-b166f1b0bbaee1a7e28186a8252b17e0.ctex[39m[0m
+[  69% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_left_plaster.png.import[39m[0m
+[  69% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_left_stone.png-6e78dd16d8f1a656fb42f96d5714eb6f.ctex[39m[0m
+[  69% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_left_stone.png.import[39m[0m
+[  70% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_left_walnut.png-ae18c47677fb79ef12ccf1a5487d2a76.ctex[39m[0m
+[  70% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_left_walnut.png.import[39m[0m
+[  71% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_right.glb-3b8ef75ff78780cab3849115de8baab8.scn[39m[0m
+[  71% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_right.glb.import[39m[0m
+[  71% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_right_cloth.png-67d112de21461b1126df78b9e43705f7.ctex[39m[0m
+[  71% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_right_cloth.png.import[39m[0m
+[  72% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_right_oak.png-b9d814c45ea8e1854c3141d2ed88d39b.ctex[39m[0m
+[  72% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_right_oak.png.import[39m[0m
+[  73% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_right_plaster.png-ada116e796ea7a7802bc73fc2efb40be.ctex[39m[0m
+[  73% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_right_plaster.png.import[39m[0m
+[  73% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_right_stone.png-04b6d599033fdc916503fcbb004b5d3e.ctex[39m[0m
+[  73% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_right_stone.png.import[39m[0m
+[  74% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/office_right_walnut.png-1d8b355698c5c83ca14506b13720a255.ctex[39m[0m
+[  74% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/office_right_walnut.png.import[39m[0m
+[  75% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/pan.glb-3b44e2b78e0c8a104fec6f1b61eb87a0.scn[39m[0m
+[  75% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/pan.glb.import[39m[0m
+[  75% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/pan_walnut.png-2825c6a16d1c6bde5e25a1a408489265.ctex[39m[0m
+[  75% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/pan_walnut.png.import[39m[0m
+[  76% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/plate.glb-fc56e10a56d7115621aceb9c6f95e3c1.scn[39m[0m
+[  76% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/plate.glb.import[39m[0m
+[  77% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/plate_cloth.png-e19f339be761a7244dd8bc8c5b8fecf3.ctex[39m[0m
+[  77% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/plate_cloth.png.import[39m[0m
+[  77% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/shield.glb-cbb034eb38460be76a95d8ce8d3e2fcf.scn[39m[0m
+[  77% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/shield.glb.import[39m[0m
+[  78% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/sink.glb-028440a72776a81644818e2a0bc26aeb.scn[39m[0m
+[  78% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/sink.glb.import[39m[0m
+[  79% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/sink_cloth.png-bd2c66693ba50e042fec67a2a5650d0e.ctex[39m[0m
+[  79% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/sink_cloth.png.import[39m[0m
+[  79% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/sink_stone.png-ea00a06a39d17fc524ce350409b50e8e.ctex[39m[0m
+[  79% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/sink_stone.png.import[39m[0m
+[  80% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/sofa.glb-da572ae0067c51605f85996e9ba8dc84.scn[39m[0m
+[  80% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/sofa.glb.import[39m[0m
+[  80% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/storage.glb-4f1a228fb9da6c58679aea77c8c80868.scn[39m[0m
+[  80% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/storage.glb.import[39m[0m
+[  81% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/storage_lid.glb-09efa8ba6a11ebf9727b491796ec01af.scn[39m[0m
+[  81% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/storage_lid.glb.import[39m[0m
+[  82% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/storage_lid_oak.png-b0a86c079459fc84af90e54c79972471.ctex[39m[0m
+[  82% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/storage_lid_oak.png.import[39m[0m
+[  82% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/storage_oak.png-852ead233cb646ea8dc12e20b9231422.ctex[39m[0m
+[  82% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/storage_oak.png.import[39m[0m
+[  83% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/storage_walnut.png-de1652e2bba13987fe1573050bb6d608.ctex[39m[0m
+[  83% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/storage_walnut.png.import[39m[0m
+[  84% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn[39m[0m
+[  84% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/table.glb.import[39m[0m
+[  84% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn[39m[0m
+[  84% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/wide_door.glb.import[39m[0m
+[  85% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/imported/wide_door_oak.png-2d6987d825b71a9ebb7c26ce428d96e5.ctex[39m[0m
+[  85% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/v2/wide_door_oak.png.import[39m[0m
+[  86% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/asset-manifest.json[39m[0m
+[  86% ] [90m[1msavepack[22m | 파일 저장 중: res://assets/build-version.json[39m[0m
+[  87% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn[39m[0m
+[  88% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/exported/133200997/export-e9fa802a987abfd667e84e30fae0c568-physics_lab.scn[39m[0m
+[  88% ] [90m[1msavepack[22m | 파일 저장 중: res://schemas/manifest-v2.schema.json[39m[0m
+[  89% ] [90m[1msavepack[22m | 파일 저장 중: res://schemas/world-v2.schema.json[39m[0m
+[  89% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/combat/combat_state.gdc[39m[0m
+[  90% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/combat/toy_effects.gdc[39m[0m
+[  91% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/core/command_ledger.gdc[39m[0m
+[  91% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/interaction/prop_capabilities.gdc[39m[0m
+[  92% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/physics/surface_profile.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/physics/verification_lab.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/player/contact_ik.gdc[39m[0m
+[  94% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/sports/ball_profile.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/sports/match_rules.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v2/avatar.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v2/board.gdc[39m[0m
+[  97% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v2/world.gdc[39m[0m
+[  97% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v3/world.gdc[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/world/campus_details.gdc[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/avatar.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/board.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/world.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scenes/main.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scenes/physics_lab.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/combat/combat_state.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/combat/toy_effects.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/core/command_ledger.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/interaction/prop_capabilities.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/physics/surface_profile.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/physics/verification_lab.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/player/contact_ik.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/sports/ball_profile.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/sports/match_rules.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v2/avatar.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v2/board.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v2/world.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/v3/world.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://scripts/world/campus_details.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | 파일 저장 중: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+finalize 3917a711-5220-4ddb-8334-e6b3f0518c8d
+
+Name                              Length
+----                              ------
+.gdignore                              1
+.nojekyll                              0
+activities.mjs                      5835
+arcade-rules.mjs                    2929
+arcade.mjs                          5235
+board-tools.mjs                     3880
+bridge.mjs                         46838
+broadcast.mjs                       6208
+build-guard.mjs                     1043
+build-id.mjs                          63
+build-info.json                     5920
+caption-policy.mjs                  1162
+captions.mjs                        6598
+collaboration-source.mjs           12703
+collaboration.mjs                 303096
+collaboration.mjs.LEGAL.txt          497
+document-registry.mjs               7145
+gameplay-hud.mjs                    1126
+handoff.mjs                         3645
+homeoffice.css                      6886
+index.audio.position.worklet.js     2973
+index.audio.worklet.js              7298
+index.html                          5817
+index.js                          315759
+index.pck                        9665904
+index.png                          21443
+index.png.import                     925
+index.wasm                      37685705
+invitations.mjs                     1358
+key-bindings.mjs                    4247
+local-stt.mjs                       3460
+pcm-worklet.mjs                      442
+pdf.mjs                           860384
+pdf.worker.mjs                   2228489
+peerjs.min.js                      86948
+presentation-view.mjs                985
+presentation.mjs                   13456
+quill.css                          24606
+runner-renderer.mjs                 1545
+save-v2.mjs                        10078
+save.mjs                            5754
+session-directory.mjs               1920
+social.mjs                          2915
+state-codec.mjs                     2354
+stt-worker-source.mjs               1171
+stt-worker.mjs                   1210151
+stt-worker.mjs.LEGAL.txt             244
+

@@ -1,0 +1,96 @@
+{
+  "sourceSHA256": "f5416b95824d982968a5ba4b357c17acfa0cbd0c75453de9f9d3873ef000dcc8",
+  "outputSHA256": "257a76eb0c4a64281a2391dd04c3b42c2f1e64b9bb928bcd5433388b56b115f2",
+  "removedTriangles": 448,
+  "removedColliders": 2,
+  "primitives": [
+    {
+      "mesh": "V2_house_bark.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_blue.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_brass.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_carpet.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_cloth.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_concrete.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_court_blue.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_court_green.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_deck.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_glass.006",
+      "removedTriangles": 24
+    },
+    {
+      "mesh": "V2_house_leaf.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_metal.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_oak2.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_oak.006",
+      "removedTriangles": 24
+    },
+    {
+      "mesh": "V2_house_orange.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_plaster.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_rubber.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_sage.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_stone.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_tile.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_walnut.006",
+      "removedTriangles": 0
+    },
+    {
+      "mesh": "V2_house_white.006",
+      "removedTriangles": 400
+    }
+  ]
+}

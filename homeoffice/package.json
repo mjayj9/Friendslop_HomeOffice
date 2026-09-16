@@ -1,0 +1,30 @@
+{
+  "name": "moyeo-house-godot",
+  "version": "0.3.0-simulation",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node tools/serve.mjs --local-signaling",
+    "preview": "node tools/serve.mjs",
+    "test": "node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs tests/v3-web.test.mjs tests/v3-broadcast.test.mjs tests/v3-caption-policy.test.mjs tests/v3-state-codec.test.mjs",
+    "test:browser": "cd .. && node homeoffice/tests/v3-user-flow.mjs",
+    "test:connection": "cd .. && node homeoffice/tests/v3-session-flow.mjs",
+    "test:soak": "cd .. && node homeoffice/tests/v3-scale-soak.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0",
+    "esbuild": "0.25.12",
+    "pdfjs-dist": "6.3.289",
+    "peerjs": "1.5.5",
+    "quill": "2.0.3",
+    "y-quill": "1.0.0",
+    "yjs": "13.6.27"
+  },
+  "devDependencies": {
+    "peer": "1.0.2",
+    "playwright": "1.63.0"
+  }
+}

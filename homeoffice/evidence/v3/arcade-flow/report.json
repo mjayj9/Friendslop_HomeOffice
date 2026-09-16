@@ -1,0 +1,16 @@
+{
+  "environment": "Two independent Chromium WebGL processes, local signaling and actual WebRTC. Keyboard movement, physical object pickup, browser file input and UI. Read-only diagnostics; no teleport or forged packets.",
+  "buildId": "9a27534c-6f90-4dc8-bf9c-3481c37a6cee",
+  "completed": true,
+  "results": [
+    {
+      "name": "Physical arcade opens runner with an actual remote spectator",
+      "passed": true
+    },
+    {
+      "name": "Runner jump, duck, collision, result, best score, restart and Escape work",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

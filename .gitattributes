@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.glb binary
+*.blend binary
+*.pck binary
+*.wasm binary
+*.png binary
+*.jpg binary
+*.ttf binary
+*.homeworld binary
+*.webm binary
+*.wav binary
+*.pdf binary
+docs/licenses/** -whitespace
+homeoffice/docs/licenses/** -whitespace
+homeoffice/assets/fonts/*.txt -whitespace
+homeoffice/docs/requirements-v2/** -whitespace

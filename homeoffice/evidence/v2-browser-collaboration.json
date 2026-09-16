@@ -1,0 +1,34 @@
+{
+  "environment": "Two independent Chromium processes, actual WebRTC local signaling, CDP Korean composition (automated; not human typing)",
+  "results": [
+    {
+      "name": "Actual two-browser WebRTC and two private rooms",
+      "passed": true
+    },
+    {
+      "name": "Walk from entrance to actual meeting desk and open report",
+      "passed": true
+    },
+    {
+      "name": "Concurrent Korean browser composition commits converge",
+      "passed": true,
+      "detail": "공동 보고서\n오늘 회의\n"
+    },
+    {
+      "name": "Focused Korean report prevents game movement",
+      "passed": true
+    },
+    {
+      "name": "Shared brainstorming note operation",
+      "passed": true
+    },
+    {
+      "name": "Shared mind-map node",
+      "passed": true
+    },
+    {
+      "name": "Actual download of whole V2 world + Yjs report",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+DRIBBLE { "environment": "Actual Godot/Jolt fixed physics ticks; controlled player/ball initial fixture; no render animation driving ball Y.", "passed": true, "bounces": 5, "minY": 0.11760003119707, "maxY": 1.32565021514893, "maxSpeed": 6.98156213760376 }

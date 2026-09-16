@@ -1,0 +1,136 @@
+{
+  "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+  "generatedAt": "2026-09-15T16:35:31.370314+00:00",
+  "groups": [
+    {
+      "title": "의자·책·회의·한글·파일 복원",
+      "file": "user-flow/report.json",
+      "passed": 8,
+      "failed": 0,
+      "completed": true,
+      "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "교실 동시 입장·인계·재개",
+      "file": "session-flow/report.json",
+      "passed": 5,
+      "failed": 0,
+      "completed": true,
+      "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "계단·자기 수면·생활",
+      "file": "life-flow/report.json",
+      "passed": 5,
+      "failed": 0,
+      "completed": true,
+      "buildId": "1667820a-0d15-45fa-9b8f-f506fc5f557b",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "회의 질문·할 일·물리 레이저",
+      "file": "tools-flow/report.json",
+      "passed": 4,
+      "failed": 0,
+      "completed": true,
+      "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "공룡 게임기·원격 관전",
+      "file": "arcade-flow/report.json",
+      "passed": 2,
+      "failed": 0,
+      "completed": true,
+      "buildId": "9a27534c-6f90-4dc8-bf9c-3481c37a6cee",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "가상 음성·방송·욕실·복원",
+      "file": "voice-facilities/report.json",
+      "passed": 6,
+      "failed": 0,
+      "completed": true,
+      "buildId": "007ca110-991d-4e1c-bb93-a09a7523896a",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "2/4/8 접속·30분 활동",
+      "file": "scale-soak/report.json",
+      "passed": 8,
+      "failed": 0,
+      "completed": true,
+      "buildId": "007ca110-991d-4e1c-bb93-a09a7523896a",
+      "sourceBuildId": null,
+      "failure": null
+    },
+    {
+      "title": "기본 게임 규칙·캐릭터",
+      "file": "gameplay-tests.json",
+      "passed": 14,
+      "failed": 0,
+      "completed": true,
+      "buildId": null,
+      "sourceBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "failure": null
+    },
+    {
+      "title": "권위·득점·피해·광선",
+      "file": "authority-physics.json",
+      "passed": 15,
+      "failed": 0,
+      "completed": true,
+      "buildId": null,
+      "sourceBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "failure": null
+    },
+    {
+      "title": "물리 낙하·CCD",
+      "file": "physics-lab.json",
+      "passed": 4,
+      "failed": 0,
+      "completed": true,
+      "buildId": null,
+      "sourceBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "failure": null
+    },
+    {
+      "title": "수납·서랍·램프·파일 복원",
+      "file": "living-props.json",
+      "passed": 12,
+      "failed": 0,
+      "completed": true,
+      "buildId": null,
+      "sourceBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "failure": null
+    },
+    {
+      "title": "요리·식사·설거지·수면·권한",
+      "file": "legacy-interactions.json",
+      "passed": 21,
+      "failed": 0,
+      "completed": true,
+      "buildId": null,
+      "sourceBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "failure": null
+    },
+    {
+      "title": "보드·점유·개인실·명령 검증",
+      "file": "legacy-authority.json",
+      "passed": 14,
+      "failed": 0,
+      "completed": true,
+      "buildId": null,
+      "sourceBuildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+      "failure": null
+    }
+  ]
+}

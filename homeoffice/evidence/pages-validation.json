@@ -1,0 +1,64 @@
+{
+  "url": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "time": "2026-09-14T16:35:54.494Z",
+  "environment": "Actual GitHub Pages HTTPS URL, public PeerServer/STUN, two independent Chromium processes on one Windows PC. Same-device P2P; not separate WAN PCs, not human microphone quality.",
+  "results": [
+    {
+      "name": "Public GitHub Pages Godot WASM/PCK initializes in HTTPS secure context",
+      "passed": true
+    },
+    {
+      "name": "Actual public PeerServer signaling joins two independent Chromium browsers",
+      "passed": true
+    },
+    {
+      "name": "Public build shares authoritative character movement",
+      "passed": true
+    },
+    {
+      "name": "Public build relays Korean text chat to the nearby participant",
+      "passed": true
+    },
+    {
+      "name": "HTTPS public build carries actual RTC audio packets from synthetic microphone",
+      "passed": true
+    },
+    {
+      "name": "Public WASM and PCK hashes match the reviewed build",
+      "passed": true
+    },
+    {
+      "name": "observed hardware and FPS",
+      "informational": true,
+      "hardware": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "hardwareConcurrency": 24
+      },
+      "performance": {
+        "drawCalls": 244,
+        "fps": 35,
+        "frameMs": 28.5714285714286,
+        "objects": 66,
+        "players": 2,
+        "staticMemory": 0
+      }
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://mjayj9.github.io/Friendslop_HomeOffice/index.pck",
+      "mime": "application/octet-stream",
+      "bytes": 7908968,
+      "sha256": "b85acfc2229bb8a570d790b9aee4c852fbe2159d887179df8887c0ae71acd74b"
+    },
+    {
+      "url": "https://mjayj9.github.io/Friendslop_HomeOffice/index.wasm",
+      "mime": "application/wasm",
+      "bytes": 37685705,
+      "sha256": "99962b29677e42f3ba0258bd90fdc52ad90295954c4473e816ad02cfe5ff1d4f"
+    }
+  ],
+  "errors": [],
+  "testedSourceCommit": "0bd5e4daec18f5997eb6fbe5dee47ddf324547b9"
+}

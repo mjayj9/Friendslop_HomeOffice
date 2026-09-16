@@ -1,0 +1,17 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Movable chair has floor collision and remains stable
+PASS Imported real male mesh has opaque visible materials
+PASS 62 authored Blender animation clips load
+PASS Default tag is immediately Practice
+PASS Practice accepts >12 shots without reloading
+PASS Revoked permission rejects fire
+PASS Four accepted hits cause KO and one kill
+PASS KO cannot be scored twice
+PASS Timed respawn restores HP and adds protection
+PASS Kill gauge decays after inactivity
+PASS Basketball collider radius 0.12m
+PASS Charged release frees ball and applies real backspin
+PASS Hoop accepts descending centre and rejects rising/edge
+PASS Document tab switch does not deliberately freeze host

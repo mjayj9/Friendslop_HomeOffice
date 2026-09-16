@@ -1,0 +1,187 @@
+{
+  "environment": "Godot 4.6.1 Jolt headless actual CharacterBody motor, fixed ticks, input commands; not browser or human test",
+  "results": [
+    {
+      "detail": {
+
+      },
+      "name": "Godot V2 actual initialization",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rooms": 8
+      },
+      "name": "2/4/8 append-only office assignment",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -9.8251371383667,
+          -0.00468753278255463,
+          10.800217628479
+        ],
+        "zone": "living"
+      },
+      "name": "Continuous physical route: living",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -10.0000791549683,
+          -0.00468753278255463,
+          15.8246126174927
+        ],
+        "zone": "terrace"
+      },
+      "name": "Continuous physical route: terrace",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -7.00062084197998,
+          -0.0048128068447113,
+          28.8462867736816
+        ],
+        "zone": "basketball"
+      },
+      "name": "Continuous physical route: basketball",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          25.0009536743164,
+          -0.00498028658330441,
+          24.862886428833
+        ],
+        "zone": "football"
+      },
+      "name": "Continuous physical route: football",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -6.83356380462646,
+          -0.00401417398825288,
+          -6.50007581710815
+        ],
+        "zone": "kitchen"
+      },
+      "name": "Continuous physical route: kitchen",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -6.80058860778809,
+          -0.00401417398825288,
+          -0.142156332731247
+        ],
+        "zone": "dining"
+      },
+      "name": "Continuous physical route: dining",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          3.00230503082275,
+          -0.00401417398825288,
+          9.85420513153076
+        ],
+        "zone": "meeting"
+      },
+      "name": "Continuous physical route: meeting",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          13.8923625946045,
+          -0.00471735000610352,
+          -0.104940220713615
+        ],
+        "zone": "free"
+      },
+      "name": "Continuous physical route: free",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          23.852933883667,
+          -0.00471735000610352,
+          -0.0000015770166328366
+        ],
+        "zone": "game"
+      },
+      "name": "Continuous physical route: game",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -2.34771728515625,
+          3.59524416923523,
+          10.8329372406006
+        ],
+        "zone": "upper_hall"
+      },
+      "name": "Continuous physical route: stairs",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          0.00000358844249603862,
+          3.59586906433105,
+          -29.829948425293
+        ],
+        "zone": "personal-gallery"
+      },
+      "name": "Continuous physical route: upper gallery",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          2.54446482658386,
+          3.59586906433105,
+          -30.9033393859863
+        ],
+        "zone": "office-8"
+      },
+      "name": "Continuous physical route: office 8",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -8.84787940979004,
+          3.59516501426697,
+          -7.99994993209839
+        ],
+        "zone": "sleep"
+      },
+      "name": "Continuous physical route: sleep",
+      "passed": true
+    },
+    {
+      "detail": {
+        "position": [
+          -9.83064079284668,
+          3.59610152244568,
+          0.000062546314438805
+        ],
+        "zone": "reading"
+      },
+      "name": "Continuous physical route: reading",
+      "passed": true
+    }
+  ]
+}

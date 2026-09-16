@@ -1,0 +1,802 @@
+extends Node3D
+var key_bindings={"forward":KEY_W,"back":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"run":KEY_SHIFT,"crouch":KEY_C,"interact":KEY_E,"drop":KEY_Q,"read":KEY_F,"secondary":KEY_R,"rest":KEY_Z,"build":KEY_B,"move":KEY_G,"remove":KEY_DELETE,"look_left":KEY_LEFT,"look_right":KEY_RIGHT,"look_up":KEY_UP,"look_down":KEY_DOWN}
+var blocked_keys={}
+var last_jump_down=false
+var sunlight:DirectionalLight3D
+var slide_laser:MeshInstance3D
+var slide_laser_until=0
+
+const Avatar=preload("res://scripts/v2/avatar.gd")
+const Board=preload("res://scripts/v2/board.gd")
+var layout={}
+var v2_manifest={}
+var doors={}
+var door_states={}
+var room_slots=[]
+var member_slots={}
+var member_identity={}
+var room_claims={}
+var room_fill:StaticBody3D
+var room_lights=[]
+var module_nodes=[]
+var room_end:StaticBody3D
+var entry_grants={}
+var weapon_grants={}
+var weapon_zones=["game"]
+var rounds={"basketball":{"phase":"practice","mode":"practice","seconds":0.0},"football":{"phase":"practice","mode":"practice","seconds":0.0},"tag":{"phase":"ready","mode":"targets","seconds":0.0}}
+var score_labels={}
+var tag_score={}
+var game_clock=0.0
+var ball_previous={}
+var basketball_score=[0,0]
+var football_score=[0,0]
+var game_results={}
+var build_move_id=""
+var build_kind=""
+var build_angle=0.0
+var build_point=Vector3.ZERO
+var build_valid=false
+var build_preview:Node3D
+var bridge
+var host=true
+var local_id="local"
+var epoch="local"
+var players={}
+var objects={}
+var definitions={}
+var manifest={}
+var inputs={}
+var actions={}
+var board_history={}
+var strokes=[]
+var door_open=false
+var door:Node3D
+var board_view:SubViewport
+var board_draw:Node2D
+var board_body:StaticBody3D
+var slide_mesh:MeshInstance3D
+var seq=0
+var revision=0
+var tick=0
+var snapshot_timer=0.0
+var state_timer=0.0
+var yaw=0.0
+var pitch=0.0
+var hud:Label
+var hint:Label
+var ready_to_play=false
+var last_snapshot_ms=0
+var last_board_point=[]
+var board_cooldown=0.0
+var world_id=""
+var pending_restore={}
+var transfer_frozen=false
+var frozen=false
+var last_remote_tick=-1
+
+func _ready():
+	manifest=JSON.parse_string(FileAccess.get_file_as_string("res://assets/asset-manifest.json"))
+	world_id="world-"+str(Time.get_unix_time_from_system())
+	setup_environment()
+	setup_board()
+	setup_presentation()
+	setup_game_targets()
+	default_furniture()
+	setup_hud()
+	var preview_camera=Camera3D.new()
+	add_child(preview_camera)
+	preview_camera.position=Vector3(-6.3,1.7,10)
+	preview_camera.look_at(Vector3(-11,1,6))
+	preview_camera.current=true
+	if OS.has_feature("web"):
+		bridge=JavaScriptBridge.get_interface("Homeoffice")
+		bridge.ready()
+		hud.visible=false
+		hint.visible=false
+	else:
+		ready_to_play=true
+		add_player(local_id)
+		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+	print("HOMEoffice_READY Godot ",Engine.get_version_info().string)
+
+func vec(a) -> Vector3:return Vector3(float(a[0]),float(a[1]),float(a[2]))
+func arr(v:Vector3) -> Array:return [v.x,v.y,v.z]
+
+func collision(parent:Node3D,pos:Vector3,size:Vector3):
+	var c=CollisionShape3D.new()
+	var shape=BoxShape3D.new()
+	shape.size=size
+	c.shape=shape
+	c.position=pos
+	parent.add_child(c)
+
+func model(kind:String) -> Node3D:
+	var path="res://assets/v2/"+kind+".glb"
+	if not ResourceLoader.exists(path):path="res://assets/environment/"+kind+".glb"
+	return load(path).instantiate()
+
+func setup_environment():
+	layout=JSON.parse_string(FileAccess.get_file_as_string("res://assets/v2/layout.json"))
+	v2_manifest=JSON.parse_string(FileAccess.get_file_as_string("res://assets/v2/manifest.json"))
+	for k in v2_manifest.assets:manifest.assets[k]=v2_manifest.assets[k]
+	for kind in ["house","grounds"]:add_architecture(kind,Vector3.ZERO)
+	var env=WorldEnvironment.new()
+	var e=Environment.new()
+	e.background_mode=Environment.BG_SKY
+	var sky=Sky.new()
+	var sky_mat=ProceduralSkyMaterial.new()
+	sky_mat.sky_top_color=Color("5f94b0")
+	sky_mat.sky_horizon_color=Color("c8d9d5")
+	sky_mat.ground_horizon_color=Color("c8d9d5")
+	sky.sky_material=sky_mat
+	e.sky=sky
+	e.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR
+	e.ambient_light_color=Color("e3e4d8")
+	e.ambient_light_energy=.30
+	e.tonemap_mode=Environment.TONE_MAPPER_FILMIC
+	env.environment=e
+	add_child(env)
+	var sun=DirectionalLight3D.new()
+	sunlight=sun
+	sun.rotation_degrees=Vector3(-48,-35,0)
+	sun.light_color=Color("fff0d3")
+	sun.light_energy=.62
+	sun.shadow_enabled=true
+	sun.directional_shadow_max_distance=35
+	sun.directional_shadow_mode=DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
+	add_child(sun)
+	for r in layout.rooms:
+		if not r.ceiling:continue
+		var q=r.rect
+		var lamp=OmniLight3D.new()
+		lamp.position=Vector3((q[0]+q[2])/2,float(r.y)+2.9,(q[1]+q[3])/2)
+		lamp.light_color=Color("ffe2b6")
+		lamp.light_energy=.32
+		lamp.omni_range=7
+		lamp.distance_fade_enabled=true
+		lamp.distance_fade_begin=15
+		lamp.distance_fade_length=8
+		lamp.set_meta("base_energy",.32)
+		lamp.set_meta("zone",r.id)
+		room_lights.append(lamp)
+		add_child(lamp)
+	for d in layout.doors:make_door(d)
+	door=Node3D.new()
+	add_child(door)
+	# door is a compatibility placeholder for the previous V1 state field.
+	make_label("모여집",Vector3(-1.8,2.8,12.14),0,.08)
+	for r in layout.rooms:
+		if r.ceiling:make_label(r.name,Vector3(float(r.rect[0])+.35,float(r.y)+2.55,float(r.rect[1])+.16),0,.032)
+
+func setup_board():
+	board_view=SubViewport.new()
+	board_view.size=Vector2i(1024,512)
+	board_view.render_target_update_mode=SubViewport.UPDATE_ONCE
+	add_child(board_view)
+	board_draw=Board.new()
+	board_view.add_child(board_draw)
+	var mesh=MeshInstance3D.new()
+	var quad=QuadMesh.new()
+	quad.size=Vector2(3.46,1.68)
+	mesh.mesh=quad
+	var material=StandardMaterial3D.new()
+	material.albedo_texture=board_view.get_texture()
+	material.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
+	mesh.material_override=material
+	mesh.position=vec(layout.board)
+	add_child(mesh)
+	board_body=StaticBody3D.new()
+	board_body.position=mesh.position
+	board_body.set_meta("object_id","board")
+	board_body.collision_layer=1
+	collision(board_body,Vector3.ZERO,Vector3(3.48,1.7,.045))
+	add_child(board_body)
+
+func default_furniture():
+	for d in layout.furniture:spawn_object(d)
+
+func spawn_object(d:Dictionary):
+	if objects.has(d.id):return
+	var kind=String(d.kind)
+	var movable=kind in ["crate","book","marker","basketball","football","gun","shield","plate","pan","ingredient","meal"]
+	var body:PhysicsBody3D=RigidBody3D.new() if movable else StaticBody3D.new()
+	body.name=d.id
+	body.set_meta("object_id",d.id)
+	body.set_meta("kind",kind)
+	body.set_meta("owner","")
+	body.set_meta("occupant","")
+	body.set_meta("seats",{})
+	body.set_meta("state",d.get("state",{}).duplicate(true))
+	body.collision_layer=4 if movable else 1
+	body.collision_mask=1|2|4
+	body.position=vec(d.p)
+	body.rotation.y=float(d.yaw)
+	body.add_child(model(kind))
+	setup_living_prop(body,kind)
+	if movable:
+		if kind in ["basketball","football","ingredient","meal"]:
+			var c=CollisionShape3D.new()
+			var shape=SphereShape3D.new()
+			shape.radius=.24 if kind=="basketball" else (.22 if kind=="football" else .13)
+			c.shape=shape
+			body.add_child(c)
+		else:
+			var sizes={"crate":Vector3(.44,.44,.44),"book":Vector3(.24,.075,.32),"marker":Vector3(.03,.19,.03),"plate":Vector3(.4,.04,.4),"pan":Vector3(.5,.10,.42),"gun":Vector3(.12,.3,.45),"shield":Vector3(.7,.92,.16)}
+			collision(body,Vector3.ZERO,sizes[kind])
+		body.mass=2.4 if kind=="crate" else (.62 if kind=="basketball" else .4)
+		body.continuous_cd=true
+		body.linear_damp=.08 if kind in ["basketball","football"] else .5
+		body.angular_damp=.3 if kind in ["basketball","football"] else 2
+		var physics=PhysicsMaterial.new()
+		physics.friction=.65
+		physics.bounce=.75 if kind=="basketball" else (.56 if kind=="football" else .08)
+		body.physics_material_override=physics
+		body.freeze=not host
+	elif kind=="chair":
+		collision(body,Vector3(0,.26,0),Vector3(.53,.52,.53))
+		collision(body,Vector3(0,.84,.24),Vector3(.54,.60,.08))
+	else:
+		for c in manifest.assets[kind].collisions:add_shape(body,c)
+	add_child(body)
+	objects[d.id]=body
+	definitions[d.id]=d.duplicate(true)
+	if not definitions[d.id].has("state"):definitions[d.id].state={}
+
+func add_player(id:String):
+	if players.has(id) or players.size()>=8:return
+	var a=Avatar.new()
+	a.actor_id=id
+	a.local_player=id==local_id
+	a.position=vec(layout.spawn)+Vector3(.45,0,-players.size()*.85)
+	a.remote_target=a.position
+	add_child(a)
+	players[id]=a
+	inputs[id]=-1
+	actions[id]=-1
+	if a.local_player:a.camera.current=true
+	if host:
+		entry_grants[id]=id==local_id
+		assign_room(id)
+
+func setup_hud():
+	var canvas=CanvasLayer.new()
+	add_child(canvas)
+	hud=Label.new()
+	hud.position=Vector2(26,25)
+	hud.add_theme_font_size_override("font_size",18)
+	hud.add_theme_color_override("font_shadow_color",Color.BLACK)
+	hud.add_theme_constant_override("shadow_offset_x",1)
+	hud.add_theme_constant_override("shadow_offset_y",1)
+	canvas.add_child(hud)
+	hint=Label.new()
+	hint.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	hint.position=Vector2(580,380)
+	canvas.add_child(hint)
+	var cross=Label.new()
+	cross.text="·"
+	cross.add_theme_font_size_override("font_size",30)
+	cross.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	canvas.add_child(cross)
+	cross.visible=not OS.has_feature("web")
+
+func playing() -> bool:
+	return ready_to_play and (not bridge or bool(bridge.is_playing())) and not frozen
+
+func _unhandled_input(event):
+	if event is InputEventMouseMotion and playing() and Input.mouse_mode==Input.MOUSE_MODE_CAPTURED:
+		yaw-=event.relative.x*(float(bridge.look_sensitivity()) if bridge else .002)
+		pitch=clampf(pitch-event.relative.y*(float(bridge.look_sensitivity()) if bridge else .002),-1.35,1.35)
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode==KEY_ESCAPE:
+			Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+			if bridge:bridge.menu()
+		if not playing():return
+		if key_event(event,"interact"):request_action("interact")
+		if key_event(event,"drop"):request_action("drop")
+		if key_event(event,"read"):request_action("read")
+	if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT and playing():
+		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+		if players.has(local_id) and players[local_id].holding!="":
+			if definitions[players[local_id].holding].kind!="marker":request_action("throw")
+
+func _physics_process(dt):
+	if bridge:
+		var events=JSON.parse_string(String(bridge.take_events()))
+		if events is Array:
+			for event in events:handle_event(event)
+	if not ready_to_play:return
+	tick+=1
+	var p=players.get(local_id)
+	if p:
+		seq+=1
+		var enabled=playing()
+		for code in blocked_keys.keys():
+			if not Input.is_physical_key_pressed(code):blocked_keys.erase(code)
+		if not enabled:
+			for code in key_bindings.values():
+				if Input.is_physical_key_pressed(code):blocked_keys[code]=true
+		if enabled:
+			yaw+=(float(key_down("look_left"))-float(key_down("look_right")))*dt*1.5
+			pitch=clampf(pitch+(float(key_down("look_up"))-float(key_down("look_down")))*dt*1.2,-1.35,1.35)
+		var cmd={"x":float(key_down("right"))-float(key_down("left")) if enabled else 0.0,"z":float(key_down("back"))-float(key_down("forward")) if enabled else 0.0,"yaw":yaw,"pitch":pitch,"jump":enabled and key_down("jump") and not last_jump_down,"run":enabled and key_down("run"),"crouch":enabled and key_down("crouch"),"seq":seq}
+		last_jump_down=key_down("jump")
+		p.command=cmd
+		p.last_input_ms=Time.get_ticks_msec()
+		if not host and tick%2==0:send({"type":"input","epoch":epoch,"command":cmd})
+		if not host and not frozen:p.simulate(dt)
+	if host and not frozen:
+		for id in players:
+			var a=players[id]
+			if id!=local_id and Time.get_ticks_msec()-a.last_input_ms>300:
+				a.command.x=0
+				a.command.z=0
+				a.command.jump=false
+			var before=a.position
+			a.simulate(dt)
+			if zone_at(a.position) in ["game","arcade"] and not allowed_entry(id):
+				a.position=before;a.velocity=Vector3.ZERO
+				if Time.get_ticks_msec()-int(a.get_meta("entry_notice",0))>2000:reject(id,"방장의 게임방 출입 허가가 필요합니다");a.set_meta("entry_notice",Time.get_ticks_msec())
+		update_sports(dt)
+		update_living(dt)
+		update_held(dt)
+		for obj in objects.values():
+			if obj is RigidBody3D:
+				obj.linear_velocity=obj.linear_velocity.limit_length(14)
+				obj.angular_velocity=obj.angular_velocity.limit_length(12)
+				if obj.position.y < -3:
+					obj.position=vec(definitions[obj.name].p)
+					obj.linear_velocity=Vector3.ZERO
+	if not host:
+		for id in players:
+			if id==local_id:continue
+			players[id].position=players[id].position.lerp(players[id].remote_target,1-exp(-dt*18))
+			players[id].rotation.y=lerp_angle(players[id].rotation.y,players[id].remote_yaw,1-exp(-dt*18))
+		for o in objects.values():
+			if o is RigidBody3D and o.has_meta("remote_position") and o.get_meta("stored_in","")=="":
+				var goal:Vector3=o.get_meta("remote_position")
+				o.position=goal if o.position.distance_to(goal)>1.6 else o.position.lerp(goal,1-exp(-dt*20))
+				o.quaternion=o.quaternion.slerp(Quaternion.from_euler(o.get_meta("remote_rotation")),1-exp(-dt*20))
+		if Time.get_ticks_msec()-last_snapshot_ms>2500:
+			frozen=true
+			if bridge:bridge.status("호스트 응답 대기 · 마지막 확인 상태 보존 중")
+	for a in players.values():a.animate(dt)
+	update_doors(dt)
+	state_timer+=dt
+	snapshot_timer+=dt
+	if state_timer>.067:
+		state_timer=0
+		var snapshot=network_state()
+		if host:send(snapshot)
+		if bridge:bridge.observe(JSON.stringify(snapshot))
+	if bridge and tick%120==0:bridge.performance_sample(JSON.stringify({"fps":Engine.get_frames_per_second(),"frameMs":1000.0/maxf(1,Engine.get_frames_per_second()),"staticMemory":Performance.get_monitor(Performance.MEMORY_STATIC),"drawCalls":Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME),"objects":objects.size(),"players":players.size()}))
+	if snapshot_timer>2 and host:
+		snapshot_timer=0
+		send({"type":"world","epoch":epoch,"world":save_world(),"strokes":strokes})
+	update_build_preview()
+	update_object_visuals()
+	update_living_props(dt)
+	update_room_lighting(dt)
+	update_hint()
+	board_cooldown-=dt
+	if p and playing() and p.holding!="" and definitions[p.holding].kind=="marker" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and board_cooldown<=0:
+		board_cooldown=.07
+		var hit=target(p)
+		if hit.get("id","")=="board":
+			var pt=objects[p.holding].global_transform*Vector3(0,-.10,0)
+			if absf(pt.z-board_body.position.z)>.22:return
+			var uv=[clampf((pt.x-(float(layout.board[0])-1.73))/3.46,0,1),clampf((float(layout.board[1])+.84-pt.y)/1.68,0,1)]
+			if not last_board_point.is_empty():request_action("stroke",{"points":[last_board_point,uv],"color":String(bridge.pen_color()) if bridge else "#183b32","width":float(bridge.pen_width()) if bridge else 4,"physical":true})
+			last_board_point=uv
+	else:last_board_point=[]
+
+func target(p) -> Dictionary:
+	var query=PhysicsRayQueryParameters3D.create(p.eye(),p.eye()+p.direction()*3.0,1|4,[p.get_rid()])
+	if p.holding!="" and objects.has(p.holding):
+		var excluded=query.exclude
+		excluded.append(objects[p.holding].get_rid())
+		query.exclude=excluded
+	var hit=get_world_3d().direct_space_state.intersect_ray(query)
+	if hit.is_empty():return {}
+	return {"id":hit.collider.get_meta("object_id",""),"point":hit.position}
+
+func update_hint():
+	var p=players.get(local_id)
+	if not p:return
+	var zone=zone_at(p.position)
+	hud.text="MOYEO HOUSE    /    "+zone+"\n"+str(players.size())+" people   ·   "+("HOST" if host else "CONNECTED")+"   ·   "+str(Engine.get_frames_per_second())+" FPS"
+	var id=target(p).get("id","")
+	var label=""
+	if p.seated!="":label="E  Stand up"
+	elif id=="door":label="E  Open / Close"
+	elif id=="board":label="E  Whiteboard"
+	elif objects.has(id):
+		var kind=definitions[id].kind
+		label="E  Sit down" if kind in ["chair","sofa"] else ("E  Pick up" if kind in ["book","crate","marker"] else "")
+	if p.holding!="":label+="   Q Drop · Click Throw" if definitions[p.holding].kind!="marker" else "   Click Draw · Q Drop"
+	if p.holding!="" and definitions[p.holding].kind=="book":label+=" · F Read"
+	hint.text=label
+	if bridge:bridge.hint(label)
+
+func request_action(kind:String,data:Dictionary={}):
+	seq+=1
+	var message={"type":"action","epoch":epoch,"seq":seq,"action":kind,"data":data}
+	if host:perform(local_id,message)
+	else:send(message)
+
+func send(message:Dictionary,to:String=""):
+	if bridge:bridge.send(JSON.stringify(message),to)
+
+func reject(id:String,reason:String):
+	if id==local_id and bridge:bridge.status(reason)
+	elif id!=local_id:send({"type":"notice","text":reason},id)
+
+func perform(id:String,m:Dictionary):
+	if not host or frozen or not players.has(id) or m.get("epoch")!=epoch:return
+	var order=int(m.get("seq",-1))
+	if order<=int(actions.get(id,-1)):return
+	actions[id]=order
+	var p=players[id]
+	var action=m.get("action","")
+	var data=m.get("data",{})
+	if action in ["drop","throw"]:
+		if p.holding!="":release(p,action=="throw")
+		return
+	if action=="read":
+		if p.holding!="" and definitions[p.holding].kind=="book":notify_ui(id,"book")
+		return
+	if action in ["stroke","undo"]:
+		if data.get("physical",false):
+			if p.holding=="" or definitions[p.holding].kind!="marker":return
+			var tip=objects[p.holding].global_transform*Vector3(0,-.10,0)
+			if absf(tip.z-board_body.position.z)>.25:return
+		if p.eye().distance_to(board_body.position)>4.2:return reject(id,"보드 가까이에서 사용할 수 있습니다")
+		var ray=PhysicsRayQueryParameters3D.create(p.eye(),board_body.position,1,[p.get_rid()])
+		var hit=get_world_3d().direct_space_state.intersect_ray(ray)
+		if not hit.is_empty() and hit.collider!=board_body:return
+		var operation={}
+		if action=="undo":
+			for i in range(strokes.size()-1,-1,-1):
+				if strokes[i].author==id:
+					operation={"remove":strokes[i].id}
+					strokes.remove_at(i)
+					break
+		elif strokes.size()<512 and valid_stroke(data):
+			strokes.append({"id":id+":"+str(order),"author":id,"points":data.points,"color":data.color,"width":data.width})
+			operation={"add":strokes[-1]}
+		else:return reject(id,"보드 획 한도 또는 형식을 확인해 주세요")
+		refresh_board()
+		send({"type":"board","epoch":epoch,"operation":operation})
+		revision+=1
+		return
+	if action!="interact":return
+	if p.seated!="":
+		var chair=objects[p.seated]
+		var point=chair.global_transform*Vector3(0,0,-.90)
+		if not safe_stand(point,p):return reject(id,"일어설 자리에 물건이 있습니다")
+		chair.set_meta("occupant","")
+		p.seated=""
+		p.position=point
+		return
+	var hit=target(p)
+	var object_id=hit.get("id","")
+	if object_id=="door":
+		for a in players.values():
+			if a.position.distance_to(Vector3(6.3,0,-.25))<1.15:return reject(id,"문에서 한 걸음 물러나 주세요")
+		door_open=not door_open
+		revision+=1
+		return
+	if object_id=="board":notify_ui(id,"board");return
+	if not objects.has(object_id):return
+	var o=objects[object_id]
+	var kind=definitions[object_id].kind
+	if kind in ["chair","sofa"]:
+		if o.get_meta("occupant")!="":return reject(id,"이미 다른 사람이 앉아 있습니다")
+		if p.holding!="":release(p,false)
+		o.set_meta("occupant",id)
+		p.seated=object_id
+		p.seat_yaw=o.rotation.y
+		p.position=o.position
+		p.rotation.y=o.rotation.y
+		p.command.yaw=o.rotation.y
+		if id==local_id:yaw=o.rotation.y
+	elif o is RigidBody3D:
+		if o.get_meta("owner")!="" or p.holding!="":return reject(id,"이미 사용 중이거나 손이 차 있습니다")
+		o.set_meta("owner",id)
+		p.holding=object_id
+		o.gravity_scale=0
+		o.add_collision_exception_with(p)
+		p.add_collision_exception_with(o)
+		revision+=1
+
+func safe_stand(point:Vector3,p) -> bool:
+	var s=CapsuleShape3D.new()
+	s.radius=.28
+	s.height=1.72
+	var q=PhysicsShapeQueryParameters3D.new()
+	q.shape=s
+	q.transform.origin=point+Vector3(0,.88,0)
+	q.collision_mask=1|2|4
+	q.exclude=[p.get_rid()]
+	return get_world_3d().direct_space_state.intersect_shape(q,1).is_empty()
+
+func update_held(dt:float):
+	for p in players.values():
+		if p.holding=="":continue
+		var o=objects.get(p.holding)
+		if not o:continue
+		var grip=p.eye()+p.direction()*.60+Vector3(0,-.38,0)
+		if definitions[p.holding].kind=="basketball" and p.get_meta("dribble",false):
+			# Jolt gravity and restitution produce the bounce. The hand only pushes downward at its reachable height.
+			o.gravity_scale=1
+			var offset=grip-o.position;offset.y=0
+			if offset.length()>1.8 or zone_at(p.position)!="basketball":release(p,false);continue
+			o.apply_central_force((offset*30-Vector3(o.linear_velocity.x,0,o.linear_velocity.z)*8).limit_length(20)*o.mass)
+			if o.position.y-p.position.y>.78 and o.linear_velocity.y>0:o.apply_central_impulse(Vector3.DOWN*(o.linear_velocity.y+5.5)*o.mass)
+			o.linear_velocity=o.linear_velocity.limit_length(8)
+			o.sleeping=false
+			continue
+		var desired=Basis.from_euler(Vector3(float(p.command.pitch),float(p.command.yaw),0)).get_rotation_quaternion()
+		if definitions[p.holding].kind=="marker":desired=Quaternion(Vector3.DOWN,p.direction())
+		var turn=desired*o.quaternion.inverse()
+		if turn.w<0:turn=-turn
+		o.angular_velocity=(turn.get_axis()*turn.get_angle()*10).limit_length(9)
+		var query=PhysicsRayQueryParameters3D.create(p.eye(),grip,1,[p.get_rid(),o.get_rid()])
+		var hit=get_world_3d().direct_space_state.intersect_ray(query)
+		if not hit.is_empty():grip=hit.position-p.direction()*.28
+		var delta=grip-o.position
+		if delta.length()>3:release(p,false);continue
+		# Bounded critically damped velocity, never teleport a held rigid body.
+		o.linear_velocity=(delta*12).limit_length(7)
+		o.sleeping=false
+
+func release(p,throwing:bool):
+	var o=objects.get(p.holding)
+	if not o:return
+	p.set_meta("dribble",false)
+	o.set_meta("owner","")
+	o.gravity_scale=1
+	o.linear_velocity=p.direction()*(9 if throwing else 0)+Vector3.UP*(1.6 if throwing else 0)
+	o.remove_collision_exception_with(p)
+	p.remove_collision_exception_with(o)
+	p.holding=""
+	revision+=1
+
+func valid_stroke(d) -> bool:
+	if not d is Dictionary or not d.get("points") is Array:return false
+	if d.points.size()<2 or d.points.size()>256:return false
+	if not d.get("color","") in ["#183b32","#bd5737","#305ea2","#f4f4ed"]:return false
+	if not (d.get("width",0) is float or d.get("width",0) is int):return false
+	if d.width<1 or d.width>24:return false
+	for p in d.points:
+		if not p is Array or p.size()!=2:return false
+		for v in p:
+			if not (v is int or v is float) or not is_finite(float(v)) or v<0 or v>1:return false
+	return true
+
+func notify_ui(id:String,mode:String):
+	if id==local_id and bridge:bridge.open_tool(mode)
+	elif id!=local_id:send({"type":"tool","mode":mode},id)
+
+func refresh_board():
+	board_draw.strokes=strokes
+	board_draw.queue_redraw()
+	board_view.render_target_update_mode=SubViewport.UPDATE_ONCE
+	if bridge:bridge.board(JSON.stringify(strokes))
+
+func network_state() -> Dictionary:
+	var ps=[]
+	var os=[]
+	for p in players.values():
+		var state=p.state()
+		state.zone=zone_at(p.position)
+		ps.append(state)
+	for id in objects:
+		var o=objects[id]
+		os.append({"id":id,"kind":definitions[id].kind,"p":arr(o.position),"r":arr(o.rotation),"owner":o.get_meta("owner"),"occupant":o.get_meta("occupant"),"state":o.get_meta("state"),"v":arr(o.linear_velocity) if o is RigidBody3D else [0,0,0],"av":arr(o.angular_velocity) if o is RigidBody3D else [0,0,0],"seats":o.get_meta("seats",{})})
+	return {"type":"state","epoch":epoch,"tick":tick,"revision":revision,"players":ps,"objects":os,"door":door_open,"paused":frozen,"doors":door_states,"roomSlots":room_slots,"basketballScore":basketball_score,"footballScore":football_score,"entryGrants":entry_grants,"grants":weapon_grants,"weaponZones":weapon_zones,"rounds":rounds,"voiceOcclusion":acoustic_links()}
+
+func save_world() -> Dictionary:
+	var os=[]
+	for id in definitions:
+		var d=definitions[id].duplicate(true)
+		var o=objects[id]
+		d.p=arr(o.position)
+		d.yaw=o.rotation.y
+		d.state=o.get_meta("state",{}).duplicate(true)
+		d.state.erase("reloadUntil")
+		d.state.erase("nextShot")
+		os.append(d)
+	return {"schemaVersion":2,"worldId":world_id,"assetPack":2,"layoutVersion":2,"roomSlots":room_slots,"objects":os,"doors":door_states,"board":strokes,"revision":revision,"results":{"basketball":basketball_score,"football":football_score},"settings":{"maxPlayers":8}}
+
+func handle_event(e:Dictionary):
+	match e.get("type",""):
+		"start":
+			host=bool(e.host)
+			local_id=e.id
+			member_identity[local_id]=String(e.get("clientId",local_id))
+			epoch=e.epoch
+			for p in players.values():p.queue_free()
+			players.clear()
+			add_player(local_id)
+			ready_to_play=true
+			last_remote_tick=-1
+			frozen=false
+			last_snapshot_ms=Time.get_ticks_msec()
+			for o in objects.values():
+				if o is RigidBody3D:o.freeze=not host
+		"join":
+			if host:
+				member_identity[e.id]=String(e.get("clientId",e.id))
+				add_player(e.id)
+				send({"type":"welcome","epoch":epoch,"world":save_world()},e.id)
+		"leave":
+			if players.has(e.id):
+				var p=players[e.id]
+				if host:
+					if p.holding!="":release(p,false)
+					if p.seated!="":clear_seat(p)
+				p.queue_free()
+				players.erase(e.id)
+				member_slots.erase(e.id)
+		"profile":
+			if host:set_profile(String(e.id),String(e.get("name","친구")))
+		"handoff_freeze":
+			transfer_frozen=bool(e.paused)
+			frozen=transfer_frozen
+			for o in objects.values():
+				if o is RigidBody3D:o.freeze=frozen or not host
+		"handoff_capture":
+			if host and bridge:bridge.handoff_capture(JSON.stringify(make_checkpoint()))
+		"handoff_commit":apply_checkpoint(e)
+		"slide_texture":set_slide(String(e.get("image","")))
+		"slide_pointer":set_slide_pointer(e.get("uv"))
+		"build":begin_build(String(e.get("kind","")))
+		"bindings":
+			for action in key_bindings:
+				var code=OS.find_keycode_from_string(String(e.get("bindings",{}).get(action,"")))
+				if code!=KEY_NONE and code!=KEY_ESCAPE:key_bindings[action]=code
+		"resume":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+		"visibility":
+			if host:
+				frozen=transfer_frozen or bool(e.hidden)
+				for body in objects.values():
+					if body is RigidBody3D:body.freeze=frozen
+		"action":request_action(e.action,e.get("data",{}))
+		"export":
+			if host and bridge:bridge.export_world(JSON.stringify(save_world()))
+		"restore":
+			if host and players.size()==1:
+				restore_world(e.world)
+				epoch="restored-"+str(Time.get_unix_time_from_system())
+				if bridge:bridge.set_epoch(epoch)
+		"data":handle_packet(e.sender,e.message)
+
+func handle_packet(sender:String,m):
+	if not m is Dictionary:return
+	if host:
+		if not players.has(sender) or m.get("epoch")!=epoch:return
+		if m.get("type")=="action":perform(sender,m)
+		if m.get("type")=="input":
+			var c=m.get("command",{})
+			if not valid_input(c) or int(c.seq)<=int(inputs.get(sender,-1)):return
+			inputs[sender]=int(c.seq)
+			players[sender].command=c
+			players[sender].last_input_ms=Time.get_ticks_msec()
+		return
+	if m.get("type")=="welcome":
+		epoch=m.epoch
+		if bridge:bridge.set_epoch(epoch)
+		restore_world(m.world)
+	if m.get("epoch",epoch)!=epoch:return
+	match m.get("type",""):
+		"state":
+			last_snapshot_ms=Time.get_ticks_msec()
+			frozen=bool(m.paused)
+			if int(m.tick)<=last_remote_tick:return
+			last_remote_tick=int(m.tick)
+			door_open=m.door
+			door_states=m.get("doors",{})
+			if m.get("roomSlots",[])!=room_slots:
+				var extended=m.roomSlots.size()>room_slots.size()
+				room_slots=m.roomSlots
+				if extended:rebuild_rooms()
+				else:update_room_names()
+			basketball_score=m.get("basketballScore",[0,0])
+			football_score=m.get("footballScore",[0,0])
+			entry_grants=m.get("entryGrants",{})
+			weapon_grants=m.get("grants",{})
+			weapon_zones=m.get("weaponZones",["game"])
+			rounds=m.get("rounds",rounds)
+			var live=[]
+			for s in m.players:
+				live.append(s.id)
+				add_player(s.id)
+				if not players.has(s.id):continue
+				var p=players[s.id]
+				p.nickname=String(s.get("displayName","친구"))
+				p.command.pitch=s.pitch
+				p.command.yaw=s.yaw if s.id!=local_id else yaw
+				p.seated=s.seat
+				p.seat_yaw=float(s.get("seatYaw",s.yaw))
+				p.holding=s.hold
+				p.posture=s.get("posture","standing")
+				p.seat_index=s.get("seatIndex",0)
+				p.velocity=vec(s.v)
+				if s.id==local_id:
+					var error=vec(s.p)-p.position
+					if s.seat!="" or error.length()>.8:p.position=vec(s.p)
+					elif error.length()>.08:p.position+=error*.3
+				else:
+					p.remote_target=vec(s.p)
+					p.remote_yaw=s.yaw
+			for id in players.keys():
+				if not id in live and id!=local_id:players[id].queue_free();players.erase(id)
+			var live_objects=[]
+			for value in m.objects:live_objects.append(value.id)
+			for object_id in objects.keys():
+				if not object_id in live_objects:objects[object_id].queue_free();objects.erase(object_id);definitions.erase(object_id)
+			for s in m.objects:
+				if not objects.has(s.id):spawn_object({"id":s.id,"kind":s.kind,"p":s.p,"yaw":s.r[1],"state":s.get("state",{})})
+				if objects.has(s.id):
+					if objects[s.id] is RigidBody3D:
+						objects[s.id].set_meta("remote_position",vec(s.p));objects[s.id].set_meta("remote_rotation",vec(s.r))
+					else:
+						objects[s.id].position=vec(s.p);objects[s.id].rotation=vec(s.r)
+					objects[s.id].set_meta("owner",s.owner)
+					objects[s.id].set_meta("occupant",s.occupant)
+					objects[s.id].set_meta("state",s.get("state",{}))
+		"world":
+			if bridge:bridge.recovery(JSON.stringify(m.world))
+			strokes=m.strokes
+			refresh_board()
+		"board":
+			var operation=m.get("operation",{})
+			if operation.has("remove"):strokes=strokes.filter(func(stroke):return stroke.id!=operation.remove)
+			if operation.has("add"):strokes.append(operation.add)
+			refresh_board()
+		"toy_effect":show_toy_effect(vec(m.from),vec(m.to))
+		"tool":
+			if bridge:bridge.open_tool(m.mode)
+		"notice":
+			if bridge:bridge.status(m.text)
+
+func valid_input(c) -> bool:
+	if not c is Dictionary:return false
+	for k in ["x","z","yaw","pitch","seq"]:
+		if not (c.get(k) is float or c.get(k) is int) or not is_finite(float(c[k])):return false
+	return absf(c.x)<=1 and absf(c.z)<=1 and absf(c.yaw)<100000 and absf(c.pitch)<=1.4 and c.seq>=0 and c.seq<1e12 and c.get("jump") is bool and c.get("run") is bool
+
+func restore_world(w:Dictionary):
+	for o in objects.values():remove_child(o);o.queue_free()
+	objects.clear()
+	definitions.clear()
+	room_slots=w.get("roomSlots",[]).duplicate(true)
+	member_slots.clear()
+	room_claims.clear()
+	rebuild_rooms()
+	for d in w.objects:spawn_object(d)
+	board_history.clear()
+	strokes=w.board.duplicate(true)
+	door_states=w.get("doors",{}).duplicate(true)
+	if door_states.has("game-gate"):door_states["game-gate"]=false
+	entry_grants.clear()
+	weapon_grants.clear()
+	world_id=w.worldId
+	revision=int(w.revision)
+	basketball_score=w.get("results",{}).get("basketball",[0,0])
+	football_score=w.get("results",{}).get("football",[0,0])
+	for p in players.values():
+		p.holding=""
+		p.seated=""
+		p.posture="standing"
+		p.position=vec(layout.spawn)
+		if host:assign_room(p.actor_id)
+	refresh_board()
+
+
+func key_down(action:String) -> bool:
+	var code=int(key_bindings.get(action,KEY_NONE))
+	return not blocked_keys.has(code) and Input.is_physical_key_pressed(code)
+
+func key_event(event:InputEventKey,action:String) -> bool:
+	return event.physical_keycode==int(key_bindings.get(action,KEY_NONE)) and not blocked_keys.has(event.physical_keycode)

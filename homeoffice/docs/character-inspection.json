@@ -1,0 +1,2645 @@
+[
+  {
+    "id": 1157,
+    "bytes": 483796,
+    "sha256": "88e40b0e82e242f8d04d22106a149fd121a69b6cf9e9aa87e22fb82848e5b754",
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "Male_Sitting"
+      },
+      {
+        "mesh": 1,
+        "name": "Male_Sitting_Cheering"
+      },
+      {
+        "mesh": 2,
+        "name": "Male_Standing"
+      },
+      {
+        "mesh": 3,
+        "name": "Male_Standing_CoveringEyes"
+      },
+      {
+        "mesh": 4,
+        "name": "Male_Standing_Hips"
+      },
+      {
+        "mesh": 5,
+        "name": "Male_Standing_Waving"
+      },
+      {
+        "mesh": 6,
+        "name": "Male_Walking"
+      }
+    ],
+    "animations": [],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "Skin.003",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shirt.003",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Pants.003",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shoes.003",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.004",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.004",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.004",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.004",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Human_CylinderMesh.004",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.6372817754745483,
+                0.6535879373550415,
+                -1.037060260772705
+              ],
+              [
+                0.6151124238967896,
+                3.0587809085845947,
+                0.12361651659011841
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6121079325675964,
+                0.8527448177337646,
+                -1.053114891052246
+              ],
+              [
+                0.588546097278595,
+                2.3786237239837646,
+                -0.5175105929374695
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.44536736607551575,
+                0.12409213930368423,
+                -0.9285669922828674
+              ],
+              [
+                0.47612500190734863,
+                1.189815878868103,
+                0.15275487303733826
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.38969433307647705,
+                -0.040537502616643906,
+                -0.19937314093112946
+              ],
+              [
+                0.4561571776866913,
+                0.1609477698802948,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.005",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.6372817754745483,
+                0.6535879373550415,
+                -1.2164723873138428
+              ],
+              [
+                0.809434175491333,
+                3.5705225467681885,
+                -0.14314188063144684
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6121079325675964,
+                0.8527448177337646,
+                -1.0599405765533447
+              ],
+              [
+                0.553132176399231,
+                2.5025882720947266,
+                -0.5192623734474182
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.44536736607551575,
+                0.12409213930368423,
+                -0.9285669922828674
+              ],
+              [
+                0.47612500190734863,
+                1.189815878868103,
+                0.15275487303733826
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.38969433307647705,
+                -0.040537502616643906,
+                -0.19937314093112946
+              ],
+              [
+                0.4561571776866913,
+                0.1609477698802948,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.006",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.6335952877998352,
+                1.2286854982376099,
+                -0.32273223996162415
+              ],
+              [
+                0.6058957576751709,
+                3.7913167476654053,
+                0.24972054362297058
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.624472975730896,
+                1.6386157274246216,
+                -0.30955642461776733
+              ],
+              [
+                0.6033995151519775,
+                3.1150803565979004,
+                0.25830549001693726
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.38989973068237305,
+                0.11984400451183319,
+                -0.25485873222351074
+              ],
+              [
+                0.3904370963573456,
+                1.798825979232788,
+                0.23300203680992126
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.38921934366226196,
+                -0.040537502616643906,
+                -0.19943131506443024
+              ],
+              [
+                0.38975703716278076,
+                0.16185462474822998,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.007",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.8251197934150696,
+                1.2616018056869507,
+                -0.28638702630996704
+              ],
+              [
+                0.6131842732429504,
+                3.813138484954834,
+                0.6296704411506653
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6025546193122864,
+                1.665669560432434,
+                -0.2980639934539795
+              ],
+              [
+                0.6103222370147705,
+                3.1311917304992676,
+                0.2618386149406433
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.3896705210208893,
+                0.1284654289484024,
+                -0.2558702528476715
+              ],
+              [
+                0.39065316319465637,
+                1.803531527519226,
+                0.2348959594964981
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.38921990990638733,
+                -0.040537502616643906,
+                -0.19868212938308716
+              ],
+              [
+                0.389756441116333,
+                0.15887591242790222,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.008",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.985044002532959,
+                1.8195931911468506,
+                -0.3511433005332947
+              ],
+              [
+                0.9988724589347839,
+                3.7789502143859863,
+                0.27892687916755676
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6348689198493958,
+                1.6223033666610718,
+                -0.2978699207305908
+              ],
+              [
+                0.6335417628288269,
+                3.097454071044922,
+                0.2585277855396271
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.47436633706092834,
+                0.11010225117206573,
+                -0.25578877329826355
+              ],
+              [
+                0.48507070541381836,
+                1.7879753112792969,
+                0.2543201148509979
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 335,
+            "bounds": [
+              [
+                -0.48856714367866516,
+                -0.04133284091949463,
+                -0.19951900839805603
+              ],
+              [
+                0.4984971880912781,
+                0.16725945472717285,
+                0.3695780336856842
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.010",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.7811694741249084,
+                1.2898647785186768,
+                -0.4122605323791504
+              ],
+              [
+                0.7844398021697998,
+                4.42529296875,
+                0.18285241723060608
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.5091972351074219,
+                1.6574478149414062,
+                -0.33293163776397705
+              ],
+              [
+                0.6579627394676208,
+                3.1581180095672607,
+                0.25482916831970215
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.45191752910614014,
+                0.1276865303516388,
+                -0.26414746046066284
+              ],
+              [
+                0.5988042950630188,
+                1.8143842220306396,
+                0.22863760590553284
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 337,
+            "bounds": [
+              [
+                -0.46317771077156067,
+                -0.04263010993599892,
+                -0.19798646867275238
+              ],
+              [
+                0.6195375919342041,
+                0.1668713539838791,
+                0.36968886852264404
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.009",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.5906070470809937,
+                1.2421486377716064,
+                -0.29540640115737915
+              ],
+              [
+                0.6193156838417053,
+                3.7643563747406006,
+                0.5584518909454346
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 323,
+            "bounds": [
+              [
+                -0.5977943539619446,
+                1.6257685422897339,
+                -0.3195551037788391
+              ],
+              [
+                0.6078616380691528,
+                3.0852293968200684,
+                0.26067274808883667
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.4536076486110687,
+                0.11166533827781677,
+                -0.6173830628395081
+              ],
+              [
+                0.45835188031196594,
+                1.7991138696670532,
+                0.47248318791389465
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.4640195667743683,
+                -0.07849825918674469,
+                -0.661220908164978
+              ],
+              [
+                0.4704955220222473,
+                0.21911610662937164,
+                0.79791259765625
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1158,
+    "bytes": 277068,
+    "sha256": "d97b63a87ab729c47a2f0ff0c30ba9271529ccc64e328aa7370625fa14005010",
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "Male_Standing_CoveringEyes"
+      },
+      {
+        "mesh": 1,
+        "name": "Male_Standing_Hips"
+      },
+      {
+        "mesh": 2,
+        "name": "Male_Standing_Waving"
+      },
+      {
+        "mesh": 3,
+        "name": "Male_Walking"
+      }
+    ],
+    "animations": [],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "Skin.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shirt.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Pants.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shoes.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Human_CylinderMesh.007",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.8251197934150696,
+                1.2616018056869507,
+                -0.28638702630996704
+              ],
+              [
+                0.6131842732429504,
+                3.813138484954834,
+                0.6296704411506653
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6025546193122864,
+                1.665669560432434,
+                -0.2980639934539795
+              ],
+              [
+                0.6103222370147705,
+                3.1311917304992676,
+                0.2618386149406433
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.3896705210208893,
+                0.1284654289484024,
+                -0.2558702528476715
+              ],
+              [
+                0.39065316319465637,
+                1.803531527519226,
+                0.2348959594964981
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.38921990990638733,
+                -0.040537502616643906,
+                -0.19868212938308716
+              ],
+              [
+                0.389756441116333,
+                0.15887591242790222,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.008",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.985044002532959,
+                1.8195931911468506,
+                -0.3511433005332947
+              ],
+              [
+                0.9988724589347839,
+                3.7789502143859863,
+                0.27892687916755676
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6348689198493958,
+                1.6223033666610718,
+                -0.2978699207305908
+              ],
+              [
+                0.6335417628288269,
+                3.097454071044922,
+                0.2585277855396271
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.47436633706092834,
+                0.11010225117206573,
+                -0.25578877329826355
+              ],
+              [
+                0.48507070541381836,
+                1.7879753112792969,
+                0.2543201148509979
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 335,
+            "bounds": [
+              [
+                -0.48856714367866516,
+                -0.04133284091949463,
+                -0.19951900839805603
+              ],
+              [
+                0.4984971880912781,
+                0.16725945472717285,
+                0.3695780336856842
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.010",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.7811694741249084,
+                1.2898647785186768,
+                -0.4122605323791504
+              ],
+              [
+                0.7844398021697998,
+                4.42529296875,
+                0.18285241723060608
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.5091972351074219,
+                1.6574478149414062,
+                -0.33293163776397705
+              ],
+              [
+                0.6579627394676208,
+                3.1581180095672607,
+                0.25482916831970215
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.45191752910614014,
+                0.1276865303516388,
+                -0.26414746046066284
+              ],
+              [
+                0.5988042950630188,
+                1.8143842220306396,
+                0.22863760590553284
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 337,
+            "bounds": [
+              [
+                -0.46317771077156067,
+                -0.04263010993599892,
+                -0.19798646867275238
+              ],
+              [
+                0.6195375919342041,
+                0.1668713539838791,
+                0.36968886852264404
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.009",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.5906070470809937,
+                1.2421486377716064,
+                -0.29540640115737915
+              ],
+              [
+                0.6193156838417053,
+                3.7643563747406006,
+                0.5584518909454346
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 323,
+            "bounds": [
+              [
+                -0.5977943539619446,
+                1.6257685422897339,
+                -0.3195551037788391
+              ],
+              [
+                0.6078616380691528,
+                3.0852293968200684,
+                0.26067274808883667
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.4536076486110687,
+                0.11166533827781677,
+                -0.6173830628395081
+              ],
+              [
+                0.45835188031196594,
+                1.7991138696670532,
+                0.47248318791389465
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.4640195667743683,
+                -0.07849825918674469,
+                -0.661220908164978
+              ],
+              [
+                0.4704955220222473,
+                0.21911610662937164,
+                0.79791259765625
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1160,
+    "bytes": 138604,
+    "sha256": "d902ca5b192ebe3e061de79af86b647d8e36d1c2e49e3290ba3ffe2bda1b4fbe",
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "Male_Standing_Waving"
+      },
+      {
+        "mesh": 1,
+        "name": "Male_Walking"
+      }
+    ],
+    "animations": [],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "Skin.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shirt.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Pants.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shoes.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Human_CylinderMesh.010",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.7811694741249084,
+                1.2898647785186768,
+                -0.4122605323791504
+              ],
+              [
+                0.7844398021697998,
+                4.42529296875,
+                0.18285241723060608
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.5091972351074219,
+                1.6574478149414062,
+                -0.33293163776397705
+              ],
+              [
+                0.6579627394676208,
+                3.1581180095672607,
+                0.25482916831970215
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.45191752910614014,
+                0.1276865303516388,
+                -0.26414746046066284
+              ],
+              [
+                0.5988042950630188,
+                1.8143842220306396,
+                0.22863760590553284
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 337,
+            "bounds": [
+              [
+                -0.46317771077156067,
+                -0.04263010993599892,
+                -0.19798646867275238
+              ],
+              [
+                0.6195375919342041,
+                0.1668713539838791,
+                0.36968886852264404
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.009",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.5906070470809937,
+                1.2421486377716064,
+                -0.29540640115737915
+              ],
+              [
+                0.6193156838417053,
+                3.7643563747406006,
+                0.5584518909454346
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 323,
+            "bounds": [
+              [
+                -0.5977943539619446,
+                1.6257685422897339,
+                -0.3195551037788391
+              ],
+              [
+                0.6078616380691528,
+                3.0852293968200684,
+                0.26067274808883667
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.4536076486110687,
+                0.11166533827781677,
+                -0.6173830628395081
+              ],
+              [
+                0.45835188031196594,
+                1.7991138696670532,
+                0.47248318791389465
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.4640195667743683,
+                -0.07849825918674469,
+                -0.661220908164978
+              ],
+              [
+                0.4704955220222473,
+                0.21911610662937164,
+                0.79791259765625
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1161,
+    "bytes": 346316,
+    "sha256": "51a8975414f406391b2d27f851587b5e50eb7a03f6d26b20f413436d48f037b1",
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "Male_Standing"
+      },
+      {
+        "mesh": 1,
+        "name": "Male_Standing_CoveringEyes"
+      },
+      {
+        "mesh": 2,
+        "name": "Male_Standing_Hips"
+      },
+      {
+        "mesh": 3,
+        "name": "Male_Standing_Waving"
+      },
+      {
+        "mesh": 4,
+        "name": "Male_Walking"
+      }
+    ],
+    "animations": [],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "Skin.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shirt.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Pants.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shoes.005",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.007",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.008",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Skin.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shirt.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Pants.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "alphaMode": "MASK",
+        "doubleSided": true,
+        "name": "Shoes.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            0
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Human_CylinderMesh.006",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.6335952877998352,
+                1.2286854982376099,
+                -0.32273223996162415
+              ],
+              [
+                0.6058957576751709,
+                3.7913167476654053,
+                0.24972054362297058
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.624472975730896,
+                1.6386157274246216,
+                -0.30955642461776733
+              ],
+              [
+                0.6033995151519775,
+                3.1150803565979004,
+                0.25830549001693726
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.38989973068237305,
+                0.11984400451183319,
+                -0.25485873222351074
+              ],
+              [
+                0.3904370963573456,
+                1.798825979232788,
+                0.23300203680992126
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.38921934366226196,
+                -0.040537502616643906,
+                -0.19943131506443024
+              ],
+              [
+                0.38975703716278076,
+                0.16185462474822998,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.007",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.8251197934150696,
+                1.2616018056869507,
+                -0.28638702630996704
+              ],
+              [
+                0.6131842732429504,
+                3.813138484954834,
+                0.6296704411506653
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6025546193122864,
+                1.665669560432434,
+                -0.2980639934539795
+              ],
+              [
+                0.6103222370147705,
+                3.1311917304992676,
+                0.2618386149406433
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.3896705210208893,
+                0.1284654289484024,
+                -0.2558702528476715
+              ],
+              [
+                0.39065316319465637,
+                1.803531527519226,
+                0.2348959594964981
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.38921990990638733,
+                -0.040537502616643906,
+                -0.19868212938308716
+              ],
+              [
+                0.389756441116333,
+                0.15887591242790222,
+                0.3695780038833618
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.008",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.985044002532959,
+                1.8195931911468506,
+                -0.3511433005332947
+              ],
+              [
+                0.9988724589347839,
+                3.7789502143859863,
+                0.27892687916755676
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.6348689198493958,
+                1.6223033666610718,
+                -0.2978699207305908
+              ],
+              [
+                0.6335417628288269,
+                3.097454071044922,
+                0.2585277855396271
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.47436633706092834,
+                0.11010225117206573,
+                -0.25578877329826355
+              ],
+              [
+                0.48507070541381836,
+                1.7879753112792969,
+                0.2543201148509979
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 335,
+            "bounds": [
+              [
+                -0.48856714367866516,
+                -0.04133284091949463,
+                -0.19951900839805603
+              ],
+              [
+                0.4984971880912781,
+                0.16725945472717285,
+                0.3695780336856842
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.010",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.7811694741249084,
+                1.2898647785186768,
+                -0.4122605323791504
+              ],
+              [
+                0.7844398021697998,
+                4.42529296875,
+                0.18285241723060608
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 324,
+            "bounds": [
+              [
+                -0.5091972351074219,
+                1.6574478149414062,
+                -0.33293163776397705
+              ],
+              [
+                0.6579627394676208,
+                3.1581180095672607,
+                0.25482916831970215
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.45191752910614014,
+                0.1276865303516388,
+                -0.26414746046066284
+              ],
+              [
+                0.5988042950630188,
+                1.8143842220306396,
+                0.22863760590553284
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 337,
+            "bounds": [
+              [
+                -0.46317771077156067,
+                -0.04263010993599892,
+                -0.19798646867275238
+              ],
+              [
+                0.6195375919342041,
+                0.1668713539838791,
+                0.36968886852264404
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      },
+      {
+        "name": "Human_CylinderMesh.009",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.5906070470809937,
+                1.2421486377716064,
+                -0.29540640115737915
+              ],
+              [
+                0.6193156838417053,
+                3.7643563747406006,
+                0.5584518909454346
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 323,
+            "bounds": [
+              [
+                -0.5977943539619446,
+                1.6257685422897339,
+                -0.3195551037788391
+              ],
+              [
+                0.6078616380691528,
+                3.0852293968200684,
+                0.26067274808883667
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.4536076486110687,
+                0.11166533827781677,
+                -0.6173830628395081
+              ],
+              [
+                0.45835188031196594,
+                1.7991138696670532,
+                0.47248318791389465
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.4640195667743683,
+                -0.07849825918674469,
+                -0.661220908164978
+              ],
+              [
+                0.4704955220222473,
+                0.21911610662937164,
+                0.79791259765625
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1162,
+    "bytes": 69336,
+    "sha256": "8a86bb1b85e888508e34f6bfbec0256524ed2aa100386e9362b233b02b4b422e",
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "Male_Walking"
+      }
+    ],
+    "animations": [],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "Skin.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484014630317688,
+            0.5023338794708252,
+            0.3141341507434845,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shirt.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2734376788139343,
+            0.296122670173645,
+            0.4019691050052643,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Pants.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.06071966513991356,
+            0.05716514587402344,
+            0.05872301757335663,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Shoes.009",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09083671122789383,
+            0.05479157716035843,
+            0.028315724804997444,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.690034806728363
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Human_CylinderMesh.009",
+        "primitives": [
+          {
+            "vertices": 876,
+            "bounds": [
+              [
+                -0.5906070470809937,
+                1.2421486377716064,
+                -0.29540640115737915
+              ],
+              [
+                0.6193156838417053,
+                3.7643563747406006,
+                0.5584518909454346
+              ]
+            ],
+            "joints": false,
+            "triangles": 428
+          },
+          {
+            "vertices": 323,
+            "bounds": [
+              [
+                -0.5977943539619446,
+                1.6257685422897339,
+                -0.3195551037788391
+              ],
+              [
+                0.6078616380691528,
+                3.0852293968200684,
+                0.26067274808883667
+              ]
+            ],
+            "joints": false,
+            "triangles": 152
+          },
+          {
+            "vertices": 338,
+            "bounds": [
+              [
+                -0.4536076486110687,
+                0.11166533827781677,
+                -0.6173830628395081
+              ],
+              [
+                0.45835188031196594,
+                1.7991138696670532,
+                0.47248318791389465
+              ]
+            ],
+            "joints": false,
+            "triangles": 158
+          },
+          {
+            "vertices": 336,
+            "bounds": [
+              [
+                -0.4640195667743683,
+                -0.07849825918674469,
+                -0.661220908164978
+              ],
+              [
+                0.4704955220222473,
+                0.21911610662937164,
+                0.79791259765625
+              ]
+            ],
+            "joints": false,
+            "triangles": 150
+          }
+        ]
+      }
+    ]
+  }
+]

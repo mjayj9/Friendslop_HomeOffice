@@ -1,0 +1,61 @@
+{
+  "environment": "Actual Godot/Jolt instance, fixture positions and action calls; not browser or human interaction",
+  "results": [
+    {
+      "name": "Korean text becomes authoritative board object",
+      "passed": true
+    },
+    {
+      "name": "Second user moves a board object by version",
+      "passed": true
+    },
+    {
+      "name": "Stale concurrent delete is rejected",
+      "passed": true
+    },
+    {
+      "name": "Old author undo does not erase other user's update",
+      "passed": true
+    },
+    {
+      "name": "Mover can undo their own latest operation",
+      "passed": true
+    },
+    {
+      "name": "Selected board object is deleted",
+      "passed": true
+    },
+    {
+      "name": "Delete undo restores Korean text",
+      "passed": true
+    },
+    {
+      "name": "Occupied chair is protected from movement/deletion",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint changes engine authority and epoch",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint retains exact player position and seat",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint retains private-room assignment and board",
+      "passed": true
+    },
+    {
+      "name": "Previous epoch action is rejected without unseating or consuming sequence",
+      "passed": true
+    },
+    {
+      "name": "Out-of-range client movement cannot replace authoritative input",
+      "passed": true
+    },
+    {
+      "name": "Previous epoch movement cannot change new host state",
+      "passed": true
+    }
+  ]
+}

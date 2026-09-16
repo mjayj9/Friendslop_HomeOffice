@@ -1,0 +1,226 @@
+{
+  "environment": "Actual Godot web at 1920×1080 plus a real local Whisper WASM worker; Microsoft Heami synthetic Korean, not human microphone",
+  "browserSupport": "ko-KR 기기 내 지원: 자동 headless 조회 제약. 실제 정확도/지연은 아직 측정하지 않았습니다.",
+  "download": {
+    "config.json": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "config.json"
+    },
+    "progress_total": {
+      "status": "progress_total",
+      "name": "onnx-community/whisper-tiny",
+      "progress": 100,
+      "loaded": 43613734,
+      "total": 43613734,
+      "files": {
+        "config.json": {
+          "loaded": 2243,
+          "total": 2243
+        },
+        "onnx/encoder_model_quantized.onnx": {
+          "loaded": 10124990,
+          "total": 10124990
+        },
+        "onnx/decoder_model_merged_quantized.onnx": {
+          "loaded": 30719241,
+          "total": 30719241
+        },
+        "generation_config.json": {
+          "loaded": 3772,
+          "total": 3772
+        },
+        "tokenizer.json": {
+          "loaded": 2480466,
+          "total": 2480466
+        },
+        "tokenizer_config.json": {
+          "loaded": 282683,
+          "total": 282683
+        },
+        "preprocessor_config.json": {
+          "loaded": 339,
+          "total": 339
+        }
+      }
+    },
+    "preprocessor_config.json": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "preprocessor_config.json"
+    },
+    "tokenizer.json": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "tokenizer.json"
+    },
+    "tokenizer_config.json": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "tokenizer_config.json"
+    },
+    "onnx/encoder_model_quantized.onnx": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "onnx/encoder_model_quantized.onnx"
+    },
+    "onnx/decoder_model_merged_quantized.onnx": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "onnx/decoder_model_merged_quantized.onnx"
+    },
+    "generation_config.json": {
+      "status": "done",
+      "name": "onnx-community/whisper-tiny",
+      "file": "generation_config.json"
+    },
+    "ready": {
+      "status": "ready",
+      "task": "automatic-speech-recognition",
+      "model": "onnx-community/whisper-tiny"
+    }
+  },
+  "buildId": "007ca110-991d-4e1c-bb93-a09a7523896a",
+  "baseline": {
+    "drawCalls": 247,
+    "fps": 30,
+    "frameMs": 33.3333333333333,
+    "objects": 64,
+    "players": 1,
+    "staticMemory": 0
+  },
+  "results": [
+    {
+      "id": "ko-01",
+      "reference": "안녕하세요. 오늘 회의를 시작하겠습니다.",
+      "result": {
+        "type": "result",
+        "generation": 1,
+        "text": " 안녕하세요 오늘 회의를 시작하겠습니다.",
+        "elapsedMs": 1353.7000000029802,
+        "duration": 4.463875,
+        "sequence": 1
+      },
+      "error": null,
+      "performance": {
+        "drawCalls": 247,
+        "fps": 32,
+        "frameMs": 31.25,
+        "objects": 64,
+        "players": 1,
+        "staticMemory": 0
+      },
+      "heap": 35100000
+    },
+    {
+      "id": "ko-02",
+      "reference": "민수님은 보고서를 쓰고 지연님은 발표 자료를 준비해 주세요.",
+      "result": {
+        "type": "result",
+        "generation": 1,
+        "text": " 민수님은 보고서를 쓰고 지언니们 발표 자료를 준비해 주세요.",
+        "elapsedMs": 1506.2999999970198,
+        "duration": 5.1035,
+        "sequence": 1
+      },
+      "error": null,
+      "performance": {
+        "drawCalls": 247,
+        "fps": 37,
+        "frameMs": 27.027027027027,
+        "objects": 64,
+        "players": 1,
+        "staticMemory": 0
+      },
+      "heap": 35100000
+    },
+    {
+      "id": "ko-03",
+      "reference": "다음 회의는 9월 14일 오후 3시 30분입니다.",
+      "result": {
+        "type": "result",
+        "generation": 1,
+        "text": " 다음 후에는 9월 14일 5월 13일 30분입니다.",
+        "elapsedMs": 1320.9000000059605,
+        "duration": 4.5336875,
+        "sequence": 1
+      },
+      "error": null,
+      "performance": {
+        "drawCalls": 247,
+        "fps": 34,
+        "frameMs": 29.4117647058824,
+        "objects": 64,
+        "players": 1,
+        "staticMemory": 0
+      },
+      "heap": 35100000
+    },
+    {
+      "id": "ko-04",
+      "reference": "이번 스프린트의 API 테스트와 코드 리뷰를 마무리하겠습니다.",
+      "result": {
+        "type": "result",
+        "generation": 1,
+        "text": " 이번 스프린트의 API Test와 코드립을 마무리하겠습니다.",
+        "elapsedMs": 1416.2999999970198,
+        "duration": 5.2984375,
+        "sequence": 1
+      },
+      "error": null,
+      "performance": {
+        "drawCalls": 247,
+        "fps": 31,
+        "frameMs": 32.258064516129,
+        "objects": 64,
+        "players": 1,
+        "staticMemory": 0
+      },
+      "heap": 35100000
+    },
+    {
+      "id": "ko-05",
+      "reference": "농구를 한 다음 주방에서 함께 저녁을 만들자.",
+      "result": {
+        "type": "result",
+        "generation": 1,
+        "text": " 농구를 한 다음 주방에서 함께 전역을 만들자",
+        "elapsedMs": 1254,
+        "duration": 4.183625,
+        "sequence": 1
+      },
+      "error": null,
+      "performance": {
+        "drawCalls": 247,
+        "fps": 31,
+        "frameMs": 32.258064516129,
+        "objects": 64,
+        "players": 1,
+        "staticMemory": 0
+      },
+      "heap": 35100000
+    },
+    {
+      "id": "ko-06",
+      "reference": "예산은 125000원이고 참석자는 8명입니다.",
+      "result": {
+        "type": "result",
+        "generation": 1,
+        "text": " 예산은 12만 5천 원이고 참석자는 8명입니다.",
+        "elapsedMs": 1311.2000000029802,
+        "duration": 4.538625,
+        "sequence": 1
+      },
+      "error": null,
+      "performance": {
+        "drawCalls": 247,
+        "fps": 31,
+        "frameMs": 32.258064516129,
+        "objects": 64,
+        "players": 1,
+        "staticMemory": 0
+      },
+      "heap": 35100000
+    }
+  ]
+}

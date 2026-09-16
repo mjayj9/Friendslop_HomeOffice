@@ -1,0 +1,42 @@
+{
+  "environment": "Two independent Chromium processes, actual Godot WebGL/Jolt and local WebRTC. Physical keyboard/mouse UI and continuous walking. No position teleport or simulated network.",
+  "results": [
+    {
+      "name": "Duplicate game key is rejected without changing mappings",
+      "passed": true
+    },
+    {
+      "name": "Remapped physical T moves Godot character and original W is inactive",
+      "passed": true
+    },
+    {
+      "name": "Held movement remains suppressed after UI close until key is released",
+      "passed": true
+    },
+    {
+      "name": "Key mappings persist across an actual page reload",
+      "passed": true
+    },
+    {
+      "name": "Two actual browsers contest one crate; host grants exactly one owner",
+      "passed": true
+    },
+    {
+      "name": "Two actual browsers contest one chair; one seat is occupied and synchronized",
+      "passed": true
+    },
+    {
+      "name": "Actual walking, book pickup and storage insert synchronize across browsers with remapped interaction",
+      "passed": true
+    },
+    {
+      "name": "Physical chest close state synchronizes while retaining the same book",
+      "passed": true
+    },
+    {
+      "name": "Host exports stored book and new furniture in a real browser download",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

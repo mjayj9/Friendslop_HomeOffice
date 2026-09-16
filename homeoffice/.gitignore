@@ -1,0 +1,6 @@
+.godot/
+.runtime/
+build/
+evidence/*.log
+art/*.blend1
+releases/

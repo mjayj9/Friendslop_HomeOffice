@@ -1,0 +1,53 @@
+{
+  "environment": "Actual Godot 4.6.1 / Jolt. Fixture positions and authentic target rays, action validation, meshes, physics and save/restore. Not human gameplay.",
+  "results": [
+    {
+      "name": "Host ray reaches the physical storage chest",
+      "passed": true
+    },
+    {
+      "name": "E opens actual hinged chest",
+      "passed": true
+    },
+    {
+      "name": "Held book becomes a unique persisted container reference",
+      "passed": true
+    },
+    {
+      "name": "Open chest shows its stored original book model",
+      "passed": true
+    },
+    {
+      "name": "Closing lid hides contents and retains them",
+      "passed": true
+    },
+    {
+      "name": "Full chest cannot be moved or removed",
+      "passed": true
+    },
+    {
+      "name": "Whole world restore retains the open chest and physical contents",
+      "passed": true
+    },
+    {
+      "name": "Two contenders cannot extract the same stored object twice",
+      "passed": true
+    },
+    {
+      "name": "Extracted item regains collision and is held with bounded physics",
+      "passed": true
+    },
+    {
+      "name": "Drawer slides along its model anchor",
+      "passed": true
+    },
+    {
+      "name": "Lamp interaction changes shared persisted power state",
+      "passed": true
+    },
+    {
+      "name": "Powered-off lamp emits no local light",
+      "passed": true
+    }
+  ]
+}

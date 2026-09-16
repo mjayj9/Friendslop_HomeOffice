@@ -1,0 +1,8 @@
+{
+  "bounces": 5,
+  "environment": "Actual Godot/Jolt fixed physics ticks; controlled player/ball initial fixture; no render animation driving ball Y.",
+  "maxSpeed": 6.98156213760376,
+  "maxY": 1.32565021514893,
+  "minY": 0.117600031197071,
+  "passed": true
+}

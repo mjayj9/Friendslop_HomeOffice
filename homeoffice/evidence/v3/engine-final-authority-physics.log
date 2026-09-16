@@ -1,0 +1,18 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Duplicate F command toggles tap exactly once and returns cached response
+PASS Forged actor and retired epoch reject without changing facilities
+PASS Flush has real cooldown and sound state
+PASS Newly placed ball is registered with shared sport rules
+PASS Restore clears removed ball metadata and never replays an old flush
+PASS Football in court cannot be picked up with E
+PASS Q passes football by real velocity without hand ownership
+PASS Football crossing scores and restarts at midfield
+PASS Facing nearby dribble can be contested and becomes a loose physical ball
+PASS Descending basket gives exactly two points once
+PASS Actual world muzzle ray applies HP damage and KO
+PASS Frontal shield blocks physical weapon ray
+PASS Shield does not protect an exposed back
+PASS Physical presentation ray maps to surface-centre UV
+PASS Physical laser stops at an intervening solid object

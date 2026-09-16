@@ -1,0 +1,5 @@
+log: Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+log: OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL
+log: Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.
+info: GODOT_WEB_READY
+log: HOMEoffice_READY Godot 4.6.1-stable (official)

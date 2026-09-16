@@ -1,0 +1,21 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Host ray reaches the physical storage chest
+PASS F opens actual hinged chest
+STORED { "open": true, "contents": ["stored-test-book"] }  true 0
+PASS Held book becomes a unique persisted container reference
+PASS Open chest shows its stored original book model
+PASS Closing lid hides contents and retains them
+PASS Full chest cannot be moved or removed
+RESTORED { "open": true, "contents": ["stored-test-book"] } true true
+PASS Whole world restore retains the open chest and physical contents
+PASS Two contenders cannot extract the same stored object twice
+PASS Extracted item regains collision and is held with bounded physics
+DRAWER RAY { "id": "living-drawer", "point": (-13.27, 0.765961, 10.75) } (-12.0, -0.004727, 10.75) { "x": 0.0, "z": 0.0, "yaw": 1.5707963267949, "pitch": -0.58944338573973, "jump": false, "run": false, "crouch": false, "seq": 7 }
+DRAWER { "open": true, "contents": [] } (0.0, 0.57, 0.42)
+PASS Drawer slides along its model anchor
+LAMP RAY { "id": "living-lamp", "point": (-13.77331, 1.270276, 4.399906) } (-13.77331, -0.004726, 5.549901) { "x": 0.0, "z": 0.0, "yaw": 0.0, "pitch": -0.29145674760659, "jump": false, "run": false, "crouch": false, "seq": 7 }
+LAMP { "on": false }
+PASS Lamp interaction changes shared persisted power state
+PASS Powered-off lamp emits no local light
