@@ -1,9 +1,9 @@
-; Homeoffice V2 — Godot 4.6.1 stable
+; Homeoffice V3 — Godot 4.6.1 stable
 config_version=5
 
 [application]
 config/name="모여집 · Homeoffice"
-config/version="0.2.0-dev"
+config/version="0.3.0-simulation"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 

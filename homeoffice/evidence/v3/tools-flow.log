@@ -1,0 +1,4 @@
+PASS Questions and assigned follow-up tasks synchronize and can be completed remotely
+PASS Real PDF bytes and page changes synchronize; guest page controls are gated
+PASS Physical picked-up laser reaches the actual 3D screen and the remote peer; timeout clears it
+PASS Export includes meeting queues and original PDF attachment

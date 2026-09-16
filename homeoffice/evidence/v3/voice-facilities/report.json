@@ -1,0 +1,40 @@
+{
+  "environment": "Two independent Chromium WebGL/WebRTC processes. Chromium generated microphone stream (synthetic tone), explicit browser UI controls. No human speech or microphone quality claim. Physical keyboard navigation to broadcast booth and bathroom.",
+  "buildId": "007ca110-991d-4e1c-bb93-a09a7523896a",
+  "rtp": [
+    {
+      "who": "ho3-user-f1b6c1f4-d514-4fd0-b077-f32cb668b799",
+      "packetsReceived": 99,
+      "bytesReceived": 5080,
+      "jitter": 0.001
+    }
+  ],
+  "completed": true,
+  "results": [
+    {
+      "name": "Real WebRTC audio receives synthetic microphone RTP near another avatar",
+      "passed": true
+    },
+    {
+      "name": "Walking outside configured proximity closes the actual media route",
+      "passed": true
+    },
+    {
+      "name": "Authorized booth broadcasts audio beyond proximity and respects scope change",
+      "passed": true
+    },
+    {
+      "name": "Stopping microphone ends capture and outgoing audio",
+      "passed": true
+    },
+    {
+      "name": "Refined bathroom lid, running water and ventilation change real scene state",
+      "passed": true
+    },
+    {
+      "name": "Announcements and facility states survive real file export and restore",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

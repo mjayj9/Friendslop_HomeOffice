@@ -1,0 +1,333 @@
+WorkerThreadPool: 24 threads, 7 max low-priority.
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Unrecognized output string "misc2" in mapping:
+030000000d0f00000202000000000000,Horipad O Nintendo Switch 2 Controller,a:b1,b:b0,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b4,leftstick:b10,lefttrigger:b6,leftx:a0,lefty:a1,misc1:b13,misc2:b14,rightshoulder:b5,rightstick:b11,righttrigger:b7,rightx:a2,righty:a3,start:b9,x:b3,y:b2,platform:Windows,
+Unrecognized output string "misc2" in mapping:
+030000000d0f00009601000000000000,Horipad Steam,a:b0,b:b1,back:b10,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b6,leftstick:b13,lefttrigger:b8,leftx:a0,lefty:a1,misc2:b2,paddle1:b5,paddle2:b15,paddle3:b18,paddle4:b19,rightshoulder:b7,rightstick:b14,righttrigger:b9,rightx:a3,righty:a4,start:b11,x:b3,y:b4,platform:Windows,
+Unrecognized output string "misc2" in mapping:
+030000007e0500006920000000000000,Nintendo Switch 2 Pro Controller,a:b0,b:b1,back:b14,dpdown:b8,dpleft:b10,dpright:b9,dpup:b11,guide:b16,leftshoulder:b12,leftstick:b15,lefttrigger:b13,leftx:a0,lefty:a1~,misc1:b17,misc2:b20,paddle1:b18,paddle2:b19,rightshoulder:b4,rightstick:b7,righttrigger:b5,rightx:a2,righty:a3~,start:b6,x:b2,y:b3,platform:Windows,
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 75400357
+EDITOR API HASH: 3012763406
+Loading resource: res://tests/v3-gameplay.gd
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://scripts/v3/world.gd
+Loading resource: res://assets/fonts/NotoSansKR-game.ttf
+Loading resource: res://.godot/imported/NotoSansKR-game.ttf-dcd2cab1e6bc0dc9aa4f3b2236a22450.fontdata
+Loading resource: res://scripts/world/campus_details.gd
+Loading resource: res://assets/v2/campus-details-v3.glb
+Loading resource: res://.godot/imported/campus-details-v3.glb-806c45a2dd97947b829e06868be37ec0.scn
+Loading resource: res://assets/v2/house.glb
+Loading resource: res://.godot/imported/house.glb-4958f2874d309ccb698b26525156cceb.scn
+Loading resource: res://assets/v2/house_carpet.png
+Loading resource: res://.godot/imported/house_carpet.png-0b94cb77b1e900b9cc2b05cc741d95d5.ctex
+Loading resource: res://assets/v2/house_cloth.png
+Loading resource: res://.godot/imported/house_cloth.png-19eb1d31cbffe44a7f9a5b2d79067ddf.ctex
+Loading resource: res://assets/v2/house_deck.png
+Loading resource: res://.godot/imported/house_deck.png-a0fea3539394294696b61585ace4f3c4.ctex
+Loading resource: res://assets/v2/house_oak2.png
+Loading resource: res://.godot/imported/house_oak2.png-8d35141e1879595cb484e86997ef9d4c.ctex
+Loading resource: res://assets/v2/house_oak.png
+Loading resource: res://.godot/imported/house_oak.png-d304585e8bfbc940af015d818472ee49.ctex
+Loading resource: res://assets/v2/house_plaster.png
+Loading resource: res://.godot/imported/house_plaster.png-92162932a70b9f58e665ed772ea9453c.ctex
+Loading resource: res://assets/v2/house_stone.png
+Loading resource: res://.godot/imported/house_stone.png-ebf7d65daa80fab87612489dd36605d2.ctex
+Loading resource: res://assets/v2/house_tile.png
+Loading resource: res://.godot/imported/house_tile.png-9ab26ccad1aa98c6ffde931417385372.ctex
+Loading resource: res://assets/v2/house_walnut.png
+Loading resource: res://.godot/imported/house_walnut.png-b92dc89c492c4f65bd9b0ee7fb341961.ctex
+Loading resource: res://assets/v2/grounds-v3.glb
+Loading resource: res://.godot/imported/grounds-v3.glb-0d77eae8172e3de3dd1750dbbdd8de5d.scn
+Loading resource: res://assets/v2/grounds-v3_oak.png
+Loading resource: res://.godot/imported/grounds-v3_oak.png-40cafd50cde571b88bbcebf91f41e85d.ctex
+Loading resource: res://assets/v2/grounds-v3_stone.png
+Loading resource: res://.godot/imported/grounds-v3_stone.png-875c3985fa3cbd118aeeb4bb486b5341.ctex
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door_oak.png
+Loading resource: res://.godot/imported/wide_door_oak.png-2d6987d825b71a9ebb7c26ce428d96e5.ctex
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/sofa.glb
+Loading resource: res://.godot/imported/sofa.glb-da572ae0067c51605f85996e9ba8dc84.scn
+Loading resource: res://assets/v2/sofa.glb
+Loading resource: res://.godot/imported/sofa.glb-da572ae0067c51605f85996e9ba8dc84.scn
+Loading resource: res://assets/v2/sofa.glb
+Loading resource: res://.godot/imported/sofa.glb-da572ae0067c51605f85996e9ba8dc84.scn
+Loading resource: res://assets/v2/low_table.glb
+Loading resource: res://.godot/imported/low_table.glb-0d0ca544862d8c10635d2d5f26f91641.scn
+Loading resource: res://assets/v2/low_table_oak.png
+Loading resource: res://.godot/imported/low_table_oak.png-260a42b62ea6dad72964e77c801a709b.ctex
+Loading resource: res://assets/v2/low_table_walnut.png
+Loading resource: res://.godot/imported/low_table_walnut.png-2b8cdf6e48389a5beae6424242b20d57.ctex
+Loading resource: res://assets/v2/book.glb
+Loading resource: res://.godot/imported/book.glb-6696d746811e9e61009d2a263d3a223f.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/marker.glb
+Loading resource: res://.godot/imported/marker.glb-112cdbf5e6b1ad05c36139fcc5c8beaf.scn
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/crate.glb
+Loading resource: res://.godot/imported/crate.glb-a7f6ad7fceffd8b322c0b4f2ae97aa00.scn
+Loading resource: res://assets/v2/crate.glb
+Loading resource: res://.godot/imported/crate.glb-a7f6ad7fceffd8b322c0b4f2ae97aa00.scn
+Loading resource: res://assets/v2/crate.glb
+Loading resource: res://.godot/imported/crate.glb-a7f6ad7fceffd8b322c0b4f2ae97aa00.scn
+Loading resource: res://assets/v2/crate.glb
+Loading resource: res://.godot/imported/crate.glb-a7f6ad7fceffd8b322c0b4f2ae97aa00.scn
+Loading resource: res://assets/v2/book.glb
+Loading resource: res://.godot/imported/book.glb-6696d746811e9e61009d2a263d3a223f.scn
+Loading resource: res://assets/v2/fridge.glb
+Loading resource: res://.godot/imported/fridge.glb-17dbeacbe20d5281fb4c9ed7a2210d99.scn
+Loading resource: res://assets/v2/fridge_cloth.png
+Loading resource: res://.godot/imported/fridge_cloth.png-3b58b937a19cc27ccd3f45c6825236cc.ctex
+Loading resource: res://assets/v2/cooker.glb
+Loading resource: res://.godot/imported/cooker.glb-e65671a4a3254c6f3afc5a3b5abfe62c.scn
+Loading resource: res://assets/v2/cooker_cloth.png
+Loading resource: res://.godot/imported/cooker_cloth.png-53d8a90f50230c68dcbd4db1fea80d39.ctex
+Loading resource: res://assets/v2/cooker_stone.png
+Loading resource: res://.godot/imported/cooker_stone.png-3b868578cad52cab1111934b64b1f308.ctex
+Loading resource: res://assets/v2/sink.glb
+Loading resource: res://.godot/imported/sink.glb-028440a72776a81644818e2a0bc26aeb.scn
+Loading resource: res://assets/v2/sink_cloth.png
+Loading resource: res://.godot/imported/sink_cloth.png-bd2c66693ba50e042fec67a2a5650d0e.ctex
+Loading resource: res://assets/v2/sink_stone.png
+Loading resource: res://.godot/imported/sink_stone.png-ea00a06a39d17fc524ce350409b50e8e.ctex
+Loading resource: res://assets/v2/counter.glb
+Loading resource: res://.godot/imported/counter.glb-f0c4510f0b84fad845800028cbf404ef.scn
+Loading resource: res://assets/v2/counter_cloth.png
+Loading resource: res://.godot/imported/counter_cloth.png-b11794ec7b8f608686297593c53617bc.ctex
+Loading resource: res://assets/v2/counter_stone.png
+Loading resource: res://.godot/imported/counter_stone.png-1130078e14824afc9494f28cfb2a41c4.ctex
+Loading resource: res://assets/v2/plate.glb
+Loading resource: res://.godot/imported/plate.glb-fc56e10a56d7115621aceb9c6f95e3c1.scn
+Loading resource: res://assets/v2/plate_cloth.png
+Loading resource: res://.godot/imported/plate_cloth.png-e19f339be761a7244dd8bc8c5b8fecf3.ctex
+Loading resource: res://assets/v2/pan.glb
+Loading resource: res://.godot/imported/pan.glb-3b44e2b78e0c8a104fec6f1b61eb87a0.scn
+Loading resource: res://assets/v2/pan_walnut.png
+Loading resource: res://.godot/imported/pan_walnut.png-2825c6a16d1c6bde5e25a1a408489265.ctex
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed_cloth.png
+Loading resource: res://.godot/imported/bed_cloth.png-c6a933c6d60d4b638f45df94058ca23c.ctex
+Loading resource: res://assets/v2/bed_oak.png
+Loading resource: res://.godot/imported/bed_oak.png-40d6f94af620ea09e2520676b0652e48.ctex
+Loading resource: res://assets/v2/bed_walnut.png
+Loading resource: res://.godot/imported/bed_walnut.png-b80fa893ffc667e47a4f715f73fd9d3c.ctex
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/bed.glb
+Loading resource: res://.godot/imported/bed.glb-09896e55b1451fd79aefff4f3a424c88.scn
+Loading resource: res://assets/v2/sofa.glb
+Loading resource: res://.godot/imported/sofa.glb-da572ae0067c51605f85996e9ba8dc84.scn
+Loading resource: res://assets/v2/low_table.glb
+Loading resource: res://.godot/imported/low_table.glb-0d0ca544862d8c10635d2d5f26f91641.scn
+Loading resource: res://assets/v2/book.glb
+Loading resource: res://.godot/imported/book.glb-6696d746811e9e61009d2a263d3a223f.scn
+Loading resource: res://assets/v2/basketball.glb
+Loading resource: res://.godot/imported/basketball.glb-8bd9400449a5ba49045437b65c35e87c.scn
+Loading resource: res://assets/v2/football.glb
+Loading resource: res://.godot/imported/football.glb-80d3aa889af44e07ddd61d6841d1b3a5.scn
+Loading resource: res://assets/v2/gun.glb
+Loading resource: res://.godot/imported/gun.glb-c306fca19e5b2ad957fcd003323375e0.scn
+Loading resource: res://assets/v2/gun.glb
+Loading resource: res://.godot/imported/gun.glb-c306fca19e5b2ad957fcd003323375e0.scn
+Loading resource: res://assets/v2/shield.glb
+Loading resource: res://.godot/imported/shield.glb-cbb034eb38460be76a95d8ce8d3e2fcf.scn
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/arcade.glb
+Loading resource: res://.godot/imported/arcade.glb-b8d67ec29cfd32a835d004d34389f809.scn
+Loading resource: res://assets/v2/arcade_walnut.png
+Loading resource: res://.godot/imported/arcade_walnut.png-7442cba71056fc9069e87d54f7ceb680.ctex
+Loading resource: res://assets/v2/arcade.glb
+Loading resource: res://.godot/imported/arcade.glb-b8d67ec29cfd32a835d004d34389f809.scn
+Loading resource: res://assets/v2/storage.glb
+Loading resource: res://.godot/imported/storage.glb-4f1a228fb9da6c58679aea77c8c80868.scn
+Loading resource: res://assets/v2/storage_oak.png
+Loading resource: res://.godot/imported/storage_oak.png-852ead233cb646ea8dc12e20b9231422.ctex
+Loading resource: res://assets/v2/storage_walnut.png
+Loading resource: res://.godot/imported/storage_walnut.png-de1652e2bba13987fe1573050bb6d608.ctex
+Loading resource: res://assets/v2/storage_lid.glb
+Loading resource: res://.godot/imported/storage_lid.glb-09efa8ba6a11ebf9727b491796ec01af.scn
+Loading resource: res://assets/v2/storage_lid_oak.png
+Loading resource: res://.godot/imported/storage_lid_oak.png-b0a86c079459fc84af90e54c79972471.ctex
+Loading resource: res://assets/v2/drawer.glb
+Loading resource: res://.godot/imported/drawer.glb-571672af4946688905f93234ab90d81d.scn
+Loading resource: res://assets/v2/drawer_oak.png
+Loading resource: res://.godot/imported/drawer_oak.png-3db7994051615dc89ecf232dabc7d562.ctex
+Loading resource: res://assets/v2/drawer_walnut.png
+Loading resource: res://.godot/imported/drawer_walnut.png-a26ac15347714fb181782f4ff87e3775.ctex
+Loading resource: res://assets/v2/drawer_slide.glb
+Loading resource: res://.godot/imported/drawer_slide.glb-6727e989fdafb051b8dbe404acf23215.scn
+Loading resource: res://assets/v2/drawer_slide_oak.png
+Loading resource: res://.godot/imported/drawer_slide_oak.png-6ffcf4af4e963d0afecae8403e158a28.ctex
+Loading resource: res://assets/v2/drawer_slide_walnut.png
+Loading resource: res://.godot/imported/drawer_slide_walnut.png-feee32675f3abec8f6f796565cf87f45.ctex
+Loading resource: res://assets/v2/floor_lamp.glb
+Loading resource: res://.godot/imported/floor_lamp.glb-0a4ddc7f155d0718491f91ef4147632c.scn
+Loading resource: res://assets/v2/floor_lamp_cloth.png
+Loading resource: res://.godot/imported/floor_lamp_cloth.png-41f0649d43a406811477330ccd7ca663.ctex
+Loading resource: res://assets/v2/floor_lamp_walnut.png
+Loading resource: res://.godot/imported/floor_lamp_walnut.png-34adbf4726c923f234ef3ad7aeef711f.ctex
+Loading resource: res://assets/characters/male-animated-v3.glb
+Loading resource: res://.godot/imported/male-animated-v3.glb-219362f540e048c8ce991624fea801e2.scn
+Loading resource: res://assets/characters/male-seated-v3.glb
+Loading resource: res://.godot/imported/male-seated-v3.glb-41d2c7102a2ed7e00f909b57db8cc678.scn
+Loading resource: res://assets/characters/male-lying-v3.glb
+Loading resource: res://.godot/imported/male-lying-v3.glb-3e3f29234717a7619474bf253b95acba.scn
+Loading resource: res://assets/characters/male-arms-v3.glb
+Loading resource: res://.godot/imported/male-arms-v3.glb-483289ccaa96148fc22698425427ff91.scn
+Loading resource: res://assets/v2/gallery.glb
+Loading resource: res://.godot/imported/gallery.glb-fc26336697ff1de58787ec8ba5c88050.scn
+Loading resource: res://assets/v2/gallery_oak.png
+Loading resource: res://.godot/imported/gallery_oak.png-77105651ece67dc0bd1736822e466805.ctex
+Loading resource: res://assets/v2/gallery_plaster.png
+Loading resource: res://.godot/imported/gallery_plaster.png-6d05475c95dbeecd17c388adb4266b6c.ctex
+Loading resource: res://assets/v2/gallery_walnut.png
+Loading resource: res://.godot/imported/gallery_walnut.png-4c739bba2e2e74b1443bcc3f2dc59091.ctex
+Loading resource: res://assets/v2/office_left.glb
+Loading resource: res://.godot/imported/office_left.glb-d1a6eb9f9c67abd59a99c704559ffe54.scn
+Loading resource: res://assets/v2/office_left_cloth.png
+Loading resource: res://.godot/imported/office_left_cloth.png-883a7a12045bd27ed102cb312b4f1041.ctex
+Loading resource: res://assets/v2/office_left_oak.png
+Loading resource: res://.godot/imported/office_left_oak.png-f35913c25bb6df056800537f867f9542.ctex
+Loading resource: res://assets/v2/office_left_plaster.png
+Loading resource: res://.godot/imported/office_left_plaster.png-b166f1b0bbaee1a7e28186a8252b17e0.ctex
+Loading resource: res://assets/v2/office_left_stone.png
+Loading resource: res://.godot/imported/office_left_stone.png-6e78dd16d8f1a656fb42f96d5714eb6f.ctex
+Loading resource: res://assets/v2/office_left_walnut.png
+Loading resource: res://.godot/imported/office_left_walnut.png-ae18c47677fb79ef12ccf1a5487d2a76.ctex
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/book.glb
+Loading resource: res://.godot/imported/book.glb-6696d746811e9e61009d2a263d3a223f.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+HOMEoffice_READY Godot 4.6.1-stable (official)
+Loading resource: res://assets/v2/marker.glb
+Loading resource: res://.godot/imported/marker.glb-112cdbf5e6b1ad05c36139fcc5c8beaf.scn
+PASS Imported real male mesh has opaque visible materials
+PASS 31 authored Blender animation clips load
+PASS Default tag is immediately Practice
+Loading resource: res://assets/characters/male-animated-v3.glb
+Loading resource: res://.godot/imported/male-animated-v3.glb-219362f540e048c8ce991624fea801e2.scn
+Loading resource: res://assets/characters/male-seated-v3.glb
+Loading resource: res://.godot/imported/male-seated-v3.glb-41d2c7102a2ed7e00f909b57db8cc678.scn
+Loading resource: res://assets/characters/male-lying-v3.glb
+Loading resource: res://.godot/imported/male-lying-v3.glb-3e3f29234717a7619474bf253b95acba.scn
+Loading resource: res://assets/characters/male-arms-v3.glb
+Loading resource: res://.godot/imported/male-arms-v3.glb-483289ccaa96148fc22698425427ff91.scn
+Loading resource: res://assets/v2/office_right.glb
+Loading resource: res://.godot/imported/office_right.glb-3b8ef75ff78780cab3849115de8baab8.scn
+Loading resource: res://assets/v2/office_right_cloth.png
+Loading resource: res://.godot/imported/office_right_cloth.png-67d112de21461b1126df78b9e43705f7.ctex
+Loading resource: res://assets/v2/office_right_oak.png
+Loading resource: res://.godot/imported/office_right_oak.png-b9d814c45ea8e1854c3141d2ed88d39b.ctex
+Loading resource: res://assets/v2/office_right_plaster.png
+Loading resource: res://.godot/imported/office_right_plaster.png-ada116e796ea7a7802bc73fc2efb40be.ctex
+Loading resource: res://assets/v2/office_right_stone.png
+Loading resource: res://.godot/imported/office_right_stone.png-04b6d599033fdc916503fcbb004b5d3e.ctex
+Loading resource: res://assets/v2/office_right_walnut.png
+Loading resource: res://.godot/imported/office_right_walnut.png-1d8b355698c5c83ca14506b13720a255.ctex
+Loading resource: res://assets/v2/table.glb
+Loading resource: res://.godot/imported/table.glb-c7214b471d3581e0dd1f689940424128.scn
+Loading resource: res://assets/v2/chair.glb
+Loading resource: res://.godot/imported/chair.glb-26fd08c59d2d3d355c04020ea3e0c7ac.scn
+Loading resource: res://assets/v2/book.glb
+Loading resource: res://.godot/imported/book.glb-6696d746811e9e61009d2a263d3a223f.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/v2/wide_door.glb
+Loading resource: res://.godot/imported/wide_door.glb-553bcd7d73e0a15ea6e50be652e50290.scn
+Loading resource: res://assets/audio/toy-pop.wav
+Loading resource: res://.godot/imported/toy-pop.wav-2b00d06df45814ea30c1b5bade7080c0.sample
+PASS Practice accepts >12 shots without reloading
+PASS Revoked permission rejects fire
+PASS Four accepted hits cause KO and one kill
+PASS KO cannot be scored twice
+PASS Timed respawn restores HP and adds protection
+PASS Kill gauge decays after inactivity
+PASS Basketball collider radius 0.12m
+PASS Charged release frees ball and applies real backspin
+PASS Hoop accepts descending centre and rejects rising/edge
+PASS Document tab switch does not deliberately freeze host
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"

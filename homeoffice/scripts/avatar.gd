@@ -13,6 +13,7 @@ var sitting: Node3D
 var skeleton: Skeleton3D
 var camera: Camera3D
 var gait = 0.0
+var remote_gesture=""
 var remote_target = Vector3.ZERO
 var remote_yaw = 0.0
 var predicted = []
@@ -29,11 +30,11 @@ func _ready():
 	shape.shape=capsule
 	shape.position.y=.88
 	add_child(shape)
-	standing=load("res://assets/characters/male-rigged.glb").instantiate()
+	standing=load("res://assets/characters/male-animated-v3.glb").instantiate()
 	standing.rotation.y=PI
 	add_child(standing)
 	skeleton=find_skeleton(standing)
-	sitting=load("res://assets/characters/male-seated.glb").instantiate()
+	sitting=load("res://assets/characters/male-seated-v3.glb").instantiate()
 	sitting.rotation.y=PI
 	add_child(sitting)
 	sitting.visible=false
@@ -93,7 +94,9 @@ func animate(dt:float):
 
 func pose(bone:String,axis:Vector3,angle:float):
 	var id=skeleton.find_bone(bone)
-	if id>=0:skeleton.set_bone_pose_rotation(id,Quaternion(axis,angle))
+	if id>=0:
+		# Godot bone pose is a local transform; preserve the imported rest basis.
+		skeleton.set_bone_pose_rotation(id,skeleton.get_bone_rest(id).basis.get_rotation_quaternion()*Quaternion(axis,angle))
 
 func state() -> Dictionary:
 	return {"id":actor_id,"p":[position.x,position.y,position.z],"v":[velocity.x,velocity.y,velocity.z],"yaw":rotation.y,"pitch":command.pitch,"seat":seated,"seatYaw":seat_yaw,"hold":holding,"ack":ack}

@@ -1,0 +1,6 @@
+PASS Real WebRTC audio receives synthetic microphone RTP near another avatar
+PASS Walking outside configured proximity closes the actual media route
+PASS Authorized booth broadcasts audio beyond proximity and respects scope change
+PASS Stopping microphone ends capture and outgoing audio
+PASS Refined bathroom lid, running water and ventilation change real scene state
+PASS Announcements and facility states survive real file export and restore

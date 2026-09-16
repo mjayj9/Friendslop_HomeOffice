@@ -7,3 +7,9 @@
 #textChat{position:fixed;z-index:80;left:24px;bottom:30px;width:min(520px,90vw);padding:22px;background:#f5f0e8;color:#203b33;border-radius:18px;box-shadow:0 15px 60px #0008}#chatLines{height:190px;overflow:auto;text-align:left}#chatForm{display:flex;gap:10px}#chatText{flex:1}#displayName{max-width:210px;margin:8px}
 
 .bindings-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}.bindings-grid label{display:flex;justify-content:space-between;align-items:center;font-size:13px}.bindings-grid button{padding:6px 10px;min-width:75px}#keyBindings{margin-top:18px}#keyBindings summary{cursor:pointer;font-weight:700}
+
+.classroom-card{margin:14px 0;padding:14px 18px;background:#e3ebdb;border:1px solid #a5b79b;border-radius:14px}.classroom-card h3{margin:0}.document-card{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:14px;border-bottom:1px solid #c6cec1}.document-card strong{flex:1}#documentForm,#searchForm{display:flex;gap:8px;flex-wrap:wrap}#documentForm input[name=url]{flex:1;min-width:240px}#gameplayHud{position:fixed;bottom:60px;left:24px;z-index:4;background:#17291fe6;color:white;padding:12px 18px;border-radius:12px;max-width:400px;pointer-events:none}#gameplayHud meter{display:block;width:280px;height:18px}#gameplayHud span{display:block;font-size:13px}#chargeHud strong{color:#efd185}#entry .welcome{max-height:90vh;overflow:auto}
+
+#onAirBadge{position:fixed;left:50%;top:64px;transform:translateX(-50%);background:#762b26;color:white;padding:8px 16px;border-radius:18px;font-size:13px;pointer-events:none}
+
+#menu .row{flex-wrap:wrap}#menu .row select{flex:1 1 180px;max-width:100%}#menu .row button{flex-shrink:0}#gameplayHud meter::-webkit-meter-optimum-value{transition:width .15s linear}

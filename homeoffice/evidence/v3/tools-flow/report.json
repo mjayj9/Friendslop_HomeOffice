@@ -1,0 +1,34 @@
+{
+  "environment": "Two independent Chromium WebGL processes, local signaling and actual WebRTC. Keyboard movement, physical object pickup, browser file input and UI. Read-only diagnostics; no teleport or forged packets.",
+  "buildId": "4edb96de-caa2-4b53-b132-5fb0cade9ec1",
+  "physicalLaser": {
+    "host": [
+      0.550625802427552,
+      0.628041308459939
+    ],
+    "guest": [
+      0.550625802427552,
+      0.628041308459939
+    ]
+  },
+  "completed": true,
+  "results": [
+    {
+      "name": "Questions and assigned follow-up tasks synchronize and can be completed remotely",
+      "passed": true
+    },
+    {
+      "name": "Real PDF bytes and page changes synchronize; guest page controls are gated",
+      "passed": true
+    },
+    {
+      "name": "Physical picked-up laser reaches the actual 3D screen and the remote peer; timeout clears it",
+      "passed": true
+    },
+    {
+      "name": "Export includes meeting queues and original PDF attachment",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

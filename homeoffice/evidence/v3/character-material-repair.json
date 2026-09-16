@@ -1,0 +1,47 @@
+[
+  {
+    "source": "male-rigged.glb",
+    "output": "male-rigged-v3.glb",
+    "materials": [
+      "Skin.005",
+      "Shirt.005",
+      "Pants.005",
+      "Shoes.005"
+    ],
+    "binaryChunkUnchanged": true,
+    "sourceSha256": "87e6395d42bbbb7454a57357bd978127621bc581472046c9bf0ad6989fcdadd6",
+    "outputSha256": "05cf879559829be7f06cec91bb67be40e96a35d784650c90cc784e4ae56c1628"
+  },
+  {
+    "source": "male-seated.glb",
+    "output": "male-seated-v3.glb",
+    "materials": [],
+    "binaryChunkUnchanged": true,
+    "sourceSha256": "986211bc555e1a3c5011e4187caa118e67aabf7a02aa87c87e7c2ce06ae9a0cc",
+    "outputSha256": "986211bc555e1a3c5011e4187caa118e67aabf7a02aa87c87e7c2ce06ae9a0cc"
+  },
+  {
+    "source": "male-lying.glb",
+    "output": "male-lying-v3.glb",
+    "materials": [
+      "Skin.001",
+      "Shirt.001",
+      "Pants.001",
+      "Shoes.001"
+    ],
+    "binaryChunkUnchanged": true,
+    "sourceSha256": "843b2f1374ec8312ad07c36879a4619cbe235174aef2617290755f9fc76cf8dd",
+    "outputSha256": "4a1a1dc787e91791e740dcdf13536bd959395803b47972804b140025b9ae42eb"
+  },
+  {
+    "source": "male-arms.glb",
+    "output": "male-arms-v3.glb",
+    "materials": [
+      "Skin.001",
+      "Shirt.001"
+    ],
+    "binaryChunkUnchanged": true,
+    "sourceSha256": "3ff1dd36304a3537bd207c83ea0707918b41a1374fe11e8a0df88eb85ace7779",
+    "outputSha256": "e65cc69272268d493bacd51d9e02da96050a60c385dd3c8d590af0f52b7a9585"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "OS": "Microsoft Windows 11 Pro",
+  "CPU": "Intel(R) Core(TM) i7-14650HX",
+  "RAMBytes": 33943150592,
+  "GPU": [
+    {
+      "Name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "DriverVersion": "32.0.16.1062"
+    },
+    {
+      "Name": "Intel(R) UHD Graphics",
+      "DriverVersion": "32.0.101.7076"
+    }
+  ],
+  "Scope": "One Windows PC, separate Chromium processes and loopback WebRTC; not distributed hardware or WAN"
+}

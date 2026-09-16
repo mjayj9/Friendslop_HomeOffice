@@ -1,0 +1,24 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS fridge gives one visible held ingredient {  }
+PASS cooker consumes ingredient once and starts cooking {  }
+PASS actual cooking timer reaches ready {  }
+PASS cooked physical food appears {  }
+PASS cooked food can be picked up {  }
+PASS counter plates food as shared object state {  }
+PASS plate can be carried {  }
+PASS sit while carrying food {  }
+PASS food consumed only once leaves dirty plate {  }
+PASS F stands before table interaction while holding a plate {  }
+PASS sink clears dirty physical plate {  }
+PASS bed enters lying state {  }
+PASS sleep is an individual explicit state {  }
+PASS wake finds safe standing location {  }
+PASS basket downward crossing scores once {  }
+PASS duplicate basket sample does not score {  }
+PASS upward crossing rejected {  }
+PASS unapproved toy gun pickup rejected {  }
+PASS approved game-zone pickup succeeds {  }
+PASS permission revoke releases already-held gun {  }
+PASS grant does not allow meeting-room firing {  }

@@ -90,7 +90,7 @@ func _ready():
 	preview_camera.current=true
 	if OS.has_feature("web"):
 		bridge=JavaScriptBridge.get_interface("Homeoffice")
-		bridge.ready()
+		bridge.ready(FileAccess.get_file_as_string("res://assets/build-version.json"))
 		hud.visible=false
 		hint.visible=false
 	else:
@@ -198,7 +198,7 @@ func default_furniture():
 func spawn_object(d:Dictionary):
 	if objects.has(d.id):return
 	var kind=String(d.kind)
-	var movable=kind in ["crate","book","marker","basketball","football","gun","shield","plate","pan","ingredient","meal"]
+	var movable=kind in ["crate","book","marker","laser","basketball","football","gun","shield","plate","pan","ingredient","meal","chair","table","low_table","floor_lamp"]
 	var body:PhysicsBody3D=RigidBody3D.new() if movable else StaticBody3D.new()
 	body.name=d.id
 	body.set_meta("object_id",d.id)
@@ -222,8 +222,14 @@ func spawn_object(d:Dictionary):
 			body.add_child(c)
 		else:
 			var sizes={"crate":Vector3(.44,.44,.44),"book":Vector3(.24,.075,.32),"marker":Vector3(.03,.19,.03),"plate":Vector3(.4,.04,.4),"pan":Vector3(.5,.10,.42),"gun":Vector3(.12,.3,.45),"shield":Vector3(.7,.92,.16)}
-			collision(body,Vector3.ZERO,sizes[kind])
-		body.mass=2.4 if kind=="crate" else (.62 if kind=="basketball" else .4)
+			if kind=="chair":
+				collision(body,Vector3(0,.26,0),Vector3(.53,.52,.53))
+				collision(body,Vector3(0,.84,.24),Vector3(.54,.60,.08))
+			elif kind=="laser":collision(body,Vector3.ZERO,Vector3(.03,.03,.19))
+			elif sizes.has(kind):collision(body,Vector3.ZERO,sizes[kind])
+			else:
+				for c in manifest.assets[kind].collisions:add_shape(body,c)
+		body.mass=float({"crate":2.4,"basketball":.62,"chair":6,"table":16,"low_table":8,"floor_lamp":4}.get(kind,.4))
 		body.continuous_cd=true
 		body.linear_damp=.08 if kind in ["basketball","football"] else .5
 		body.angular_damp=.3 if kind in ["basketball","football"] else 2
@@ -332,6 +338,7 @@ func _physics_process(dt):
 				a.command.z=0
 				a.command.jump=false
 			var before=a.position
+			if a.get_meta("ko",false):a.command.x=0;a.command.z=0;a.command.jump=false
 			a.simulate(dt)
 			if zone_at(a.position) in ["game","arcade"] and not allowed_entry(id):
 				a.position=before;a.velocity=Vector3.ZERO
@@ -341,8 +348,8 @@ func _physics_process(dt):
 		update_held(dt)
 		for obj in objects.values():
 			if obj is RigidBody3D:
-				obj.linear_velocity=obj.linear_velocity.limit_length(14)
-				obj.angular_velocity=obj.angular_velocity.limit_length(12)
+				if obj.linear_velocity.length_squared()>196:obj.linear_velocity=obj.linear_velocity.limit_length(14)
+				if obj.angular_velocity.length_squared()>144:obj.angular_velocity=obj.angular_velocity.limit_length(12)
 				if obj.position.y < -3:
 					obj.position=vec(definitions[obj.name].p)
 					obj.linear_velocity=Vector3.ZERO
@@ -535,10 +542,14 @@ func update_held(dt:float):
 		if p.holding=="":continue
 		var o=objects.get(p.holding)
 		if not o:continue
-		var grip=p.eye()+p.direction()*.60+Vector3(0,-.38,0)
+		var grip=p.eye()+p.direction()*.43+Vector3(0,-.38,0)
+		if definitions[p.holding].kind in ["laser","marker"]:grip=p.eye()+p.direction()*.43+Vector3(0,-.22,0)+p.global_basis*Vector3(.15,0,0)
+		var anchor_height=float({"chair":.55,"table":.78,"low_table":.42,"floor_lamp":.85}.get(definitions[p.holding].kind,0))
+		grip-=o.basis*Vector3.UP*anchor_height
 		if definitions[p.holding].kind=="basketball" and p.get_meta("dribble",false):
 			# Jolt gravity and restitution produce the bounce. The hand only pushes downward at its reachable height.
 			o.gravity_scale=1
+			grip+=p.global_basis*Vector3(-.22 if p.get_meta("dribble_left",false) else .22,0,0)
 			var offset=grip-o.position;offset.y=0
 			if offset.length()>1.8 or zone_at(p.position)!="basketball":release(p,false);continue
 			o.apply_central_force((offset*30-Vector3(o.linear_velocity.x,0,o.linear_velocity.z)*8).limit_length(20)*o.mass)
@@ -731,6 +742,10 @@ func handle_packet(sender:String,m):
 				p.seat_yaw=float(s.get("seatYaw",s.yaw))
 				p.holding=s.hold
 				p.posture=s.get("posture","standing")
+				p.set_meta("activity",s.get("activity",""))
+				p.remote_gesture=String(s.get("gesture",""))
+				p.set_meta("dribble",s.get("dribble",false));p.set_meta("dribble_left",s.get("dribbleLeft",false))
+				p.crouching=bool(s.get("crouch",false))
 				p.seat_index=s.get("seatIndex",0)
 				p.velocity=vec(s.v)
 				if s.id==local_id:

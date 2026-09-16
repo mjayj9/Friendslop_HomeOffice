@@ -1,0 +1,152 @@
+{
+  "environment": "Actual Godot/Jolt engine. Direct fixture positions and action requests; scoring uses controlled crossing samples. Not browser/manual validation.",
+  "results": [
+    {
+      "detail": {
+
+      },
+      "name": "fridge gives one visible held ingredient",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "cooker consumes ingredient once and starts cooking",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "actual cooking timer reaches ready",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "cooked physical food appears",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "cooked food can be picked up",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "counter plates food as shared object state",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "plate can be carried",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "sit while carrying food",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "food consumed only once leaves dirty plate",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "F stands before table interaction while holding a plate",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "sink clears dirty physical plate",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "bed enters lying state",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "sleep is an individual explicit state",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "wake finds safe standing location",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "basket downward crossing scores once",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "duplicate basket sample does not score",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "upward crossing rejected",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "unapproved toy gun pickup rejected",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "approved game-zone pickup succeeds",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "permission revoke releases already-held gun",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "grant does not allow meeting-room firing",
+      "passed": true
+    }
+  ]
+}

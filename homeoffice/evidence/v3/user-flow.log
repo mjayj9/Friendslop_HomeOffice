@@ -1,0 +1,8 @@
+PASS Same room has two physical avatar instances
+PASS F sits on chair; F stands; peer receives both
+PASS E carries and lowers a chair; Q throws it with velocity
+PASS E picks book; F opens reader; Q releases physical book
+PASS Walk through meeting doorway and register original document reference
+PASS Korean text input stops movement and existing report remains reachable
+PASS Seated meeting R opens documents; F always stands even when facing the desk
+PASS Export contains shared references; import restores them after guest leaves

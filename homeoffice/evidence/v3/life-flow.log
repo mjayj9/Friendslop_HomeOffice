@@ -1,0 +1,5 @@
+PASS Real stair route reaches upper floor
+PASS F bed enters own third-person sleep; F wakes safely
+PASS Return downstairs without teleport
+PASS Broadcast console opens physically; permission gates start and persists notice
+PASS Sink water, flush and ventilation have physical state changes

@@ -1,0 +1,2 @@
+PASS Physical arcade opens runner with an actual remote spectator
+PASS Runner jump, duck, collision, result, best score, restart and Escape work

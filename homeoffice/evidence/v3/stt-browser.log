@@ -1,0 +1,8 @@
+MODEL {}
+MODEL_READY
+STT ko-01 {"result":{"type":"result","generation":1,"text":" 안녕하세요 오늘 회의를 시작하겠습니다.","elapsedMs":1353.7000000029802,"duration":4.463875,"sequence":1},"error":null,"performance":{"drawCalls":247,"fps":32,"frameMs":31.25,"objects":64,"players":1,"staticMemory":0},"heap":35100000}
+STT ko-02 {"result":{"type":"result","generation":1,"text":" 민수님은 보고서를 쓰고 지언니们 발표 자료를 준비해 주세요.","elapsedMs":1506.2999999970198,"duration":5.1035,"sequence":1},"error":null,"performance":{"drawCalls":247,"fps":37,"frameMs":27.027027027027,"objects":64,"players":1,"staticMemory":0},"heap":35100000}
+STT ko-03 {"result":{"type":"result","generation":1,"text":" 다음 후에는 9월 14일 5월 13일 30분입니다.","elapsedMs":1320.9000000059605,"duration":4.5336875,"sequence":1},"error":null,"performance":{"drawCalls":247,"fps":34,"frameMs":29.4117647058824,"objects":64,"players":1,"staticMemory":0},"heap":35100000}
+STT ko-04 {"result":{"type":"result","generation":1,"text":" 이번 스프린트의 API Test와 코드립을 마무리하겠습니다.","elapsedMs":1416.2999999970198,"duration":5.2984375,"sequence":1},"error":null,"performance":{"drawCalls":247,"fps":31,"frameMs":32.258064516129,"objects":64,"players":1,"staticMemory":0},"heap":35100000}
+STT ko-05 {"result":{"type":"result","generation":1,"text":" 농구를 한 다음 주방에서 함께 전역을 만들자","elapsedMs":1254,"duration":4.183625,"sequence":1},"error":null,"performance":{"drawCalls":247,"fps":31,"frameMs":32.258064516129,"objects":64,"players":1,"staticMemory":0},"heap":35100000}
+STT ko-06 {"result":{"type":"result","generation":1,"text":" 예산은 12만 5천 원이고 참석자는 8명입니다.","elapsedMs":1311.2000000029802,"duration":4.538625,"sequence":1},"error":null,"performance":{"drawCalls":247,"fps":31,"frameMs":32.258064516129,"objects":64,"players":1,"staticMemory":0},"heap":35100000}
