@@ -1,14 +1,16 @@
+import {validateAnnouncements} from './broadcast.mjs';
+import {validateRegistry} from './document-registry.mjs';
 import {validatePresentationView} from './presentation-view.mjs';
 import {crc32,zipStored} from './save.mjs';
 const te=new TextEncoder(),td=new TextDecoder('utf-8',{fatal:true});
-const MAX=32*1024*1024,assets=new Set(['chair','table','sofa','book','crate','marker','low_table','bed','counter','cooker','sink','fridge','plate','pan','basketball','football','ingredient','meal','gun','shield','arcade','storage','drawer','floor_lamp']);
+const MAX=32*1024*1024,assets=new Set(['chair','table','sofa','book','crate','marker','laser','low_table','bed','counter','cooker','sink','fridge','plate','pan','basketball','football','ingredient','meal','gun','shield','arcade','storage','drawer','floor_lamp']);
 function bad(s='파일 형식/범위 오류'){throw new Error(s+' · 현재 공간을 유지합니다.')}
 const finite=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
 const str=(v,n=100)=>typeof v==='string'&&v.length>0&&v.length<=n&&!/[\x00-\x1f<>]/.test(v);
 function keys(o,required,optional=[]){if(!o||Object.getPrototypeOf(o)!==Object.prototype||required.some(k=>!(k in o))||Object.keys(o).some(k=>![...required,...optional].includes(k)))bad()}
 function safeState(o){keys(o,[],['recipe','stage','food','dirty','cooking','ready','ammo','reloadUntil','nextShot','open','on','contents']);for(const[k,v]of Object.entries(o)){if(['recipe','stage'].includes(k)){if(!str(v,40))bad()}else if(['food','dirty','ready','open','on'].includes(k)){if(typeof v!=='boolean')bad()}else if(k==='contents'){if(!Array.isArray(v)||v.length>16||!v.every(x=>str(x)))bad()}else if(!finite(v,0,1e15))bad()}}
 export function validateWorld(w){
- keys(w,['schemaVersion','worldId','assetPack','layoutVersion','roomSlots','objects','doors','board','revision','results','settings'],['collaboration','presentation','presentationView']);
+ keys(w,['schemaVersion','worldId','assetPack','layoutVersion','roomSlots','objects','doors','board','revision','results','settings'],['collaboration','presentation','presentationView','documents','facilities','announcements']);
  if(w.schemaVersion!==2||w.assetPack!==2||w.layoutVersion!==2||!str(w.worldId)||!Number.isSafeInteger(w.revision)||w.revision<0)bad('V2 공간 파일이 필요합니다');
  if(!Array.isArray(w.objects)||w.objects.length>256||!Array.isArray(w.roomSlots)||w.roomSlots.length>8)bad();
  const ids=new Set();
@@ -26,6 +28,9 @@ export function validateWorld(w){
  if(w.presentationView!==undefined)validatePresentationView(w.presentationView,w.presentation||[]);
  const attachmentIds=(w.presentation||[]).map(a=>a.id);if(new Set(attachmentIds).size!==attachmentIds.length)bad('중복 발표 자료 ID');for(const o of w.objects)if(o.state.contents?.some(id=>!ids.has(id)||id===o.id))bad('수납 참조 오류');
  const contained=new Set();for(const o of w.objects){const contents=o.state.contents||[];if(contents.length&&!['storage','drawer'].includes(o.kind))bad('수납 사물이 아닙니다');if(contents.length>(o.kind==='drawer'?2:4))bad('수납 용량 초과');for(const id of contents){const item=w.objects.find(i=>i.id===id);const allowed=o.kind==='storage'?['book','marker','crate','plate','pan','ingredient','meal']:['book','marker','plate','ingredient','meal'];if(contained.has(id)||!allowed.includes(item.kind))bad('중복 또는 허용하지 않는 수납 참조');contained.add(id)}}
+ if(w.facilities!==undefined){keys(w.facilities,[],['toilet_ground','toilet_upper','tap_ground','tap_upper','home_light','office_light','bath_light','flush_ground','flush_upper','vent']);if(Object.values(w.facilities).some(v=>typeof v!=='boolean'))bad('시설 상태 형식 오류');}
+ if(w.announcements!==undefined)validateAnnouncements(w.announcements);
+ if(w.documents!==undefined)validateRegistry(w.documents);
  return structuredClone(w);
 }
 export async function sha(bytes){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('')}

@@ -4,11 +4,11 @@
 
 ## 결과물
 
-- [설계·결함 원인·구현 상세 분석](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/docs/v3/implementation-analysis-ko.md)
-- [R01–R30 / U01–U56 / G01–G16 전수 대조표](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/docs/v3/requirements-traceability-ko.md)
-- [이번 실행 결과·수치·증거·제약](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/docs/v3/verification-report-ko.md)
-- [62개 동작과 전이·접촉 검수 범위](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/docs/v3/animation-review-ko.md)
-- [실행 방법·조작 안내](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/README.md)
+- [설계·결함 원인·구현 상세 분석](implementation-analysis-ko.md)
+- [R01–R30 / U01–U56 / G01–G16 전수 대조표](requirements-traceability-ko.md)
+- [이번 실행 결과·수치·증거·제약](verification-report-ko.md)
+- [62개 동작과 전이·접촉 검수 범위](animation-review-ko.md)
+- [실행 방법·조작 안내](../../README.md)
 
 현재 로컬 실행: [HomeOffice V3](http://127.0.0.1:8060/homeoffice/?signal=local). 이 주소는 이 PC에서 실행 중인 개발 서버입니다. 고정 교실은 [교실 링크](http://127.0.0.1:8060/homeoffice/?signal=local&room=classroom)입니다.
 
@@ -24,7 +24,7 @@
 | 기준 Git 자료 | PR #1 head `e62360fd45e03e15fe7e2371d204dc30ff35c9ae` |
 | 이번 변경 전달 방식 | 현재 작업 폴더의 소스·에셋·실행 빌드. 원격 PR/배포 변경 없음 |
 
-해시와 바이트 크기는 [실제 빌드 매니페스트](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/build-info.json)에 있습니다. 과거 `evidence/v2-*`는 회귀 시험의 설계 자료이며 이번 통과 결과로 합산하지 않습니다.
+해시와 바이트 크기는 [실제 빌드 매니페스트](../../evidence/v3/build-info.json)에 있습니다. 과거 `evidence/v2-*`는 회귀 시험의 설계 자료이며 이번 통과 결과로 합산하지 않습니다.
 
 ## 읽는 순서
 

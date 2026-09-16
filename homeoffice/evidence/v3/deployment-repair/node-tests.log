@@ -1,0 +1,32 @@
+
+> moyeo-house-godot@0.3.0-simulation test
+> node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs tests/v3-web.test.mjs tests/v3-broadcast.test.mjs tests/v3-caption-policy.test.mjs tests/v3-state-codec.test.mjs
+
+✔ runner input cannot submit score and collision ends an actual round (1.4543ms)
+✔ maze collects once, obeys walls and rejects repeated sequences (0.6177ms)
+✔ saved mid-round simulation produces deterministic authority handoff (0.4418ms)
+✔ actual browser-exported V2 world and Korean Yjs state roundtrip (4.2489ms)
+✔ embedded PDF data roundtrip with sha and content type verification (2.3679ms)
+✔ missing and mismatched attachment rejected before restore (0.9472ms)
+✔ CRC corruption never replaces current world (1.5674ms)
+✔ host role, permissions, duplicate IDs, untrusted asset and nonfinite positions rejected (0.849ms)
+✔ path traversal and executable entries rejected (0.2663ms)
+✔ office indices, duplicate slots and unsupported versions rejected (0.8844ms)
+✔ engine-exported physical storage state roundtrips through homeworld container (7.1132ms)
+✔ duplicate or nested storage and forbidden tools are rejected before replacing current world (1.6688ms)
+✔ Physical broadcast access requires a player near the microphone (0.4506ms)
+✔ HOME/OFFICE/PLAY announcements follow explicit recipient scopes (0.1401ms)
+✔ Interim becomes final; duplicates and later interim cannot replace final (0.5906ms)
+✔ Mute generation invalidates delayed recognition; new speaker generation is independent (0.1086ms)
+✔ Unchanged objects omitted, changes/removal restored, roster remains complete (1.1658ms)
+✔ Lost base fails closed and explicit keyframe restores current state (0.1751ms)
+✔ Invite code, pasted URL, classroom and subpath round trip (3.7119ms)
+✔ Official original documents are validated and preserved in snapshots (0.5077ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.6317

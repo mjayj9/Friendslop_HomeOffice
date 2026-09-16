@@ -1,0 +1,44 @@
+{
+  "url": "http://127.0.0.1:8062/Friendslop_HomeOffice/?signal=local",
+  "startedAt": "2026-09-16T14:02:28.912Z",
+  "environment": "Actual Chromium WebGL/WASM and WebRTC; keyboard and HTML controls; two independent browser processes on one PC. No injected world state.",
+  "buildId": "52b4edbc-4abd-4619-bea4-463db1278f2b",
+  "manifest": {
+    "buildId": "52b4edbc-4abd-4619-bea4-463db1278f2b",
+    "protocol": 3,
+    "files": 68
+  },
+  "completed": true,
+  "finishedAt": "2026-09-16T14:02:47.390Z",
+  "results": [
+    {
+      "name": "Published V3 shell, verified PCK and solo world start",
+      "passed": true
+    },
+    {
+      "name": "Two published clients join the same invite and instantiate both avatars",
+      "passed": true
+    },
+    {
+      "name": "Real keyboard movement and a visible remote body synchronize",
+      "passed": true
+    },
+    {
+      "name": "Published game exports a real world file",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [
+    {
+      "client": 0,
+      "url": "http://127.0.0.1:8062/Friendslop_HomeOffice/index.wasm",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "client": 1,
+      "url": "http://127.0.0.1:8062/Friendslop_HomeOffice/index.wasm",
+      "failure": "net::ERR_ABORTED"
+    }
+  ]
+}

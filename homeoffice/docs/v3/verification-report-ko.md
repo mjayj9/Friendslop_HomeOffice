@@ -13,27 +13,27 @@
 
 | 묶음 | 통과 | 실패 | 실행 완료 | 실행 Build ID | 증거 |
 |---|---:|---:|---|---|---|
-| 의자·책·회의·한글·파일 복원 | 8 | 0 | 예 | `4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/user-flow/report.json) |
-| 교실 동시 입장·인계·재개 | 5 | 0 | 예 | `4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/session-flow/report.json) |
-| 계단·자기 수면·생활 | 5 | 0 | 예 | `1667820a-0d15-45fa-9b8f-f506fc5f557b` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/life-flow/report.json) |
-| 회의 질문·할 일·물리 레이저 | 4 | 0 | 예 | `4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/tools-flow/report.json) |
-| 공룡 게임기·원격 관전 | 2 | 0 | 예 | `9a27534c-6f90-4dc8-bf9c-3481c37a6cee` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/arcade-flow/report.json) |
-| 가상 음성·방송·욕실·복원 | 6 | 0 | 예 | `007ca110-991d-4e1c-bb93-a09a7523896a` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/voice-facilities/report.json) |
-| 2/4/8 접속·30분 활동 | 8 | 0 | 예 | `007ca110-991d-4e1c-bb93-a09a7523896a` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/scale-soak/report.json) |
-| 기본 게임 규칙·캐릭터 | 14 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/gameplay-tests.json) |
-| 권위·득점·피해·광선 | 15 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/authority-physics.json) |
-| 물리 낙하·CCD | 4 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/physics-lab.json) |
-| 수납·서랍·램프·파일 복원 | 12 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/living-props.json) |
-| 요리·식사·설거지·수면·권한 | 21 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/legacy-interactions.json) |
-| 보드·점유·개인실·명령 검증 | 14 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/legacy-authority.json) |
+| 의자·책·회의·한글·파일 복원 | 8 | 0 | 예 | `4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/user-flow/report.json) |
+| 교실 동시 입장·인계·재개 | 5 | 0 | 예 | `4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/session-flow/report.json) |
+| 계단·자기 수면·생활 | 5 | 0 | 예 | `1667820a-0d15-45fa-9b8f-f506fc5f557b` | [JSON](../../evidence/v3/life-flow/report.json) |
+| 회의 질문·할 일·물리 레이저 | 4 | 0 | 예 | `4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/tools-flow/report.json) |
+| 공룡 게임기·원격 관전 | 2 | 0 | 예 | `9a27534c-6f90-4dc8-bf9c-3481c37a6cee` | [JSON](../../evidence/v3/arcade-flow/report.json) |
+| 가상 음성·방송·욕실·복원 | 6 | 0 | 예 | `007ca110-991d-4e1c-bb93-a09a7523896a` | [JSON](../../evidence/v3/voice-facilities/report.json) |
+| 2/4/8 접속·30분 활동 | 8 | 0 | 예 | `007ca110-991d-4e1c-bb93-a09a7523896a` | [JSON](../../evidence/v3/scale-soak/report.json) |
+| 기본 게임 규칙·캐릭터 | 14 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/gameplay-tests.json) |
+| 권위·득점·피해·광선 | 15 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/authority-physics.json) |
+| 물리 낙하·CCD | 4 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/physics-lab.json) |
+| 수납·서랍·램프·파일 복원 | 12 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/living-props.json) |
+| 요리·식사·설거지·수면·권한 | 21 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/legacy-interactions.json) |
+| 보드·점유·개인실·명령 검증 | 14 | 0 | 예 | `동일 소스: 4edb96de-caa2-4b53-b132-5fb0cade9ec1` | [JSON](../../evidence/v3/legacy-authority.json) |
 
-엔진 회귀 일괄 실행 완료=True, 대응 build ID `4edb96de-caa2-4b53-b132-5fb0cade9ec1`, 소스 digest `81c6f8fff1d90ed4ea96ebbb7d20790b77fdb5169faffd6abcc779986bc063dd`. [실행 시각·종료 코드 기록](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/engine-final-run.json)
+엔진 회귀 일괄 실행 완료=True, 대응 build ID `4edb96de-caa2-4b53-b132-5fb0cade9ec1`, 소스 digest `81c6f8fff1d90ed4ea96ebbb7d20790b77fdb5169faffd6abcc779986bc063dd`. [실행 시각·종료 코드 기록](../../evidence/v3/engine-final-run.json)
 
-장시간 시험 이후 최종 변경: [수정 범위와 재검증 기록](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/final-build-changes.json).
+장시간 시험 이후 최종 변경: [수정 범위와 재검증 기록](../../evidence/v3/final-build-changes.json).
 
-빌드별 파일 해시는 [보존한 빌드 manifest](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/builds)에서 확인합니다. 최종 빌드는 runtime .gd/scene/asset/web 파일별 SHA256과 전체 digest를 함께 기록합니다. 빌드 ID 주입 파일과 import 캐시는 digest에서 제외합니다.
+빌드별 파일 해시는 [보존한 빌드 manifest](../../evidence/v3/builds)에서 확인합니다. 최종 빌드는 runtime .gd/scene/asset/web 파일별 SHA256과 전체 digest를 함께 기록합니다. 빌드 ID 주입 파일과 import 캐시는 digest에서 제외합니다.
 
-Node 규칙/저장/초대/방송/자막/상태 복제 시험: ℹ pass 20; ℹ fail 0. [전체 로그](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/node-tests.log)
+Node 규칙/저장/초대/방송/자막/상태 복제 시험: ℹ pass 20; ℹ fail 0. [전체 로그](../../evidence/v3/node-tests.log)
 
 ## 실제 드리블 측정
 
@@ -41,7 +41,7 @@ Node 규칙/저장/초대/방송/자막/상태 복제 시험: ℹ pass 20; ℹ f
 
 ## 2·4·8 접속과 장시간 활동
 
-낮음 그래픽, 호스트 1280×720 / 참가자 640×360. [실제 시험 PC 사양](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/test-machine.json).
+낮음 그래픽, 호스트 1280×720 / 참가자 640×360. [실제 시험 PC 사양](../../evidence/v3/test-machine.json).
 완료=True. 계획 활동 1800초 / 기록된 경과 1821.4초, 입력 활동 319회, 재입장 2회.
 
 기록된 경과 시간은 마지막 내보내기/복원 시간도 포함합니다. 30분 활동 도중 계획된 두 차례 재입장 구간에서는 일시적으로 7개 참가자가 연결됩니다. 8명이 다른 PC에서 플레이한 시험은 아닙니다.
@@ -70,31 +70,31 @@ Node 규칙/저장/초대/방송/자막/상태 복제 시험: ℹ pass 20; ℹ f
 
 ### 상대 몸체
 
-![상대 몸체](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/integrated-three/client-0-forward.png)
+![상대 몸체](../../evidence/v3/integrated-three/client-0-forward.png)
 
 ### 본인 3인칭 취침
 
-![본인 3인칭 취침](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/life-flow/sleep-third-person.png)
+![본인 3인칭 취침](../../evidence/v3/life-flow/sleep-third-person.png)
 
 ### 공동 질문과 할 일
 
-![공동 질문과 할 일](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/tools-flow/meeting-questions-tasks.png)
+![공동 질문과 할 일](../../evidence/v3/tools-flow/meeting-questions-tasks.png)
 
 ### 3D 물리 레이저
 
-![3D 물리 레이저](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/tools-flow/physical-laser-host.png)
+![3D 물리 레이저](../../evidence/v3/tools-flow/physical-laser-host.png)
 
 ### 정리한 세면대와 수도
 
-![정리한 세면대와 수도](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/voice-facilities/refined-basin-water.png)
+![정리한 세면대와 수도](../../evidence/v3/voice-facilities/refined-basin-water.png)
 
 ### 실제 공룡 러너 결과
 
-![실제 공룡 러너 결과](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/arcade-flow/runner-result.png)
+![실제 공룡 러너 결과](../../evidence/v3/arcade-flow/runner-result.png)
 
 ### 8개 브라우저 접속
 
-![8개 브라우저 접속](C:/Users/admin/Documents/ChatGPT/3D_모임/homeoffice/evidence/v3/scale-soak/eight-peers.png)
+![8개 브라우저 접속](../../evidence/v3/scale-soak/eight-peers.png)
 
 ## 해석할 때 남는 제약
 

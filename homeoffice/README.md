@@ -17,7 +17,7 @@ npm run dev
 
 [고정 교실](http://127.0.0.1:8060/homeoffice/?signal=local&room=classroom)은 같은 주소로 입장합니다. 빈 교실의 첫 참가자가 시뮬레이션 호스트가 되고, 동시 입장은 단일 호스트로 정리됩니다. 최초 입장자를 교사로 인증하지 않습니다. 자율 교실에서는 무기·방송 관리자 권한을 주지 않습니다.
 
-이 서버는 loopback 8060/9001을 사용합니다. 로컬 URL을 다른 PC의 접속 주소로 사용하지 않습니다. 이번 작업은 운영 배포를 변경하지 않았습니다.
+새 체크아웃은 포함된 `../docs/` 배포본을 자동으로 사용합니다. `build/`가 있으면 해당 로컬 빌드를 사용합니다. 서버는 loopback 8060/9001을 사용하며 로컬 URL은 다른 PC의 접속 주소가 아닙니다. [공개 V3](https://mjayj9.github.io/Friendslop_HomeOffice/)는 GitHub Pages의 `/docs` 배포본입니다.
 
 ## 기본 조작
 
@@ -94,11 +94,20 @@ Esc → **공간 내보내기**에서 `.homeworld` 파일을 실제로 내려받
 
 ## 다시 빌드
 
-이 프로젝트의 `.runtime/godot/`와 `.runtime/templates/`에는 Godot **4.6.1 stable** 실행 파일과 같은 버전의 웹 템플릿을 사용합니다.
+다시 빌드할 때만 Python 3과 Godot **4.6.1 stable**이 필요합니다. 새 체크아웃의 `npm run dev`에는 필요하지 않습니다.
+
+1. [Godot 4.6.1 공식 배포](https://github.com/godotengine/godot-builds/releases/tag/4.6.1-stable)에서 Windows 실행 파일과 같은 버전의 export templates를 받습니다.
+2. Windows 실행 파일을 `.runtime/godot/`에 풀거나 `-Godot`으로 실행 파일의 경로를 전달합니다.
+3. export templates의 `web_nothreads_debug.zip`과 `web_nothreads_release.zip`을 `.runtime/templates/`에 둡니다.
+4. 아래 빌드를 실행하면 `build/`와 저장소 루트의 `docs/`가 함께 갱신됩니다. `.runtime/`와 `build/`는 커밋하지 않고, 갱신된 `docs/`는 소스와 함께 커밋합니다.
 
 ```powershell
 # homeoffice 폴더에서
 ./tools/build.ps1
+# 다른 위치의 Godot를 사용하는 경우
+./tools/build.ps1 -Godot "C:/Tools/Godot/Godot_v4.6.1-stable_win64_console.exe"
+# 소스와 Pages 배포본을 확인
+npm run verify:published
 
 # 공동 편집 원본을 바꿨을 때만
 node tools/bundle_collaboration.mjs
@@ -106,7 +115,7 @@ node tools/bundle_collaboration.mjs
 node tools/bundle_stt.mjs
 ```
 
-빌드마다 UUID와 SHA256 목록을 생성합니다. JS/PCK/WASM 핵심 파일이 섞이면 입장 전에 오류를 표시합니다. `tools/assemble_v2.py`는 중단된 옛 생성기입니다. 실행 `.gd`를 다시 조합해 덮어쓰지 않습니다.
+기본 빌드는 GitHub Pages가 제공하는 `../docs/`까지 갱신합니다. 로컬 빌드만 필요하면 `-LocalOnly`를 사용합니다. 빌드마다 UUID와 하위 의존 파일을 포함한 SHA256 목록을 생성합니다. JS/PCK/WASM 핵심 파일이 섞이면 입장 전에 오류를 표시합니다. `tools/assemble_v2.py`는 중단된 옛 생성기입니다. 실행 `.gd`를 다시 조합해 덮어쓰지 않습니다.
 
 Blender 제작 원본: `art/male-character-v3.blend`, `art/campus-details-v3.blend`, `art/laser-pointer-v3.blend`. 기존 V2 원본도 보존했습니다. BlenderMCP는 제작에 사용하며 배포 게임이 Blender의 포트에 접근하지 않습니다. 이미 제공된 GLB로 실행할 때 Blender를 켤 필요는 없습니다.
 

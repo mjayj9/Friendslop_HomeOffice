@@ -4,3 +4,6 @@ build/
 evidence/*.log
 art/*.blend1
 releases/
+
+# Evidence is not a Godot asset tree.
+evidence/**/*.import

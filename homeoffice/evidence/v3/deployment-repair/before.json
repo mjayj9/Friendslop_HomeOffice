@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "4cd064efc31647c7615851394972b28e9d3f4649",
+  "pagesSource": {
+    "branch": "codex/homeoffice-v3",
+    "path": "/docs"
+  },
+  "cleanCheckoutBuildExists": false,
+  "findings": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 5201,
+      "sha256": "352a5b2e9739150942694880fb8528a339c97d1576738f715a23d05471f6462c",
+      "hasV3Guard": false,
+      "hasClassroom": false
+    },
+    {
+      "path": "build-info.json",
+      "status": 404
+    },
+    {
+      "path": "build-guard.mjs",
+      "status": 404
+    }
+  ]
+}

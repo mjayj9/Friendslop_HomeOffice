@@ -1,21 +1,35 @@
-# Friendslop HomeOffice · 모여집
+# Friendslop HomeOffice · V3
 
-[웹에서 실행](https://mjayj9.github.io/Friendslop_HomeOffice/) · [한국어 실행·조작 안내](homeoffice/README.md) · [필수 미완료](homeoffice/docs/v2/required-remaining.md)
+[웹에서 실행](https://mjayj9.github.io/Friendslop_HomeOffice/) · [조작 안내](homeoffice/README.md) · [V3 분석·요구 대조](homeoffice/docs/v3/README.md)
 
-Godot 4.6.1/GDScript 기반의 2층 집+오피스 멀티플레이 게임입니다. **개발 빌드이며 원문 전체 완료가 아닙니다.** 기존 main을 보존한 `codex/godot-homeoffice-v2` 브랜치입니다.
+Godot 4.6.1 / Jolt 기반의 집·오피스·회의·게임 공간입니다. V3에는 상대 캐릭터 표시 수리, 의자·책·생활 조작, Blender 동작과 시설, 회의 자료·물리 레이저, 전투·스포츠, 방송·교실·저장 복구가 포함됩니다.
 
-![실제 Godot 웹 거실](homeoffice/evidence/v2-game-living.png)
+## 내려받아 실행
 
-독립 브라우저 2/4/8명 연결·개인실, 실제 이동/소품/생활, Yjs 동시 한글 보고서, PDF/레이저/주석, 음성 범위, 아케이드, 파일 복원과 정상 방장 이전을 개발·검증했습니다. 각각의 부분 시험과 남은 필수 작업은 [56개 원문](homeoffice/docs/v2/requirements-traceability.md), [80개 인수 기록](homeoffice/docs/v2/acceptance-80.md)에 구분했습니다.
+```powershell
+cd homeoffice
+npm ci --ignore-scripts
+npm run dev
+```
 
-같은 PC의 8개 브라우저에서 이전 기본 설정 6~7fps, 최신 저사양 설정 12~14fps로 성능 목표에 못 미쳤습니다. 실제 사람 마이크/STT·정밀 캐릭터 동작·수납을 포함한 통합 생활 인수·팀 경기 규칙·전체 통합 인수 등이 남아 있습니다. 캡처는 실제 Godot 웹 화면이며 Blender 프리뷰는 art에 별도 있습니다.
+[로컬 게임](http://127.0.0.1:8060/homeoffice/?signal=local)을 엽니다. 새 체크아웃은 저장소에 포함된 `docs/` V3 배포본으로 실행됩니다. 로컬 `homeoffice/build/`가 있으면 그 빌드를 우선합니다. 게임 실행에 Godot·Blender 설치는 필요하지 않습니다.
 
-![실제 Godot 웹 외관](homeoffice/evidence/v2-game-exterior.png)
+## GitHub Pages와 다시 빌드
 
-- [연속 보행 영상](homeoffice/evidence/v2-walk-video/continuous-game-walk.webm)
-- [층별 도면/공간 프로그램](homeoffice/docs/v2/space-program.md)
-- [실제 성능 기록](homeoffice/docs/v2/performance.md)
-- [한국어 합성 음성 측정](homeoffice/docs/v2/korean-stt-measurement.md)
-- [라이선스 고지](homeoffice/docs/third-party-notices.md)
+현재 Pages 배포 원본은 `codex/homeoffice-v3` 브랜치의 `/docs`입니다. `homeoffice/`의 소스만 바꿔 푸시하면 공개 게임이 갱신되지 않습니다.
 
-`homeoffice/`는 실행 가능한 소스·실제 에셋·Blender 원본·브리지·시험, `docs/`는 GitHub Pages용 Godot 웹 export입니다. Firebase·기존 프로젝트·기존 서비스 설정을 변경하지 않았습니다.
+`homeoffice/tools/build.ps1`은 Godot export → 전체 파일 해시 검증 → `/docs` 갱신을 함께 수행합니다. `-LocalOnly`를 지정한 경우에만 로컬 export로 끝냅니다. 자세한 엔진·템플릿 준비는 [빌드 안내](homeoffice/README.md#다시-빌드)를 참조하세요.
+
+```powershell
+python homeoffice/tools/site_artifact.py verify docs --source
+```
+
+위 명령과 GitHub 검증 작업은 배포 누락, 소스와 배포본의 불일치, PCK/JS 혼합, 누락된 의존 파일을 검사합니다. 배포 파일은 Git 줄바꿈 변환 없이 저장해 검증 해시를 유지합니다.
+
+## 검증 기록
+
+- [V3 기능·가상 검증](homeoffice/docs/v3/verification-report-ko.md)
+- [배포 실패 원인과 수정 검증](homeoffice/docs/v3/deployment-repair-ko.md)
+- [라이선스](homeoffice/docs/third-party-notices.md)
+
+기능 시험과 실제 사람·실마이크·서로 다른 외부망 품질 검증은 구분합니다. 기존 V2 증거는 이력으로 보존합니다.

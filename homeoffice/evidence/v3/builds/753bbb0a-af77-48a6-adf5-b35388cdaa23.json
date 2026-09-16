@@ -1,5 +1,5 @@
 {
-  "buildId": "52b4edbc-4abd-4619-bea4-463db1278f2b",
+  "buildId": "753bbb0a-af77-48a6-adf5-b35388cdaa23",
   "commit": "4cd064efc31647c7615851394972b28e9d3f4649",
   "dirty": true,
   "godotVersion": "4.6.1.stable",
@@ -7,10 +7,10 @@
   "protocolVersion": 3,
   "assetVersion": 3,
   "schemaVersion": 2,
-  "builtAt": "2026-09-16T13:53:44.282101+00:00",
+  "builtAt": "2026-09-16T13:48:51.740803+00:00",
   "source": {
     "algorithm": "SHA256 of sorted relative-path to SHA256 mapping; text uses LF; generated build ID and import cache excluded",
-    "digest": "858aac6def60e9f92c7ef4cd54c57039b7ed0d4842b7e51fa1b823b159b6c430",
+    "digest": "1a3453f7fd63ec9072ff8ccff971199b077f17a4cf602ed370392619b0a3f83e",
     "files": {
       "scripts/avatar.gd": "6099a3557d5b9188ce405f8c4803f46e38ceb7f6c1f9ffd494f89346233a86f8",
       "scripts/board.gd": "d1068a90047017bf25ef482b508413f26c87da1aa4e6ebb01c7d15316758e9ab",
@@ -213,7 +213,7 @@
       "web/stt-worker.mjs": "eb31c1e08184aeac7e9f1aba1c65575e55f60214635dd603a566263ee9a3c9d6",
       "web/stt-worker.mjs.LEGAL.txt": "983a9fe727c603c1c22d3341df6158c24d3a80b1f006baa651f34965b27f1df8",
       "project.godot": "c2a9c7e013326d8dbb8cc1d090b56c7c3999e95ab1eb65f4945fb9939b46895e",
-      "export_presets.cfg": "2cc8195eddf2331c509d40e1d6f5167fdcab719a2cd1c69d841709daf2828752"
+      "export_presets.cfg": "75ecbf6f636abeb76684c16d1a6e1c47ca2d75adce7aa40c694970421713176a"
     }
   },
   "files": {
@@ -251,7 +251,7 @@
     },
     "build-id.mjs": {
       "bytes": 62,
-      "sha256": "8fe68b5314422cfc09f369e4cc8b3a2a9aab6eecc6dd497bc6e73a30289061ba"
+      "sha256": "5e288f7e1b3bb7eaafb85160e265359259f8cbeb2cc1b458999cf9443077ada5"
     },
     "caption-policy.mjs": {
       "bytes": 1162,
@@ -299,15 +299,15 @@
     },
     "index.html": {
       "bytes": 5808,
-      "sha256": "ed7ab08ee9f688a623d782943a867dc9f7802b437acb988141ea2c2acfd23702"
+      "sha256": "2943d3121b11a0a517194bbee4bd0e0630af3a679d31860452691062608ba4c6"
     },
     "index.js": {
       "bytes": 315759,
       "sha256": "e3f56ee40e6f84371053db06692cfac15e2c8659547b11c6b2dfa1996dabd981"
     },
     "index.pck": {
-      "bytes": 9666748,
-      "sha256": "57db93143bd7a8c139ad3ea54a1609b1cebd8296fd1361a764c75d891fda7cd4"
+      "bytes": 9671980,
+      "sha256": "57d256e35c447778272cb7594d94c46863f2451fca9b6170d0e963fcf652b862"
     },
     "index.png": {
       "bytes": 21443,

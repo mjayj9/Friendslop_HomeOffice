@@ -14,3 +14,6 @@ docs/licenses/** -whitespace
 homeoffice/docs/licenses/** -whitespace
 homeoffice/assets/fonts/*.txt -whitespace
 homeoffice/docs/requirements-v2/** -whitespace
+
+# Preserve exported bytes so manifest hashes survive Git checkout/staging.
+docs/** -text

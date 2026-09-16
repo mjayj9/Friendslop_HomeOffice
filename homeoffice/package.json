@@ -12,7 +12,10 @@
     "test": "node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs tests/v3-web.test.mjs tests/v3-broadcast.test.mjs tests/v3-caption-policy.test.mjs tests/v3-state-codec.test.mjs",
     "test:browser": "cd .. && node homeoffice/tests/v3-user-flow.mjs",
     "test:connection": "cd .. && node homeoffice/tests/v3-session-flow.mjs",
-    "test:soak": "cd .. && node homeoffice/tests/v3-scale-soak.mjs"
+    "test:soak": "cd .. && node homeoffice/tests/v3-scale-soak.mjs",
+    "verify:published": "python tools/site_artifact.py verify ../docs --source",
+    "test:publication": "python tests/site-artifact.test.py",
+    "build": "powershell -File tools/build.ps1"
   },
   "dependencies": {
     "@huggingface/transformers": "4.2.0",

@@ -3,14 +3,14 @@ Never changes evidence or turns a missing/failed test into a pass.
 """
 from pathlib import Path
 from datetime import datetime,timezone
-import json,re,statistics,sys
+import json,re,statistics,sys,os
 sys.stdout.reconfigure(encoding="utf-8")
 R=Path(__file__).resolve().parents[1];D=R/'docs/v3';E=R/'evidence/v3'
 def read(p,default=None):
     try:return json.loads(p.read_text(encoding='utf-8-sig'))
     except (FileNotFoundError,json.JSONDecodeError):return default
 def write(name,text): (D/name).write_text(text.strip()+'\n',encoding='utf-8')
-def link(path,label=None):return f'[{label or path}]({(R/path).resolve().as_posix()})'
+def link(path,label=None):return f'[{label or path}]({Path(os.path.relpath(R/path,D)).as_posix()})'
 build=read(E/'build-info.json',{})
 cases=[('의자·책·회의·한글·파일 복원','user-flow/report.json'),('교실 동시 입장·인계·재개','session-flow/report.json'),('계단·자기 수면·생활','life-flow/report.json'),('회의 질문·할 일·물리 레이저','tools-flow/report.json'),('공룡 게임기·원격 관전','arcade-flow/report.json'),('가상 음성·방송·욕실·복원','voice-facilities/report.json'),('2/4/8 접속·30분 활동','scale-soak/report.json'),('기본 게임 규칙·캐릭터','gameplay-tests.json'),('권위·득점·피해·광선','authority-physics.json'),('물리 낙하·CCD','physics-lab.json'),('수납·서랍·램프·파일 복원','living-props.json'),('요리·식사·설거지·수면·권한','legacy-interactions.json'),('보드·점유·개인실·명령 검증','legacy-authority.json')]
 summary=[]
@@ -335,7 +335,7 @@ elif stt.get('error'):lines+=['현재 실행 오류: `'+stt['error'].replace('\n
 else:lines+=['현재 결과 미확정. 과거 CER17.2%/WER29.7%를 현재 결과로 재인용하지 않습니다.']
 lines+=['','## 실제 화면','']
 for img,title in [('integrated-three/client-0-forward.png','상대 몸체'),('life-flow/sleep-third-person.png','본인 3인칭 취침'),('tools-flow/meeting-questions-tasks.png','공동 질문과 할 일'),('tools-flow/physical-laser-host.png','3D 물리 레이저'),('voice-facilities/refined-basin-water.png','정리한 세면대와 수도'),('arcade-flow/runner-result.png','실제 공룡 러너 결과'),('scale-soak/eight-peers.png','8개 브라우저 접속')]:
-    if (E/img).exists():lines += [f'### {title}','',f'![{title}]({(E/img).resolve().as_posix()})','']
+    if (E/img).exists():lines += [f'### {title}','',f'![{title}]({Path(os.path.relpath(E/img,D)).as_posix()})','']
 lines+=['## 해석할 때 남는 제약','', '1. 사람/실마이크/외부 두 계정/WAN/운영 배포는 사용자 지정 가상 범위 밖입니다.','2. 62개 클립의 존재·로딩과 일부 실제 행동을 검증했으며 모든 프레임의 손·발·가구 접촉 품질을 완전히 인수한 것은 아닙니다. 13본 구조에는 손가락/손목 본이 없습니다.','3. 기존 거대한 V2 world/bridge의 점진적 분리는 진행했지만 전면 해체하지 않았습니다.','4. 요리·식사·설거지·수납·서랍·램프·보드·점유·저장에 대한 현재 V3 엔진 회귀를 추가했습니다. 모든 기존 기능 조합을 최종 브라우저 빌드에서 전수 재시험한 것은 아닙니다.','5. 호스트 탭을 숨길 때 의도적으로 freeze하지 않지만 브라우저/운영체제의 백그라운드 제한과 비정상 종료 시 최근 상태 손실까지 제거하지는 못합니다.','6. 교실 고정 링크는 영구 저장 서버가 아닙니다. 보존에는 실제 파일 내보내기/가져오기를 사용합니다.']
 write('verification-report-ko.md','\n'.join(lines))
 print(json.dumps({'documents':5,'buildId':build.get('buildId'),'groups':[(r['title'],r['passed'],r['failed'],r['completed']) for r in summary]},ensure_ascii=False))

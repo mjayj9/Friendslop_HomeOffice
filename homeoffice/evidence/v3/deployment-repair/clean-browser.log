@@ -1,0 +1,4 @@
+PASS Published V3 shell, verified PCK and solo world start
+PASS Two published clients join the same invite and instantiate both avatars
+PASS Real keyboard movement and a visible remote body synchronize
+PASS Published game exports a real world file
