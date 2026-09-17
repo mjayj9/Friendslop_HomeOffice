@@ -1,0 +1,16 @@
+{
+  "environment": "Two isolated Chromium processes on one PC, real public GitHub Pages bytes, Clerk development SDK and default remote PeerJS signaling. No real user account or microphone. Not a two-person WAN acceptance test.",
+  "expectedBuildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "url": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "failure": "page.waitForFunction: TypeError: Cannot read properties of undefined (reading 'length')\n    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:116)\n    at predicate (eval at evaluate (:311:30), <anonymous>:7:27)\n    at next (eval at evaluate (:311:30), <anonymous>:29:33)\n    at eval (eval at evaluate (:311:30), <anonymous>:42:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-public-smoke.mjs:25:33\n    at async check (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-public-smoke.mjs:10:31)\n    at async file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v4-public-smoke.mjs:22:2",
+  "checkedAt": "2026-09-17T09:27:33.119Z",
+  "results": [
+    {
+      "name": "Published game and actual Clerk sign-in load on the unchanged Pages URL",
+      "passed": true
+    }
+  ],
+  "errors": [
+    "Cannot read properties of undefined (reading 'length')"
+  ]
+}

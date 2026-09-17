@@ -22,7 +22,7 @@ try{
  await check('Public host and invite join establish two visible participants through remote signaling',async()=>{
   await a.locator('#displayName').fill('배포 확인 A');await a.locator('#host').click();await a.waitForFunction(()=>Homeoffice.diagnostics().playing&&Homeoffice.diagnostics().currentState?.players.length===1,null,{timeout:60000});
   await b.locator('#displayName').fill('배포 확인 B');await b.locator('#room').fill((await diag(a)).roomCode);await b.locator('#join').click();
-  for(const p of pages){await p.waitForFunction(()=>Homeoffice.diagnostics().currentState?.players.length===2&&Homeoffice.diagnostics().avatarDiagnostics.instances.length===2,null,{timeout:60000});assert.equal((await diag(p)).avatarDiagnostics.instances.filter(x=>!x.local&&x.standingVisible).length,1);}
+  for(const p of pages){await p.waitForFunction(()=>Homeoffice.diagnostics().currentState?.players.length===2&&Homeoffice.diagnostics().avatarDiagnostics?.instances?.length===2&&Homeoffice.diagnostics().avatarDiagnostics.instances.filter(x=>!x.local&&x.standingVisible).length===1,null,{timeout:60000});assert.equal((await diag(p)).avatarDiagnostics.instances.filter(x=>!x.local&&x.standingVisible).length,1);}
   await a.screenshot({path:dir+'/02-public-two-players.png'});
  });
  await check('Public build changes normal camera with actual C input and delivers Korean session chat',async()=>{

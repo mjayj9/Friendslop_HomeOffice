@@ -1,0 +1,22 @@
+{
+  "environment": "Two isolated Chromium processes on one PC, real public GitHub Pages bytes, Clerk development SDK and default remote PeerJS signaling. No real user account or microphone. Not a two-person WAN acceptance test.",
+  "expectedBuildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "url": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "completed": true,
+  "checkedAt": "2026-09-17T09:29:39.629Z",
+  "results": [
+    {
+      "name": "Published game and actual Clerk sign-in load on the unchanged Pages URL",
+      "passed": true
+    },
+    {
+      "name": "Public host and invite join establish two visible participants through remote signaling",
+      "passed": true
+    },
+    {
+      "name": "Public build changes normal camera with actual C input and delivers Korean session chat",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -13,8 +13,8 @@
 | 이번 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
 | 엔진 / 프로토콜 / 자산 / 저장 | Godot 4.6.1 / 4 / 3 / 2 |
 | 로컬 export | 73파일 hash 일치, `homeoffice/build` |
-| Pages 게시 대상 Build ID | `cc2f8fbd-ba33-4601-b716-82bb26422424` |
-| Pages 게시 대상 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
+| 검증된 공개 Pages Build ID | `cc2f8fbd-ba33-4601-b716-82bb26422424` |
+| 검증된 공개 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
 | 기존 Pages 배포 ref | `codex/homeoffice-v3`, URL 유지 |
 
 배포 전 기록: 2026-09-17 02:30 KST 공개 main·Pages 응답 재확인. `/pages` 관리 API는 404로 설정 자체 미확인. 공개 67파일은 별도 hash 검증 통과. [원격 증거](homeoffice/evidence/v4/remote-audit.json), [로컬 manifest](homeoffice/evidence/v4/build-info.json).
@@ -33,6 +33,8 @@
 - 원본 남성 GLB 5개와 13 bones / 62 animations 파생본이 있다. 추가 업로드를 요청하지 않았다. 이 개수를 접촉 품질 인수로 삼지 않는다.
 
 ## 최근 실행 결과
+
+- **공개 검토 배포 성공**: 게임 커밋 `968554abb7e19802085ef2c43abec2df628d0eda`, Pages run `35205066858`. main·기존 배포 브랜치 CI도 통과. 실제 공개 origin의 73파일 SHA-256 일치, 실제 Clerk 창/두 브라우저 원격 시그널링·초대/카메라·한국어 채팅 **3/3** 통과. [공개 결과](homeoffice/evidence/v4/published/report.json), [바이트 검사](homeoffice/evidence/v4/published/artifact-verification.json). 검수 스크립트의 생성 전 배열 접근을 수정한 재검사이며 게임 artifact는 그대로다.
 
 - 사용자 요청의 검토 배포를 위해 현재 `cc2f8fbd…`에서 실제 UI **26/26(14+5+7)**, Node **33/33**, artifact 회귀 **6/6**, Clerk 합성 JWT **1/1**, 실제 PCK **318경로/금지 0**을 다시 확인했다. `docs/`와 로컬 export 모두 **73파일/source hash 일치**. [배포 기록](homeoffice/docs/v4/review-deployment-ko.md), [집계](homeoffice/evidence/v4/review-deployment.json). 이전 빌드 결과와 합산해 새 빌드 통과 수를 부풀리지 않는다.
 
@@ -68,7 +70,7 @@
 
 ## 바로 다음 작업
 
-사용자 검토 배포 후 실제 [Pages build-info](https://mjayj9.github.io/Friendslop_HomeOffice/build-info.json)와 Actions에서 위 Build ID/배포 commit을 확인한다. `node homeoffice/tests/v4-public-smoke.mjs`로 공개 원본의 Clerk 창·두 독립 클라이언트·카메라/한국어 채팅을 시험한다. 결과는 비공개 설정이 없는 로컬 `.runtime/public-review-smoke/report.json`에 기록한다.
+공개 검토 배포와 공개 원본 3개 검사는 완료했다. 사용자가 [실제 게임](https://mjayj9.github.io/Friendslop_HomeOffice/)에서 품질을 분석하고 피드백할 수 있다. `node homeoffice/tests/v4-public-smoke.mjs`는 이후 재검증 명령이며 이번 결과는 `evidence/v4/published/`에 선별 기록했다.
 
 인증의 다음 단계는 사용자가 **http://localhost:5173/** 첫 화면에서 회원가입/로그인해 `로그인됨`과 자신의 사용자 ID를 확인한다. 현재 CLI 로그인은 완료됐지만 게임 계정 로그인은 별개다. 이 실제 사용자 UID를 서버 관리자 allowlist에 명시적으로 연결한다. 첫 시뮬레이션 참가자에게 자동 관리자 권한을 주지 않는다. 이후 비공개 PIN 서버를 로컬에서 검증하고, 원격 배포는 비용·저장소·도메인·변경 영향이 구체화된 뒤 승인된 범위에서 수행한다.
 
