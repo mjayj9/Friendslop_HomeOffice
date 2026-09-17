@@ -13,11 +13,11 @@ func run():
 	w.set_physics_process(false)
 	for i in range(150):await physics_frame
 	check("Movable chair has floor collision and remains stable",absf(w.objects["living-chair"].position.y)<.05 and w.objects["living-chair"].linear_velocity.length()<.1)
-	var a=w.players.local
+	var a=w.players.local;a.command.third=false
 	check("Imported real male mesh has opaque visible materials",a.standing.find_children("*","MeshInstance3D",true,false)[0].get_active_material(0).albedo_color.a>.99)
 	check("62 authored Blender animation clips load",a.animator and a.animator.get_animation_list().size()>=62)
 	check("Default tag is immediately Practice",w.rounds.tag.phase=="practice")
-	w.add_player("friend");w.entry_grants.friend=true;w.weapon_grants.local=true;w.weapon_grants.friend=true
+	w.add_player("friend")
 	a.position=Vector3(25,0,-4);a.command.yaw=0.;a.command.pitch=0.
 	var b=w.players.friend;b.position=Vector3(25,0,-7)
 	for id in w.objects:
@@ -26,8 +26,8 @@ func run():
 	for i in range(20):
 		var state=gun.get_meta("state",{});state.nextShot=0;gun.set_meta("state",state);w.fire_tag("local")
 	check("Practice accepts >12 shots without reloading",w.shot_serial>=13)
-	var before=w.shot_serial;w.weapon_grants.local=false;w.fire_tag("local");check("Revoked permission rejects fire",w.shot_serial==before)
-	w.weapon_grants.local=true
+	var before=w.shot_serial;gun.set_meta("owner","friend");w.fire_tag("local");check("Forged gun ownership rejects fire",w.shot_serial==before)
+	gun.set_meta("owner","local")
 	var combat=load("res://scripts/combat/combat_state.gd").new()
 	for i in 4:combat.damage("a","b",1000+i)
 	check("Four accepted hits cause KO and one kill",combat.fighters.b.hp==0 and combat.fighters.a.kills==1 and combat.fighters.a.meter==25)
@@ -44,7 +44,7 @@ func run():
 	var profile=load("res://scripts/sports/ball_profile.gd")
 	check("Hoop accepts descending centre and rejects rising/edge",profile.basket_crossing(Vector3(0,4,0),Vector3(0,2,0),Vector3(0,3,0)) and not profile.basket_crossing(Vector3(0,2,0),Vector3(0,4,0),Vector3(0,3,0)) and not profile.basket_crossing(Vector3(.2,4,0),Vector3(.2,2,0),Vector3(0,3,0)))
 	w.handle_event({"type":"visibility","hidden":true});check("Document tab switch does not deliberately freeze host",not w.frozen)
-	var file=FileAccess.open("res://evidence/v3/gameplay-tests.json",FileAccess.WRITE);file.store_string(JSON.stringify({"environment":"Godot headless engine with controlled fixture positions; not UI/human acceptance","results":results},"  "))
+	var file=FileAccess.open("res://evidence/v4/gameplay-tests.json",FileAccess.WRITE);file.store_string(JSON.stringify({"environment":"Godot headless engine with controlled fixture positions; not UI/human acceptance","results":results},"  "))
 	file.close();file=null
 	var okay=results.all(func(r):return r.passed)
 	a=null;b=null;gun=null;ball=null;combat=null;profile=null

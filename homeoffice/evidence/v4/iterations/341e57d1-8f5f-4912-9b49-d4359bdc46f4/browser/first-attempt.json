@@ -1,0 +1,23 @@
+{
+  "environment": "Three independent headless Chromium processes on one Windows PC, actual Godot WebGL and HTML input. Local PeerJS signaling. Synthetic test files; no real microphone, external accounts or human acceptance.",
+  "buildId": "afdbb48f-2e7c-4442-ac91-9cd294a8d727",
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#chatToggle')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"chatToggle\">대화</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - performing click action\u001b[22m\n\u001b[2m      - <canvas id=\"canvas\" tabindex=\"0\" width=\"1440\" height=\"900\">WebGL2 지원 브라우저가 필요합니다.</canvas> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - performing click action\u001b[22m\n\u001b[2m      - <canvas id=\"canvas\" tabindex=\"0\" width=\"1440\" height=\"900\">WebGL2 지원 브라우저가 필요합니다.</canvas> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - performing click action\u001b[22m\n\u001b[2m       - <canvas id=\"canvas\" tabindex=\"0\" width=\"1440\" height=\"900\">WebGL2 지원 브라우저가 필요합니다.</canvas> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:26:100\n    at check (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:10:60)\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:26:8",
+  "results": [
+    {
+      "name": "Three clients instantiate visible remote bodies on the same build",
+      "passed": true,
+      "ms": 707
+    },
+    {
+      "name": "Real C input switches ordinary third and first person",
+      "passed": true,
+      "ms": 1512
+    },
+    {
+      "name": "Mouse wheel zoom is applied to the running camera",
+      "passed": true,
+      "ms": 974
+    }
+  ],
+  "errors": []
+}

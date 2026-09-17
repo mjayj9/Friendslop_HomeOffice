@@ -1,0 +1,61 @@
+{
+  "environment": "Godot headless engine with controlled fixture positions; not UI/human acceptance",
+  "results": [
+    {
+      "name": "Movable chair has floor collision and remains stable",
+      "passed": true
+    },
+    {
+      "name": "Imported real male mesh has opaque visible materials",
+      "passed": true
+    },
+    {
+      "name": "62 authored Blender animation clips load",
+      "passed": true
+    },
+    {
+      "name": "Default tag is immediately Practice",
+      "passed": true
+    },
+    {
+      "name": "Practice accepts >12 shots without reloading",
+      "passed": true
+    },
+    {
+      "name": "Forged gun ownership rejects fire",
+      "passed": true
+    },
+    {
+      "name": "Four accepted hits cause KO and one kill",
+      "passed": true
+    },
+    {
+      "name": "KO cannot be scored twice",
+      "passed": true
+    },
+    {
+      "name": "Timed respawn restores HP and adds protection",
+      "passed": true
+    },
+    {
+      "name": "Kill gauge decays after inactivity",
+      "passed": true
+    },
+    {
+      "name": "Basketball collider radius 0.12m",
+      "passed": true
+    },
+    {
+      "name": "Charged release frees ball and applies real backspin",
+      "passed": true
+    },
+    {
+      "name": "Hoop accepts descending centre and rejects rising/edge",
+      "passed": true
+    },
+    {
+      "name": "Document tab switch does not deliberately freeze host",
+      "passed": true
+    }
+  ]
+}

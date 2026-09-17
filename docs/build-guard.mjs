@@ -1,6 +1,6 @@
 export async function verifyBuild(){
  const response=await fetch('./build-info.json',{cache:'no-store'});if(!response.ok)throw Error('빌드 정보를 읽지 못했습니다.');
- const info=await response.json();if(info.protocolVersion!==3)throw Error('지원하지 않는 게임 버전입니다.');
+ const info=await response.json();if(info.protocolVersion!==4)throw Error('지원하지 않는 게임 버전입니다.');
  const files=['index.pck','index.wasm','index.js','bridge.mjs','build-id.mjs'];
  for(const name of files){
   const expected=info.files[name];if(!expected)throw Error('빌드 파일 목록 누락: '+name);

@@ -1,0 +1,65 @@
+{
+  "buildId": "fa3e62b2-1222-43f9-bbcc-662894987f1e",
+  "sourceDigest": "2af1fa865757671b234ac519bc8c9ba7f532fae9fe79cbed03ee486ebba79bfb",
+  "commit": "d67dd929cc719fb3e7e72626e59fc9bd9050a2d9",
+  "dirty": true,
+  "checkedAt": "2026-09-16T17:36:43.098046+00:00",
+  "ui": [
+    {
+      "report": "browser/report.json",
+      "passed": 14,
+      "errors": 0,
+      "videos": [
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\browser\\page@267a208e0fc07c141d25887ed777de14.webm",
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\browser\\page@9cfb7128c49b4061aa122a3a2d4eb198.webm",
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\browser\\page@7a7b251dbfa0875a5f485ccf14c63d5b.webm"
+      ]
+    },
+    {
+      "report": "meeting-browser/report.json",
+      "passed": 5,
+      "errors": 0,
+      "videos": [
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\meeting-browser\\page@ec0882be3a0c944864a7f1d9a79c9eee.webm",
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\meeting-browser\\page@d74875030fe9ba9bf7f651fc8b8feaaa.webm"
+      ]
+    },
+    {
+      "report": "play-browser/report.json",
+      "passed": 7,
+      "errors": 0,
+      "videos": [
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\play-browser\\page@ff11fa7336414a36e1885b5d7cd8d53c.webm",
+        "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\play-browser\\page@e0c90d00650179f94f864fa60693327d.webm"
+      ]
+    }
+  ],
+  "admin-ui": {
+    "verified": true,
+    "results": 2
+  },
+  "save-inspection": {
+    "verified": true,
+    "results": 0
+  },
+  "package-audit": {
+    "verified": true,
+    "results": 0
+  },
+  "engine": {
+    "suites": 9,
+    "assertions": 112,
+    "dribbleMeasurement": true,
+    "errors": 0
+  },
+  "node": {
+    "passed": 33,
+    "clerkSyntheticJwtPassed": 1
+  },
+  "limits": [
+    "Automated browsers on one Windows PC/local signaling, not two real people or WAN.",
+    "Clerk login and PIN service not configured. No actual private PIN loaded.",
+    "External Google/Microsoft accounts, real microphones, full sports matches and art acceptance not performed.",
+    "Remote deployment, merge and Firebase unchanged."
+  ]
+}

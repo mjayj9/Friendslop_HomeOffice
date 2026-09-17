@@ -33,7 +33,7 @@ def verify(directory, source=False, index=False):
             return directory.joinpath(*safe_name(name).parts).read_bytes()
 
     info = json.loads(read('build-info.json'))
-    if info.get('protocolVersion') != 3 or not info.get('buildId'):
+    if info.get('protocolVersion') not in (3, 4) or not info.get('buildId'):
         raise ValueError('Not a V3 artifact: build-info.json')
     if not CRITICAL.issubset(info.get('files', {})):
         raise ValueError('Missing critical runtime files in build-info.json')

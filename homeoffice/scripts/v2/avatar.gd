@@ -22,6 +22,13 @@ var transition_until=0
 var transition_clip=""
 var sleep_blend=0.0
 var collider:CollisionShape3D
+var camera_rig=preload("res://scripts/player/camera_rig.gd").new()
+
+func aim_point() -> Vector3:
+	return camera_rig.aim_point(self)
+
+func aim_direction() -> Vector3:
+	return (aim_point()-eye()).normalized()
 
 func _ready():
 	super._ready()
@@ -113,10 +120,10 @@ func animate(dt:float):
 	name_label.pixel_size=.0018
 	name_label.visible=not local_player
 	var sleeping=posture in ["lying","sleeping"]
-	standing.visible=not local_player or sleeping
+	standing.visible=not local_player or camera_rig.third_person or sleeping
 	sitting.visible=false
 	lying.visible=false
-	hands.visible=local_player and holding!="" and not sleeping
+	hands.visible=local_player and not camera_rig.third_person and holding!="" and not sleeping
 	if hands.visible and hand_skeleton:
 		for side in ["L","R"]:
 			for part in ["UpperArm.","Forearm."]:
@@ -168,18 +175,8 @@ func animate(dt:float):
 			for candidate in animator.get_animation_list():
 				if String(candidate).ends_with(name):name=candidate;break
 		if name!=last_clip and animator.has_animation(name):animator.play(name,.12);last_clip=name
-		animator.speed_scale=clampf(speed/(5.2 if clip=="run" else 3.1),.45,1.6) if clip.begins_with("walk") or clip.begins_with("run") else 1.0
-	if local_player:
-		sleep_blend=move_toward(sleep_blend,1.0 if sleeping else 0.0,dt*1.8)
-		var near=eye()
-		var desired=global_position+global_basis*Vector3(1.8,1.9,2.2)
-		var q=PhysicsRayQueryParameters3D.create(global_position+Vector3.UP*.9,desired,1|4,[get_rid()])
-		var hit=get_world_3d().direct_space_state.intersect_ray(q)
-		if not hit.is_empty():desired=hit.position+hit.normal*.18
-		if sleep_blend>.001:
-			camera.global_position=near.lerp(desired,sleep_blend)
-			camera.look_at(global_position+Vector3(0,.75,0))
-		else:camera.position=Vector3(0,eye().y-global_position.y,0)
+		animator.speed_scale=clampf(speed/(5.2 if clip.begins_with("run") else 3.1),.45,1.6) if clip.begins_with("walk") or clip.begins_with("run") else 1.0
+	if local_player:camera_rig.update(self,dt,sleeping)
 
 func state() -> Dictionary:
 	var s=super.state()

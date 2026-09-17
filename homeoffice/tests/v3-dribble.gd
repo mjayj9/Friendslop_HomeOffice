@@ -16,5 +16,5 @@ func run():
 		previous_v=ball.linear_velocity.y
 	var passed=bounces>=3 and height_min>.10 and height_max<2.0 and speed_max<=8.1 and p.holding=="basketball"
 	var result={"environment":"Actual Godot/Jolt fixed physics ticks; controlled player/ball initial fixture; no render animation driving ball Y.","passed":passed,"bounces":bounces,"minY":height_min,"maxY":height_max,"maxSpeed":speed_max}
-	FileAccess.open("res://evidence/v3/dribble.json",FileAccess.WRITE).store_string(JSON.stringify(result,"  "))
+	FileAccess.open("res://evidence/v4/dribble.json",FileAccess.WRITE).store_string(JSON.stringify(result,"  "))
 	print("DRIBBLE ",result);w.queue_free();w=null;p=null;ball=null;await process_frame;await create_timer(.25).timeout;quit(0 if passed else 1)

@@ -1,0 +1,48 @@
+{
+  "environment": "Three independent headless Chromium processes on one Windows PC, actual Godot WebGL and HTML input. Local PeerJS signaling. Synthetic test files; no real microphone, external accounts or human acceptance.",
+  "buildId": "ea7d95ca-e973-4c73-8930-6a42f1a4980e",
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.chat-file').filter({ hasText: '이어받기.txt' }).getByRole('button', { name: '취소', exact: true })\u001b[22m\n\u001b[2m    2 × locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m  2 × element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is not visible\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is not visible\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m  4 × element was detached from the DOM, retrying\u001b[22m\n\u001b[2m      - locator resolved to <button type=\"button\" class=\"secondary\">취소</button>\u001b[22m\n\u001b[2m    - attempting click action\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:39:503\n    at async check (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:10:54)\n    at async file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v4-browser-flow.mjs:38:2",
+  "results": [
+    {
+      "name": "Three clients instantiate visible remote bodies on the same build",
+      "passed": true,
+      "ms": 716
+    },
+    {
+      "name": "Real C input switches ordinary third and first person",
+      "passed": true,
+      "ms": 1693
+    },
+    {
+      "name": "Mouse wheel zoom is applied to the running camera",
+      "passed": true,
+      "ms": 1002
+    },
+    {
+      "name": "Chat focus blocks WASD and camera bindings",
+      "passed": true,
+      "ms": 2153
+    },
+    {
+      "name": "Actual Korean DM reaches B while C receives no chat payload",
+      "passed": true,
+      "ms": 1859
+    },
+    {
+      "name": "Reaction and author edit propagate to the other recipient",
+      "passed": true,
+      "ms": 1643
+    },
+    {
+      "name": "File chooser transfers real file bytes and verified download matches sender SHA-256",
+      "passed": true,
+      "ms": 2840
+    }
+  ],
+  "errors": [],
+  "videos": [
+    "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\browser\\page@c631e4d34228cd13cad3fd21c12ad2c7.webm",
+    "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\browser\\page@8af0c3de60aa121b0b910b33c46867a5.webm",
+    "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\browser\\page@43f84e06431bda0ac335c1ca0b4bc04c.webm"
+  ]
+}

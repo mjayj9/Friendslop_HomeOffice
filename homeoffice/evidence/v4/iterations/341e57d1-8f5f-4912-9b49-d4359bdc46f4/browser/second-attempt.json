@@ -1,0 +1,43 @@
+{
+  "environment": "Three independent headless Chromium processes on one Windows PC, actual Godot WebGL and HTML input. Local PeerJS signaling. Synthetic test files; no real microphone, external accounts or human acceptance.",
+  "buildId": "afdbb48f-2e7c-4442-ac91-9cd294a8d727",
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.chat-file').filter({ hasText: '공유-이미지.png' }).getByRole('button', { name: '파일 받기' })\u001b[22m\n\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:38:338\n    at async check (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:10:54)\n    at async file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v4-browser-flow.mjs:37:2",
+  "results": [
+    {
+      "name": "Three clients instantiate visible remote bodies on the same build",
+      "passed": true,
+      "ms": 708
+    },
+    {
+      "name": "Real C input switches ordinary third and first person",
+      "passed": true,
+      "ms": 1740
+    },
+    {
+      "name": "Mouse wheel zoom is applied to the running camera",
+      "passed": true,
+      "ms": 1018
+    },
+    {
+      "name": "Chat focus blocks WASD and camera bindings",
+      "passed": true,
+      "ms": 2490
+    },
+    {
+      "name": "Actual Korean DM reaches B while C receives no chat payload",
+      "passed": true,
+      "ms": 1959
+    },
+    {
+      "name": "Reaction and author edit propagate to the other recipient",
+      "passed": true,
+      "ms": 2288
+    },
+    {
+      "name": "File chooser transfers real file bytes and verified download matches sender SHA-256",
+      "passed": true,
+      "ms": 3883
+    }
+  ],
+  "errors": []
+}

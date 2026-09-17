@@ -58,8 +58,8 @@ func run():
 	var ball=w.objects.basketball;ball.freeze=true;ball.position=Vector3(-16.35,2.99,30);ball.linear_velocity=Vector3(0,-3,0);w.ball_previous.basketball=Vector3(-16.35,3.12,30);w.update_sports(1.0/60)
 	check("basket downward crossing scores once",w.basketball_score==[0,2]);w.update_sports(1.0/60);check("duplicate basket sample does not score",w.basketball_score==[0,2])
 	ball.position=Vector3(-16.35,3.12,30);ball.linear_velocity=Vector3(0,3,0);w.ball_previous.basketball=Vector3(-16.35,2.9,30);w.update_sports(1.0/60);check("upward crossing rejected",w.basketball_score==[0,2])
-	at(Vector3(23,0,-2),w.objects["tag-gun-1"].position);action("carry");check("unapproved toy gun pickup rejected",p.holding=="")
-	w.entry_grants.local=true;w.weapon_grants.local=true;action("carry");check("approved game-zone pickup succeeds",p.holding=="tag-gun-1")
-	w.weapon_grants.local=false;w.update_living(0);check("permission revoke releases already-held gun",p.holding=="")
-	w.weapon_grants.local=true;at(Vector3(5,0,6),Vector3(6,1,6));check("grant does not allow meeting-room firing",not w.allowed_weapon("local"))
-	var file=FileAccess.open("res://evidence/v3/legacy-interactions.json",FileAccess.WRITE);file.store_string(JSON.stringify({"environment":"Actual Godot/Jolt engine. Direct fixture positions and action requests; scoring uses controlled crossing samples. Not browser/manual validation.","results":results},"  "));file.close();var code=1 if results.any(func(r):return not r.passed) else 0;w.queue_free();w=null;p=null;ball=null;await process_frame;await create_timer(.25).timeout;quit(code)
+	at(Vector3(23,0,-2),w.objects["tag-gun-1"].position);action("carry");check("Toy gun pickup needs no individual permission",p.holding=="tag-gun-1")
+	w.update_living(0);check("Living tick preserves current gun ownership",p.holding=="tag-gun-1")
+	at(Vector3(5,0,6),Vector3(6,1,6));w.objects[p.holding].position=p.eye()+p.direction()*.43
+	var before=w.shot_serial;w.fire_tag("local");check("Meeting room accepts free fire",w.shot_serial==before+1)
+	var file=FileAccess.open("res://evidence/v4/legacy-interactions.json",FileAccess.WRITE);file.store_string(JSON.stringify({"environment":"Actual Godot/Jolt engine. Direct fixture positions and action requests; scoring uses controlled crossing samples. Not browser/manual validation.","results":results},"  "));file.close();var code=1 if results.any(func(r):return not r.passed) else 0;w.queue_free();w=null;p=null;ball=null;await process_frame;await create_timer(.25).timeout;quit(code)

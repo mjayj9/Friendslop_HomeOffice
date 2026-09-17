@@ -1,0 +1,15 @@
+✔ Session, zone and DM are routed before delivery; sender identity is connection-owned (2.1546ms)
+✔ Retries deduplicate; edits/deletes/replies cannot cross identities or channel boundaries (0.2656ms)
+✔ Delivery and read are distinct and reactions bind to actual participants (0.2043ms)
+✔ Attachment fragments need a participant request, exact size and original provider (0.295ms)
+✔ Cancel revokes transfer; offline provider is reported without pretending server storage (0.3079ms)
+✔ Validation rejects spoofed images, scripts, oversized decoding and path-shaped names (0.54ms)
+✔ Conflicting attachment IDs cannot alias an existing receiver cache (0.1593ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75.5525

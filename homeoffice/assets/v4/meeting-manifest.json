@@ -1,0 +1,18 @@
+{
+  "units": "metres, Godot Y up",
+  "table": {
+    "center": [
+      6.5,
+      0.81,
+      8.15
+    ],
+    "size": [
+      3.16,
+      0.12,
+      6.3
+    ]
+  },
+  "decorativeObjects": 61,
+  "preserved": "Existing room, doors, seats, original documents and board controls",
+  "quality": "Pending actual Godot WebGL review"
+}

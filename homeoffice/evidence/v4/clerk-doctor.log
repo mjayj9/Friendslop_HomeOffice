@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Host execution",
+    "status": "pass",
+    "message": "Host-only Clerk state is writable in agent mode"
+  },
+  {
+    "name": "CLI version",
+    "status": "pass",
+    "message": "Up to date (3.3.0)"
+  },
+  {
+    "name": "Logged in",
+    "status": "pass",
+    "message": "Logged in (token found in credential store)"
+  },
+  {
+    "name": "Authentication valid",
+    "status": "pass",
+    "message": "Authenticated as [authenticated account]"
+  },
+  {
+    "name": "Project linked",
+    "status": "pass",
+    "message": "Linked via git remote (github.com/mjayj9/friendslop_homeoffice)",
+    "detail": "Workspace: (none)\nDev instance: ins_3JPx7xhL86VZZWEMz31KuKq5h7F\nProd instance: (not set)"
+  },
+  {
+    "name": "Application reachable",
+    "status": "pass",
+    "message": "Application \"My Application\" (app_3JPx7wBJ683SFfndYIqhAHGOKeX) is reachable"
+  },
+  {
+    "name": "Instance IDs",
+    "status": "warn",
+    "message": "Instance IDs: development (ins_3JPx7xhL86VZZWEMz31KuKq5h7F) (production not configured)",
+    "detail": "Production instance is optional but recommended for deployment."
+  },
+  {
+    "name": "Environment variables",
+    "status": "warn",
+    "message": "No .env.local or .env file found",
+    "remedy": "Run `clerk env pull` to create one with your Clerk keys.",
+    "fix": "Pull env vars with clerk env pull"
+  },
+  {
+    "name": "CLI configuration",
+    "status": "pass",
+    "message": "C:\\Users\\admin\\AppData\\Roaming\\clerk-cli\\Config\\config.json is valid (1 profile, auth: yes)"
+  },
+  {
+    "name": "Shell completion",
+    "status": "pass",
+    "message": "Shell completion (could not detect shell, skipped)"
+  },
+  {
+    "name": "MCP server",
+    "status": "pass",
+    "message": "Skipped (no Clerk MCP entry installed)"
+  }
+]

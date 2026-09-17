@@ -1,0 +1,62 @@
+[
+  {
+    "file": "quaternius_cc0-male-character-1157.glb",
+    "bytes": 483796,
+    "sha256": "88e40b0e82e242f8d04d22106a149fd121a69b6cf9e9aa87e22fb82848e5b754",
+    "meshes": 7,
+    "joints": [],
+    "animations": 0
+  },
+  {
+    "file": "quaternius_cc0-male-character-1158.glb",
+    "bytes": 277068,
+    "sha256": "d97b63a87ab729c47a2f0ff0c30ba9271529ccc64e328aa7370625fa14005010",
+    "meshes": 4,
+    "joints": [],
+    "animations": 0
+  },
+  {
+    "file": "quaternius_cc0-male-character-1160.glb",
+    "bytes": 138604,
+    "sha256": "d902ca5b192ebe3e061de79af86b647d8e36d1c2e49e3290ba3ffe2bda1b4fbe",
+    "meshes": 2,
+    "joints": [],
+    "animations": 0
+  },
+  {
+    "file": "quaternius_cc0-male-character-1161.glb",
+    "bytes": 346316,
+    "sha256": "51a8975414f406391b2d27f851587b5e50eb7a03f6d26b20f413436d48f037b1",
+    "meshes": 5,
+    "joints": [],
+    "animations": 0
+  },
+  {
+    "file": "quaternius_cc0-male-character-1162.glb",
+    "bytes": 69336,
+    "sha256": "8a86bb1b85e888508e34f6bfbec0256524ed2aa100386e9362b233b02b4b422e",
+    "meshes": 1,
+    "joints": [],
+    "animations": 0
+  },
+  {
+    "file": "male-animated-v3.glb",
+    "bytes": 540708,
+    "sha256": "f29277db191e895d88fd96f6d35cecc68930646455fd1393b8830187f786f2c2",
+    "meshes": 1,
+    "joints": [
+      13
+    ],
+    "animations": 62
+  },
+  {
+    "file": "male-rigged-v3.glb",
+    "bytes": 111932,
+    "sha256": "05cf879559829be7f06cec91bb67be40e96a35d784650c90cc784e4ae56c1628",
+    "meshes": 1,
+    "joints": [
+      13
+    ],
+    "animations": 0
+  }
+]

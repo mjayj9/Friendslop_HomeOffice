@@ -1,0 +1,4 @@
+PASS Exact localhost:5173 origin serves the game and real Clerk SDK with visible account controls
+PASS Real Clerk sign-in component opens from the existing welcome screen
+PASS Real Clerk sign-up component opens without replacing the game project
+PASS Clerk modal cancels gameplay input; closing and resuming restores movement

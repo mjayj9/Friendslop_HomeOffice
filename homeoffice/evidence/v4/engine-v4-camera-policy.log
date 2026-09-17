@@ -1,0 +1,24 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Third-person default shows actual local body
+PASS Idle camera orbit does not turn body
+PASS Movement follows camera yaw independent of old body facing
+PASS First-person reaches eye and avoids local head interior
+PASS Sleep camera returns to previous first-person preference
+PASS Camera volume contracts before a physical wall
+PASS Shoulder aim offsets camera to character right
+PASS Zoom cannot exceed bounded distance
+PASS Zoom cannot enter unbounded negative distance
+PASS Untrusted camera values reject non-finite input
+PASS UI cancellation clears held fire and charge without releasing a shot
+PASS Guest focus loss cancels authoritative automatic fire
+PASS Retired approval commands cannot mutate policy
+PASS Free fire keeps ownership and fires in meeting
+PASS Free fire keeps ownership and fires in home
+PASS Free fire keeps ownership and fires in office
+PASS Free fire keeps ownership and fires in garden
+PASS Free fire keeps ownership and fires in play
+PASS Classroom flag does not prohibit free fire
+PASS Ending a match cannot disable ordinary free fire
+PASS Snapshot excludes retired per-player permissions

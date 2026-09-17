@@ -1,0 +1,34 @@
+{
+  "environment": "Actual same-build UI-exported meeting bundle; schema/hash/entry inspection. No private PIN value loaded.",
+  "buildId": "fa3e62b2-1222-43f9-bbcc-662894987f1e",
+  "bytes": 9795,
+  "entries": [
+    "manifest.json",
+    "world.json"
+  ],
+  "fields": [
+    "assetPack",
+    "board",
+    "doors",
+    "facilities",
+    "layoutVersion",
+    "objects",
+    "results",
+    "revision",
+    "roomSlots",
+    "schemaVersion",
+    "settings",
+    "worldId",
+    "announcements",
+    "documents",
+    "collaboration",
+    "presentation",
+    "presentationView"
+  ],
+  "attachments": 0,
+  "objects": 67,
+  "roomSlots": 2,
+  "builtinDocument": true,
+  "unexpectedPolicyOrChatKeysRejected": true,
+  "passed": true
+}

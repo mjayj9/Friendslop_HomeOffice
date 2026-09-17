@@ -1,0 +1,53 @@
+{
+  "environment": "Godot/Jolt fixture; verified-policy injection, no real Clerk login",
+  "results": [
+    {
+      "name": "Only the selected physical room blocks new entry",
+      "passed": true
+    },
+    {
+      "name": "Existing occupants can leave and move within a locked room",
+      "passed": true
+    },
+    {
+      "name": "Crossing a locked boundary restores the last outside position",
+      "passed": true
+    },
+    {
+      "name": "Crossing outward succeeds without a PIN or administrator role",
+      "passed": true
+    },
+    {
+      "name": "Older local policy cannot replace current locks",
+      "passed": true
+    },
+    {
+      "name": "World file restore does not overwrite current admin policy",
+      "passed": true
+    },
+    {
+      "name": "Administrator unlock opens entry to every student",
+      "passed": true
+    },
+    {
+      "name": "Door leaf does not close onto an occupied opening",
+      "passed": true
+    },
+    {
+      "name": "Meeting lights respect the real office wall switch",
+      "passed": true
+    },
+    {
+      "name": "Host handoff preserves look direction independently of body facing",
+      "passed": true
+    },
+    {
+      "name": "KO return cannot place a player inside a locked game room",
+      "passed": true
+    },
+    {
+      "name": "Opening the game room restores its ordinary return location",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "environment": "Godot/Jolt controlled fixtures; no real people or UI acceptance",
+  "results": [
+    {
+      "name": "Third-person default shows actual local body",
+      "passed": true
+    },
+    {
+      "name": "Idle camera orbit does not turn body",
+      "passed": true
+    },
+    {
+      "name": "Movement follows camera yaw independent of old body facing",
+      "passed": true
+    },
+    {
+      "name": "First-person reaches eye and avoids local head interior",
+      "passed": true
+    },
+    {
+      "name": "Sleep camera returns to previous first-person preference",
+      "passed": true
+    },
+    {
+      "name": "Camera volume contracts before a physical wall",
+      "passed": true
+    },
+    {
+      "name": "Shoulder aim offsets camera to character right",
+      "passed": true
+    },
+    {
+      "name": "Zoom cannot exceed bounded distance",
+      "passed": true
+    },
+    {
+      "name": "Zoom cannot enter unbounded negative distance",
+      "passed": true
+    },
+    {
+      "name": "Untrusted camera values reject non-finite input",
+      "passed": true
+    },
+    {
+      "name": "UI cancellation clears held fire and charge without releasing a shot",
+      "passed": true
+    },
+    {
+      "name": "Guest focus loss cancels authoritative automatic fire",
+      "passed": true
+    },
+    {
+      "name": "Retired approval commands cannot mutate policy",
+      "passed": true
+    },
+    {
+      "name": "Free fire keeps ownership and fires in meeting",
+      "passed": true
+    },
+    {
+      "name": "Free fire keeps ownership and fires in home",
+      "passed": true
+    },
+    {
+      "name": "Free fire keeps ownership and fires in office",
+      "passed": true
+    },
+    {
+      "name": "Free fire keeps ownership and fires in garden",
+      "passed": true
+    },
+    {
+      "name": "Free fire keeps ownership and fires in play",
+      "passed": true
+    },
+    {
+      "name": "Classroom flag does not prohibit free fire",
+      "passed": true
+    },
+    {
+      "name": "Ending a match cannot disable ordinary free fire",
+      "passed": true
+    },
+    {
+      "name": "Snapshot excludes retired per-player permissions",
+      "passed": true
+    }
+  ]
+}

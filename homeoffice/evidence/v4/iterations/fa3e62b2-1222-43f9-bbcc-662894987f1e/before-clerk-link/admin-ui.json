@@ -1,0 +1,15 @@
+{
+  "environment": "Chromium DOM configuration fixture; synthetic Clerk SDK/session, no real account or PIN. Actual exported room-admin module.",
+  "buildId": "fa3e62b2-1222-43f9-bbcc-662894987f1e",
+  "completed": true,
+  "results": [
+    {
+      "name": "No configuration exposes neither login nor PIN management",
+      "passed": true
+    },
+    {
+      "name": "Clerk-only onboarding shows UID without granting operator authority or sending token to an absent service",
+      "passed": true
+    }
+  ]
+}

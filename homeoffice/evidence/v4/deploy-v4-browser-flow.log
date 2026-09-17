@@ -1,0 +1,14 @@
+PASS Three clients instantiate visible remote bodies on the same build
+PASS Real C input switches ordinary third and first person
+PASS Mouse wheel zoom is applied to the running camera
+PASS Chat focus blocks WASD and camera bindings
+PASS Actual Korean DM reaches B while C receives no chat payload
+PASS Reaction and author edit propagate to the other recipient
+PASS Reply, conversation search and author deletion update both actual messenger views
+PASS File chooser transfers real file bytes and verified download matches sender SHA-256
+PASS Chunk transfer cancels, resumes at its saved offset, and leaves another player responsive
+PASS PNG bytes are decoded and previewed by the recipient
+PASS Actual clipboard image paste reaches the recipient and decodes
+PASS Browser drop event delivers TXT bytes through the same attachment pipeline
+PASS Closing messenger restores movement without replaying typed keys
+PASS An undownloaded file is visibly unavailable after its actual provider disconnects

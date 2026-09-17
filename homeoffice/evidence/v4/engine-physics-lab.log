@@ -1,0 +1,6 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS Basketball bounces without gaining energy
+PASS Football has lower restitution than basketball
+PASS 14m/s CCD ball stays on near side of 6cm wall
+PASS Both balls remain above the floor after 6 seconds

@@ -1,5 +1,5 @@
 extends RefCounted
-## Host-owned damage and scoring. Callers validate actors, permission and rays.
+## Host-owned damage and scoring. Callers validate actors, ownership, cooldown and rays.
 const MAX_HP=100
 const DAMAGE=25
 const RESPAWN_MS=3000

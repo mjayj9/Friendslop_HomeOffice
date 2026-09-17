@@ -7,3 +7,13 @@
 *.blend2
 .env
 .env.*
+
+PRIVATE_*
+**/*DO_NOT_COMMIT*
+**/.private/
+
+# Clerk CLI local project link (authentication credentials stay in the CLI profile).
+.clerk/
+
+# Repeated local QA captures stay local; selected report videos are explicitly tracked.
+homeoffice/evidence/v4/**/page@*.webm

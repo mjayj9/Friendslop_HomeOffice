@@ -24,6 +24,7 @@ func _ready():
 	toy_effects=load("res://scripts/combat/toy_effects.gd").new();add_child(toy_effects)
 	facilities=load("res://scripts/world/campus_details.gd").new();add_child(facilities)
 	super._ready()
+	add_child(load("res://scripts/world/meeting_finish.gd").new())
 	add_child(load("res://scripts/sports/hoop_feedback.gd").new())
 	rounds.tag={"phase":"practice","mode":"practice","seconds":0.0}
 	spawn_object({"id":"meeting-laser","kind":"laser","p":[8.6,1.0,8.2],"yaw":0.0,"state":{}})
@@ -36,6 +37,10 @@ func spawn_object(d:Dictionary):
 	# The retained spawner handles carrying furniture with its original colliders.
 	super.spawn_object(d)
 	var body=objects.get(d.id)
+	if d.id in ["meeting-table-0","meeting-table-1"] and body:body.get_child(0).visible=false
+	if String(d.id).begins_with("meeting-chair-") and body:
+		var old_visual=body.get_child(0);body.remove_child(old_visual);old_visual.queue_free()
+		var visual=load("res://assets/v4/meeting-chair.glb").instantiate();body.add_child(visual);body.move_child(visual,0)
 	if body is RigidBody3D and d.kind in ["basketball","football"]:
 		body.get_child(0).scale=Vector3.ONE*.5
 		for child in body.get_children():
@@ -50,7 +55,7 @@ func add_player(id:String):
 func base_input(event):
 	if event is InputEventMouseMotion and playing() and Input.mouse_mode==Input.MOUSE_MODE_CAPTURED:
 		yaw-=event.relative.x*(float(bridge.look_sensitivity()) if bridge else .002)
-		pitch=clampf(pitch-event.relative.y*(float(bridge.look_sensitivity()) if bridge else .002),-1.35,1.35)
+		pitch=clampf(pitch-event.relative.y*(float(bridge.look_sensitivity()) if bridge else .002)*(-1.0 if bridge and bool(bridge.look_inverted()) else 1.0),-1.35,1.35)
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode==KEY_ESCAPE:
 			Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
@@ -67,6 +72,14 @@ func _unhandled_input(event):
 	if not playing():
 		base_input(event)
 		return
+	var local_avatar=players.get(local_id)
+	if local_avatar and event is InputEventKey and event.pressed and not event.echo and key_event(event,"camera"):
+		local_avatar.camera_rig.toggle();return
+	if local_avatar and event is InputEventMouseButton:
+		if event.pressed and event.button_index in [MOUSE_BUTTON_WHEEL_UP,MOUSE_BUTTON_WHEEL_DOWN]:
+			local_avatar.camera_rig.zoom(-1 if event.button_index==MOUSE_BUTTON_WHEEL_UP else 1);return
+		if event.button_index==MOUSE_BUTTON_RIGHT and definitions.get(local_avatar.holding,{}).get("kind")=="gun":
+			local_avatar.camera_rig.aiming=event.pressed;return
 	if build_kind!="":
 		if event is InputEventKey and event.pressed and not event.echo:
 			if key_event(event,"secondary"):build_angle+=PI/4;return
@@ -104,8 +117,9 @@ func execute_action(id:String,m:Dictionary):
 	if order<=int(actions.get(id,-1)):return
 	var p=players[id]
 	var action=String(m.get("action",""))
-	if not combat.alive(id) and action not in ["trigger_up"]:actions[id]=order;return reject(id,"KO 상태입니다. 곧 안전한 위치에서 복귀합니다.")
-	if classroom and action in ["grant","entry_grant","game_gate","weapon_zone","remove_object"]:actions[id]=order;return reject(id,"자율 교실에는 교사 인증이 없습니다. 무기·방송 관리자 권한은 부여하지 않습니다.")
+	if not combat.alive(id) and action not in ["trigger_up","input_cancel"]:actions[id]=order;return reject(id,"KO 상태입니다. 곧 안전한 위치에서 복귀합니다.")
+	if action=="input_cancel":
+		actions[id]=order;p.set_meta("trigger_held",false);p.remove_meta("charge_started");p.remove_meta("kick_started");return
 	if action=="activity":
 		actions[id]=order
 		var mode=String(m.get("data",{}).get("mode",""))
@@ -127,7 +141,6 @@ func execute_action(id:String,m:Dictionary):
 		var kind=definitions[focused].kind
 		if not Capabilities.can_carry(kind) and kind!="laser":return reject(id,"고정 시설입니다. F로 사용하세요.")
 		if kind=="football" and zone_at(p.position)=="football":return reject(id,"축구장에서는 발로 제어합니다. 클릭 슛 · Q 패스 · F 가로채기")
-		if kind in ["gun","shield"] and not allowed_weapon(id):return reject(id,"현재 사용자와 구역에 대한 무기 사용 허가가 필요합니다.")
 		var o=objects[focused]
 		if focused in ["meeting-table-0","meeting-table-1"]:return reject(id,"컴퓨터가 설치된 회의 책상은 고정되어 있습니다. 다른 책상은 집을 수 있습니다.")
 		if not o is RigidBody3D or object_in_use(focused):return reject(id,"다른 사람이 사용 중이거나 내용물이 있는 사물입니다.")
@@ -193,7 +206,6 @@ func execute_action(id:String,m:Dictionary):
 			if zone_at(person.position)==("game" if game=="tag" else game):ids.append(person.actor_id)
 		sports.assign(game,ids)
 		if game=="tag":combat.reset()
-	if action=="grant" and m.get("data",{}).get("allow",false) and rounds.tag.phase in ["ready","rules","results"]:rounds.tag.phase="practice";rounds.tag.mode="practice"
 
 func release(p,throwing:bool):
 	var held=objects.get(p.holding)
@@ -208,12 +220,11 @@ func release(p,throwing:bool):
 func fire_tag(id:String):
 	var p=players.get(id)
 	if not p or p.holding=="" or not definitions.has(p.holding) or definitions[p.holding].kind!="gun":return
-	if not allowed_weapon(id):p.set_meta("trigger_held",false);return reject(id,"발사 불가 · 무기 사용 허가 또는 허용 구역을 확인하세요.")
-	if not rounds.tag.phase in ["practice","play"]:p.set_meta("trigger_held",false);return reject(id,"발사 불가 · 현재 라운드는 "+String(rounds.tag.phase)+"입니다.")
 	if not combat.alive(id):return
 	var gun=objects[p.holding];var st=gun.get_meta("state",{});var now=Time.get_ticks_msec()
+	if gun.get_meta("owner","")!=id:return reject(id,"현재 총 소유권이 일치하지 않습니다.")
 	if now<int(st.get("nextShot",0)):return
-	var unlimited=rounds.tag.phase=="practice"
+	var unlimited=not (rounds.tag.phase=="play" and sports.team("tag",id)>=0 and rounds.tag.get("mode")=="limited")
 	if not unlimited:
 		if now<int(st.get("reloadUntil",0)):return
 		if st.has("reloadUntil"):st.ammo=12;st.erase("reloadUntil")
@@ -225,7 +236,8 @@ func fire_tag(id:String):
 	if not unlimited:st.ammo=int(st.get("ammo",12))-1
 	gun.set_meta("state",st);shot_serial+=1
 	p.set_meta("gesture","fire");p.set_meta("gesture_until",now+220)
-	var query=PhysicsRayQueryParameters3D.create(muzzle,muzzle+p.direction()*22,1|2|4,[p.get_rid(),gun.get_rid()])
+	var shot_direction=(p.aim_point()-muzzle).normalized()
+	var query=PhysicsRayQueryParameters3D.create(muzzle,muzzle+shot_direction*22,1|2|4,[p.get_rid(),gun.get_rid()])
 	var hit=get_world_3d().direct_space_state.intersect_ray(query)
 	if not hit.is_empty() and hit.collider.get_meta("kind","")=="shield":
 		var owner=players.get(hit.collider.get_meta("owner",""))
@@ -234,12 +246,11 @@ func fire_tag(id:String):
 		else:
 			var excluded=query.exclude;excluded.append(hit.collider.get_rid());query.exclude=excluded
 			hit=get_world_3d().direct_space_state.intersect_ray(query)
-	emit_toy_effect(muzzle,hit.get("position",muzzle+p.direction()*22))
+	emit_toy_effect(muzzle,hit.get("position",muzzle+shot_direction*22))
 	if hit.is_empty():return
 	if hit.collider.get_meta("object_id","").begins_with("target-"):tag_score[id]=int(tag_score.get(id,0))+1;return
 	if hit.collider not in players.values():return
 	var other=hit.collider
-	if not allowed_weapon(other.actor_id):return
 	if other.holding!="" and definitions[other.holding].kind=="shield" and other.direction().dot((p.position-other.position).normalized())>.45:return
 	var result=combat.damage(id,other.actor_id,now)
 	if result.accepted:
@@ -288,7 +299,15 @@ func steal_ball(p):
 		if not hit.is_empty() and hit.collider!=ball:continue
 		sports.transition(other.holding,"CONTESTED",p.actor_id);release(other,false);ball.linear_velocity=p.direction()*2.5+Vector3.UP*.6;return
 
+func respawn_position() -> Vector3:
+	var preferred=Vector3(24,0,-4)
+	# A KO must not bypass the administrator's entry policy.
+	return Vector3(0,0,10.3) if room_access.blocks_entry("hall",zone_at(preferred)) else preferred
+
 func _physics_process(dt):
+	for player in players.values():
+		var bubble=player.get_node_or_null("MessageBubble")
+		if bubble and Time.get_ticks_msec()>int(bubble.get_meta("until",0)):bubble.visible=false
 	for object_id in objects:
 		if objects[object_id] is RigidBody3D and definitions[object_id].kind=="chair":
 			var locked=not host or objects[object_id].get_meta("occupant","")!=""
@@ -300,7 +319,7 @@ func _physics_process(dt):
 	var now=Time.get_ticks_msec()
 	if host and not frozen:
 		for id in combat.advance(now,dt):
-			if players.has(id):players[id].position=Vector3(24,0,-4);players[id].velocity=Vector3.ZERO;players[id].set_meta("gesture","respawn");players[id].set_meta("gesture_until",now+600)
+			if players.has(id):players[id].position=respawn_position();players[id].velocity=Vector3.ZERO;players[id].set_meta("gesture","respawn");players[id].set_meta("gesture_until",now+600)
 		for id in players:
 			var p=players[id]
 			p.set_meta("ko",not combat.alive(id))
@@ -334,7 +353,7 @@ func _physics_process(dt):
 func network_state() -> Dictionary:
 	var s=super.network_state()
 	if not host:s.tick=last_remote_tick
-	s.combat=combat.snapshot(Time.get_ticks_msec()) if host else combat_view;s.shots=shot_serial;s.protocolVersion=3;s.sports=sports.snapshot();s.facilities=facilities.states.duplicate(true)
+	s.combat=combat.snapshot(Time.get_ticks_msec()) if host else combat_view;s.shots=shot_serial;s.protocolVersion=4;s.sports=sports.snapshot();s.facilities=facilities.states.duplicate(true)
 	return s
 
 func handle_packet(sender:String,m):
@@ -350,14 +369,29 @@ func handle_packet(sender:String,m):
 		avatar_state_count+=1;combat_view=m.get("combat",{});shot_serial=int(m.get("shots",0))
 
 func handle_event(e:Dictionary):
-	if e.get("type")=="ui_focus":Input.mouse_mode=Input.MOUSE_MODE_VISIBLE;return
+	if e.get("type")=="room_policy":room_access.apply_policy(e);return
+	if e.get("type")=="chat_bubble":
+		var speaker=players.get(String(e.get("sender","")))
+		if speaker:
+			var bubble=speaker.get_node_or_null("MessageBubble")
+			if not bubble:
+				bubble=Label3D.new();bubble.name="MessageBubble";bubble.position=Vector3(0,2.25,0);bubble.font=load("res://assets/fonts/NotoSansKR-game.ttf");bubble.font_size=36;bubble.pixel_size=.003;bubble.billboard=BaseMaterial3D.BILLBOARD_ENABLED;bubble.outline_size=9;speaker.add_child(bubble)
+			bubble.text=String(e.get("text","")).left(60);bubble.visible=true;bubble.set_meta("until",Time.get_ticks_msec()+6000)
+		return
+	if e.get("type")=="ui_focus":
+		local_charge_ms=0
+		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+		if players.has(local_id):
+			players[local_id].camera_rig.aiming=false
+			request_action("input_cancel")
+		return
 	if e.get("type")=="broadcast_visual":facilities.broadcast_display(bool(e.get("active",false)));toy_effects.duck=.35 if e.get("active",false) else 1.0;return
 	if e.get("type")=="activity":request_action("activity",{"mode":e.get("mode","")});return
 	if e.get("type")=="visibility":
 		# Host scheduling can still be throttled by the browser. Do not deliberately freeze on a Docs window switch.
 		if host:frozen=transfer_frozen
 		return
-	if e.get("type")=="start":classroom=bool(e.get("classroom",false));command_ledger.clear();combat.reset();last_extra_tick=-1
+	if e.get("type")=="start":room_access.reset();classroom=bool(e.get("classroom",false));command_ledger.clear();combat.reset();last_extra_tick=-1
 	if e.get("type")=="restore":combat.reset()
 	super.handle_event(e)
 
@@ -366,7 +400,7 @@ func avatar_diagnostics() -> Dictionary:
 	for p in players.values():
 		var meshes=[]
 		for n in p.standing.find_children("*","MeshInstance3D",true,false):meshes.append({"visible":n.is_visible_in_tree(),"surfaces":n.mesh.get_surface_count() if n.mesh else 0,"aabb":str(n.get_aabb())})
-		rows.append({"id":p.actor_id,"local":p.local_player,"position":arr(p.position),"standingVisible":p.standing.is_visible_in_tree(),"contactErrors":p.contact_ik.errors,"handContactErrors":p.hand_ik.errors,"skeletonBones":p.skeleton.get_bone_count() if p.skeleton else 0,"meshes":meshes})
+		rows.append({"id":p.actor_id,"local":p.local_player,"position":arr(p.position),"standingVisible":p.standing.is_visible_in_tree(),"cameraRig":p.camera_rig.diagnostics(),"cameraPosition":arr(p.camera.global_position),"contactErrors":p.contact_ik.errors,"handContactErrors":p.hand_ik.errors,"skeletonBones":p.skeleton.get_bone_count() if p.skeleton else 0,"meshes":meshes})
 	return {"commandResults":command_results,"role":"host" if host else "guest","epoch":epoch,"stateCount":avatar_state_count,"stateAgeMs":Time.get_ticks_msec()-last_snapshot_ms,"instances":rows,"camera":str(get_viewport().get_camera_3d().get_path())}
 
 func target(p) -> Dictionary:
@@ -410,7 +444,7 @@ func update_hint():
 	elif doors.has(focused):label="F 문 열기 / 닫기"
 	elif focused=="presentation":label="F 발표 자료 · PDF/이미지"
 	elif focused=="board":label="F 보드 확대 · 마카를 들고 클릭해 쓰기"
-	if zone_at(p.position)=="football":label="발 드리블 · 클릭 충전/슛 · Q 패스 · F 가로채기"
+	if zone_at(p.position)=="football" and p.holding=="":label="발 드리블 · 클릭 충전/슛 · Q 패스 · F 가로채기"
 	elif zone_at(p.position)=="basketball" and p.holding=="":label+=" · F 드리블 공 스틸"
 	if build_kind!="":label=("클릭 설치" if build_valid else "충돌/보호 구역 · 설치 불가")+" · R 회전 · B 취소"
 	hint.text=label
@@ -505,7 +539,7 @@ func perform(id:String,m:Dictionary):
 	if not validation.cached.is_empty():
 		command_results.duplicates+=1;send_command_result(id,validation.cached);return
 	active_request={"type":"action-result","requestId":m.requestId,"actor":id,"epoch":epoch,"targetId":m.get("targetId",""),"accepted":true,"reason":"","stateRevision":revision}
-	var allowed=["carry","throw","use","trigger_down","trigger_up","kick_start","kick","secondary","crossover","activity","rest","eat","place","remove_object","entry_grant","grant","game_gate","weapon_zone","round","stroke","undo","board_update","board_delete"]
+	var allowed=["carry","throw","use","trigger_down","trigger_up","kick_start","kick","secondary","crossover","activity","rest","eat","place","remove_object","input_cancel","round","stroke","undo","board_update","board_delete"]
 	if frozen:reject(id,"방장 이전 중에는 조작을 잠시 기다려 주세요.")
 	elif int(m.seq)<=int(actions.get(id,-1)):reject(id,"이미 처리된 순서의 요청입니다.")
 	elif not m.get("action","") in allowed:reject(id,"지원하지 않는 동작입니다.")

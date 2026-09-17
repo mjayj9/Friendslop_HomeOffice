@@ -1,0 +1,13 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Only the selected physical room blocks new entry
+PASS Existing occupants can leave and move within a locked room
+PASS Crossing a locked boundary restores the last outside position
+PASS Crossing outward succeeds without a PIN or administrator role
+PASS Older local policy cannot replace current locks
+PASS World file restore does not overwrite current admin policy
+PASS Administrator unlock opens entry to every student
+PASS Door leaf does not close onto an occupied opening
+PASS Meeting lights respect the real office wall switch
+PASS Host handoff preserves look direction independently of body facing

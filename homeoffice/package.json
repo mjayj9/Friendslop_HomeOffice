@@ -7,15 +7,17 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "node tools/serve.mjs --local-signaling",
+    "dev": "node tools/serve.mjs --port 5173 --artifact build",
     "preview": "node tools/serve.mjs",
-    "test": "node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs tests/v3-web.test.mjs tests/v3-broadcast.test.mjs tests/v3-caption-policy.test.mjs tests/v3-state-codec.test.mjs",
+    "test": "node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs tests/v3-web.test.mjs tests/v3-broadcast.test.mjs tests/v3-caption-policy.test.mjs tests/v3-state-codec.test.mjs tests/v4-messenger.test.mjs tests/v4-admin-policy.test.mjs",
     "test:browser": "cd .. && node homeoffice/tests/v3-user-flow.mjs",
     "test:connection": "cd .. && node homeoffice/tests/v3-session-flow.mjs",
     "test:soak": "cd .. && node homeoffice/tests/v3-scale-soak.mjs",
     "verify:published": "python tools/site_artifact.py verify ../docs --source",
     "test:publication": "python tests/site-artifact.test.py",
-    "build": "powershell -File tools/build.ps1"
+    "build": "powershell -File tools/build.ps1",
+    "test:v4:browser": "cd .. && node homeoffice/tests/v4-browser-flow.mjs",
+    "dev:signal": "node tools/serve.mjs --port 5173 --artifact build --local-signaling"
   },
   "dependencies": {
     "@huggingface/transformers": "4.2.0",

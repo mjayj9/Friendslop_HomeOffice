@@ -1,5 +1,5 @@
 extends Node3D
-var key_bindings={"forward":KEY_W,"back":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"run":KEY_SHIFT,"crouch":KEY_C,"interact":KEY_E,"drop":KEY_Q,"read":KEY_F,"secondary":KEY_R,"rest":KEY_Z,"build":KEY_B,"move":KEY_G,"remove":KEY_DELETE,"look_left":KEY_LEFT,"look_right":KEY_RIGHT,"look_up":KEY_UP,"look_down":KEY_DOWN}
+var key_bindings={"forward":KEY_W,"back":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"run":KEY_SHIFT,"crouch":KEY_CTRL,"camera":KEY_C,"interact":KEY_E,"drop":KEY_Q,"read":KEY_F,"secondary":KEY_R,"rest":KEY_Z,"build":KEY_B,"move":KEY_G,"remove":KEY_DELETE,"look_left":KEY_LEFT,"look_right":KEY_RIGHT,"look_up":KEY_UP,"look_down":KEY_DOWN}
 var blocked_keys={}
 var last_jump_down=false
 var sunlight:DirectionalLight3D
@@ -12,6 +12,7 @@ var layout={}
 var v2_manifest={}
 var doors={}
 var door_states={}
+var room_access=preload("res://scripts/security/room_access.gd").new()
 var room_slots=[]
 var member_slots={}
 var member_identity={}
@@ -20,9 +21,6 @@ var room_fill:StaticBody3D
 var room_lights=[]
 var module_nodes=[]
 var room_end:StaticBody3D
-var entry_grants={}
-var weapon_grants={}
-var weapon_zones=["game"]
 var rounds={"basketball":{"phase":"practice","mode":"practice","seconds":0.0},"football":{"phase":"practice","mode":"practice","seconds":0.0},"tag":{"phase":"ready","mode":"targets","seconds":0.0}}
 var score_labels={}
 var tag_score={}
@@ -164,7 +162,7 @@ func setup_environment():
 	door=Node3D.new()
 	add_child(door)
 	# door is a compatibility placeholder for the previous V1 state field.
-	make_label("모여집",Vector3(-1.8,2.8,12.14),0,.08)
+	make_label("COMMONS",Vector3(-1.8,2.8,12.14),0,.08)
 	for r in layout.rooms:
 		if r.ceiling:make_label(r.name,Vector3(float(r.rect[0])+.35,float(r.y)+2.55,float(r.rect[1])+.16),0,.032)
 
@@ -253,7 +251,7 @@ func add_player(id:String):
 	var a=Avatar.new()
 	a.actor_id=id
 	a.local_player=id==local_id
-	a.position=vec(layout.spawn)+Vector3(.45,0,-players.size()*.85)
+	a.position=vec(layout.spawn)+Vector3(.45,0,-1.5-players.size()*.85)
 	a.remote_target=a.position
 	add_child(a)
 	players[id]=a
@@ -261,7 +259,6 @@ func add_player(id:String):
 	actions[id]=-1
 	if a.local_player:a.camera.current=true
 	if host:
-		entry_grants[id]=id==local_id
 		assign_room(id)
 
 func setup_hud():
@@ -326,10 +323,12 @@ func _physics_process(dt):
 			pitch=clampf(pitch+(float(key_down("look_up"))-float(key_down("look_down")))*dt*1.2,-1.35,1.35)
 		var cmd={"x":float(key_down("right"))-float(key_down("left")) if enabled else 0.0,"z":float(key_down("back"))-float(key_down("forward")) if enabled else 0.0,"yaw":yaw,"pitch":pitch,"jump":enabled and key_down("jump") and not last_jump_down,"run":enabled and key_down("run"),"crouch":enabled and key_down("crouch"),"seq":seq}
 		last_jump_down=key_down("jump")
+		cmd.third=p.camera_rig.third_person;cmd.zoom=p.camera_rig.distance;cmd.aim=enabled and p.camera_rig.aiming;cmd.active=enabled
 		p.command=cmd
 		p.last_input_ms=Time.get_ticks_msec()
 		if not host and tick%2==0:send({"type":"input","epoch":epoch,"command":cmd})
-		if not host and not frozen:p.simulate(dt)
+		if not host and not frozen:
+			var before=p.position;p.simulate(dt);room_access.guard(self,p,before)
 	if host and not frozen:
 		for id in players:
 			var a=players[id]
@@ -340,9 +339,7 @@ func _physics_process(dt):
 			var before=a.position
 			if a.get_meta("ko",false):a.command.x=0;a.command.z=0;a.command.jump=false
 			a.simulate(dt)
-			if zone_at(a.position) in ["game","arcade"] and not allowed_entry(id):
-				a.position=before;a.velocity=Vector3.ZERO
-				if Time.get_ticks_msec()-int(a.get_meta("entry_notice",0))>2000:reject(id,"방장의 게임방 출입 허가가 필요합니다");a.set_meta("entry_notice",Time.get_ticks_msec())
+			room_access.guard(self,a,before)
 		update_sports(dt)
 		update_living(dt)
 		update_held(dt)
@@ -397,7 +394,7 @@ func _physics_process(dt):
 	else:last_board_point=[]
 
 func target(p) -> Dictionary:
-	var query=PhysicsRayQueryParameters3D.create(p.eye(),p.eye()+p.direction()*3.0,1|4,[p.get_rid()])
+	var query=PhysicsRayQueryParameters3D.create(p.eye(),p.eye()+p.aim_direction()*3.0,1|4,[p.get_rid()])
 	if p.holding!="" and objects.has(p.holding):
 		var excluded=query.exclude
 		excluded.append(objects[p.holding].get_rid())
@@ -414,7 +411,7 @@ func update_hint():
 	var id=target(p).get("id","")
 	var label=""
 	if p.seated!="":label="E 일어서기"+ (" · Z 취침" if p.posture=="lying" else "")
-	elif doors.has(id):label="E 문 열기 / 닫기"+(" · 방장 승인 필요" if id=="game-gate" and not door_states.get(id,false) else "")
+	elif doors.has(id):label="F 문 열기 / 닫기"
 	elif id=="presentation":label="E 발표 자료 · PDF / 이미지"
 	elif id=="board":label="E 보드 확대 · 마카를 들고 클릭해 쓰기"
 	elif objects.has(id):
@@ -615,7 +612,7 @@ func network_state() -> Dictionary:
 	for id in objects:
 		var o=objects[id]
 		os.append({"id":id,"kind":definitions[id].kind,"p":arr(o.position),"r":arr(o.rotation),"owner":o.get_meta("owner"),"occupant":o.get_meta("occupant"),"state":o.get_meta("state"),"v":arr(o.linear_velocity) if o is RigidBody3D else [0,0,0],"av":arr(o.angular_velocity) if o is RigidBody3D else [0,0,0],"seats":o.get_meta("seats",{})})
-	return {"type":"state","epoch":epoch,"tick":tick,"revision":revision,"players":ps,"objects":os,"door":door_open,"paused":frozen,"doors":door_states,"roomSlots":room_slots,"basketballScore":basketball_score,"footballScore":football_score,"entryGrants":entry_grants,"grants":weapon_grants,"weaponZones":weapon_zones,"rounds":rounds,"voiceOcclusion":acoustic_links()}
+	return {"type":"state","epoch":epoch,"tick":tick,"revision":revision,"players":ps,"objects":os,"door":door_open,"paused":frozen,"doors":door_states,"roomSlots":room_slots,"basketballScore":basketball_score,"footballScore":football_score,"rounds":rounds,"voiceOcclusion":acoustic_links()}
 
 func save_world() -> Dictionary:
 	var os=[]
@@ -703,6 +700,7 @@ func handle_packet(sender:String,m):
 			if not valid_input(c) or int(c.seq)<=int(inputs.get(sender,-1)):return
 			inputs[sender]=int(c.seq)
 			players[sender].command=c
+			if not c.get("active",true):players[sender].set_meta("trigger_held",false);players[sender].remove_meta("charge_started");players[sender].remove_meta("kick_started")
 			players[sender].last_input_ms=Time.get_ticks_msec()
 		return
 	if m.get("type")=="welcome":
@@ -725,9 +723,6 @@ func handle_packet(sender:String,m):
 				else:update_room_names()
 			basketball_score=m.get("basketballScore",[0,0])
 			football_score=m.get("footballScore",[0,0])
-			entry_grants=m.get("entryGrants",{})
-			weapon_grants=m.get("grants",{})
-			weapon_zones=m.get("weaponZones",["game"])
 			rounds=m.get("rounds",rounds)
 			var live=[]
 			for s in m.players:
@@ -737,7 +732,7 @@ func handle_packet(sender:String,m):
 				var p=players[s.id]
 				p.nickname=String(s.get("displayName","친구"))
 				p.command.pitch=s.pitch
-				p.command.yaw=s.yaw if s.id!=local_id else yaw
+				p.command.yaw=s.get("lookYaw",s.yaw) if s.id!=local_id else yaw
 				p.seated=s.seat
 				p.seat_yaw=float(s.get("seatYaw",s.yaw))
 				p.holding=s.hold
@@ -790,6 +785,9 @@ func valid_input(c) -> bool:
 	if not c is Dictionary:return false
 	for k in ["x","z","yaw","pitch","seq"]:
 		if not (c.get(k) is float or c.get(k) is int) or not is_finite(float(c[k])):return false
+	for flag in ["third","aim","active","crouch"]:
+		if c.has(flag) and not c[flag] is bool:return false
+	if c.has("zoom") and (not (c.zoom is float or c.zoom is int) or not is_finite(float(c.zoom)) or c.zoom<.9 or c.zoom>5.0):return false
 	return absf(c.x)<=1 and absf(c.z)<=1 and absf(c.yaw)<100000 and absf(c.pitch)<=1.4 and c.seq>=0 and c.seq<1e12 and c.get("jump") is bool and c.get("run") is bool
 
 func restore_world(w:Dictionary):
@@ -804,9 +802,6 @@ func restore_world(w:Dictionary):
 	board_history.clear()
 	strokes=w.board.duplicate(true)
 	door_states=w.get("doors",{}).duplicate(true)
-	if door_states.has("game-gate"):door_states["game-gate"]=false
-	entry_grants.clear()
-	weapon_grants.clear()
 	world_id=w.worldId
 	revision=int(w.revision)
 	basketball_score=w.get("results",{}).get("basketball",[0,0])
@@ -894,6 +889,12 @@ func make_door(d:Dictionary):
 func update_doors(dt:float):
 	for id in doors:
 		var root=doors[id]
+		if not door_states.get(id,false):
+			var definition=root.get_meta("definition");var occupied=false
+			for player in players.values():
+				var local=root.to_local(player.position)
+				if local.x>-.4 and local.x<float(definition.width)+.4 and absf(local.z)<.65 and absf(local.y)<1.8:occupied=true
+			if occupied:continue
 		for side in range(2):
 			var target_angle=(-PI/2 if side==0 else PI*1.5) if door_states.get(id,false) else (0.0 if side==0 else PI)
 			root.get_child(side).rotation.y=move_toward(root.get_child(side).rotation.y,target_angle,dt*2)
@@ -1067,10 +1068,6 @@ func stand_up(p) -> bool:
 	return false
 
 
-func allowed_weapon(id:String) -> bool:
-	return allowed_entry(id) and weapon_grants.get(id,false) and players.has(id) and zone_at(players[id].position) in weapon_zones
-
-
 func perform(id:String,m:Dictionary):
 	if not host or frozen or not players.has(id) or m.get("epoch")!=epoch:return
 	var order=int(m.get("seq",-1))
@@ -1091,16 +1088,6 @@ func perform(id:String,m:Dictionary):
 		return
 	actions[id]=order
 	if not data is Dictionary:return
-	if action=="entry_grant":
-		if id!=local_id or not players.has(String(data.get("peer",""))):return
-		var who=String(data.peer)
-		entry_grants[who]=bool(data.get("allow",false))
-		if not entry_grants[who]:
-			weapon_grants[who]=false
-			var other=players[who]
-			if other.holding!="" and definitions[other.holding].kind in ["gun","shield"]:release(other,false)
-			if zone_at(other.position) in ["game","arcade"]:other.position=Vector3(18.7,0,0);other.velocity=Vector3.ZERO
-		return
 	if action=="round":
 		if id!=local_id:return
 		var game=String(data.get("game",""))
@@ -1115,20 +1102,6 @@ func perform(id:String,m:Dictionary):
 			else:tag_score.clear()
 		if op=="end":rounds[game].phase="results";rounds[game].seconds=0.0
 		if op=="practice":rounds[game].phase="practice"
-		return
-	if action=="weapon_zone":
-		if id!=local_id:return
-		weapon_zones=["game","free"] if data.get("free",false) else ["game"]
-		return
-	if action=="grant":
-		if id!=local_id:return
-		var peer=String(data.get("peer",""))
-		if not players.has(peer):return
-		weapon_grants[peer]=bool(data.get("allow",false))
-		if not weapon_grants[peer] and players[peer].holding!="" and definitions[players[peer].holding].kind in ["gun","shield"]:release(players[peer],false)
-		return
-	if action=="game_gate":
-		if id==local_id:door_states["game-gate"]=bool(data.get("open",false));revision+=1
 		return
 	if action=="place":place_object(id,data);return
 	if action=="remove_object":
@@ -1173,7 +1146,7 @@ func perform(id:String,m:Dictionary):
 				p.set_meta("dribble",not bool(p.get_meta("dribble",false)))
 				o.gravity_scale=1 if p.get_meta("dribble",false) else 0
 				if p.get_meta("dribble",false):o.linear_velocity.y=-5.5
-			if definitions[p.holding].kind=="gun" and allowed_weapon(id):
+			if definitions[p.holding].kind=="gun":
 				var st=o.get_meta("state",{})
 				st.reloadUntil=Time.get_ticks_msec()+1400
 				o.set_meta("state",st)
@@ -1194,7 +1167,6 @@ func perform(id:String,m:Dictionary):
 	var hit=target(p)
 	var target_id=hit.get("id","")
 	if doors.has(target_id):
-		if target_id=="game-gate" and id!=local_id:return reject(id,"게임방 출입은 방장 승인이 필요합니다")
 		var d=doors[target_id].get_meta("definition")
 		var centre=doors[target_id].global_transform*Vector3(float(d.width)/2,0,0)
 		for a in players.values():
@@ -1230,7 +1202,6 @@ func perform(id:String,m:Dictionary):
 	if kind in ["fridge","cooker","counter","sink"]:use_kitchen(p,target_id);return
 	if kind=="arcade":notify_ui(id,"runner" if target_id=="arcade-runner" else "maze");return
 	if kind in ["table","low_table"]:notify_ui(id,"report");return
-	if kind in ["gun","shield"] and not allowed_weapon(id):return reject(id,"이 사용자와 현재 구역의 무기 허가가 필요합니다")
 	if o is RigidBody3D:
 		if o.get_meta("owner","")!="" or p.holding!="":return reject(id,"손이 차 있거나 이미 사용 중입니다")
 		o.set_meta("owner",id)
@@ -1292,7 +1263,6 @@ func update_living(dt:float):
 				if round.phase=="countdown":round.phase="play";round.seconds=120.0
 				else:
 					round.phase="results"
-					if game=="tag":weapon_grants.clear()
 	for id in objects:
 		var o=objects[id]
 		var st=o.get_meta("state",{})
@@ -1300,8 +1270,6 @@ func update_living(dt:float):
 			st.cooking=float(st.cooking)+dt
 			if st.cooking>=6:st.ready=true
 			o.set_meta("state",st)
-	for p in players.values():
-		if p.holding!="" and definitions[p.holding].kind in ["gun","shield"] and not allowed_weapon(p.actor_id):release(p,false)
 
 
 func update_sports(_dt:float):
@@ -1344,7 +1312,7 @@ func reset_ball(ball:RigidBody3D,pos:Vector3):
 
 
 func fire_tag(id:String):
-	if not allowed_weapon(id) or not rounds.tag.phase in ["practice","play"]:return
+	if not rounds.tag.phase in ["practice","play"]:return
 	var p=players[id]
 	var gun=objects[p.holding]
 	var st=gun.get_meta("state",{})
@@ -1366,7 +1334,6 @@ func fire_tag(id:String):
 		reject(id,"타깃 명중 · "+str(tag_score[id])+"점")
 	if not hit.is_empty() and hit.collider in players.values():
 		var other=hit.collider
-		if not zone_at(other.position) in weapon_zones:return
 		if other.holding!="" and definitions[other.holding].kind=="shield" and other.direction().dot((p.position-other.position).normalized())>.45:return
 		tag_score[id]=int(tag_score.get(id,0))+1
 		reject(other.actor_id,"태그! 비유혈 놀이 피격")
@@ -1411,7 +1378,6 @@ func place_object(id:String,data:Dictionary):
 	if objects.size()>=256:return reject(id,"가구 한도 256개입니다")
 	var p=players[id]
 	if move_id!="" and p.eye().distance_to(objects[move_id].position)>3.5:return
-	if kind in ["gun","shield"] and not allowed_weapon(id):return
 	var point=vec(data.p)
 	var angle=snappedf(float(data.yaw),PI/4)
 	if not placement_ok(p,kind,point,angle,move_id):return reject(id,"충돌, 거리 또는 보호 구역으로 설치할 수 없습니다")
@@ -1490,6 +1456,7 @@ func setup_presentation():
 	material.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
 	slide_mesh.material_override=material
 	add_child(slide_mesh)
+	var idle=Label3D.new();idle.name="IdleMessage";idle.font=load("res://assets/fonts/NotoSansKR-game.ttf");idle.font_size=36;idle.pixel_size=.0025;idle.position=Vector3(0,0,.026);idle.text="자료를 함께 보세요\n\nF 발표 자료 열기";idle.modulate=Color("284940");idle.outline_size=0;slide_mesh.add_child(idle)
 	var body=StaticBody3D.new()
 	body.position=slide_mesh.position
 	body.set_meta("object_id","presentation")
@@ -1502,6 +1469,8 @@ func set_slide(encoded:String):
 	var bytes=Marshalls.base64_to_raw(encoded)
 	var img=Image.new()
 	if img.load_jpg_from_buffer(bytes)!=OK or img.get_width()>2048 or img.get_height()>2048:return
+	slide_mesh.get_node("IdleMessage").visible=false
+	slide_mesh.material_override.albedo_color=Color.WHITE
 	slide_mesh.material_override.albedo_texture=ImageTexture.create_from_image(img)
 
 
@@ -1590,14 +1559,14 @@ func apply_checkpoint(e:Dictionary):
 			player.velocity=vec(a.v)
 			player.rotation.y=float(a.yaw)
 			player.remote_yaw=float(a.yaw)
-			player.command.yaw=float(a.yaw)
+			player.command.yaw=float(a.get("lookYaw",a.yaw))
 			player.command.pitch=float(a.pitch)
 			player.command.x=0.0;player.command.z=0.0;player.command.jump=false
 			player.seated=a.seat;player.holding=a.hold
 			player.seat_yaw=float(a.seatYaw)
 			player.posture=a.posture;player.seat_index=int(a.seatIndex)
 			player.last_input_ms=Time.get_ticks_msec()
-			if a.id==local_id:yaw=float(a.yaw);pitch=float(a.pitch)
+			if a.id==local_id:yaw=float(a.get("lookYaw",a.yaw));pitch=float(a.pitch)
 		for a in state.objects:
 			var object=objects.get(a.id)
 			if not object:continue
@@ -1615,9 +1584,6 @@ func apply_checkpoint(e:Dictionary):
 		member_identity=checkpoint.memberIdentity.duplicate(true)
 		room_claims=checkpoint.roomClaims.duplicate(true)
 		door_states=state.doors.duplicate(true)
-		entry_grants=state.get("entryGrants",{}).duplicate(true)
-		weapon_grants=state.grants.duplicate(true)
-		weapon_zones=state.weaponZones.duplicate(true)
 		rounds=state.rounds.duplicate(true)
 		tag_score=checkpoint.tagScore.duplicate(true)
 	host=bool(e.host)
@@ -1707,9 +1673,6 @@ func update_room_names():
 			if index<room_slots.size():node.text=room_slots[index].label
 
 
-func allowed_entry(id:String) -> bool:
-	return id==local_id or entry_grants.get(id,false)
-
 
 func update_room_lighting(dt:float):
 	if slide_laser and Time.get_ticks_msec()>slide_laser_until:slide_laser.visible=false
@@ -1727,6 +1690,7 @@ func update_room_lighting(dt:float):
 		var active=i<(2 if low else 4) and light.global_position.distance_to(eye)<16
 		var furniture=String(light.get_meta("furniture",""))
 		if objects.has(furniture):active=active and objects[furniture].get_meta("state",{}).get("on",true)
+		if get("facilities") and String(light.get_meta("zone","")) in ["meeting","resources","free","utility"]:active=active and get("facilities").states.office_light
 		light.light_energy=lerpf(light.light_energy,float(light.get_meta("base_energy",.32)) if active else 0.0,minf(1.0,dt*5))
 		light.visible=light.light_energy>.005
 

@@ -1,0 +1,56 @@
+{
+  "preparedAt": "2026-09-17T09:22:29.812750+00:00",
+  "purpose": "User-authorized review deployment, not full V4 acceptance",
+  "pagesUrl": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "pagesBranch": "codex/homeoffice-v3",
+  "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "sourceDigest": "d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514",
+  "artifactFilesVerified": 73,
+  "uiSuites": [
+    {
+      "name": "browser",
+      "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+      "passed": 14,
+      "report": "homeoffice/evidence/v4/browser/report.json"
+    },
+    {
+      "name": "meeting-browser",
+      "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+      "passed": 5,
+      "report": "homeoffice/evidence/v4/meeting-browser/report.json"
+    },
+    {
+      "name": "play-browser",
+      "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+      "passed": 7,
+      "report": "homeoffice/evidence/v4/play-browser/report.json"
+    },
+    {
+      "name": "clerk-local",
+      "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+      "passed": 4,
+      "report": "homeoffice/evidence/v4/clerk-local/report.json"
+    }
+  ],
+  "nodeTestsPassed": 33,
+  "publicationTestsPassed": 6,
+  "clerkSyntheticJwtTestsPassed": 1,
+  "pckAudit": "deploy-package-audit.json",
+  "selectedVideos": [
+    "homeoffice/evidence/v4/browser/page@d2be6e57cf550c97546bddf5936893b9.webm",
+    "homeoffice/evidence/v4/browser/page@03db76fe04ea9c4ee18f41ea339347c3.webm",
+    "homeoffice/evidence/v4/browser/page@f98fe838c1cfe49b1bc3c2f6c3b3dcca.webm",
+    "homeoffice/evidence/v4/meeting-browser/page@c06cd97149de8b7dcdbd7f52e501275f.webm",
+    "homeoffice/evidence/v4/meeting-browser/page@24439e0c58b42d3c99c7a5d84a6ff071.webm",
+    "homeoffice/evidence/v4/play-browser/page@ea81599542f8f81b4ccd39444eba4f6c.webm",
+    "homeoffice/evidence/v4/play-browser/page@6264c768e74e740a7f827a4fec864509.webm",
+    "homeoffice/evidence/v4/clerk-local/page@e2507f59f6f345318096e12ca09eb6c8.webm"
+  ],
+  "secrets": "No credential payload found; private memo is not in the repository. PIN is not configured. WASM PEM header literals belong to the engine parser, not embedded keys.",
+  "limitations": [
+    "Clerk development instance; real user sign-in not confirmed",
+    "Administrator UID and trusted PIN service not configured; room locks and managed broadcast disabled",
+    "Art, contact quality, complete sports, real microphone and external Google/Microsoft collaboration acceptance still pending"
+  ],
+  "liveVerification": "Run tests/v4-public-smoke.mjs after Pages succeeds; local report is kept under ignored .runtime/public-review-smoke."
+}

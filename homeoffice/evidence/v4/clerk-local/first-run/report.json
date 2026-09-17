@@ -1,0 +1,22 @@
+{
+  "environment": "Actual Godot WebGL and actual user-selected Clerk development SDK at http://localhost:5173. Fresh unauthenticated Chromium profile. No mocked Clerk API, account creation, credentials or session tokens recorded.",
+  "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#menuButton')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"menuButton\">메뉴 · Esc</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - performing click action\u001b[22m\n\u001b[2m      - <canvas id=\"canvas\" tabindex=\"0\" width=\"1440\" height=\"1000\">WebGL2 지원 브라우저가 필요합니다.</canvas> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - performing click action\u001b[22m\n\u001b[2m      - <canvas id=\"canvas\" tabindex=\"0\" width=\"1440\" height=\"1000\">WebGL2 지원 브라우저가 필요합니다.</canvas> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    44 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - performing click action\u001b[22m\n\u001b[2m       - <canvas id=\"canvas\" tabindex=\"0\" width=\"1440\" height=\"1000\">WebGL2 지원 브라우저가 필요합니다.</canvas> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-clerk-local-flow.mjs:27:37\n    at check (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-clerk-local-flow.mjs:13:37)\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-clerk-local-flow.mjs:26:8",
+  "visibleText": "COMMONS\nWORKSPACE\n현관 · 계단\n방장 · 1명\n메뉴 · Esc\n대화 · Enter\nE 집기 / 내리기 · Q 던지기 · F 기능 사용",
+  "results": [
+    {
+      "name": "Exact localhost:5173 origin serves the game and real Clerk SDK with visible account controls",
+      "passed": true
+    },
+    {
+      "name": "Real Clerk sign-in component opens from the existing welcome screen",
+      "passed": true
+    },
+    {
+      "name": "Real Clerk sign-up component opens without replacing the game project",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "video": "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\clerk-local\\page@53f4872282717aca1244133f9177ed9d.webm"
+}

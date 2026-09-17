@@ -1,0 +1,18 @@
+{
+  "buildId": "fa3e62b2-1222-43f9-bbcc-662894987f1e",
+  "results": [
+    {
+      "exit": 0,
+      "flow": "browser"
+    },
+    {
+      "exit": 0,
+      "flow": "meeting"
+    },
+    {
+      "exit": 0,
+      "flow": "play"
+    }
+  ],
+  "sourceDigest": "2af1fa865757671b234ac519bc8c9ba7f532fae9fe79cbed03ee486ebba79bfb"
+}

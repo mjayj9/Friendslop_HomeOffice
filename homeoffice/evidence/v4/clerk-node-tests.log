@@ -1,0 +1,45 @@
+
+> moyeo-house-godot@0.3.0-simulation test
+> node --test tests/save-v2.test.mjs tests/storage-save.test.mjs tests/arcade-rules.test.mjs tests/v3-web.test.mjs tests/v3-broadcast.test.mjs tests/v3-caption-policy.test.mjs tests/v3-state-codec.test.mjs tests/v4-messenger.test.mjs tests/v4-admin-policy.test.mjs
+
+✔ runner input cannot submit score and collision ends an actual round (1.4276ms)
+✔ maze collects once, obeys walls and rejects repeated sequences (0.6027ms)
+✔ saved mid-round simulation produces deterministic authority handoff (0.5235ms)
+✔ actual browser-exported V2 world and Korean Yjs state roundtrip (4.2547ms)
+✔ embedded PDF data roundtrip with sha and content type verification (2.5625ms)
+✔ missing and mismatched attachment rejected before restore (1.0293ms)
+✔ CRC corruption never replaces current world (2.251ms)
+✔ host role, permissions, duplicate IDs, untrusted asset and nonfinite positions rejected (0.8339ms)
+✔ path traversal and executable entries rejected (0.1603ms)
+✔ office indices, duplicate slots and unsupported versions rejected (0.5013ms)
+✔ engine-exported physical storage state roundtrips through homeworld container (8.489ms)
+✔ duplicate or nested storage and forbidden tools are rejected before replacing current world (2.4368ms)
+✔ Physical broadcast access requires a player near the microphone (0.4792ms)
+✔ HOME/OFFICE/PLAY announcements follow explicit recipient scopes (0.1558ms)
+✔ Interim becomes final; duplicates and later interim cannot replace final (0.5853ms)
+✔ Mute generation invalidates delayed recognition; new speaker generation is independent (0.1165ms)
+✔ Unchanged objects omitted, changes/removal restored, roster remains complete (1.3276ms)
+✔ Lost base fails closed and explicit keyframe restores current state (0.1748ms)
+✔ Invite code, pasted URL, classroom and subpath round trip (3.7857ms)
+✔ Official original documents are validated and preserved in snapshots (0.53ms)
+✔ Student host / URL role / asserted administrator cannot unlock; authenticated operator changes one room (1132.1976ms)
+✔ Wrong PIN attempt budget is shared across rooms; correct PIN cannot bypass lockout (1345.3199ms)
+✔ Nonce replay, stale revision, signature mutation, cross-session and expiry are rejected (1121.9893ms)
+✔ Independent salted room PIN change persists privately; public state and stale world cannot replace it (1278.2159ms)
+✔ Broadcast authorization binds the authenticated operator to a session actor and expires (1138.2161ms)
+✔ HTTP rejects foreign origins, emits no credentials, and verifies signed state through an actual socket (1113.1101ms)
+✔ Session, zone and DM are routed before delivery; sender identity is connection-owned (2.0864ms)
+✔ Retries deduplicate; edits/deletes/replies cannot cross identities or channel boundaries (0.2661ms)
+✔ Delivery and read are distinct and reactions bind to actual participants (0.1965ms)
+✔ Attachment fragments need a participant request, exact size and original provider (0.2858ms)
+✔ Cancel revokes transfer; offline provider is reported without pretending server storage (0.2972ms)
+✔ Validation rejects spoofed images, scripts, oversized decoding and path-shaped names (0.51ms)
+✔ Conflicting attachment IDs cannot alias an existing receiver cache (0.1386ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7277.1753

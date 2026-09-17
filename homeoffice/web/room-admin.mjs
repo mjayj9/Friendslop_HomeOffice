@@ -1,0 +1,45 @@
+import {ADMIN_CONFIG} from './admin-config.mjs';
+import {ROOM_LABELS,createPolicyVerifier} from './room-policy.mjs';
+export function createRoomAdmin({identity,apply,notify,pause=()=>{},config=ADMIN_CONFIG}){
+ const clerkConfigured=!!(config.clerkPublishableKey&&config.clerkFrontendApi);
+ const configured=!!(clerkConfigured&&config.serviceUrl&&config.publicKey);
+ const verifier=configured?createPolicyVerifier({publicKey:config.publicKey}):null;
+ let session='',generation=0,busy=false,policy=null,clerkPromise=null,unsubscribe=null,userMounted=false;
+ const root=document.createElement('details');root.id='roomAdmin';root.innerHTML=`<summary>방 잠금 · 운영 관리자</summary><p>관리자가 연 방에는 누구나 출입합니다. 잠금은 새 입장을 막고 안에 있는 사람의 퇴로를 유지합니다.</p><p class="fine">게임 공간 입장 제어입니다. 현재 P2P 문서·음성·대화의 기밀 보관을 보장하지 않습니다.</p><p id="adminStatus" role="status"></p><button id="adminLogin" type="button" class="secondary">Clerk 관리자 로그인</button><form id="roomLockForm"><label>실제 공간 <select id="lockRoom"></select></label><p id="roomLockState"></p><label>관리 동작 <select id="lockOperation"><option value="unlock">잠금 해제</option><option value="lock">잠금</option><option value="keep-open">열어 두기</option><option value="set-pin">이 방 PIN 변경</option><option value="broadcast-authorize">내 방송 권한 10분 활성화</option><option value="broadcast-revoke">내 방송 권한 해제</option></select></label><label>현재 PIN <input id="roomPin" type="password" inputmode="numeric" autocomplete="off" maxlength="12" required></label><label id="newPinLabel" hidden>새 PIN <input id="newRoomPin" type="password" inputmode="numeric" autocomplete="off" maxlength="12"></label><button type="submit">서버에서 확인하고 적용</button></form>`;
+ document.querySelector('#menu .panel').append(root);const $=name=>root.querySelector('#'+name),status=text=>{$('adminStatus').textContent=text;};
+ for(const [id,name]of Object.entries(ROOM_LABELS))$('lockRoom').append(new Option(name,id));
+ $('roomLockForm').hidden=!configured;$('adminLogin').disabled=!clerkConfigured;
+ status(configured?'관리 서비스 연결 대기':clerkConfigured?'Clerk 로그인과 사용자 ID 확인을 먼저 할 수 있습니다. 관리 서버 연결 전에는 방 잠금과 관리자 방송이 비활성입니다.':'운영 인증 서비스가 아직 연결되지 않았습니다. 현재 빌드에서 방 잠금과 관리자 방송은 비활성입니다.');
+ const account=document.createElement('section');account.id='clerkAccount';account.className='account-card';account.setAttribute('aria-label','COMMONS 계정');
+ account.innerHTML=`<div class="row"><strong>COMMONS 계정</strong><div id="clerkUser"></div></div><p id="accountStatus" role="status"></p><div class="row"><button id="accountSignIn" class="secondary" type="button">로그인</button><button id="accountSignUp" type="button">회원가입</button><button id="copyAccountId" class="secondary" type="button" hidden>내 사용자 ID 복사</button></div><p class="fine">계정 없이도 공간에 입장할 수 있습니다. 관리자 권한은 별도로 확인합니다.</p>`;
+ const welcome=document.querySelector('#entry .welcome');welcome?.insertBefore(account,welcome.querySelector('.buttons'));
+ const accountElement=key=>account.querySelector('#'+key),accountStatus=text=>{accountElement('accountStatus').textContent=text;};
+ for(const name of ['accountSignIn','accountSignUp'])accountElement(name).disabled=!clerkConfigured;
+ accountStatus(clerkConfigured?'로그인 상태 확인 중…':'계정 연결 준비 중');
+ function renderAccount(c){
+  const signed=!!c.user;accountElement('accountSignIn').hidden=signed;accountElement('accountSignUp').hidden=signed;accountElement('copyAccountId').hidden=!signed;
+  accountStatus(signed?(c.user.fullName||c.user.username||'계정')+' · 로그인됨':'로그인하거나 첫 계정을 만들어 보세요.');
+  if(signed&&!userMounted&&account.isConnected&&c.mountUserButton){c.mountUserButton(accountElement('clerkUser'),{afterSignOutUrl:location.origin+location.pathname});userMounted=true;}
+  if(!signed&&userMounted){c.unmountUserButton?.(accountElement('clerkUser'));userMounted=false;}
+ }
+ async function openAccount(mode){pause();try{const c=await clerk();const options={forceRedirectUrl:location.origin+location.pathname};if(mode==='signup')c.openSignUp(options);else c.openSignIn(options);}catch(error){accountStatus(error.message);}}
+ accountElement('accountSignIn').onclick=()=>openAccount('signin');accountElement('accountSignUp').onclick=()=>openAccount('signup');
+ accountElement('copyAccountId').onclick=async()=>{try{const c=await clerk();if(!c.user)return;await navigator.clipboard.writeText(c.user.id);accountStatus('사용자 ID 복사됨 · '+c.user.id);}catch(error){accountStatus(error.message);}};
+ function render(){const room=$('lockRoom').value,value=policy?.rooms[room];$('roomLockState').textContent=value?(value.locked?'잠김 · 새 입장 제한 / 퇴실 가능':'열림 · 개인 승인 없이 출입')+(value.configured?'':' · 서버 PIN 미설정'):'정책 확인 중';}
+ async function request(path,options={}){const response=await fetch(config.serviceUrl.replace(/\/$/,'')+path,{...options,cache:'no-store',signal:AbortSignal.timeout(10000)}),data=await response.json();if(!response.ok)throw Error(data.error||'관리 서비스 응답 오류');return data;}
+ function loadScript(src,key){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.crossOrigin='anonymous';if(key)s.dataset.clerkPublishableKey=key;s.onload=resolve;s.onerror=()=>reject(Error('Clerk 로그인 구성 요소를 불러오지 못했습니다.'));document.head.append(s);});}
+ async function clerk(){
+  if(!clerkConfigured)throw Error('Clerk 공개 설정 미등록');
+  clerkPromise??=(async()=>{const base=new URL(config.clerkFrontendApi);if(base.protocol!=='https:')throw Error('Clerk 주소는 HTTPS여야 합니다.');await loadScript(base.origin+'/npm/@clerk/ui@1/dist/ui.browser.js');await loadScript(base.origin+'/npm/@clerk/clerk-js@6/dist/clerk.browser.js',config.clerkPublishableKey);await window.Clerk.load({ui:{ClerkUI:window.__internal_ClerkUICtor}});const c=window.Clerk;renderAccount(c);unsubscribe=c.addListener?.(()=>renderAccount(c));return c;})();
+  try{return await clerkPromise;}catch(error){clerkPromise=null;throw error;}
+ }
+ async function token(){const c=await clerk();if(!c.session){pause();await c.openSignIn({forceRedirectUrl:location.origin+location.pathname});throw Error('로그인을 완료한 후 다시 적용하세요.');}const token=await c.session.getToken();if(!token)throw Error('로그인이 만료되었습니다.');return token;}
+ $('adminLogin').onclick=async()=>{try{const value=await token();if(!configured){const c=await clerk();status('Clerk 로그인 확인 · 사용자 ID: '+c.user.id+' · 운영 관리자 권한은 아직 검증되지 않았습니다.');return;}await request('/identity',{method:'POST',headers:{Authorization:'Bearer '+value}});status('서버가 운영 관리자 계정을 확인했습니다.');}catch(e){status(e.message);}};
+ async function accept(envelope,context,currentGeneration){if(currentGeneration!==generation)return;const value=await verifier.accept(envelope,context);if(currentGeneration!==generation)return;policy=value;apply({revision:value.revision,locks:Object.fromEntries(Object.entries(value.rooms).map(([k,v])=>[k,v.locked]))});render();}
+ async function refresh(){if(!configured||!session||busy)return;busy=true;const current=generation,challenge=crypto.randomUUID(),expectedSession=session;try{const result=await request('/state?'+new URLSearchParams({session,challenge}));await accept(result,{expectedSession,challenge},current);}catch(e){if(current===generation)status('정책 확인 실패 · 마지막 잠금 유지: '+e.message);}finally{busy=false;}}
+ $('lockRoom').onchange=render;$('lockOperation').onchange=()=>{$('newPinLabel').hidden=$('lockOperation').value!=='set-pin';if($('lockOperation').value.startsWith('broadcast-'))$('lockRoom').value='utility';render();};
+ $('roomLockForm').onsubmit=async e=>{e.preventDefault();const pin=$('roomPin').value,newPin=$('newRoomPin').value;$('roomPin').value='';$('newRoomPin').value='';const current=generation,expectedSession=session,challenge=crypto.randomUUID();const submit=root.querySelector('button[type="submit"]');submit.disabled=true;try{if(!policy)throw Error('현재 방 정책을 먼저 확인해야 합니다.');const value=await token(),operation=$('lockOperation').value;const packet=await request('/command',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+value},body:JSON.stringify({session:expectedSession,challenge,zone:$('lockRoom').value,operation,pin,newPin,revision:policy.revision,actor:identity()})});await accept(packet,{expectedSession,challenge},current);status('관리 정책을 적용했습니다. 다른 참가자는 다음 정책 갱신에서 반영됩니다.');notify('관리 정책 적용 완료');}catch(error){status(error.message);void refresh();}finally{submit.disabled=false;}};
+ if(clerkConfigured)void clerk().catch(error=>accountStatus(error.message));
+ const timer=setInterval(refresh,5000);
+ return {setSession(value){if(value===session)return;session=value;generation++;busy=false;policy=null;verifier?.reset();if(configured)apply({revision:0,locks:Object.fromEntries(Object.keys(ROOM_LABELS).map(k=>[k,true]))});render();void refresh();},authorized:who=>!!policy&&policy.expiresAt>Date.now()&&(policy.broadcasters[who]||0)>Date.now(),diagnostics:()=>({configured,revision:policy?.revision??null,policyFresh:!!policy&&policy.expiresAt>Date.now(),locked:policy?Object.keys(policy.rooms).filter(k=>policy.rooms[k].locked):[],trust:'server-verified operator identity; P2P host is not administrator'}),destroy(){clearInterval(timer);unsubscribe?.();if(userMounted)window.Clerk?.unmountUserButton?.(accountElement('clerkUser'));account.remove();root.remove();}};
+}

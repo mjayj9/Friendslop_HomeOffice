@@ -1,0 +1,121 @@
+{
+  "environment": "Real Godot/Jolt scene and raycasts, controlled engine fixture positions. No browser/human acceptance claim.",
+  "results": [
+    {
+      "detail": {
+
+      },
+      "name": "Duplicate F command toggles tap exactly once and returns cached response",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Forged actor and retired epoch reject without changing facilities",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Flush has real cooldown and sound state",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Newly placed ball is registered with shared sport rules",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Restore clears removed ball metadata and never replays an old flush",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Football in court cannot be picked up with E",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Q passes football by real velocity without hand ownership",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Football crossing scores and restarts at midfield",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Facing nearby dribble can be contested and becomes a loose physical ball",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Descending basket gives exactly two points once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "victim": {
+          "deaths": 1,
+          "hp": 0,
+          "kills": 0,
+          "koUntil": 3658,
+          "lastKill": 0,
+          "meter": 0,
+          "protectedUntil": 0
+        }
+      },
+      "name": "Actual world muzzle ray applies HP damage and KO",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Frontal shield blocks physical weapon ray",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Shield does not protect an exposed back",
+      "passed": true
+    },
+    {
+      "detail": {
+        "uv": [
+          0.5,
+          0.5
+        ]
+      },
+      "name": "Physical presentation ray maps to surface-centre UV",
+      "passed": true
+    },
+    {
+      "detail": {
+
+      },
+      "name": "Physical laser stops at an intervening solid object",
+      "passed": true
+    }
+  ]
+}

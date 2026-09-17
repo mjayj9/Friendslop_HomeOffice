@@ -1,0 +1,7 @@
+PASS Both classroom participants walk out through the public lobby
+PASS F opens the game gate without a personal grant; E acquires a real gun
+PASS Held gun remains usable after leaving the game building
+PASS HP, KO, kill counter and respawn agree across both clients
+PASS Ordinary free fire works inside the classroom meeting room
+PASS Messenger focus cancels a held trigger without a stuck shot
+PASS Carried gun works in the HOME living room with no automatic confiscation

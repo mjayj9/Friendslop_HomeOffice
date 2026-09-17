@@ -1,0 +1,5 @@
+PASS Both participants walk through the real meeting doorway and keep the circulation lane
+PASS Conference chair supports real F sit, seated R documents and remote occupancy
+PASS Two clients edit the same built-in Korean meeting notes
+PASS Document focus suppresses movement/camera; F stands after closing the seated editor
+PASS World export/import preserves shared notes and does not export chat or administrator secrets

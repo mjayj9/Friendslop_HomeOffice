@@ -1,0 +1,18 @@
+{
+  "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "sourceDigest": "d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514",
+  "origin": "http://localhost:5173",
+  "applicationId": "app_3JPx7wBJ683SFfndYIqhAHGOKeX",
+  "frontendApi": "https://frank-whale-1215.clerk.accounts.dev",
+  "cliVersion": "3.3.0",
+  "cliAuthenticated": true,
+  "projectLinked": true,
+  "automaticInit": "framework_undetected; official JavaScript CDN fallback",
+  "realClerkUiChecksPassed": 4,
+  "configurationFixturePassed": 2,
+  "nodeTestsPassed": 33,
+  "realUserSignIn": "awaiting user confirmation",
+  "administratorPinService": "not configured",
+  "publicArtifactSecretKeyMarkers": [],
+  "publishedPagesChanged": false
+}

@@ -13,8 +13,8 @@ func settle(n=3):
 	for i in n:await physics_frame
 func run():
 	w=load("res://scripts/v3/world.gd").new();root.add_child(w);await settle(8);w.set_physics_process(false)
-	w.add_player("friend");w.entry_grants.friend=true;w.weapon_grants.local=true;w.weapon_grants.friend=true
-	var a=w.players.local;var b=w.players.friend
+	w.add_player("friend")
+	var a=w.players.local;a.command.third=false;var b=w.players.friend
 	a.position=Vector3(13.35,0,-8.9);aim(a,Vector3(13.35,1.03,-10));await settle()
 	var request=packet("local","use");var before=w.facilities.states.tap_ground
 	w.perform("local",request);var changed=w.facilities.states.tap_ground;w.perform("local",request)
@@ -39,7 +39,6 @@ func run():
 	w.steal_ball(a);check("Facing nearby dribble can be contested and becomes a loose physical ball",b.holding=="" and ball.get_meta("owner","")=="" and ball.linear_velocity.length()>1)
 	w.rounds.basketball.phase="practice";ball.set_meta("scored",false);w.ball_previous.basketball=Vector3(-16.35,3.2,30);ball.position=Vector3(-16.35,2.9,30);var score=w.basketball_score.duplicate();w.update_sports(.016);w.update_sports(.016)
 	check("Descending basket gives exactly two points once",w.basketball_score[1]==score[1]+2)
-	w.entry_grants.friend=true;w.weapon_grants.local=true;w.weapon_grants.friend=true
 	a.position=Vector3(25,0,1);b.position=Vector3(25,0,-2);aim(a,b.eye());w.combat.reset();w.combat.add("local");w.combat.add("friend")
 	var gun;var shield
 	for key in w.objects:
@@ -60,5 +59,5 @@ func run():
 	check("Physical presentation ray maps to surface-centre UV",uv.distance_to(Vector2(.5,.5))<.01,{"uv":[uv.x,uv.y]})
 	var blocker=StaticBody3D.new();blocker.position=Vector3(9,1.85,5.5);blocker.collision_layer=1;var shape=CollisionShape3D.new();var box=BoxShape3D.new();box.size=Vector3(.4,.4,.4);shape.shape=box;blocker.add_child(shape);w.add_child(blocker);await settle();hit=w.get_world_3d().direct_space_state.intersect_ray(query)
 	check("Physical laser stops at an intervening solid object",not hit.is_empty() and hit.collider==blocker)
-	var file=FileAccess.open("res://evidence/v3/authority-physics.json",FileAccess.WRITE);file.store_string(JSON.stringify({"environment":"Real Godot/Jolt scene and raycasts, controlled engine fixture positions. No browser/human acceptance claim.","results":results},"  "));file.close()
+	var file=FileAccess.open("res://evidence/v4/authority-physics.json",FileAccess.WRITE);file.store_string(JSON.stringify({"environment":"Real Godot/Jolt scene and raycasts, controlled engine fixture positions. No browser/human acceptance claim.","results":results},"  "));file.close()
 	var okay=results.all(func(r):return r.passed);w.queue_free();w=null;a=null;b=null;gun=null;shield=null;ball=null;foot=null;blocker=null;await process_frame;await create_timer(.25).timeout;quit(0 if okay else 1)

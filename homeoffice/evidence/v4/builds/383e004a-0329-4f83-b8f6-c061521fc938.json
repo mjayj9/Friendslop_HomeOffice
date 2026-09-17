@@ -1,0 +1,525 @@
+{
+  "buildId": "383e004a-0329-4f83-b8f6-c061521fc938",
+  "commit": "d67dd929cc719fb3e7e72626e59fc9bd9050a2d9",
+  "dirty": true,
+  "godotVersion": "4.6.1.stable",
+  "exportTemplatesVersion": "4.6.1.stable",
+  "protocolVersion": 4,
+  "assetVersion": 3,
+  "schemaVersion": 2,
+  "builtAt": "2026-09-16T16:42:38.614536+00:00",
+  "source": {
+    "algorithm": "SHA256 of sorted relative-path to SHA256 mapping; text uses LF; generated build ID and import cache excluded",
+    "digest": "07cd5e4f80954c5401de6a7a644ffe986ce3c69257fbe2c9123ce12d2de93770",
+    "files": {
+      "scripts/avatar.gd": "2987824972f2fdd9bf827eb6fff7019e9d11c82b2c73c5fa5d391f7c534fb2ac",
+      "scripts/board.gd": "d1068a90047017bf25ef482b508413f26c87da1aa4e6ebb01c7d15316758e9ab",
+      "scripts/combat/combat_state.gd": "e7c789a265f7290f2438a9d1c49b9f524e5785e31a4518db9e3bac51f588e2dd",
+      "scripts/combat/toy_effects.gd": "266b89529e303c717877a781fbec48f48f77f2484e8c4cfa910a76e067838f34",
+      "scripts/core/command_ledger.gd": "6fd60352fadcbd042bf80a04e692ffe70ce9f993735ed8b902a8cf67cd206efe",
+      "scripts/interaction/prop_capabilities.gd": "511ed4d5d89d18736a5fa41f03e347be8c582bd3b6906f1f3b4026d5850bb331",
+      "scripts/physics/surface_profile.gd": "1fdda14361e55e7264b7ff78c7a9f72eb4720b95fcc3484993b70543d4d53495",
+      "scripts/physics/verification_lab.gd": "d3ba00fe0f444de2f61e25949ac8271c8a05818817bb3712bd22f0eed4839ce0",
+      "scripts/player/camera_rig.gd": "a62cc243f475b959036e074c7291223f43676af5ac88b8e92cf6c759f5f8fb99",
+      "scripts/player/contact_ik.gd": "9e325cd46fe2289183d6f07e56273be3b5d0689ab7be9f6ac58383d33fa67f20",
+      "scripts/security/room_access.gd": "e1286aa118ef7ba09c5a8b64097401089c8a2f48eecfcd04f1caf36be947ce7d",
+      "scripts/sports/ball_profile.gd": "84fcafd3546d384ac026004a5ddc5e4c1a4b4bb645e334e4843c8bd95683b0bf",
+      "scripts/sports/hoop_feedback.gd": "bf980e7d9e421454161ec1ea306dc3b8ddf5a5557ec101d867b1a450d21cdec2",
+      "scripts/sports/match_rules.gd": "9c4a67829fa17eace8b1c86a2be4ba6b4eb36bbd8368b49ebf5c3e3c3aa77c9b",
+      "scripts/v2/avatar.gd": "62e78dc44a912c810872f8380898374f7a3040c6bbf6603ad7ab58ec58ef1f90",
+      "scripts/v2/board.gd": "9c056feaa086a9614e0f8423b3690ed4991d1a74ad874e959ed837c429525e68",
+      "scripts/v2/world.gd": "153d33d697438c7675ecb6cf12234f6e5486a96684d8ae93403b62b853b74a64",
+      "scripts/v3/world.gd": "2f9030c8306fb06da2ac196f42ac5f9e4d927ae4708717e2881ac813f3796862",
+      "scripts/world/campus_details.gd": "eae129aa07c190b238685b64a5d7dfd133df5ada511a23089c2b695121c4e0b0",
+      "scripts/world/meeting_finish.gd": "9417a12f823935d1a58baef4dcc53e2715c5492ce100a257a496b498a12978af",
+      "scripts/world.gd": "6f47014337d2692c196aef72f6a9a10971f2da9f278d30c4ee9b8ba7d9741cee",
+      "scenes/main.tscn": "470bbc1840ae8d44785acd03d4c886a900ed45e73c779e7cea710045f4d95c48",
+      "scenes/physics_lab.tscn": "23f8ccb40ecd09dbcef470d6c3159a12c4148873797d86ae35005b33a1940419",
+      "assets/asset-manifest.json": "7ddc4eeca44384ecdb92a34aec885048451cff2b095f7c49bc6ec8ca7f0a1164",
+      "assets/audio/bath-flush-v3.wav": "e054ed08ac5064e8014e0be3a055f95cc2502c14890e4c64520cae5cf2cbe5a1",
+      "assets/audio/bath-water-v3.wav": "9e72089490ef263ca9ae39c32c399da94b5c1bcf9b3a845ce807a9381a3f90d5",
+      "assets/audio/toy-pop.wav": "72fefa3f30a00a4e163f0eff5c19c68bc1262c71a70f3e9b2c49ca89a994ce2e",
+      "assets/characters/animation-manifest-v3.json": "17925a8e5c7d924abb953456f8c921e6aecbe5a117eb60269e57b074e2aa7375",
+      "assets/characters/male-animated-v3.glb": "f29277db191e895d88fd96f6d35cecc68930646455fd1393b8830187f786f2c2",
+      "assets/characters/male-arms-v3.glb": "e65cc69272268d493bacd51d9e02da96050a60c385dd3c8d590af0f52b7a9585",
+      "assets/characters/male-arms.glb": "3ff1dd36304a3537bd207c83ea0707918b41a1374fe11e8a0df88eb85ace7779",
+      "assets/characters/male-lying-v3.glb": "4a1a1dc787e91791e740dcdf13536bd959395803b47972804b140025b9ae42eb",
+      "assets/characters/male-lying.glb": "843b2f1374ec8312ad07c36879a4619cbe235174aef2617290755f9fc76cf8dd",
+      "assets/characters/male-rigged-v3.glb": "05cf879559829be7f06cec91bb67be40e96a35d784650c90cc784e4ae56c1628",
+      "assets/characters/male-rigged.glb": "87e6395d42bbbb7454a57357bd978127621bc581472046c9bf0ad6989fcdadd6",
+      "assets/characters/male-seated-v3.glb": "986211bc555e1a3c5011e4187caa118e67aabf7a02aa87c87e7c2ce06ae9a0cc",
+      "assets/characters/male-seated.glb": "986211bc555e1a3c5011e4187caa118e67aabf7a02aa87c87e7c2ce06ae9a0cc",
+      "assets/characters/quaternius_cc0-male-character-1157.glb": "88e40b0e82e242f8d04d22106a149fd121a69b6cf9e9aa87e22fb82848e5b754",
+      "assets/characters/quaternius_cc0-male-character-1158.glb": "d97b63a87ab729c47a2f0ff0c30ba9271529ccc64e328aa7370625fa14005010",
+      "assets/characters/quaternius_cc0-male-character-1160.glb": "d902ca5b192ebe3e061de79af86b647d8e36d1c2e49e3290ba3ffe2bda1b4fbe",
+      "assets/characters/quaternius_cc0-male-character-1161.glb": "51a8975414f406391b2d27f851587b5e50eb7a03f6d26b20f413436d48f037b1",
+      "assets/characters/quaternius_cc0-male-character-1162.glb": "8a86bb1b85e888508e34f6bfbec0256524ed2aa100386e9362b233b02b4b422e",
+      "assets/environment/architecture.glb": "76bce0e1dc909c6db4914a379f25e92c8b7e2301d61b2b1d43141b33e61ac702",
+      "assets/environment/book.glb": "0a4883651a8abcd29e59befd0636cfd135ae9c8ebe706a1d967ae34ee0ec7e81",
+      "assets/environment/chair.glb": "f655872311fccd863e53d2a310dad5caf6208e48daad076c5d614ebc929ef648",
+      "assets/environment/crate.glb": "d98f4c143f50ea4a5c03a387567ec37aaa0e9adb25fab2f63e50282b42995881",
+      "assets/environment/door.glb": "9ab2023c9a4dce057039892b9f65ef1cf2ee1a5d384fbed6550d03930cd2a571",
+      "assets/environment/marker.glb": "7d91b4aca3c9b9240140778cdd160c5fce3aec57c38cdd6919172d78cf87297b",
+      "assets/environment/sofa.glb": "65e9ac399f6f62075a9545c83ab9ecc69f8ae010ea052bf30cbbb219db37ac47",
+      "assets/environment/table.glb": "d94a08297ee350e495fca017a1efee2cf460c5f7d82b8f76e429f3487c1eb3e1",
+      "assets/fonts/NotoSansKR-game.ttf": "963869cd69aefa52fb9dee59fd49d4f635ab1cc5f07b43e857d5a85bfe03f8ec",
+      "assets/fonts/OFL-NotoSansKR.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "assets/textures/v2/carpet.png": "918d9ceacdfdd3eb8fdffa47d54d81ecb9a7a5288bd5c59bad5c8abe3abcc95f",
+      "assets/textures/v2/cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/textures/v2/deck.png": "4e8a9724d9ae16cdd52a78d0e49271bbb6f833391ab9c88805d7cf63fe8c101e",
+      "assets/textures/v2/oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/textures/v2/oak2.png": "5cd2ecc21aa2a26b7326eaf0c2dc5f11e6ffb5bfc4e2a0fdda5a65ea14ac693b",
+      "assets/textures/v2/plaster.png": "3cbc9a62f1d7b63463657b17f431f7d5f19fedbe3b303dcf1295152db6f064b8",
+      "assets/textures/v2/stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/textures/v2/tile.png": "953bad88a95b756b552d0bd447729fee88d8e77f589d37b3ca381704019af73a",
+      "assets/textures/v2/walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/arcade.glb": "3bb7763b30b1f58be089b5fa43861952e5bccfa082d9563095591f9c55b2558c",
+      "assets/v2/arcade_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/basketball.glb": "b2e096c666cdd6842800443ccb9030175ce9978e640dc1adaaab90aa8e677746",
+      "assets/v2/bed.glb": "f6a70cb12b41c2ea1f1966ba4ad3e6ab51395088bf862732d51d06bb03519468",
+      "assets/v2/bed_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/bed_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/bed_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/book.glb": "5002897a69127f1dad6bef9f10748dbca3fe7ddbc23d5e24c6b8fdabbfb0f33d",
+      "assets/v2/campus-details-v3.glb": "8d0790d7a95a20c8a2db806b8418696f0fc0d51866a4fdb113aaf9a83a5a97a3",
+      "assets/v2/chair.glb": "33dd82b189dda16909200e4a6daf5c3d48967a01618de2bc17e3c1679394907b",
+      "assets/v2/cooker.glb": "7582f3e8a0dbad019d237a174709cf66258245ec3e4f9d20ce7c559b574b1c83",
+      "assets/v2/cooker_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/cooker_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/counter.glb": "5d1ac78c8f3c2c4d3419ea56ec995b0a097df619bd4401e3772ff63aa3008e9a",
+      "assets/v2/counter_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/counter_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/crate.glb": "8a340bb3172ff58258f25fc023a5fae7bfc93de256820f34afc5f3e2ba5b292b",
+      "assets/v2/drawer.glb": "68dfa1b744bfb0c239953e210adda9e47a989dc11d6de46608e907e203900fb1",
+      "assets/v2/drawer_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/drawer_slide.glb": "6a7cc0dfec5e0ce2dd49f40e07391a10312538b3ef375b817b19a3551f63cf0d",
+      "assets/v2/drawer_slide_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/drawer_slide_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/drawer_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/floor_lamp.glb": "f13fd3515e0820a69d36a70698b0e80eb34d7cfba81e009d3d7161afbc34d618",
+      "assets/v2/floor_lamp_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/floor_lamp_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/football.glb": "7ea6ef50fc02035e2363f2811af3533349cf6bfeafd1613e7b6867e833ef45ea",
+      "assets/v2/fridge.glb": "0c4cf3c4fa0adbae7a6b800fe48b8649879f9b237cc84b2129c8cf84852a48df",
+      "assets/v2/fridge_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/gallery.glb": "ae7c0d31fba5ebb60480cf7aa8a72f02cd6f2cea0e9155d67f2895fc2d5e9eed",
+      "assets/v2/gallery_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/gallery_plaster.png": "3cbc9a62f1d7b63463657b17f431f7d5f19fedbe3b303dcf1295152db6f064b8",
+      "assets/v2/gallery_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/grounds-collisions-v3.json": "ba4a4df73d1d952b29a6156dfce83e16c5e6e003f21f78dd5fa22ea7c07b0a41",
+      "assets/v2/grounds-v3.glb": "c424f8a6ee6557d76cfe27a0aa49ba90d6760ffdc27e770b2b7a700341c565ab",
+      "assets/v2/grounds-v3_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/grounds-v3_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/grounds.glb": "f100d3de467ad3d1448a9e401ee1abab7295bf4d402ebe2bfd177b412a4e57db",
+      "assets/v2/grounds_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/grounds_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/gun.glb": "3cb4954f03c69fea9ea856e18123dad9656c77cf15092839444ce1d88321fac3",
+      "assets/v2/house-collisions-v3.json": "df6f5d82c733d19910e5a708d68ee13ecb1cd3c8721c83e7b401f4688f5632ec",
+      "assets/v2/house-v3.glb": "257a76eb0c4a64281a2391dd04c3b42c2f1e64b9bb928bcd5433388b56b115f2",
+      "assets/v2/house-v3_carpet.png": "918d9ceacdfdd3eb8fdffa47d54d81ecb9a7a5288bd5c59bad5c8abe3abcc95f",
+      "assets/v2/house-v3_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/house-v3_deck.png": "4e8a9724d9ae16cdd52a78d0e49271bbb6f833391ab9c88805d7cf63fe8c101e",
+      "assets/v2/house-v3_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/house-v3_oak2.png": "5cd2ecc21aa2a26b7326eaf0c2dc5f11e6ffb5bfc4e2a0fdda5a65ea14ac693b",
+      "assets/v2/house-v3_plaster.png": "3cbc9a62f1d7b63463657b17f431f7d5f19fedbe3b303dcf1295152db6f064b8",
+      "assets/v2/house-v3_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/house-v3_tile.png": "953bad88a95b756b552d0bd447729fee88d8e77f589d37b3ca381704019af73a",
+      "assets/v2/house-v3_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/house.glb": "f5416b95824d982968a5ba4b357c17acfa0cbd0c75453de9f9d3873ef000dcc8",
+      "assets/v2/house_carpet.png": "918d9ceacdfdd3eb8fdffa47d54d81ecb9a7a5288bd5c59bad5c8abe3abcc95f",
+      "assets/v2/house_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/house_deck.png": "4e8a9724d9ae16cdd52a78d0e49271bbb6f833391ab9c88805d7cf63fe8c101e",
+      "assets/v2/house_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/house_oak2.png": "5cd2ecc21aa2a26b7326eaf0c2dc5f11e6ffb5bfc4e2a0fdda5a65ea14ac693b",
+      "assets/v2/house_plaster.png": "3cbc9a62f1d7b63463657b17f431f7d5f19fedbe3b303dcf1295152db6f064b8",
+      "assets/v2/house_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/house_tile.png": "953bad88a95b756b552d0bd447729fee88d8e77f589d37b3ca381704019af73a",
+      "assets/v2/house_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/ingredient.glb": "959c24e94962e1f6c622a5b9430c52eb0865f02a3b6af6ec7a98b75cf540c702",
+      "assets/v2/laser-v3.glb": "892baf9d366909039b2f544d4a5d3da30b311c5e20523aef0b13339980a97352",
+      "assets/v2/layout.json": "dc89d658137d2467b29917dfe4c8e7f9cf28363e709fb051894a05bc2814700a",
+      "assets/v2/low_table.glb": "b5e378b5ec95a60789ab083fb64f1eeb943dc5e2682abb8024caa77082053b99",
+      "assets/v2/low_table_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/low_table_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/manifest.json": "0e1c9529a5add2b8dbbc0b87d80de3ed4478bbb467edad48e3c4386fef6b4b55",
+      "assets/v2/marker.glb": "1e26e63d5c587dd1d4526a3620bf3ae38f7e7ed9e4d9235945a6de3d421b66b1",
+      "assets/v2/meal.glb": "3549785c0c37b78613770b08c1de62f48942751526189d73ce04f86bb5a3f77b",
+      "assets/v2/office_left.glb": "8c5e5dd67dee587feeeefd6074c75e3859169d5c1899a6e339d0629450860db7",
+      "assets/v2/office_left_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/office_left_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/office_left_plaster.png": "3cbc9a62f1d7b63463657b17f431f7d5f19fedbe3b303dcf1295152db6f064b8",
+      "assets/v2/office_left_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/office_left_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/office_right.glb": "1a4b82eca8f366ecfb1a873096bfe72041c54f147507aa0edfd4ae10e7977fb2",
+      "assets/v2/office_right_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/office_right_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/office_right_plaster.png": "3cbc9a62f1d7b63463657b17f431f7d5f19fedbe3b303dcf1295152db6f064b8",
+      "assets/v2/office_right_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/office_right_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/pan.glb": "9515ee9b56ec03bde7196e936bfd8d05240bf008c9ba265b41cb52a800c1d0e8",
+      "assets/v2/pan_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/plate.glb": "6ab06be90e5b5757c2b606c0abd40542ed2880880d7c141d86ef568c96e93ca2",
+      "assets/v2/plate_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/shield.glb": "4d1646518e1bd9cd59c7d3edbb0d10064ef996c89ba52a99bd546ba5e0794694",
+      "assets/v2/sink.glb": "9e8613d064daff3272d36658bfc12cbfd0757be45381abd57a46beb32314e8df",
+      "assets/v2/sink_cloth.png": "fd33244610c7d508fe472154f9d2fe400bf4b91178c456a03726c2e393818872",
+      "assets/v2/sink_stone.png": "e73402fec11f903b83515240d9ad94cbe059794a4f62cbb4d90a69387e6dadaf",
+      "assets/v2/sofa.glb": "a957e556ab3777511547571535f3740d4d0dffb9d5ca1b83b629c8c594ffff81",
+      "assets/v2/storage.glb": "b40deafca407d32260b81bbc4cea76d450ee3ba6e2c3024cb0c96fb5a5d7ab93",
+      "assets/v2/storage_lid.glb": "800b988967e1c54a83e2dddd59f6274edc55db88cba396e51b46ddcfa531c06a",
+      "assets/v2/storage_lid_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/storage_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v2/storage_walnut.png": "8a8ee3b1b7fb1038d2c1279ae69577766081473aa8b3630f1c0b7f5974c26604",
+      "assets/v2/table.glb": "084aa1c55f774e7f739e8d21eb26c441f8d5755b86862f696dc2476a4aa88fe0",
+      "assets/v2/wide_door.glb": "79b6a098f095da29bce60617c20bb4d02df69991802869a0cb94840f0ad08cbd",
+      "assets/v2/wide_door_oak.png": "43441045256c0e401c475c7bbbd5974498fbf95135260df30abd3f504b89fbcd",
+      "assets/v4/meeting-chair.glb": "9c90fdfdee059b8c833c79d739a0fc540565cea1dc7068f45873849a8ba31a06",
+      "assets/v4/meeting-finish.glb": "2fec2e7ccfdffa81da1a06bd60589a1ffcbb4c04c24289b7c78b49ae911a88e1",
+      "assets/v4/meeting-manifest.json": "faf58acc5ea36b5ad87a15760d569da3a3444a18e1300c420873a73f4c49b0a7",
+      "web/activities.mjs": "940d5625df45fd9b4f7e8f05ac4f23c6d66fcd125996d6fa0007a8d8fcac1b6f",
+      "web/admin-config.mjs": "9f6d641b7e62abe12057a3069c98ae8a1ab55c3bb30217ed3c45a7d2f44623a8",
+      "web/arcade-rules.mjs": "ac4cc63055f88189ee1c81e5c8f464af1acd9c62ff3d6e62d377a7b59b5fa809",
+      "web/arcade.mjs": "10b80a429230cb10b38509cc96e9e3df300c88168ad40ec41cd41b1a94f48c2e",
+      "web/attachment-policy.mjs": "0abe429411f2ee6ffc8f9bbab7a132d7f00d541846a68ac8e6ecbed9c838d36a",
+      "web/board-tools.mjs": "4853da36db4fa0ade3b1c190452a306f651fbc41dd2269f0f57787e8b947a213",
+      "web/bridge.mjs": "f997f62b9259a4cad86f8de05d2ec9d649dadbbaeab5093b5cb4ddf3e87e7844",
+      "web/broadcast.mjs": "af3e11c6208eecc38ff3086255d7bb11d4bf013139737f1d0ae0a573ff58f9ca",
+      "web/build-guard.mjs": "c1700427c78b38fec6a55bea57399881d50f3efabbcf6b8b59d2f91bc7f2b586",
+      "web/caption-policy.mjs": "1dc439ab226960abc138069d390bfeaa4319c7d24621774c8d9914544be66261",
+      "web/captions.mjs": "6f6632c2726a7bea3bf59e77d23e201f4cddf4dd9f7807a55da754d00952131c",
+      "web/chat-protocol.mjs": "b4ec43c2e33c74bbd6bdb8f5b511d2e95fc80596128fee3e320188095b25358b",
+      "web/collaboration-source.mjs": "4aa395cdf0cced05df348cd2d4d9d0a8bcc1fc289f0b66febd77859fe4ba9ff7",
+      "web/collaboration.mjs": "7881517c400e953f44ac5f7039c3bbb9b9b2ea67ab3482c225c447806ef4ddc6",
+      "web/collaboration.mjs.LEGAL.txt": "6b6975fa54d238102e8167e3b9e0d8a9eb8cbc72ba50dd3211da266c74a02822",
+      "web/document-registry.mjs": "bd6a04e0acd37a9f7837860dbfa1cca8d84015a1a94696ca7386353a9d216ebf",
+      "web/gameplay-hud.mjs": "646120236925b28865c2fb8b20f19ea1b8ee103b29b04e7a89fd9285cf76a85b",
+      "web/handoff.mjs": "58105fddfa15af4eb559ff90bf2d9ecff0734a50b15dbd6e3116ffd4917d8f5d",
+      "web/homeoffice.css": "1996916348fb8b17f0000cad5562e500a266fc644f223aaee7ee177b9e77c566",
+      "web/invitations.mjs": "1870401644370a40d3d1c2344e8cefa7aff883eba1683a33ddab3949a1979ac2",
+      "web/key-bindings.mjs": "838323c2665287ba11a1fb5ca3e7d48b07184704f39809a23c5ae9fc0414a25c",
+      "web/local-stt.mjs": "c18f0007e7e05ba79894b61dfea88b225136a41d1c926f6373ada4567ea131f3",
+      "web/messenger.mjs": "93cba6a3b10bbece2c23e92bada8b771042a0e6c7548baae01983350974a48a3",
+      "web/onnx/ort-wasm-simd-threaded.asyncify.mjs": "5959c6733039619c9af710d8e1bae8d6e84402787990637be987c2b1bd6c5fa9",
+      "web/onnx/ort-wasm-simd-threaded.asyncify.wasm": "e0c0c6d3e73d43b8a249972f8358f845b08cc16fec3c80efafdf8bed40366786",
+      "web/onnx/ort-wasm-simd-threaded.jsep.mjs": "522b3769929f5684c83a12cf1e06eedf073b65d161728b4f3757c75d62b14384",
+      "web/onnx/ort-wasm-simd-threaded.jsep.wasm": "ae61141f8fbf0a4e43fd7b4f4d40a1a115627f6facc4f33ddf84074a655e33ea",
+      "web/onnx/ort-wasm-simd-threaded.mjs": "5f2cd914554830762579c372d0211614c1e3f40ab3f6c0cfcf0900343229071d",
+      "web/onnx/ort-wasm-simd-threaded.wasm": "f4f290847a4df02d0b93cdbf39b4b0e71acefbe80573e7e6b9342a7abd7b290a",
+      "web/pcm-worklet.mjs": "cd3c4a936a1eab4c3d3276f9592aca704f92f9fb56fa4f60f5f4474efe948fca",
+      "web/pdf.mjs": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e",
+      "web/pdf.worker.mjs": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930",
+      "web/peerjs.min.js": "7604d8c31bec4f134b0d15c2d80b1d095ea18af005354f439f14291fcd7b4168",
+      "web/presentation-view.mjs": "a3a30d2be6413feb1b4efb057eceab7c0d640d0929d47a049284cb8cff5bcc86",
+      "web/presentation.mjs": "e5d9239fbfebf70af74ce54a4cbcb0e860f6a10ad10b158b07691f4c1cb0e7f8",
+      "web/quill.css": "1c7948cd13aa92fac6390319bc1e5e461823da171519d3a768db56164f871636",
+      "web/room-admin.mjs": "e183b543e324d193b7f051942c0850dc05e00a58336842367ea79d7dee360d34",
+      "web/room-policy.mjs": "475c756b19cfe2c024ea07623c4947340049813730ad6d09548b0998c1384048",
+      "web/runner-renderer.mjs": "29c81b933b888d816274dd5f8e5ef758d60511590ad823739073f169c2eaefdc",
+      "web/save-v2.mjs": "26117803a40af459adc6d50a940ad3b25065787d45b89ee90c72f92b42267aa6",
+      "web/save.mjs": "ee32eac3a3435277746beb4ed4d3241a8e07bd4593ffbbe15a68fc778639b76a",
+      "web/session-directory.mjs": "340f140c612b716b365273c1794e6813e2eafd255406f3840779ac2934be2a4a",
+      "web/shell.html": "46744c167a0e405b9f4a241ff17fd212996a1fdfcbe8f99584b55f5a2b421631",
+      "web/social.mjs": "ad2cbaa18efe25b0740e6e27469913bab43c79d2cd1d230fb6abc0b9880b889a",
+      "web/state-codec.mjs": "a5ea5de094425eba24f67335b4d5ecb510a727b08be82fb43be6b27fed06dcba",
+      "web/stt-worker-source.mjs": "9c81d921bca1e5f6fe1a7e143f8fcd8809fd8ffa920237b2f630a8cbbf5d24ec",
+      "web/stt-worker.mjs": "eb31c1e08184aeac7e9f1aba1c65575e55f60214635dd603a566263ee9a3c9d6",
+      "web/stt-worker.mjs.LEGAL.txt": "983a9fe727c603c1c22d3341df6158c24d3a80b1f006baa651f34965b27f1df8",
+      "project.godot": "2fbef8acc616eb5d0e791a4ed7808d9704b8f640d5a3539c2620de114f7480ef",
+      "export_presets.cfg": "8b6e75821aadc89f25f8c8966404c3cd06589336bb1427421773a9250150d9b3"
+    }
+  },
+  "files": {
+    ".nojekyll": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "activities.mjs": {
+      "bytes": 5810,
+      "sha256": "940d5625df45fd9b4f7e8f05ac4f23c6d66fcd125996d6fa0007a8d8fcac1b6f"
+    },
+    "admin-config.mjs": {
+      "bytes": 227,
+      "sha256": "9f6d641b7e62abe12057a3069c98ae8a1ab55c3bb30217ed3c45a7d2f44623a8"
+    },
+    "arcade-rules.mjs": {
+      "bytes": 2922,
+      "sha256": "ac4cc63055f88189ee1c81e5c8f464af1acd9c62ff3d6e62d377a7b59b5fa809"
+    },
+    "arcade.mjs": {
+      "bytes": 5217,
+      "sha256": "10b80a429230cb10b38509cc96e9e3df300c88168ad40ec41cd41b1a94f48c2e"
+    },
+    "attachment-policy.mjs": {
+      "bytes": 2784,
+      "sha256": "0abe429411f2ee6ffc8f9bbab7a132d7f00d541846a68ac8e6ecbed9c838d36a"
+    },
+    "board-tools.mjs": {
+      "bytes": 3880,
+      "sha256": "4853da36db4fa0ade3b1c190452a306f651fbc41dd2269f0f57787e8b947a213"
+    },
+    "bridge.mjs": {
+      "bytes": 47104,
+      "sha256": "f997f62b9259a4cad86f8de05d2ec9d649dadbbaeab5093b5cb4ddf3e87e7844"
+    },
+    "broadcast.mjs": {
+      "bytes": 6122,
+      "sha256": "af3e11c6208eecc38ff3086255d7bb11d4bf013139737f1d0ae0a573ff58f9ca"
+    },
+    "build-guard.mjs": {
+      "bytes": 1043,
+      "sha256": "c1700427c78b38fec6a55bea57399881d50f3efabbcf6b8b59d2f91bc7f2b586"
+    },
+    "build-id.mjs": {
+      "bytes": 62,
+      "sha256": "f4938730389f42e8f7c0c77e4594f24b8301a34427e9e87ed218d73384bfc409"
+    },
+    "caption-policy.mjs": {
+      "bytes": 1162,
+      "sha256": "1dc439ab226960abc138069d390bfeaa4319c7d24621774c8d9914544be66261"
+    },
+    "captions.mjs": {
+      "bytes": 6580,
+      "sha256": "6f6632c2726a7bea3bf59e77d23e201f4cddf4dd9f7807a55da754d00952131c"
+    },
+    "chat-protocol.mjs": {
+      "bytes": 6127,
+      "sha256": "b4ec43c2e33c74bbd6bdb8f5b511d2e95fc80596128fee3e320188095b25358b"
+    },
+    "collaboration-source.mjs": {
+      "bytes": 12659,
+      "sha256": "4aa395cdf0cced05df348cd2d4d9d0a8bcc1fc289f0b66febd77859fe4ba9ff7"
+    },
+    "collaboration.mjs": {
+      "bytes": 303096,
+      "sha256": "7881517c400e953f44ac5f7039c3bbb9b9b2ea67ab3482c225c447806ef4ddc6"
+    },
+    "collaboration.mjs.LEGAL.txt": {
+      "bytes": 497,
+      "sha256": "6b6975fa54d238102e8167e3b9e0d8a9eb8cbc72ba50dd3211da266c74a02822"
+    },
+    "document-registry.mjs": {
+      "bytes": 7089,
+      "sha256": "bd6a04e0acd37a9f7837860dbfa1cca8d84015a1a94696ca7386353a9d216ebf"
+    },
+    "gameplay-hud.mjs": {
+      "bytes": 1204,
+      "sha256": "646120236925b28865c2fb8b20f19ea1b8ee103b29b04e7a89fd9285cf76a85b"
+    },
+    "handoff.mjs": {
+      "bytes": 3617,
+      "sha256": "58105fddfa15af4eb559ff90bf2d9ecff0734a50b15dbd6e3116ffd4917d8f5d"
+    },
+    "homeoffice.css": {
+      "bytes": 11645,
+      "sha256": "1996916348fb8b17f0000cad5562e500a266fc644f223aaee7ee177b9e77c566"
+    },
+    "index.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "index.html": {
+      "bytes": 5879,
+      "sha256": "93017b3060c5a14645f7658a15314678b699a1531b7dfd614886dccbc3c9b2c7"
+    },
+    "index.js": {
+      "bytes": 315759,
+      "sha256": "e3f56ee40e6f84371053db06692cfac15e2c8659547b11c6b2dfa1996dabd981"
+    },
+    "index.pck": {
+      "bytes": 10049408,
+      "sha256": "19d7bd14ca20eff6e96e8c5881f286a6f77cd9c49abf44b9bd9d5c34f833deb9"
+    },
+    "index.png": {
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "index.wasm": {
+      "bytes": 37685705,
+      "sha256": "99962b29677e42f3ba0258bd90fdc52ad90295954c4473e816ad02cfe5ff1d4f"
+    },
+    "invitations.mjs": {
+      "bytes": 1358,
+      "sha256": "1870401644370a40d3d1c2344e8cefa7aff883eba1683a33ddab3949a1979ac2"
+    },
+    "key-bindings.mjs": {
+      "bytes": 4725,
+      "sha256": "838323c2665287ba11a1fb5ca3e7d48b07184704f39809a23c5ae9fc0414a25c"
+    },
+    "licenses/Godot-MIT.txt": {
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    "licenses/Godot-third-party-COPYRIGHT.txt": {
+      "bytes": 99790,
+      "sha256": "dc043a7dbf69632560219e72fbc61ef9fa7338c7a773660acd81b51590b69104"
+    },
+    "licenses/Jolt-MIT.txt": {
+      "bytes": 1052,
+      "sha256": "800abe35d64ad9defd636ff1ee8c961e06f0ebca3ef8d10083e8aa0e8ef86ac3"
+    },
+    "licenses/NotoSansKR-OFL-1.1.txt": {
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    "licenses/ONNX-Runtime-MIT.txt": {
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    "licenses/PDFjs-Apache-2.0.txt": {
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    "licenses/PeerJS-MIT.txt": {
+      "bytes": 1108,
+      "sha256": "9407807dba7f47a79bfb3ac55759d63d77c9371ebd0616d5a093e97d3e810397"
+    },
+    "licenses/PeerServer-MIT.txt": {
+      "bytes": 1108,
+      "sha256": "7094c54fad057d724fadad84f7da16ba6e42fca09b27b6fe20e18cbceca2d70d"
+    },
+    "licenses/Playwright-Apache-2.0.txt": {
+      "bytes": 11399,
+      "sha256": "7fab1461b41970ff376f1c9303a637076bfaaeb71cd12dd3a1c44aaf59a1a2b9"
+    },
+    "licenses/Quill-BSD-3.txt": {
+      "bytes": 1561,
+      "sha256": "395c12b616d6f58238b4be39284d4d9221b58dd6e1f1e34d9ab537e34abbb022"
+    },
+    "licenses/TransformersJS-Apache-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/Whisper-MIT.txt": {
+      "bytes": 1063,
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d"
+    },
+    "licenses/Y-Quill-MIT.txt": {
+      "bytes": 1108,
+      "sha256": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+    },
+    "licenses/Yjs-MIT.txt": {
+      "bytes": 1211,
+      "sha256": "341baa53605ed85d6f95782322854cca56c655ebc7fd4712649b8e7afc6020ff"
+    },
+    "local-stt.mjs": {
+      "bytes": 3451,
+      "sha256": "c18f0007e7e05ba79894b61dfea88b225136a41d1c926f6373ada4567ea131f3"
+    },
+    "messenger.mjs": {
+      "bytes": 17287,
+      "sha256": "93cba6a3b10bbece2c23e92bada8b771042a0e6c7548baae01983350974a48a3"
+    },
+    "onnx/ort-wasm-simd-threaded.asyncify.mjs": {
+      "bytes": 47389,
+      "sha256": "5959c6733039619c9af710d8e1bae8d6e84402787990637be987c2b1bd6c5fa9"
+    },
+    "onnx/ort-wasm-simd-threaded.asyncify.wasm": {
+      "bytes": 23567050,
+      "sha256": "e0c0c6d3e73d43b8a249972f8358f845b08cc16fec3c80efafdf8bed40366786"
+    },
+    "onnx/ort-wasm-simd-threaded.jsep.mjs": {
+      "bytes": 46490,
+      "sha256": "522b3769929f5684c83a12cf1e06eedf073b65d161728b4f3757c75d62b14384"
+    },
+    "onnx/ort-wasm-simd-threaded.jsep.wasm": {
+      "bytes": 26101073,
+      "sha256": "ae61141f8fbf0a4e43fd7b4f4d40a1a115627f6facc4f33ddf84074a655e33ea"
+    },
+    "onnx/ort-wasm-simd-threaded.mjs": {
+      "bytes": 24180,
+      "sha256": "5f2cd914554830762579c372d0211614c1e3f40ab3f6c0cfcf0900343229071d"
+    },
+    "onnx/ort-wasm-simd-threaded.wasm": {
+      "bytes": 12942611,
+      "sha256": "f4f290847a4df02d0b93cdbf39b4b0e71acefbe80573e7e6b9342a7abd7b290a"
+    },
+    "pcm-worklet.mjs": {
+      "bytes": 442,
+      "sha256": "cd3c4a936a1eab4c3d3276f9592aca704f92f9fb56fa4f60f5f4474efe948fca"
+    },
+    "pdf.mjs": {
+      "bytes": 860384,
+      "sha256": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e"
+    },
+    "pdf.worker.mjs": {
+      "bytes": 2228489,
+      "sha256": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930"
+    },
+    "peerjs.min.js": {
+      "bytes": 86948,
+      "sha256": "7604d8c31bec4f134b0d15c2d80b1d095ea18af005354f439f14291fcd7b4168"
+    },
+    "presentation-view.mjs": {
+      "bytes": 985,
+      "sha256": "a3a30d2be6413feb1b4efb057eceab7c0d640d0929d47a049284cb8cff5bcc86"
+    },
+    "presentation.mjs": {
+      "bytes": 13402,
+      "sha256": "e5d9239fbfebf70af74ce54a4cbcb0e860f6a10ad10b158b07691f4c1cb0e7f8"
+    },
+    "quill.css": {
+      "bytes": 24606,
+      "sha256": "1c7948cd13aa92fac6390319bc1e5e461823da171519d3a768db56164f871636"
+    },
+    "room-admin.mjs": {
+      "bytes": 7056,
+      "sha256": "e183b543e324d193b7f051942c0850dc05e00a58336842367ea79d7dee360d34"
+    },
+    "room-policy.mjs": {
+      "bytes": 2406,
+      "sha256": "475c756b19cfe2c024ea07623c4947340049813730ad6d09548b0998c1384048"
+    },
+    "runner-renderer.mjs": {
+      "bytes": 1545,
+      "sha256": "29c81b933b888d816274dd5f8e5ef758d60511590ad823739073f169c2eaefdc"
+    },
+    "save-v2.mjs": {
+      "bytes": 10013,
+      "sha256": "26117803a40af459adc6d50a940ad3b25065787d45b89ee90c72f92b42267aa6"
+    },
+    "save.mjs": {
+      "bytes": 5754,
+      "sha256": "ee32eac3a3435277746beb4ed4d3241a8e07bd4593ffbbe15a68fc778639b76a"
+    },
+    "schemas/manifest-v2.schema.json": {
+      "bytes": 611,
+      "sha256": "1cf46efdc0920498cb1c6d38d960f7bc6d393cfee7ee3aa34ab2aa7dccd6f584"
+    },
+    "schemas/world-v2.schema.json": {
+      "bytes": 10140,
+      "sha256": "6fdf36476c6bd743e70f50385ab1616a2494f4aa8d440cfe2cc118c93c0a56d0"
+    },
+    "session-directory.mjs": {
+      "bytes": 1891,
+      "sha256": "340f140c612b716b365273c1794e6813e2eafd255406f3840779ac2934be2a4a"
+    },
+    "social.mjs": {
+      "bytes": 46,
+      "sha256": "ad2cbaa18efe25b0740e6e27469913bab43c79d2cd1d230fb6abc0b9880b889a"
+    },
+    "state-codec.mjs": {
+      "bytes": 2327,
+      "sha256": "a5ea5de094425eba24f67335b4d5ecb510a727b08be82fb43be6b27fed06dcba"
+    },
+    "stt-worker-source.mjs": {
+      "bytes": 1159,
+      "sha256": "9c81d921bca1e5f6fe1a7e143f8fcd8809fd8ffa920237b2f630a8cbbf5d24ec"
+    },
+    "stt-worker.mjs": {
+      "bytes": 1210151,
+      "sha256": "eb31c1e08184aeac7e9f1aba1c65575e55f60214635dd603a566263ee9a3c9d6"
+    },
+    "stt-worker.mjs.LEGAL.txt": {
+      "bytes": 244,
+      "sha256": "983a9fe727c603c1c22d3341df6158c24d3a80b1f006baa651f34965b27f1df8"
+    },
+    "third-party-notices.md": {
+      "bytes": 2643,
+      "sha256": "e9f3b07653c46193172cf36d3b49bc81853a47daa1ea6be43033c5b6c8351e5f"
+    }
+  }
+}

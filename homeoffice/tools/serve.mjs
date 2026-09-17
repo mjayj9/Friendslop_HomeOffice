@@ -15,7 +15,7 @@ const root=artifact==='published'?published:artifact==='build'?built:fs.existsSy
 const manifestPath=path.join(root,'build-info.json');
 if(!fs.existsSync(manifestPath))throw Error(`V3 export is missing in ${root}. Download the complete repository including docs/, or run tools/build.ps1.`);
 const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
-if(manifest.protocolVersion!==3||!['index.html','index.js','index.pck','index.wasm','build-guard.mjs'].every(name=>fs.existsSync(path.join(root,name))))throw Error(`Incomplete V3 export: ${root}`);
+if(![3,4].includes(manifest.protocolVersion)||!['index.html','index.js','index.pck','index.wasm','build-guard.mjs'].every(name=>fs.existsSync(path.join(root,name))))throw Error(`Incomplete V3 export: ${root}`);
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.wasm':'application/wasm','.pck':'application/octet-stream','.png':'image/png','.svg':'image/svg+xml','.jpg':'image/jpeg','.pdf':'application/pdf','.wav':'audio/wav','.txt':'text/plain; charset=utf-8'};
 const server=http.createServer((req,res)=>{
  let url;try{url=decodeURIComponent(new URL(req.url,'http://localhost').pathname)}catch{res.writeHead(400).end();return}
@@ -33,7 +33,7 @@ const server=http.createServer((req,res)=>{
 });
 try{
  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,'127.0.0.1',resolve)});
- console.log(`Game: http://127.0.0.1:${port}/homeoffice/ | build ${manifest.buildId} | ${root}`);
+ console.log(`Game: http://localhost:${port}/ | build ${manifest.buildId} | ${root}`);
  if(args.includes('--local-signaling')){
   const {PeerServer}=await import('peer');
   const peer=PeerServer({port:9001,host:'127.0.0.1',path:'/homeoffice',allow_discovery:false});

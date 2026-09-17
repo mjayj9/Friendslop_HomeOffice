@@ -1,0 +1,19 @@
+✔ actual browser-exported V2 world and Korean Yjs state roundtrip (4.0444ms)
+✔ embedded PDF data roundtrip with sha and content type verification (1.8585ms)
+✔ missing and mismatched attachment rejected before restore (1.056ms)
+✔ CRC corruption never replaces current world (1.5415ms)
+✔ host role, permissions, duplicate IDs, untrusted asset and nonfinite positions rejected (0.864ms)
+✔ path traversal and executable entries rejected (0.1545ms)
+✔ office indices, duplicate slots and unsupported versions rejected (0.5074ms)
+✔ Unchanged objects omitted, changes/removal restored, roster remains complete (1.1095ms)
+✔ Lost base fails closed and explicit keyframe restores current state (0.1669ms)
+✔ Invite code, pasted URL, classroom and subpath round trip (3.8691ms)
+✔ Official original documents are validated and preserved in snapshots (0.5229ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 71.1797

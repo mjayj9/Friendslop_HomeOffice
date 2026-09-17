@@ -60,7 +60,11 @@ func direction() -> Vector3:
 	return Basis.from_euler(Vector3(float(command.pitch),float(command.yaw),0))*Vector3.FORWARD
 
 func simulate(dt:float):
-	rotation.y=seat_yaw if seated!="" else float(command.yaw)
+	var look_yaw=float(command.yaw)
+	var movement=Basis(Vector3.UP,look_yaw)*Vector3(float(command.x),0,float(command.z)).limit_length(1)
+	if seated!="":rotation.y=seat_yaw
+	elif not command.get("third",false) or command.get("aim",false) or holding!="":rotation.y=lerp_angle(rotation.y,look_yaw,1-exp(-dt*18))
+	elif movement.length()>.05:rotation.y=lerp_angle(rotation.y,atan2(-movement.x,-movement.z),1-exp(-dt*14))
 	camera.rotation.y=float(command.yaw)-rotation.y
 	camera.rotation.x=float(command.pitch)
 	camera.position.y=move_toward(camera.position.y,1.25 if seated!="" else 1.62,dt*3)
@@ -68,7 +72,7 @@ func simulate(dt:float):
 		velocity=Vector3.ZERO
 		return
 	var move=Vector3(float(command.x),0,float(command.z)).limit_length(1)
-	move=Basis(Vector3.UP,rotation.y)*move
+	move=Basis(Vector3.UP,look_yaw)*move
 	var speed=5.2 if command.run else 3.1
 	velocity.x=move_toward(velocity.x,move.x*speed,dt*22)
 	velocity.z=move_toward(velocity.z,move.z*speed,dt*22)
@@ -99,4 +103,4 @@ func pose(bone:String,axis:Vector3,angle:float):
 		skeleton.set_bone_pose_rotation(id,skeleton.get_bone_rest(id).basis.get_rotation_quaternion()*Quaternion(axis,angle))
 
 func state() -> Dictionary:
-	return {"id":actor_id,"p":[position.x,position.y,position.z],"v":[velocity.x,velocity.y,velocity.z],"yaw":rotation.y,"pitch":command.pitch,"seat":seated,"seatYaw":seat_yaw,"hold":holding,"ack":ack}
+	return {"id":actor_id,"p":[position.x,position.y,position.z],"v":[velocity.x,velocity.y,velocity.z],"yaw":rotation.y,"lookYaw":command.yaw,"pitch":command.pitch,"seat":seated,"seatYaw":seat_yaw,"hold":holding,"ack":ack}

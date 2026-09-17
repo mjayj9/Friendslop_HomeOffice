@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "test": "v3-gameplay",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v3-authority-physics",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v3-physics-lab",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v3-dribble",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v3-living-props",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v3-legacy-interactions",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v3-legacy-authority",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v4-camera-policy",
+      "errors": 0,
+      "exit": 0
+    },
+    {
+      "test": "v4-room-access",
+      "errors": 0,
+      "exit": 0
+    }
+  ],
+  "buildId": "fa3e62b2-1222-43f9-bbcc-662894987f1e",
+  "sourceDigest": "2af1fa865757671b234ac519bc8c9ba7f532fae9fe79cbed03ee486ebba79bfb"
+}

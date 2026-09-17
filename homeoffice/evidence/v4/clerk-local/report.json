@@ -1,0 +1,25 @@
+{
+  "environment": "Actual Godot WebGL and actual user-selected Clerk development SDK at http://localhost:5173. Fresh unauthenticated Chromium profile. No mocked Clerk API, account creation, credentials or session tokens recorded.",
+  "buildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "completed": true,
+  "results": [
+    {
+      "name": "Exact localhost:5173 origin serves the game and real Clerk SDK with visible account controls",
+      "passed": true
+    },
+    {
+      "name": "Real Clerk sign-in component opens from the existing welcome screen",
+      "passed": true
+    },
+    {
+      "name": "Real Clerk sign-up component opens without replacing the game project",
+      "passed": true
+    },
+    {
+      "name": "Clerk modal cancels gameplay input; closing and resuming restores movement",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "video": "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v4\\clerk-local\\page@e2507f59f6f345318096e12ca09eb6c8.webm"
+}
