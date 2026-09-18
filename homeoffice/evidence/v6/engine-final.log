@@ -1,0 +1,13 @@
+{"action": "verify", "buildId": "f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa", "files": 91, "verified": true}
+{"script": "v5-table-support", "ok": true, "checks": 7, "passed": 7, "exitCode": 0}
+{"script": "v5-motion-matrix", "ok": true, "checks": 14, "passed": 14, "exitCode": 0}
+{"script": "v5-court-access", "ok": true, "checks": 35, "passed": 35, "exitCode": 0}
+{"script": "v5-carry-volume", "ok": true, "checks": 6, "passed": 6, "exitCode": 0}
+{"script": "v5-seat-contacts", "ok": true, "checks": 20, "passed": 20, "exitCode": 0}
+{"script": "v5-placement", "ok": true, "checks": 10, "passed": 10, "exitCode": 0}
+{"script": "v5-retained-living-props", "ok": true, "checks": 12, "passed": 12, "exitCode": 0}
+{"script": "v5-wardrobe", "ok": true, "checks": 21, "passed": 21, "exitCode": 0}
+{"script": "v6-campus-physics", "ok": true, "checks": 15, "passed": 15, "exitCode": 0}
+{"script": "v6-stair-route", "ok": true, "checks": 151, "passed": 151, "exitCode": 0}
+{"script": "v6-private-rooms", "ok": true, "checks": 14, "passed": 14, "exitCode": 0}
+{"script": "v6-facility-access", "ok": true, "checks": 43, "passed": 43, "exitCode": 0}

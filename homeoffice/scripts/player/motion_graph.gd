@@ -132,7 +132,7 @@ func update(dt:float):
 	var activity=String(p.get_meta("activity",""))
 	if activity=="broadcast":upper_body="broadcast"
 	elif activity=="book":upper_body="book_read"
-	elif activity in ["report","documents","brainstorm","mindmap","meeting"] and p.seated!="":upper_body="work"
+	elif activity in ["workspace","report","documents","brainstorm","mindmap","meeting"] and p.seated!="":upper_body="work"
 	var gesture=String(p.get_meta("gesture","")) if now<int(p.get_meta("gesture_until",0)) else (p.remote_gesture if not world.host and not p.local_player else "")
 	if gesture!="":
 		one_shot=gesture

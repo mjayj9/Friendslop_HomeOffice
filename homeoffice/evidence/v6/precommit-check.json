@@ -1,0 +1,9 @@
+{
+  "buildId": "f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa",
+  "sourceDigest": "3704c4ccdd712215f6fafbddc719bd7e537153612aabea07e1a9b5a0bf468861",
+  "sourceFilesMatchedInIndex": 277,
+  "changedFiles": 319,
+  "oversizeGitFiles": [],
+  "credentialPatternFindings": [],
+  "note": "Pattern scan is limited; no claim of exhaustive secret or dependency audit."
+}

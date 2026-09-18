@@ -1,3 +1,21 @@
+# COMMONS V6 — 사용자 테스트 게시 준비 (2026-09-19)
+
+최신 기준: [V6 명세](homeoffice/docs/v6/master-spec-ko.md), [네 이미지 분석](homeoffice/docs/v6/design-decisions-ko.md), [OBS 원문](USER_OBSERVATIONS.md), [V6-T01–56](homeoffice/docs/v6/verification-ko.md). 기존 V5 이력은 아래에 그대로 보존한다. **전체 V6 인수 완료가 아니다.**
+
+검수 빌드 `f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa` / source `3704c4ccdd712215f6fafbddc719bd7e537153612aabea07e1a9b5a0bf468861`. 시작 HEAD 7cab26a, 실제 Pages codex/homeoffice-v3 및 기존 공개 9fa65de6을 확인했다. 같은 export를 docs/로 복사했다. 사용자는 같은 저장소 commit/push/Pages 게시를 명시적으로 요청했다. 실제 게시 증거는 [영수증](homeoffice/evidence/v6/publication/receipt.json)에 기록한다. 인증 서비스·Firebase·PIN·관리자 설정 변경 없음.
+
+구현: 원본을 보존한 BlenderMCP 제작, 크림/우드/세이지 팔레트와 차양·식재, OFFICE B1~RF 8개층, 두 실제 승강기/두 U계단/층별 화장실, 4층 고정 개인실 8슬롯, 2층 4개 회의의 문서·보드·자료·발표 분리, 오프라인 초안 재접속/참여 중지, 이전 저장 좌표와 미배치 보관함. [평면](homeoffice/docs/v6/campus-plan.html), [책임/저장 경계](homeoffice/docs/v6/implementation-map-ko.md), [제작 출처](homeoffice/docs/v6/art-and-assets-ko.md).
+
+같은 빌드 실제 검수: 4개 독립 Chromium 회의 9흐름, 실제 HOME→OFFICE·2F 회의·6F/RF/B1/1F 승강기 왕복 4흐름, 기존 의상방 9흐름, 옆 설치함/총 입력 격리 10흐름. 브라우저 pageerror 0. 엔진 348/348(기존 V5 125, V6 223), Node 33+6. 사람·실제 마이크·실계정 공동편집으로 오인하지 않는다. 이전 V5 증거 파일은 바이트 그대로 보존했다.
+
+[실제 결함 수리](homeoffice/docs/v6/repair-log-ko.md): 문턱/계단 머리 공간/회의 화면과 문 겹침/개인실 초기 가구 누락과 서가 충돌/화장실 뒷칸 통로/발표 화면 배치/재접속 메뉴 가림/복원 성공 응답 순서를 수리하고 재시험했다.
+
+남음: 첨부 사진 수준의 세밀한 표면·명암, 실제 사람 4명 및 마이크/두 외부 계정/운영 관리자/CCTV·방송 확인, 내장 프로젝트 문서의 회의 간 의도 공유, 모든 첨부의 host handoff, 2/4/8인 결합 성능, 일부 V5 스포츠/체형·좌석 접촉 품질. [성능](homeoffice/docs/v6/performance-ko.md)은 저사양 보행 약20fps로 목표 미달이다. 사용자 OBS 재확인은 대기 상태다.
+
+[직접 테스트 안내](homeoffice/docs/v6/testing-ko.md). 기존 로컬 서버와 사용자 Blender는 종료하지 않는다.
+
+---
+
 # COMMONS WORKSPACE V5 — 현재 작업 상태
 
 2026-09-18 KST. **V5 전체 미완료. 최신 사용자 요청과 V5 통합 명세가 기준이다.** 원래 V4 세계·자료·계정 설정을 보존하며 점진적으로 수리했다. 아래 결과는 제한된 로컬 및 공개 페이지 검수이며 완성형 제품 출시 판정이 아니다.

@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "label": "Eight fixed personal room slots have a hard boundary",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 1 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 2 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 3 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 4 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 5 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 6 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 7 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desk 8 is on authored fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal desks settle without pushing into shelves or walls",
+      "ok": true
+    },
+    {
+      "label": "Leaving and reconnecting never moves existing room furniture",
+      "ok": true
+    },
+    {
+      "label": "Old personal item is copied once with the same identity",
+      "ok": true
+    },
+    {
+      "label": "Old personal room height maps to fourth floor",
+      "ok": true
+    },
+    {
+      "label": "Personal room migration is idempotent",
+      "ok": true
+    }
+  ],
+  "fixture": true
+}

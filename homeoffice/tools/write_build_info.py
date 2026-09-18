@@ -38,7 +38,7 @@ if __name__=='__main__':
   info['source']=source_manifest()
   info['files']={p.relative_to(build).as_posix():{'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(build.rglob('*')) if p.is_file() and p.name not in ['build-info.json','.gdignore'] and p.suffix not in ['.import','.uid'] and '_qa' not in p.relative_to(build).parts}
   (build/'build-info.json').write_text(json.dumps(info,indent=2),encoding='utf8',newline='\n')
-  (R/'evidence/v5/build-info.json').write_text(json.dumps(info,indent=2),encoding='utf8',newline='\n')
-  archive=R/'evidence/v5/builds';archive.mkdir(parents=True,exist_ok=True)
+  (R/'evidence/v6/build-info.json').write_text(json.dumps(info,indent=2),encoding='utf8',newline='\n')
+  archive=R/'evidence/v6/builds';archive.mkdir(parents=True,exist_ok=True)
   (archive/(info['buildId']+'.json')).write_text(json.dumps(info,indent=2),encoding='utf8',newline='\n')
  print(args.phase,info['buildId'])

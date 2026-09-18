@@ -1,0 +1,84 @@
+{
+  "buildId": "3f6d9ee4-6a11-4295-8254-ba07501636ad",
+  "sourceDigest": "c71a3526a0cc105f58979ee66b1dff4af4b23f0de13947d72d0893e4caf32f09",
+  "testedAt": "2026-09-18T17:42:39.250528+00:00",
+  "scope": "Headless physics/authority/save fixtures, not artwork, real accounts or human acceptance. V5 historical files restored byte-for-byte.",
+  "suites": [
+    {
+      "script": "v5-table-support",
+      "ok": true,
+      "checks": 7,
+      "passed": 7,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-motion-matrix",
+      "ok": true,
+      "checks": 14,
+      "passed": 14,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-court-access",
+      "ok": true,
+      "checks": 35,
+      "passed": 35,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-carry-volume",
+      "ok": true,
+      "checks": 6,
+      "passed": 6,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-seat-contacts",
+      "ok": true,
+      "checks": 20,
+      "passed": 20,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-placement",
+      "ok": true,
+      "checks": 10,
+      "passed": 10,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-retained-living-props",
+      "ok": true,
+      "checks": 12,
+      "passed": 12,
+      "exitCode": 0
+    },
+    {
+      "script": "v5-wardrobe",
+      "ok": false,
+      "checks": 0,
+      "passed": 0,
+      "exitCode": 0
+    },
+    {
+      "script": "v6-campus-physics",
+      "ok": true,
+      "checks": 15,
+      "passed": 15,
+      "exitCode": 0
+    },
+    {
+      "script": "v6-stair-route",
+      "ok": true,
+      "checks": 151,
+      "passed": 151,
+      "exitCode": 0
+    },
+    {
+      "script": "v6-private-rooms",
+      "ok": false,
+      "timeout": 90
+    }
+  ],
+  "passed": false
+}

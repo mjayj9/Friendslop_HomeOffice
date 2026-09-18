@@ -1,11 +1,11 @@
 {
-  "buildId": "9fa65de6-20d0-4a7a-b315-f3b388891e24",
-  "commit": "27dccb8adeccb51690a5f5c4abbebebf339b850c",
+  "buildId": "f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa",
+  "commit": "7cab26a28db6df949378b6a4ac9e470661b36c7b",
   "dirty": true,
   "godotVersion": "4.6.1.stable",
   "exportTemplatesVersion": "4.6.1.stable",
   "protocolVersion": 4,
   "assetVersion": 3,
   "schemaVersion": 2,
-  "builtAt": "2026-09-17T13:39:15.837370+00:00"
+  "builtAt": "2026-09-18T17:58:49.864866+00:00"
 }

@@ -1,0 +1,17 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS animation_only does not repeatedly enter landing
+PASS animation_only uses authority ground state
+PASS animation_only retains locomotion
+PASS ik_only does not repeatedly enter landing
+PASS ik_only uses authority ground state
+PASS combined does not repeatedly enter landing
+PASS combined uses authority ground state
+PASS combined retains locomotion
+PASS remote_interpolation does not repeatedly enter landing
+PASS remote_interpolation uses authority ground state
+PASS remote_interpolation retains locomotion
+PASS reload preserves lower-body walking
+PASS one real airborne-to-ground edge enters landing
+PASS landing finishes and walking resumes

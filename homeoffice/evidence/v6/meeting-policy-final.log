@@ -1,0 +1,14 @@
+✔ Two simultaneous meetings require independent current membership grants (0.9281ms)
+✔ Revocation and host reset invalidate stale grants; no administrator privilege exists (0.1422ms)
+✔ Old worlds remain accepted and two scoped meetings survive archive round trip (6.3706ms)
+✔ Archives reject session grants, PIN fields, duplicate scopes and unknown meetings (0.3161ms)
+✔ Meeting attachment data is exported and validated, not silently left behind (1.5679ms)
+✔ Unplaced furniture preserves identity and storage references without importing authority (1.2031ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 70.9616

@@ -1,0 +1,14 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Public passage threshold is walkable without jumping (17.5, -0.174954, -2.956119)
+PASS First stair flight reaches actual half landing (11.6, 1.795015, -35.36083)
+PASS Half landing rises by 1.8 metres (11.6, 1.795015, -35.36083)
+PASS Half landing permits the turn (13.11075, 1.795015, -35.50527)
+PASS Return flight reaches next floor corridor (13.2517, 3.595514, -31.33094)
+PASS Two flights rise one complete storey (13.2517, 3.595514, -31.33094)
+PASS First stair flight reaches actual half landing (32.5, 1.796477, -21.35814)
+PASS Half landing rises by 1.8 metres (32.5, 1.796477, -21.35814)
+PASS Half landing permits the turn (34.0108, 1.796477, -21.50501)
+PASS Return flight reaches next floor corridor (34.1517, 3.595518, -17.33073)
+PASS Two flights rise one complete storey (34.1517, 3.595518, -17.33073)

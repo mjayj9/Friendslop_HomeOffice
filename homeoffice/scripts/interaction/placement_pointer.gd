@@ -1,5 +1,6 @@
 extends RefCounted
 var token=""
+var stored_id=""
 var uv=Vector2.ZERO
 var inside=false
 var snap=true
@@ -9,7 +10,7 @@ func handle(world,e:Dictionary):
 	var phase=String(e.get("phase",""));var id=String(e.get("token",""))
 	if phase=="begin":
 		if id.length()!=36:return
-		world.end_build();token=id;inside=false;world.begin_build(String(e.get("kind","")));return
+		world.end_build();token=id;stored_id=String(e.get("unplacedId",""));inside=false;world.begin_build(String(e.get("kind","")));return
 	if token=="" or id!=token:return
 	if phase=="move":
 		uv=Vector2(float(e.get("u",-1)),float(e.get("v",-1)))
@@ -20,7 +21,7 @@ func handle(world,e:Dictionary):
 		if phase=="drop":
 			update(world)
 			if inside and world.build_valid:
-				world.request_action("place",{"kind":world.build_kind,"p":world.arr(world.build_point),"yaw":world.build_angle,"objectId":"","placementId":token})
+				world.request_action("place",{"kind":world.build_kind,"p":world.arr(world.build_point),"yaw":world.build_angle,"objectId":"","placementId":token,"unplacedId":stored_id})
 		world.end_build();token="";inside=false
 
 func update(world):

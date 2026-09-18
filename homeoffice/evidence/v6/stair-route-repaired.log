@@ -1,0 +1,14 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Public passage threshold is walkable without jumping (17.5, -0.174954, -2.956119)
+FAIL First stair flight reaches actual half landing (11.6, 1.744957, -34.3858)
+PASS Half landing rises by 1.8 metres (11.6, 1.744957, -34.3858)
+FAIL Half landing permits the turn (12.18554, 1.744897, -34.38574)
+PASS Return flight reaches next floor corridor (13.14699, -0.004046, -31.28598)
+FAIL Two flights rise one complete storey (13.14699, -0.004046, -31.28598)
+FAIL First stair flight reaches actual half landing (32.50051, 1.744958, -20.3858)
+PASS Half landing rises by 1.8 metres (32.50051, 1.744958, -20.3858)
+FAIL Half landing permits the turn (33.08665, 1.744897, -20.38574)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2641)

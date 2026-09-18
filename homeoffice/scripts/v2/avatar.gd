@@ -126,7 +126,7 @@ func simulate(dt:float):
 	command.x=original_x
 	command.z=original_z
 	if crouching:camera.position.y=1.10
-	if position.y < -.9:position=Vector3(-1.8,.05,10.6)
+	if position.y < -7 or (position.y < -.9 and (not world.get("campus") or world.campus.floor_at(position)=="")):position=Vector3(-1.8,.05,10.6)
 
 func animate(dt:float):
 	var now=Time.get_ticks_msec()

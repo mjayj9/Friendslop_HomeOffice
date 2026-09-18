@@ -22,3 +22,7 @@ docs/** -text
 homeoffice/evidence/v5/** -text -whitespace
 homeoffice/docs/v5/master-spec-ko.md -whitespace
 homeoffice/docs/v5/prior-audit-ko.md -whitespace
+
+# V6 captures and supplied specification preserve measured/original bytes.
+homeoffice/evidence/v6/** -text -whitespace
+homeoffice/docs/v6/master-spec-ko.md -whitespace

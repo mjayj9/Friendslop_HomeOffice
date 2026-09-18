@@ -1,0 +1,75 @@
+{
+  "buildId": "f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa",
+  "environment": "One Windows host; actual independent headless Chromium WebGL processes using D3D11. CPU/GPU resources shared. Not four separate user computers.",
+  "fourPeerSnapshots": [
+    {
+      "quality": "low",
+      "workspaceOpen": true,
+      "playing": false,
+      "drawCalls": 500,
+      "fps": 12,
+      "frameMs": 83.3333333333333,
+      "objects": 134,
+      "p95FrameMs": 83.5666656494141,
+      "players": 4,
+      "sampleFrames": 240,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "workspaceOpen": true,
+      "playing": false,
+      "drawCalls": 0,
+      "fps": 43,
+      "frameMs": 23.2558139534884,
+      "objects": 134,
+      "p95FrameMs": 29.1666660308838,
+      "players": 4,
+      "sampleFrames": 240,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "workspaceOpen": true,
+      "playing": false,
+      "drawCalls": 0,
+      "fps": 41,
+      "frameMs": 24.390243902439,
+      "objects": 134,
+      "p95FrameMs": 27.0833339691162,
+      "players": 4,
+      "sampleFrames": 240,
+      "staticMemory": 0
+    },
+    {
+      "quality": "low",
+      "workspaceOpen": false,
+      "playing": true,
+      "drawCalls": 490,
+      "fps": 15,
+      "frameMs": 66.6666666666667,
+      "objects": 134,
+      "p95FrameMs": 90.3666687011719,
+      "players": 4,
+      "sampleFrames": 240,
+      "staticMemory": 0
+    }
+  ],
+  "campusFinal": {
+    "quality": "low",
+    "drawCalls": 259,
+    "fps": 20,
+    "frameMs": 50,
+    "objects": 125,
+    "p95FrameMs": 55.2666664123535,
+    "players": 1,
+    "sampleFrames": 240,
+    "staticMemory": 0
+  },
+  "limitations": [
+    "UI transition can leave the previous performance sample; snapshots are not a controlled all-editing comparison.",
+    "staticMemory=0 from the Web export is unavailable rather than evidence of zero memory.",
+    "No 2/4/8-person combined microphone, caption, attachment, elevator and CCTV benchmark.",
+    "Walking frame rate remains below the acceptance target."
+  ]
+}

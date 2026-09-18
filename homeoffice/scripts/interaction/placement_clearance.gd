@@ -5,6 +5,7 @@ func valid(world,p,kind:String,point:Vector3,angle:float,move_id:String="") -> b
 	var transform=Transform3D(Basis(Vector3.UP,angle),point)
 	var volume=AABB(Vector3(-size.x*.5,.025,-size.z*.5),size-Vector3(0,.025,0))
 	var world_volume=transform*volume
+	if world.get("campus") and not world.campus.placement_clear(world_volume):return false
 	# The wardrobe's gallery doorway, lounge opening and fitting approach stay usable.
 	for reserve in [AABB(Vector3(-6.0,3.6,-1.2),Vector3(2,2.5,2.4)),AABB(Vector3(-10.7,3.6,-.85),Vector3(1.5,2.5,1.9)),AABB(Vector3(-9.3,3.6,-2.8),Vector3(1.2,2.2,3.2))]:
 		if world_volume.intersects(reserve):return false

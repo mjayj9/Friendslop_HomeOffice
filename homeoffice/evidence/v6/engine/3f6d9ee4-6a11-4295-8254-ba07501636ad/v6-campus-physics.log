@@ -1,0 +1,18 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS All eight authored storeys instantiate {  }
+PASS Remote floor request cannot call a car {  }
+PASS Physical lobby call accepted {  }
+PASS Car and occupied landing open together { "floor": "1F", "target": "1F", "state": "OPEN", "queue": [], "y": 0.0, "open": 1.0, "elapsed": 0.41666666666667, "tripId": 0, "reason": "", "occupants": [] }
+PASS Character is inside real cabin {  }
+PASS Cabin accepts destination {  }
+PASS Repeated destination is queued only once {  }
+PASS Car completes a trip and opens at 2F { "floor": "2F", "target": "2F", "state": "OPEN", "queue": [], "y": 3.59999990463257, "open": 1.0, "elapsed": 2.15, "tripId": 1, "reason": "", "occupants": ["lift-fixture"] }
+PASS Character rides AnimatableBody without extra position offset { "position": [21.0, 3.59531235694885, -34.2000007629395] }
+PASS Next destination accepted before obstruction {  }
+PASS Door obstruction reopens and preserves destination { "floor": "2F", "target": "3F", "state": "OPEN", "queue": ["3F"], "y": 3.59999990463257, "open": 1.0, "elapsed": 1.45, "tripId": 1, "reason": "문 앞의 사람과 물건을 확인하고 다시 엽니다.", "occupants": [] }
+PASS Handoff preserves queued trip without opening another landing {  }
+PASS Migration leaves source unchanged {  }
+PASS Conflicting furniture keeps its ID in unplaced storage {  }
+PASS Migration is idempotent {  }

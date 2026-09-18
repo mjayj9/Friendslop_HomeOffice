@@ -1,0 +1,16 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Eight fixed personal room slots have a hard boundary
+PASS Personal desk 1 is on authored fourth floor
+PASS Personal desk 2 is on authored fourth floor
+PASS Personal desk 3 is on authored fourth floor
+PASS Personal desk 4 is on authored fourth floor
+PASS Personal desk 5 is on authored fourth floor
+PASS Personal desk 6 is on authored fourth floor
+PASS Personal desk 7 is on authored fourth floor
+PASS Personal desk 8 is on authored fourth floor
+PASS Leaving and reconnecting never moves existing room furniture
+PASS Old personal item is copied once with the same identity
+PASS Old personal room height maps to fourth floor
+PASS Personal room migration is idempotent

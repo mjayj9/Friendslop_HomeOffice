@@ -1,0 +1,13 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Empty supported living-room floor accepts chair
+PASS Public corridor stays clear
+PASS Open terrace door reserves its passage
+PASS Sofa approach stays clear
+PASS Unsupported floating furniture is rejected
+PASS Administrator court cannot be bypassed by placement
+PASS Screen-centre ray hits actual chosen support
+PASS Cancel removes preview without spawning
+PASS Valid authoritative drop creates exactly one object
+PASS Duplicate request returns cached result without a second object

@@ -1,0 +1,1364 @@
+{
+  "checks": [
+    {
+      "label": "Public passage threshold is walkable without jumping",
+      "ok": true,
+      "position": [
+        17.5,
+        -0.17495433986187,
+        -2.95611929893494
+      ]
+    },
+    {
+      "label": "Flight rises from level 0",
+      "ok": true,
+      "position": [
+        11.6000003814697,
+        -1.80498480796814,
+        -35.3608283996582
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 0",
+      "ok": true,
+      "position": [
+        11.6000003814697,
+        -1.80498480796814,
+        -35.3608283996582
+      ]
+    },
+    {
+      "label": "Half landing turns at level 0",
+      "ok": true,
+      "position": [
+        13.1107521057129,
+        -1.80498480796814,
+        -35.5052719116211
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 0",
+      "ok": true,
+      "position": [
+        13.2517013549805,
+        -0.00448637455701828,
+        -31.3309478759766
+      ]
+    },
+    {
+      "label": "Full storey rise at level 0",
+      "ok": true,
+      "position": [
+        13.2517013549805,
+        -0.00448637455701828,
+        -31.3309478759766
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 0",
+      "ok": true,
+      "position": [
+        11.7358903884888,
+        -0.00448637455701828,
+        -31.1940593719482
+      ]
+    },
+    {
+      "label": "Flight rises from level 1",
+      "ok": true,
+      "position": [
+        11.5982208251953,
+        1.79533553123474,
+        -35.37109375
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 1",
+      "ok": true,
+      "position": [
+        11.5982208251953,
+        1.79533553123474,
+        -35.37109375
+      ]
+    },
+    {
+      "label": "Half landing turns at level 1",
+      "ok": true,
+      "position": [
+        13.1142663955688,
+        1.79533553123474,
+        -35.5061225891113
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 1",
+      "ok": true,
+      "position": [
+        13.2517805099487,
+        3.59533739089966,
+        -31.328685760498
+      ]
+    },
+    {
+      "label": "Full storey rise at level 1",
+      "ok": true,
+      "position": [
+        13.2517805099487,
+        3.59533739089966,
+        -31.328685760498
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 1",
+      "ok": true,
+      "position": [
+        11.7357196807861,
+        3.59533739089966,
+        -31.19384765625
+      ]
+    },
+    {
+      "label": "Flight rises from level 2",
+      "ok": true,
+      "position": [
+        11.5982217788696,
+        5.39533805847168,
+        -35.3714828491211
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 2",
+      "ok": true,
+      "position": [
+        11.5982217788696,
+        5.39533805847168,
+        -35.3714828491211
+      ]
+    },
+    {
+      "label": "Half landing turns at level 2",
+      "ok": true,
+      "position": [
+        13.1142826080322,
+        5.39533805847168,
+        -35.5061645507813
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 2",
+      "ok": true,
+      "position": [
+        13.2517786026001,
+        7.19533824920654,
+        -31.328556060791
+      ]
+    },
+    {
+      "label": "Full storey rise at level 2",
+      "ok": true,
+      "position": [
+        13.2517786026001,
+        7.19533824920654,
+        -31.328556060791
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 2",
+      "ok": true,
+      "position": [
+        11.7357187271118,
+        7.19533824920654,
+        -31.1938381195068
+      ]
+    },
+    {
+      "label": "Flight rises from level 3",
+      "ok": true,
+      "position": [
+        11.5982227325439,
+        8.99533939361572,
+        -35.3715629577637
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 3",
+      "ok": true,
+      "position": [
+        11.5982227325439,
+        8.99533939361572,
+        -35.3715629577637
+      ]
+    },
+    {
+      "label": "Half landing turns at level 3",
+      "ok": true,
+      "position": [
+        13.1142597198486,
+        8.99533939361572,
+        -35.506175994873
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 3",
+      "ok": true,
+      "position": [
+        13.2517786026001,
+        10.7953367233276,
+        -31.3285331726074
+      ]
+    },
+    {
+      "label": "Full storey rise at level 3",
+      "ok": true,
+      "position": [
+        13.2517786026001,
+        10.7953367233276,
+        -31.3285331726074
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 3",
+      "ok": true,
+      "position": [
+        11.7357215881348,
+        10.7953367233276,
+        -31.1938381195068
+      ]
+    },
+    {
+      "label": "Flight rises from level 4",
+      "ok": true,
+      "position": [
+        11.5975103378296,
+        12.5953397750854,
+        -35.3200531005859
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 4",
+      "ok": true,
+      "position": [
+        11.5975103378296,
+        12.5953397750854,
+        -35.3200531005859
+      ]
+    },
+    {
+      "label": "Half landing turns at level 4",
+      "ok": true,
+      "position": [
+        13.1148366928101,
+        12.5953397750854,
+        -35.5012626647949
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 4",
+      "ok": true,
+      "position": [
+        13.2519502639771,
+        14.395562171936,
+        -31.3392581939697
+      ]
+    },
+    {
+      "label": "Full storey rise at level 4",
+      "ok": true,
+      "position": [
+        13.2519502639771,
+        14.395562171936,
+        -31.3392581939697
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 4",
+      "ok": true,
+      "position": [
+        11.7354173660278,
+        14.395562171936,
+        -31.1948699951172
+      ]
+    },
+    {
+      "label": "Flight rises from level 5",
+      "ok": true,
+      "position": [
+        11.5981826782227,
+        16.1954231262207,
+        -35.3695297241211
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 5",
+      "ok": true,
+      "position": [
+        11.5981826782227,
+        16.1954231262207,
+        -35.3695297241211
+      ]
+    },
+    {
+      "label": "Half landing turns at level 5",
+      "ok": true,
+      "position": [
+        13.1143531799316,
+        16.1954231262207,
+        -35.5059814453125
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 5",
+      "ok": true,
+      "position": [
+        13.2517833709717,
+        17.9953365325928,
+        -31.3287467956543
+      ]
+    },
+    {
+      "label": "Full storey rise at level 5",
+      "ok": true,
+      "position": [
+        13.2517833709717,
+        17.9953365325928,
+        -31.3287467956543
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 5",
+      "ok": true,
+      "position": [
+        11.7357177734375,
+        17.9953365325928,
+        -31.1938591003418
+      ]
+    },
+    {
+      "label": "Flight rises from level 6",
+      "ok": true,
+      "position": [
+        11.5975103378296,
+        19.7952461242676,
+        -35.3200416564941
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 6",
+      "ok": true,
+      "position": [
+        11.5975103378296,
+        19.7952461242676,
+        -35.3200416564941
+      ]
+    },
+    {
+      "label": "Half landing turns at level 6",
+      "ok": true,
+      "position": [
+        13.1148357391357,
+        19.7952461242676,
+        -35.5012626647949
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 6",
+      "ok": true,
+      "position": [
+        13.2519512176514,
+        21.5955600738525,
+        -31.3393363952637
+      ]
+    },
+    {
+      "label": "Full storey rise at level 6",
+      "ok": true,
+      "position": [
+        13.2519512176514,
+        21.5955600738525,
+        -31.3393363952637
+      ]
+    },
+    {
+      "label": "Downward return flight 6",
+      "ok": true,
+      "position": [
+        13.2500791549683,
+        19.7954521179199,
+        -35.3250617980957
+      ]
+    },
+    {
+      "label": "Downward half landing 6",
+      "ok": true,
+      "position": [
+        11.7383337020874,
+        19.7954521179199,
+        -35.501781463623
+      ]
+    },
+    {
+      "label": "Downward main flight 6",
+      "ok": true,
+      "position": [
+        11.5980587005615,
+        17.9959011077881,
+        -31.3439445495605
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 6",
+      "ok": true,
+      "position": [
+        11.5980587005615,
+        17.9959011077881,
+        -31.3439445495605
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 6",
+      "ok": true,
+      "position": [
+        13.11452293396,
+        17.9959011077881,
+        -31.1953144073486
+      ]
+    },
+    {
+      "label": "Downward return flight 5",
+      "ok": true,
+      "position": [
+        13.2519559860229,
+        16.1950626373291,
+        -35.3617515563965
+      ]
+    },
+    {
+      "label": "Downward half landing 5",
+      "ok": true,
+      "position": [
+        11.735405921936,
+        16.1950626373291,
+        -35.5052261352539
+      ]
+    },
+    {
+      "label": "Downward main flight 5",
+      "ok": true,
+      "position": [
+        11.5980615615845,
+        14.3953332901001,
+        -31.3369026184082
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 5",
+      "ok": true,
+      "position": [
+        11.5980615615845,
+        14.3953332901001,
+        -31.3369026184082
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 5",
+      "ok": true,
+      "position": [
+        13.1145610809326,
+        14.3953332901001,
+        -31.1946430206299
+      ]
+    },
+    {
+      "label": "Downward return flight 4",
+      "ok": true,
+      "position": [
+        13.2519245147705,
+        12.5956048965454,
+        -35.3639755249023
+      ]
+    },
+    {
+      "label": "Downward half landing 4",
+      "ok": true,
+      "position": [
+        11.7354459762573,
+        12.5956048965454,
+        -35.5054397583008
+      ]
+    },
+    {
+      "label": "Downward main flight 4",
+      "ok": true,
+      "position": [
+        11.598069190979,
+        10.7952318191528,
+        -31.3364753723145
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 4",
+      "ok": true,
+      "position": [
+        11.598069190979,
+        10.7952318191528,
+        -31.3364753723145
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 4",
+      "ok": true,
+      "position": [
+        13.1145448684692,
+        10.7952318191528,
+        -31.1946029663086
+      ]
+    },
+    {
+      "label": "Downward return flight 3",
+      "ok": true,
+      "position": [
+        13.2519226074219,
+        8.99550342559814,
+        -35.364143371582
+      ]
+    },
+    {
+      "label": "Downward half landing 3",
+      "ok": true,
+      "position": [
+        11.7354526519775,
+        8.99550342559814,
+        -35.5054588317871
+      ]
+    },
+    {
+      "label": "Downward main flight 3",
+      "ok": true,
+      "position": [
+        11.5980710983276,
+        7.19512128829956,
+        -31.336296081543
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 3",
+      "ok": true,
+      "position": [
+        11.5980710983276,
+        7.19512128829956,
+        -31.336296081543
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 3",
+      "ok": true,
+      "position": [
+        13.1145353317261,
+        7.19512128829956,
+        -31.1945877075195
+      ]
+    },
+    {
+      "label": "Downward return flight 2",
+      "ok": true,
+      "position": [
+        13.2519178390503,
+        5.3953742980957,
+        -35.3643569946289
+      ]
+    },
+    {
+      "label": "Downward half landing 2",
+      "ok": true,
+      "position": [
+        11.7354650497437,
+        5.3953742980957,
+        -35.5054817199707
+      ]
+    },
+    {
+      "label": "Downward main flight 2",
+      "ok": true,
+      "position": [
+        11.5980768203735,
+        3.59498286247253,
+        -31.336067199707
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 2",
+      "ok": true,
+      "position": [
+        11.5980768203735,
+        3.59498286247253,
+        -31.336067199707
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 2",
+      "ok": true,
+      "position": [
+        13.1145391464233,
+        3.59498286247253,
+        -31.1945629119873
+      ]
+    },
+    {
+      "label": "Downward return flight 1",
+      "ok": true,
+      "position": [
+        13.2519273757935,
+        1.79523539543152,
+        -35.3637886047363
+      ]
+    },
+    {
+      "label": "Downward half landing 1",
+      "ok": true,
+      "position": [
+        11.7354507446289,
+        1.79523539543152,
+        -35.5054206848145
+      ]
+    },
+    {
+      "label": "Downward main flight 1",
+      "ok": true,
+      "position": [
+        11.5980777740479,
+        -0.00451181549578905,
+        -31.3358345031738
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 1",
+      "ok": true,
+      "position": [
+        11.5980777740479,
+        -0.00451181549578905,
+        -31.3358345031738
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 1",
+      "ok": true,
+      "position": [
+        13.1145486831665,
+        -0.00451181549578905,
+        -31.1945419311523
+      ]
+    },
+    {
+      "label": "Downward return flight 0",
+      "ok": true,
+      "position": [
+        13.2519283294678,
+        -1.80490362644196,
+        -35.3637466430664
+      ]
+    },
+    {
+      "label": "Downward half landing 0",
+      "ok": true,
+      "position": [
+        11.7354516983032,
+        -1.80490362644196,
+        -35.5054206848145
+      ]
+    },
+    {
+      "label": "Downward main flight 0",
+      "ok": true,
+      "position": [
+        11.5980815887451,
+        -3.60465097427368,
+        -31.3356018066406
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 0",
+      "ok": true,
+      "position": [
+        11.5980815887451,
+        -3.60465097427368,
+        -31.3356018066406
+      ]
+    },
+    {
+      "label": "Flight rises from level 0",
+      "ok": true,
+      "position": [
+        32.5,
+        -1.80502033233643,
+        -21.3582515716553
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 0",
+      "ok": true,
+      "position": [
+        32.5,
+        -1.80502033233643,
+        -21.3582515716553
+      ]
+    },
+    {
+      "label": "Half landing turns at level 0",
+      "ok": true,
+      "position": [
+        34.010799407959,
+        -1.80502033233643,
+        -21.5050220489502
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 0",
+      "ok": true,
+      "position": [
+        34.1517028808594,
+        -0.00449289288371801,
+        -17.3313751220703
+      ]
+    },
+    {
+      "label": "Full storey rise at level 0",
+      "ok": true,
+      "position": [
+        34.1517028808594,
+        -0.00449289288371801,
+        -17.3313751220703
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 0",
+      "ok": true,
+      "position": [
+        32.6359443664551,
+        -0.00449289288371801,
+        -17.1940994262695
+      ]
+    },
+    {
+      "label": "Flight rises from level 1",
+      "ok": true,
+      "position": [
+        32.4982261657715,
+        1.79533636569977,
+        -21.3711624145508
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 1",
+      "ok": true,
+      "position": [
+        32.4982261657715,
+        1.79533636569977,
+        -21.3711624145508
+      ]
+    },
+    {
+      "label": "Half landing turns at level 1",
+      "ok": true,
+      "position": [
+        34.0142555236816,
+        1.79533636569977,
+        -21.5061378479004
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 1",
+      "ok": true,
+      "position": [
+        34.1517677307129,
+        3.59524631500244,
+        -17.3284740447998
+      ]
+    },
+    {
+      "label": "Full storey rise at level 1",
+      "ok": true,
+      "position": [
+        34.1517677307129,
+        3.59524631500244,
+        -17.3284740447998
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 1",
+      "ok": true,
+      "position": [
+        32.6357612609863,
+        3.59524631500244,
+        -17.1938285827637
+      ]
+    },
+    {
+      "label": "Flight rises from level 2",
+      "ok": true,
+      "position": [
+        32.4975242614746,
+        5.39501762390137,
+        -21.3201236724854
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 2",
+      "ok": true,
+      "position": [
+        32.4975242614746,
+        5.39501762390137,
+        -21.3201236724854
+      ]
+    },
+    {
+      "label": "Half landing turns at level 2",
+      "ok": true,
+      "position": [
+        34.0148696899414,
+        5.39501762390137,
+        -21.5012702941895
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 2",
+      "ok": true,
+      "position": [
+        34.1519546508789,
+        7.19525241851807,
+        -17.3393611907959
+      ]
+    },
+    {
+      "label": "Full storey rise at level 2",
+      "ok": true,
+      "position": [
+        34.1519546508789,
+        7.19525241851807,
+        -17.3393611907959
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 2",
+      "ok": true,
+      "position": [
+        32.6354560852051,
+        7.19525241851807,
+        -17.1948776245117
+      ]
+    },
+    {
+      "label": "Flight rises from level 3",
+      "ok": true,
+      "position": [
+        32.4981842041016,
+        8.99531841278076,
+        -21.3695507049561
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 3",
+      "ok": true,
+      "position": [
+        32.4981842041016,
+        8.99531841278076,
+        -21.3695507049561
+      ]
+    },
+    {
+      "label": "Half landing turns at level 3",
+      "ok": true,
+      "position": [
+        34.0143394470215,
+        8.99531841278076,
+        -21.5059776306152
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 3",
+      "ok": true,
+      "position": [
+        34.151782989502,
+        10.7952432632446,
+        -17.3287620544434
+      ]
+    },
+    {
+      "label": "Full storey rise at level 3",
+      "ok": true,
+      "position": [
+        34.151782989502,
+        10.7952432632446,
+        -17.3287620544434
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 3",
+      "ok": true,
+      "position": [
+        32.6357574462891,
+        10.7952432632446,
+        -17.1938571929932
+      ]
+    },
+    {
+      "label": "Flight rises from level 4",
+      "ok": true,
+      "position": [
+        32.4975204467773,
+        12.5950164794922,
+        -21.3200569152832
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 4",
+      "ok": true,
+      "position": [
+        32.4975204467773,
+        12.5950164794922,
+        -21.3200569152832
+      ]
+    },
+    {
+      "label": "Half landing turns at level 4",
+      "ok": true,
+      "position": [
+        34.0148544311523,
+        12.5950164794922,
+        -21.5012645721436
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 4",
+      "ok": true,
+      "position": [
+        34.1519508361816,
+        14.3950366973877,
+        -17.3392868041992
+      ]
+    },
+    {
+      "label": "Full storey rise at level 4",
+      "ok": true,
+      "position": [
+        34.1519508361816,
+        14.3950366973877,
+        -17.3392868041992
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 4",
+      "ok": true,
+      "position": [
+        32.6354560852051,
+        14.3950366973877,
+        -17.1948680877686
+      ]
+    },
+    {
+      "label": "Flight rises from level 5",
+      "ok": true,
+      "position": [
+        32.4981842041016,
+        16.1953182220459,
+        -21.3694972991943
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 5",
+      "ok": true,
+      "position": [
+        32.4981842041016,
+        16.1953182220459,
+        -21.3694972991943
+      ]
+    },
+    {
+      "label": "Half landing turns at level 5",
+      "ok": true,
+      "position": [
+        34.0143699645996,
+        16.1953182220459,
+        -21.5059719085693
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 5",
+      "ok": true,
+      "position": [
+        34.151782989502,
+        17.9952430725098,
+        -17.3287906646729
+      ]
+    },
+    {
+      "label": "Full storey rise at level 5",
+      "ok": true,
+      "position": [
+        34.151782989502,
+        17.9952430725098,
+        -17.3287906646729
+      ]
+    },
+    {
+      "label": "Floor landing connects next flight 5",
+      "ok": true,
+      "position": [
+        32.6357307434082,
+        17.9952430725098,
+        -17.1938591003418
+      ]
+    },
+    {
+      "label": "Flight rises from level 6",
+      "ok": true,
+      "position": [
+        32.4975204467773,
+        19.7950191497803,
+        -21.3200397491455
+      ]
+    },
+    {
+      "label": "Actual half landing height at level 6",
+      "ok": true,
+      "position": [
+        32.4975204467773,
+        19.7950191497803,
+        -21.3200397491455
+      ]
+    },
+    {
+      "label": "Half landing turns at level 6",
+      "ok": true,
+      "position": [
+        34.0148544311523,
+        19.7950191497803,
+        -21.5012645721436
+      ]
+    },
+    {
+      "label": "Return flight reaches next floor 6",
+      "ok": true,
+      "position": [
+        34.1519470214844,
+        21.5950393676758,
+        -17.3392753601074
+      ]
+    },
+    {
+      "label": "Full storey rise at level 6",
+      "ok": true,
+      "position": [
+        34.1519470214844,
+        21.5950393676758,
+        -17.3392753601074
+      ]
+    },
+    {
+      "label": "Downward return flight 6",
+      "ok": true,
+      "position": [
+        34.1500854492188,
+        19.79514503479,
+        -21.3247470855713
+      ]
+    },
+    {
+      "label": "Downward half landing 6",
+      "ok": true,
+      "position": [
+        32.6383399963379,
+        19.79514503479,
+        -21.5017490386963
+      ]
+    },
+    {
+      "label": "Downward main flight 6",
+      "ok": true,
+      "position": [
+        32.4980659484863,
+        17.9955940246582,
+        -17.3434352874756
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 6",
+      "ok": true,
+      "position": [
+        32.4980659484863,
+        17.9955940246582,
+        -17.3434352874756
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 6",
+      "ok": true,
+      "position": [
+        34.0145149230957,
+        17.9955940246582,
+        -17.1952629089355
+      ]
+    },
+    {
+      "label": "Downward return flight 5",
+      "ok": true,
+      "position": [
+        34.1519470214844,
+        16.1951847076416,
+        -21.3622627258301
+      ]
+    },
+    {
+      "label": "Downward half landing 5",
+      "ok": true,
+      "position": [
+        32.635383605957,
+        16.1951847076416,
+        -21.5052738189697
+      ]
+    },
+    {
+      "label": "Downward main flight 5",
+      "ok": true,
+      "position": [
+        32.4980697631836,
+        14.3954553604126,
+        -17.336576461792
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 5",
+      "ok": true,
+      "position": [
+        32.4980697631836,
+        14.3954553604126,
+        -17.336576461792
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 5",
+      "ok": true,
+      "position": [
+        34.0145263671875,
+        14.3954553604126,
+        -17.1946125030518
+      ]
+    },
+    {
+      "label": "Downward return flight 4",
+      "ok": true,
+      "position": [
+        34.151927947998,
+        12.59508228302,
+        -21.3637714385986
+      ]
+    },
+    {
+      "label": "Downward half landing 4",
+      "ok": true,
+      "position": [
+        32.6354904174805,
+        12.59508228302,
+        -21.5054244995117
+      ]
+    },
+    {
+      "label": "Downward main flight 4",
+      "ok": true,
+      "position": [
+        32.4980812072754,
+        10.7953538894653,
+        -17.3356075286865
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 4",
+      "ok": true,
+      "position": [
+        32.4980812072754,
+        10.7953538894653,
+        -17.3356075286865
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 4",
+      "ok": true,
+      "position": [
+        34.0145149230957,
+        10.7953538894653,
+        -17.1945209503174
+      ]
+    },
+    {
+      "label": "Downward return flight 3",
+      "ok": true,
+      "position": [
+        34.1519241333008,
+        8.99498081207275,
+        -21.3639392852783
+      ]
+    },
+    {
+      "label": "Downward half landing 3",
+      "ok": true,
+      "position": [
+        32.6354866027832,
+        8.99498081207275,
+        -21.5054378509521
+      ]
+    },
+    {
+      "label": "Downward main flight 3",
+      "ok": true,
+      "position": [
+        32.4980735778809,
+        7.19524335861206,
+        -17.3362293243408
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 3",
+      "ok": true,
+      "position": [
+        32.4980735778809,
+        7.19524335861206,
+        -17.3362293243408
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 3",
+      "ok": true,
+      "position": [
+        34.0145034790039,
+        7.19524335861206,
+        -17.1945762634277
+      ]
+    },
+    {
+      "label": "Downward return flight 2",
+      "ok": true,
+      "position": [
+        34.1519203186035,
+        5.3954963684082,
+        -21.3641471862793
+      ]
+    },
+    {
+      "label": "Downward half landing 2",
+      "ok": true,
+      "position": [
+        32.6354522705078,
+        5.3954963684082,
+        -21.5054569244385
+      ]
+    },
+    {
+      "label": "Downward main flight 2",
+      "ok": true,
+      "position": [
+        32.4980735778809,
+        3.59510493278503,
+        -17.3362731933594
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 2",
+      "ok": true,
+      "position": [
+        32.4980735778809,
+        3.59510493278503,
+        -17.3362731933594
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 2",
+      "ok": true,
+      "position": [
+        34.014533996582,
+        3.59510493278503,
+        -17.1945819854736
+      ]
+    },
+    {
+      "label": "Downward return flight 1",
+      "ok": true,
+      "position": [
+        34.1519165039063,
+        1.79535734653473,
+        -21.3643817901611
+      ]
+    },
+    {
+      "label": "Downward half landing 1",
+      "ok": true,
+      "position": [
+        32.6354598999023,
+        1.79535734653473,
+        -21.5054779052734
+      ]
+    },
+    {
+      "label": "Downward main flight 1",
+      "ok": true,
+      "position": [
+        32.4980773925781,
+        -0.00503439549356699,
+        -17.3360404968262
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 1",
+      "ok": true,
+      "position": [
+        32.4980773925781,
+        -0.00503439549356699,
+        -17.3360404968262
+      ]
+    },
+    {
+      "label": "Floor landing connects descending flight 1",
+      "ok": true,
+      "position": [
+        34.014518737793,
+        -0.00503439549356699,
+        -17.1945610046387
+      ]
+    },
+    {
+      "label": "Downward return flight 0",
+      "ok": true,
+      "position": [
+        34.1519241333008,
+        -1.80478179454803,
+        -21.3638134002686
+      ]
+    },
+    {
+      "label": "Downward half landing 0",
+      "ok": true,
+      "position": [
+        32.6354789733887,
+        -1.80478179454803,
+        -21.5054225921631
+      ]
+    },
+    {
+      "label": "Downward main flight 0",
+      "ok": true,
+      "position": [
+        32.4980812072754,
+        -3.60452914237976,
+        -17.335807800293
+      ]
+    },
+    {
+      "label": "Descent stops on correct floor 0",
+      "ok": true,
+      "position": [
+        32.4980812072754,
+        -3.60452914237976,
+        -17.335807800293
+      ]
+    }
+  ],
+  "fixture": true
+}

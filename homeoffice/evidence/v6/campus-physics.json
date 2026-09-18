@@ -1,0 +1,145 @@
+{
+  "checks": [
+    {
+      "detail": {
+
+      },
+      "label": "All eight authored storeys instantiate",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Remote floor request cannot call a car",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Physical lobby call accepted",
+      "ok": true
+    },
+    {
+      "detail": {
+        "elapsed": 0.416666666666667,
+        "floor": "1F",
+        "occupants": [],
+        "open": 1.0,
+        "queue": [],
+        "reason": "",
+        "state": "OPEN",
+        "target": "1F",
+        "tripId": 0,
+        "y": 0.0
+      },
+      "label": "Car and occupied landing open together",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Character is inside real cabin",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Cabin accepts destination",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Repeated destination is queued only once",
+      "ok": true
+    },
+    {
+      "detail": {
+        "elapsed": 2.15,
+        "floor": "2F",
+        "occupants": [
+          "lift-fixture"
+        ],
+        "open": 1.0,
+        "queue": [],
+        "reason": "",
+        "state": "OPEN",
+        "target": "2F",
+        "tripId": 1,
+        "y": 3.59999990463257
+      },
+      "label": "Car completes a trip and opens at 2F",
+      "ok": true
+    },
+    {
+      "detail": {
+        "position": [
+          21.0,
+          3.59531235694885,
+          -34.2000007629395
+        ]
+      },
+      "label": "Character rides AnimatableBody without extra position offset",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Next destination accepted before obstruction",
+      "ok": true
+    },
+    {
+      "detail": {
+        "elapsed": 1.45,
+        "floor": "2F",
+        "occupants": [],
+        "open": 1.0,
+        "queue": [
+          "3F"
+        ],
+        "reason": "문 앞의 사람과 물건을 확인하고 다시 엽니다.",
+        "state": "OPEN",
+        "target": "3F",
+        "tripId": 1,
+        "y": 3.59999990463257
+      },
+      "label": "Door obstruction reopens and preserves destination",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Handoff preserves queued trip without opening another landing",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Migration leaves source unchanged",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Conflicting furniture keeps its ID in unplaced storage",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Migration is idempotent",
+      "ok": true
+    }
+  ],
+  "fixture": true
+}

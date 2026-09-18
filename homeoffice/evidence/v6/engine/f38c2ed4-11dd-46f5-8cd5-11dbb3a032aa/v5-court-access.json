@@ -1,0 +1,250 @@
+{
+  "checks": [
+    {
+      "detail": {
+
+      },
+      "label": "Global gun exists in retained world",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denies open-door",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denies jump",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denies restore",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denies spawn",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denies host-transfer",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "basketball denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denies open-door",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denies jump",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denies restore",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denies spawn",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denies host-transfer",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "football denial preserves global weapon",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Simulation host and nickname are not administrator",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Explicit in-memory operator fixture enters basketball",
+      "ok": true
+    },
+    {
+      "detail": {
+        "clip": "basketball_ready"
+      },
+      "label": "No-ball ready pose before a match: basketball",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "No phantom ball action: basketball",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Profile enters once: basketball",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Dedicated camera: basketball",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Explicit in-memory operator fixture enters football",
+      "ok": true
+    },
+    {
+      "detail": {
+        "clip": "football_ready"
+      },
+      "label": "No-ball ready pose before a match: football",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "No phantom ball action: football",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Profile enters once: football",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Dedicated camera: football",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Leaving courts restores previous camera once",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Expired authority ejects safely",
+      "ok": true
+    },
+    {
+      "detail": {
+
+      },
+      "label": "Session reset removes authority",
+      "ok": true
+    }
+  ],
+  "kind": "Local explicit fixture; no operational administrator account verified"
+}

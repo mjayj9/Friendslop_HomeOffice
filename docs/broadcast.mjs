@@ -3,7 +3,7 @@ export function validateAnnouncements(values){
  const ids=new Set();return values.map(v=>{if(!v||Object.getPrototypeOf(v)!==Object.prototype||Object.keys(v).some(k=>!['id','text','scope','createdAt'].includes(k))||typeof v.id!=='string'||v.id.length>80||ids.has(v.id)||typeof v.text!=='string'||!v.text.trim()||v.text.length>400||/[\x00-\x1f<>]/.test(v.text)||!BROADCAST_SCOPES.includes(v.scope)||typeof v.createdAt!=='string'||!Number.isFinite(Date.parse(v.createdAt)))throw Error('공지 형식이 올바르지 않습니다.');ids.add(v.id);return {...v,text:v.text.trim()};});
 }
 export const BROADCAST_SCOPES=['session','home','office','play'];
-export function atBroadcastConsole(player){return !!player&&Array.isArray(player.p)&&Math.hypot(player.p[0]-5,player.p[1],player.p[2]+9.7)<3;}
+export function atBroadcastConsole(player){return !!player&&Array.isArray(player.p)&&(Math.hypot(player.p[0]-5,player.p[1],player.p[2]+9.7)<3||Math.hypot(player.p[0]-27,player.p[1]-14.4,player.p[2]+27.4)<2.7);}
 export function broadcastAudience(scope,player){
  if(!player)return false;
  if(scope==='session')return true;

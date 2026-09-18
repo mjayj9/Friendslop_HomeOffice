@@ -1,7 +1,7 @@
 extends RefCounted
 ## Room locks and ADMIN_ONLY courts are distinct. Only browser-verified short leases
 ## populate administrators; host identity, nicknames, saved files and open doors do not.
-const ADMIN_ONLY=["basketball","football"]
+const ADMIN_ONLY=["basketball","football","office-5-operations","office-5-broadcast"]
 var locks={}
 var administrators={}
 var policy_expires_at=0.0
@@ -26,6 +26,11 @@ func blocks_entry(from_zone:String,to_zone:String,actor:String="") -> bool:
 	return from_zone!=to_zone and bool(locks.get(to_zone,false)) and to_zone not in ["hall","upper_hall","personal-gallery","garden"]
 
 func restricted_zone(world,point:Vector3,margin=0.0) -> String:
+	# The fifth-floor public hall and lift lobby remain accessible.
+	if point.y>=14.15 and point.y<17.8:
+		for region in [{"id":"office-5-operations","r":[10.2,-22.6,21.5,-16.4]},{"id":"office-5-broadcast","r":[24.2,-31.3,30.4,-24]}]:
+			var r=region.r
+			if point.x>=r[0]-margin and point.x<=r[2]+margin and point.z>=r[1]-margin and point.z<=r[3]+margin:return region.id
 	# Extruded XZ volumes cover jumps, elevated spawns and restored positions.
 	for room in world.layout.rooms:
 		if room.id not in ADMIN_ONLY:continue
@@ -48,5 +53,5 @@ func guard(world,player,before:Vector3):
 		if restricted=="":player.set_meta("last_public_position",player.position)
 		return
 	if denied and Time.get_ticks_msec()>int(player.get_meta("lock_notice_until",0)):
-		world.reject(player.actor_id,"농구·축구는 운영 관리자 전용입니다. 관리자 신원 확인이 필요합니다." if restricted!="" else "잠긴 방입니다. 관리자가 열면 입장할 수 있습니다.")
+		world.reject(player.actor_id,"이 공간은 운영 관리자 전용입니다. 관리자 신원 확인이 필요합니다." if restricted!="" else "잠긴 방입니다. 관리자가 열면 입장할 수 있습니다.")
 		player.set_meta("lock_notice_until",Time.get_ticks_msec()+2500)

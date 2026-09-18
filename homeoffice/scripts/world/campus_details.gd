@@ -10,7 +10,7 @@ var fan:Node3D
 var scene:Node3D
 
 func _ready():
-	scene=load("res://assets/v2/campus-details-v3.glb").instantiate();add_child(scene)
+	scene=load("res://assets/v6/facilities-v6.glb").instantiate();add_child(scene)
 	for row in [["flush_ground",Vector3(12.10,1.03,-10.32),Vector3(.18,.12,.18)],["flush_upper",Vector3(-11.9,4.63,8.68),Vector3(.18,.12,.18)],["vent",Vector3(11.2,1.25,-6.2),Vector3(.15,.22,.12)],["toilet_ground",Vector3(12,.50,-10),Vector3(.55,.65,.75)],["toilet_upper",Vector3(-12,4.10,9),Vector3(.55,.65,.75)],["tap_ground",Vector3(13.35,1.0,-10),Vector3(.95,.5,.6)],["tap_upper",Vector3(-10.65,4.6,9),Vector3(.95,.5,.6)],["home_light",Vector3(-5.1,1.25,10.2),Vector3(.15,.22,.12)],["office_light",Vector3(1.65,1.25,10.2),Vector3(.15,.22,.12)],["bath_light",Vector3(10.8,1.25,-6.2),Vector3(.15,.22,.12)],["broadcast_console",Vector3(5,1.1,-9.7),Vector3(2.4,.65,1)],["meeting_computer",Vector3(6.5,1.1,6.7),Vector3(.7,.5,.3)]]:
 		var body=StaticBody3D.new();body.position=row[1];body.set_meta("object_id",row[0]);body.collision_layer=1
 		var shape=CollisionShape3D.new();var box=BoxShape3D.new();box.size=row[2];shape.shape=box;body.add_child(shape);add_child(body);fixtures[row[0]]=body

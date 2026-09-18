@@ -55,3 +55,39 @@ button:active{transform:translateY(1px)}button:disabled{cursor:not-allowed;opaci
 #placementPanel[hidden]{display:none}.placement-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.placement-heading h2{margin:0;font-size:23px}.placement-heading button{padding:8px 12px}.placement-options{display:flex;align-items:center;gap:8px;margin:12px 0}.placement-options label{font-size:12px}.placement-options button{font-size:12px;padding:8px}.placement-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.placement-card{display:flex;flex-direction:column;align-items:center;background:#fffaf2;border:1px solid #d6d8c9;color:#243c32;padding:8px;cursor:grab;touch-action:none}.placement-card[hidden]{display:none}.placement-card img{width:100%;aspect-ratio:1;object-fit:contain;pointer-events:none}.placement-card small{font-size:10px;font-weight:400;margin-top:5px}.placement-card strong{font-size:14px}.dragging .placement-card{cursor:grabbing}#placementStatus{font-size:13px;min-height:38px;color:#7d4932}#placementStatus[data-valid="true"]{color:#217650}#placementPanel input[type="search"]{width:100%;box-sizing:border-box}
 
 #installObjects{pointer-events:auto;white-space:nowrap}
+
+/* V6 focused collaboration keeps the live 3D edges visible. */
+#tool:has(#meetingWorkspace:not([hidden])) .tool-panel{width:min(1180px,92vw);max-width:1180px;background:#faf4e8;color:#344044;border-radius:18px;border:1px solid #d9c7ad;box-shadow:0 18px 60px #20342a44}
+.workspace-heading{display:flex;align-items:center;gap:18px;padding:4px 0 14px;border-bottom:1px solid #d9c7ad}.workspace-heading>div{flex:1}.workspace-heading h2{margin:3px 0;font-size:25px}.workspace-heading small{color:#647b61;letter-spacing:.05em}.workspace-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.workspace-tabs button{background:#e9dfce;color:#344044;border:1px solid #dacbb5;padding:10px 14px;border-radius:9px}
+#meetingStatus{padding:10px 14px;background:#e5eedf;border-radius:8px;line-height:1.5;font-size:14px}#meetingPeople{font-size:14px;color:#527264;min-height:20px}
+#meetingWorkspace .ql-container{min-height:300px;background:#fffefa;font-size:17px;line-height:1.7}#meetingWorkspace .ql-toolbar{background:#efe6d7}#meetingWorkspace canvas{width:100%;max-height:58vh;object-fit:contain;border:1px solid #c8bda7;border-radius:9px;touch-action:none}#meetingWorkspace [data-control=cardSpace]{min-height:480px;position:relative}
+#meetingWorkspace textarea,#meetingWorkspace input{background:#fffefa;color:#344044}#meetingWorkspace form{display:flex;gap:8px;flex-wrap:wrap}.resource-list article{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #d9c7ad}.collaborator-presence{display:flex;gap:8px;min-height:24px;margin:8px 0}.collaborator-presence span{border-left:4px solid;padding:3px 8px;background:#f0eadf;border-radius:4px;font-size:13px}.ql-container{position:relative}.collaborator-cursors{position:absolute;inset:0;pointer-events:none}.collaborator-caret{position:absolute;border-left:2px solid;min-height:16px;pointer-events:none}
+
+.campus-panel{position:fixed;z-index:45;right:28px;top:90px;width:min(430px,90vw);max-height:80vh;overflow:auto;background:#faf3e5;color:#344044;border:1px solid #bc875f;border-radius:20px;padding:24px;box-shadow:0 12px 50px #34404444}.campus-panel[hidden]{display:none}.campus-panel header{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.campus-panel h2{font-size:23px;margin:4px 0;flex:1}.campus-panel .eyebrow{width:100%;color:#436d61;letter-spacing:.1em;font-size:12px}.campus-floors{display:grid;gap:9px}.campus-floors button{text-align:left;background:#f1e5d2;color:#344044;padding:12px 18px;border-radius:9px;border:1px solid #d7b68a}.campus-floors button.current{border-color:#436d61}.campus-floors button.queued{background:#436d61;color:#faf3e5}
+
+#tool:has(#meetingWorkspace:not([hidden])){padding:30px 0;align-items:start;overflow:auto}#tool:has(#meetingWorkspace:not([hidden])) .tool-panel{max-height:none;height:auto;margin:0 auto;padding:22px}#meetingWorkspace [id$=-collaboration]>.tabs{display:none}#meetingWorkspace [data-control=meetingPane]>label{display:block;margin:14px 0}#meetingWorkspace [data-control=agenda],#meetingWorkspace [data-control=decisions]{display:block;width:100%;box-sizing:border-box;min-height:110px;margin-top:8px;padding:12px;border:1px solid #c7bba7;border-radius:8px;font:inherit;line-height:1.6}#meetingWorkspace [data-control=reportPane]>.row span{display:none}#meetingWorkspace [data-control=cardSpace]{overflow:auto}#meetingWorkspace .workspace-tabs button[aria-current=true]{background:#436d61;color:#fffaf2}
+
+#meetingWorkspace canvas{height:auto;max-height:none;aspect-ratio:16/9}
+
+#meetingPeople{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 12px}#meetingPeople>span{padding:5px 10px;border:1px solid #c7cdbd;border-radius:16px;background:#eff2e8}#meetingPeople button{font-size:11px;padding:3px 7px;margin-left:8px;background:transparent;color:#74594c}
+
+#tool:has(#meetingWorkspace:not([hidden])){backdrop-filter:none}
+#tool:has(#meetingWorkspace:not([hidden])) .tool-panel{padding:16px 22px;max-height:94vh}
+#tool:has(#meetingWorkspace:not([hidden])) .tool-panel>p.fine{display:none}
+#tool:has(#meetingWorkspace:not([hidden])) .tool-panel>.row{position:sticky;top:-16px;z-index:3;background:#faf4e8;min-height:40px}
+#tool:has(#meetingWorkspace:not([hidden])) #toolTitle{font-size:18px;margin:0 auto 0 0}
+#meetingWorkspace .workspace-heading{padding:7px 0;gap:10px}
+#meetingWorkspace .workspace-heading h2{font-size:18px;margin:3px 0}
+#meetingWorkspace .workspace-heading label{margin:0}
+#meetingWorkspace .workspace-heading small{font-size:10px}
+#meetingWorkspace #meetingStatus{font-size:12px;margin:5px 0;padding:5px 10px}
+#meetingWorkspace #meetingPeople{font-size:12px;margin:5px 0}
+#meetingWorkspace #meetingPeople>span{padding:2px 8px}
+#meetingWorkspace .workspace-tabs{margin:7px 0}
+#meetingWorkspace button{padding:8px 12px}
+#meetingWorkspace [data-control=slideCanvas]{display:block;width:auto;max-width:100%;height:min(47vh,540px);max-height:none;aspect-ratio:16/9;margin:12px auto 0}
+#meetingWorkspace [data-view=presentation] .row{gap:8px}
+#meetingWorkspace [data-control=slideUpload]{max-width:220px}
+#meetingWorkspace [data-control=slideStatus]{margin:3px 0;font-size:12px}
+
+#tool:has(#meetingWorkspace:not([hidden])){background:#e9e3d4}

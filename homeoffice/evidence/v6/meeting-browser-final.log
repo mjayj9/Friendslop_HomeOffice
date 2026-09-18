@@ -1,0 +1,10 @@
+PASS Four real peers join one meeting and type into one report
+PASS Korean composition survives another peer inserting text
+PASS Four participants share a real image slide, laser, question and task
+PASS Two concurrent meetings isolate report, board and agenda
+PASS Undo removes my edit while preserving the other participant
+PASS Disconnected peer keeps an offline draft and rejoins by state-vector merge
+PASS Meeting participation revocation rejects a stale peer rejoin
+PASS Export contains both meetings and can be decoded
+PASS Fresh session imports both meeting results and the verified slide attachment
+{"buildId":"f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa","completed":true,"checks":[{"name":"Four real peers join one meeting and type into one report","ok":true},{"name":"Korean composition survives another peer inserting text","ok":true},{"name":"Four participants share a real image slide, laser, question and task","ok":true},{"name":"Two concurrent meetings isolate report, board and agenda","ok":true},{"name":"Undo removes my edit while preserving the other participant","ok":true},{"name":"Disconnected peer keeps an offline draft and rejoins by state-vector merge","ok":true},{"name":"Meeting participation revocation rejects a stale peer rejoin","ok":true},{"name":"Export contains both meetings and can be decoded","ok":true},{"name":"Fresh session imports both meeting results and the verified slide attachment","ok":true}],"errors":[]}

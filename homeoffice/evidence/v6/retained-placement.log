@@ -1,0 +1,10 @@
+PASS Exact entry notice is display-only
+PASS Button opens side panel with real model thumbnails
+PASS Actual pointer ray produces a valid world preview
+PASS R rotates preview without camera or actor movement
+PASS Drop creates exactly one authoritative object
+PASS Panel drop cancels without object creation
+PASS Escape cancels drag and keeps the panel usable
+PASS Real browser tab focus loss cancels drag
+PASS Dragging while holding a gun emits no shot
+{"buildId":"f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa","completed":true,"checks":[["Exact entry notice is display-only",true],["Button opens side panel with real model thumbnails",true],["Actual pointer ray produces a valid world preview",true],["R rotates preview without camera or actor movement",true],["Drop creates exactly one authoritative object",true],["Panel drop cancels without object creation",true],["Escape cancels drag and keeps the panel usable",true],["Real browser tab focus loss cancels drag",true],["Held global gun still fires in HOME before UI isolation test",true],["Dragging while holding a gun emits no shot",true]],"errors":[]}

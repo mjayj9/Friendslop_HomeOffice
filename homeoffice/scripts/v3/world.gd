@@ -3,6 +3,9 @@ extends "res://scripts/v2/world.gd"
 const Combat=preload("res://scripts/combat/combat_state.gd")
 const BallProfile=preload("res://scripts/sports/ball_profile.gd")
 const Capabilities=preload("res://scripts/interaction/prop_capabilities.gd")
+var migration=preload("res://scripts/world/campus_migration.gd").new()
+var unplaced=[]
+var campus=preload("res://scripts/world/crafted_campus.gd").new()
 var wardrobe=preload("res://scripts/wardrobe/station.gd").new()
 var toy_effects
 var combat=Combat.new()
@@ -29,10 +32,16 @@ func _ready():
 	facilities=load("res://scripts/world/campus_details.gd").new();add_child(facilities)
 	super._ready()
 	add_child(wardrobe);wardrobe.setup(self)
+	add_child(campus);campus.setup(self)
+	for index in room_slots.size():campus.add_personal(index,true)
 	add_child(load("res://scripts/world/meeting_finish.gd").new())
 	add_child(load("res://scripts/sports/hoop_feedback.gd").new())
 	rounds.tag={"phase":"practice","mode":"practice","seconds":0.0}
 	spawn_object({"id":"meeting-laser","kind":"laser","p":[8.6,1.0,8.2],"yaw":0.0,"state":{}})
+
+func add_room(index:int,furnish:bool=true):campus.add_personal(index,furnish)
+
+func update_room_end():pass
 
 func model(kind:String) -> Node3D:
 	return load("res://assets/v2/laser-v3.glb").instantiate() if kind=="laser" else super.model(kind)
@@ -124,6 +133,17 @@ func execute_action(id:String,m:Dictionary):
 	if order<=int(actions.get(id,-1)):return
 	var p=players[id]
 	var action=String(m.get("action",""))
+	if action=="place" and String(m.get("data",{}).get("unplacedId",""))!="":
+		actions[id]=order
+		var reason=migration.place_stored(self,p,m.data)
+		if reason!="":reject(id,reason)
+		return
+	if action=="lift_request":
+		actions[id]=order
+		var reason=campus.lifts.request(id,String(m.get("data",{}).get("liftId","")),String(m.get("data",{}).get("floor","")))
+		if reason!="":reject(id,reason)
+		return
+	if action=="use" and campus.fixture_action(id,String(target(p).get("id",""))):actions[id]=order;return
 	if not combat.alive(id) and action not in ["trigger_up","input_cancel"]:actions[id]=order;return reject(id,"KO 상태입니다. 곧 안전한 위치에서 복귀합니다.")
 	if action=="input_cancel":
 		actions[id]=order;p.set_meta("trigger_held",false);p.remove_meta("charge_started");p.remove_meta("kick_started");return
@@ -143,7 +163,8 @@ func execute_action(id:String,m:Dictionary):
 	if action=="activity":
 		actions[id]=order
 		var mode=String(m.get("data",{}).get("mode",""))
-		if not mode in ["","book","documents","report","brainstorm","mindmap","meeting","presentation","broadcast","board","catalog","runner","maze"]:return reject(id,"지원하지 않는 활동입니다.")
+		if mode.begins_with("workspace") or mode.begins_with("lift:") or mode in ["cctv","directory"]:mode="workspace"
+		if not mode in ["workspace","","book","documents","report","brainstorm","mindmap","meeting","presentation","broadcast","board","catalog","runner","maze"]:return reject(id,"지원하지 않는 활동입니다.")
 		p.set_meta("activity",mode);return
 	if action=="secondary" and p.seated!="":
 		if definitions.get(p.holding,{}).get("kind","")=="book":actions[id]=order;notify_ui(id,"book");return
@@ -368,6 +389,11 @@ func _physics_process(dt):
 			if not hit.is_empty() and hit.collider.get_meta("object_id","")=="presentation":
 				var at=slide_mesh.to_local(hit.position);var size=slide_mesh.mesh.size
 				if bridge:bridge.physical_laser(p.actor_id,JSON.stringify([at.x/size.x+.5,.5-at.y/size.y]))
+			elif not hit.is_empty() and String(hit.collider.get_meta("object_id","")).begins_with("campus-meeting-"):
+				var meeting_id=String(hit.collider.get_meta("object_id")).trim_prefix("campus-meeting-")
+				if campus.screens.has(meeting_id) and bridge:
+					var screen=campus.screens[meeting_id];var at=screen.to_local(hit.position);var size=screen.mesh.size
+					bridge.campus_physical_laser(p.actor_id,meeting_id,JSON.stringify([at.x/size.x+.5,.5-at.y/size.y]))
 	if bridge:
 		bridge.gameplay_hud(JSON.stringify({"combat":combat_view.get(local_id,{}),"charge":clampf((now-local_charge_ms)/1300.0,0,1) if local_charge_ms>0 else -1,"shots":shot_serial}))
 		if tick%60==0:bridge.avatar_diagnostics(JSON.stringify(avatar_diagnostics()))
@@ -375,10 +401,13 @@ func _physics_process(dt):
 func network_state() -> Dictionary:
 	var s=super.network_state()
 	if not host:s.tick=last_remote_tick
-	s.combat=combat.snapshot(Time.get_ticks_msec()) if host else combat_view;s.shots=shot_serial;s.protocolVersion=4;s.sports=sports.snapshot();s.facilities=facilities.states.duplicate(true)
+	s.combat=combat.snapshot(Time.get_ticks_msec()) if host else combat_view;s.shots=shot_serial;s.protocolVersion=4;s.sports=sports.snapshot();s.facilities=facilities.states.duplicate(true);s.campusLifts=campus.lifts.snapshot();s.campusTaps=campus.tap_states.duplicate();s.campusStored=unplaced.duplicate(true);s.campusDoors=campus.doors.snapshot()
 	return s
 
 func handle_packet(sender:String,m):
+	if m is Dictionary and m.get("epoch")==epoch and not host:
+		if m.get("type")=="campus-fixtures":campus.tap_states=m.get("states",{}).duplicate();return
+		if m.get("type")=="campus-cctv" and m.get("open"):campus.open_cctv();return
 	if m is Dictionary and String(m.get("type","")).begins_with("wardrobe-"):
 		if not host:wardrobe.receive(m)
 		return
@@ -397,10 +426,31 @@ func handle_packet(sender:String,m):
 		sports.restore(m.get("sports",{}))
 		facilities.restore(m.get("facilities",{}))
 		for p in players.values():p.set_meta("ko",int(m.get("combat",{}).get(p.actor_id,{}).get("hp",100))<=0)
+		campus.lifts.restore(m.get("campusLifts",{}));campus.tap_states=m.get("campusTaps",{}).duplicate();unplaced=m.get("campusStored",[]).duplicate(true);campus.doors.restore(m.get("campusDoors",{}))
 		wardrobe.apply_pending()
 		avatar_state_count+=1;combat_view=m.get("combat",{});shot_serial=int(m.get("shots",0))
 
 func handle_event(e:Dictionary):
+	if e.get("type")=="restore_transaction":
+		var candidate=migration.prepare(self,e.get("world",{}));var conflicts=wardrobe.restore_conflicts(candidate)
+		if not host or players.size()>1 or not conflicts.is_empty():
+			if bridge:bridge.restore_result(false,"현재 세션 또는 건축 충돌 때문에 복원하지 않았습니다.")
+			return
+		restore_world(candidate)
+		if bridge:bridge.restore_result(true,"")
+		return
+	if e.get("type")=="restore_preview":
+		var staged=migration.prepare(self,e.get("world",{}))
+		var conflicts=wardrobe.restore_conflicts(staged)
+		if bridge:bridge.restore_preview(JSON.stringify({"world":staged,"conflicts":conflicts,"unplaced":staged.unplaced.size()}))
+		return
+	if e.get("type")=="campus_pointer":campus.set_pointer(String(e.get("meetingId","")),e.get("uv"));return
+	if e.get("type")=="campus_slide":campus.set_slide(String(e.get("meetingId","")),String(e.get("image","")));return
+	if e.get("type")=="campus_lift":request_action("lift_request",{"liftId":e.get("liftId",""),"floor":e.get("floor","")});return
+	if e.get("type")=="campus_cctv":
+		if e.get("op")=="close":campus.close_cctv()
+		elif campus.cctv_active:campus.select_feed(int(e.get("feed",0)))
+		return
 	if e.get("type")=="wardrobe":wardrobe.event(e);return
 	if e.get("type")=="appearance_bootstrap":
 		if host:wardrobe.initialize_profile(local_id,e.get("profile"))
@@ -416,6 +466,11 @@ func handle_event(e:Dictionary):
 				bubble=Label3D.new();bubble.name="MessageBubble";bubble.position=Vector3(0,2.25,0);bubble.font=load("res://assets/fonts/NotoSansKR-game.ttf");bubble.font_size=36;bubble.pixel_size=.003;bubble.billboard=BaseMaterial3D.BILLBOARD_ENABLED;bubble.outline_size=9;speaker.add_child(bubble)
 			bubble.text=String(e.get("text","")).left(60);bubble.visible=true;bubble.set_meta("until",Time.get_ticks_msec()+6000)
 		return
+	if e.get("type")=="workspace_visibility":
+		# Only visuals hidden behind the full document panel; physics, networking and CRDT continue.
+		visible=not bool(e.get("open",false))
+		return
+	if e.get("type") in ["resume","start"]:visible=true
 	if e.get("type")=="ui_focus":
 		local_charge_ms=0
 		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
@@ -481,6 +536,7 @@ func update_hint():
 		var kind=definitions[focused].kind
 		var verbs={"chair":"앉기","sofa":"앉기","bed":"취침","table":"회의 자료 / 컴퓨터","low_table":"회의 자료 / 컴퓨터","floor_lamp":"전등 켜기/끄기","arcade":"공룡 러너","storage":"수납","drawer":"서랍","fridge":"재료 꺼내기","sink":"설거지","cooker":"조리","counter":"담기"}
 		label=("E 집기 · " if Capabilities.can_carry(kind) else "고정 시설 · ")+"F "+verbs.get(kind,"사용")
+	elif campus.fixtures.has(focused) or focused.begins_with("lift-console-") or focused.begins_with("campus-door-"):label="F "+("승강기 패널" if focused.begins_with("lift-") else "공동 작업 / 시설 사용")
 	elif focused in wardrobe.station_ids:label="빈손으로 클릭 · 꾸미기 시작"
 	elif facilities.fixtures.has(focused):label="F "+{"toilet_ground":"변기 뚜껑 열기/닫기","toilet_upper":"변기 뚜껑 열기/닫기","flush_ground":"물내림","flush_upper":"물내림","vent":"환기 켜기/끄기","tap_ground":"수도 켜기/끄기","tap_upper":"수도 켜기/끄기","broadcast_console":"방송석","meeting_computer":"회의 자료 / 컴퓨터"}.get(focused,"조명 켜기/끄기")
 	elif doors.has(focused):label="F 문 열기 / 닫기"
@@ -494,15 +550,18 @@ func update_hint():
 	if bridge:bridge.hint(label)
 
 func save_world() -> Dictionary:
-	var w=super.save_world();w.facilities=facilities.states.duplicate(true);return w
+	var w=super.save_world();w.facilities=facilities.states.duplicate(true);w.campusVersion=1;w.campusDoors=campus.doors.snapshot();w.campusTaps=campus.tap_states.duplicate();w.unplaced=unplaced.duplicate(true);return w
 
 func restore_world(w:Dictionary):
+	w=migration.prepare(self,w)
 	var conflicts=wardrobe.restore_conflicts(w)
 	if not conflicts.is_empty():
 		if bridge:bridge.status("기존 사물이 의상방 구조와 겹쳐 복원을 중단했습니다. 현재 공간과 원본 파일을 유지합니다: "+", ".join(conflicts))
 		return
 	sports=preload("res://scripts/sports/match_rules.gd").new();command_ledger.clear()
 	super.restore_world(furniture_support.prepare_restore(self,w))
+	unplaced=w.get("unplaced",[]).duplicate(true);campus.doors.restore(w.get("campusDoors",{}))
+	for tap in campus.tap_states:campus.tap_states[tap]=bool(w.get("campusTaps",{}).get(tap,false))
 	if facilities:facilities.reset();facilities.restore(w.get("facilities",{}),true)
 	combat.reset()
 	for p in players.values():combat.add(p.actor_id);p.set_meta("ko",false);p.set_meta("trigger_held",false);p.set_meta("gesture","");p.set_meta("gesture_until",0)
@@ -515,13 +574,20 @@ func object_in_use(object_id:String) -> bool:
 func add_architecture(kind:String,pos:Vector3) -> Node3D:
 	if kind=="house":
 		var body=StaticBody3D.new();body.position=pos;body.collision_layer=1
-		body.add_child(load("res://assets/v2/house-v3.glb").instantiate())
-		for c in JSON.parse_string(FileAccess.get_file_as_string("res://assets/v2/house-collisions-v3.json")):add_shape(body,c)
+		body.add_child(load("res://assets/v6/house-v6.glb").instantiate())
+		for c in JSON.parse_string(FileAccess.get_file_as_string("res://assets/v2/house-collisions-v3.json")):
+			var at=vec(c.get("position",[0,0,0]))
+			if absf(at.x-17.5)<.01 and absf(absf(at.z)-1.5)<.01 and at.y<2.6:continue
+			add_shape(body,c)
 		add_child(body);return body
 	if kind!="grounds":return super.add_architecture(kind,pos)
 	var node=StaticBody3D.new();node.position=pos;node.collision_layer=1;node.physics_material_override=Surface.material("court")
-	node.add_child(load("res://assets/v2/grounds-v3.glb").instantiate())
+	node.add_child(load("res://assets/v6/grounds-v6.glb").instantiate())
 	for c in JSON.parse_string(FileAccess.get_file_as_string("res://assets/v2/grounds-collisions-v3.json")):
+		if c.get("size",[0,0,0])[0]>60 and c.get("position",[0,0,0])[1]<0:
+			for area in [Rect2(-23,-38,33,86),Rect2(36,-38,7,86),Rect2(10,-14,26,62)]:
+				add_shape(node,{"position":[area.position.x+area.size.x*.5,-.29,area.position.y+area.size.y*.5],"size":[area.size.x,.24,area.size.y]})
+			continue
 		var surface="rim" if absf(c.get("position",[0,0,0])[1]-3.05)<.02 else ("backboard" if c.get("size",[0,0,0])[0]<.08 and c.get("size",[0,0,0])[1]>1 else "")
 		if surface!="":
 			var contact=StaticBody3D.new();contact.collision_layer=1;contact.physics_material_override=Surface.material(surface);node.add_child(contact);add_shape(contact,c)
@@ -562,6 +628,7 @@ func apply_checkpoint(e:Dictionary):
 	command_ledger.clear()
 	super.apply_checkpoint(e)
 	last_extra_tick=-1
+	campus.lifts.restore(e.get("checkpoint",{}).get("state",{}).get("campusLifts",{}),true)
 	wardrobe.reset_session()
 	var appearances=e.get("checkpoint",{}).get("appearances",{})
 	if appearances is Dictionary and appearances.size()<=8:
@@ -593,7 +660,7 @@ func perform(id:String,m:Dictionary):
 	if not validation.cached.is_empty():
 		command_results.duplicates+=1;send_command_result(id,validation.cached);return
 	active_request={"type":"action-result","requestId":m.requestId,"actor":id,"epoch":epoch,"targetId":m.get("targetId",""),"accepted":true,"reason":"","stateRevision":revision}
-	var allowed=["wardrobe_open","wardrobe_apply","wardrobe_cancel","carry","throw","use","trigger_down","trigger_up","kick_start","kick","secondary","crossover","activity","rest","eat","place","remove_object","input_cancel","round","stroke","undo","board_update","board_delete"]
+	var allowed=["lift_request","wardrobe_open","wardrobe_apply","wardrobe_cancel","carry","throw","use","trigger_down","trigger_up","kick_start","kick","secondary","crossover","activity","rest","eat","place","remove_object","input_cancel","round","stroke","undo","board_update","board_delete"]
 	if frozen:reject(id,"방장 이전 중에는 조작을 잠시 기다려 주세요.")
 	elif int(m.seq)<=int(actions.get(id,-1)):reject(id,"이미 처리된 순서의 요청입니다.")
 	elif not m.get("action","") in allowed:reject(id,"지원하지 않는 동작입니다.")
@@ -628,6 +695,9 @@ func placement_ok(p,kind:String,point:Vector3,angle:float,move_id:String="") -> 
 
 
 func zone_at(pos:Vector3) -> String:
+	if campus and not campus.data.is_empty():
+		var campus_zone=campus.zone_at(pos)
+		if campus_zone!="":return campus_zone
 	if pos.y>3.3 and pos.y<4.1 and pos.x> -9.9 and pos.x< -5.0 and pos.z> -3.9 and pos.z<2.9:return "wardrobe"
 	return super.zone_at(pos)
 

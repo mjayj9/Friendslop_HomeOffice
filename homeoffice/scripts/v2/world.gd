@@ -2,6 +2,9 @@ extends Node3D
 var key_bindings={"forward":KEY_W,"back":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"run":KEY_SHIFT,"crouch":KEY_CTRL,"camera":KEY_C,"interact":KEY_E,"drop":KEY_Q,"read":KEY_F,"secondary":KEY_R,"rest":KEY_Z,"build":KEY_B,"move":KEY_G,"remove":KEY_DELETE,"look_left":KEY_LEFT,"look_right":KEY_RIGHT,"look_up":KEY_UP,"look_down":KEY_DOWN}
 var blocked_keys={}
 var last_jump_down=false
+var frame_samples=PackedFloat32Array()
+var sampled_p95=0.0
+var frame_sample_tick=0
 var sunlight:DirectionalLight3D
 var slide_laser:MeshInstance3D
 var slide_laser_until=0
@@ -304,6 +307,12 @@ func base_input(event):
 		if players.has(local_id) and players[local_id].holding!="":
 			if definitions[players[local_id].holding].kind!="marker":request_action("throw")
 
+func _process(dt):
+	frame_sample_tick+=1;frame_samples.append(dt*1000.0)
+	if frame_samples.size()>240:frame_samples.remove_at(0)
+	if frame_samples.size()>0 and frame_sample_tick%30==0:
+		var ordered=frame_samples.duplicate();ordered.sort();sampled_p95=ordered[int((ordered.size()-1)*.95)]
+
 func _physics_process(dt):
 	if bridge:
 		var events=JSON.parse_string(String(bridge.take_events()))
@@ -349,7 +358,7 @@ func _physics_process(dt):
 			if obj is RigidBody3D:
 				if obj.linear_velocity.length_squared()>196:obj.linear_velocity=obj.linear_velocity.limit_length(14)
 				if obj.angular_velocity.length_squared()>144:obj.angular_velocity=obj.angular_velocity.limit_length(12)
-				if obj.position.y < -3:
+				if obj.position.y < -7:
 					obj.position=vec(definitions[obj.name].p)
 					obj.linear_velocity=Vector3.ZERO
 	if not host:
@@ -374,7 +383,7 @@ func _physics_process(dt):
 		var snapshot=network_state()
 		if host:send(snapshot)
 		if bridge:bridge.observe(JSON.stringify(snapshot))
-	if bridge and tick%120==0:bridge.performance_sample(JSON.stringify({"fps":Engine.get_frames_per_second(),"frameMs":1000.0/maxf(1,Engine.get_frames_per_second()),"staticMemory":Performance.get_monitor(Performance.MEMORY_STATIC),"drawCalls":Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME),"objects":objects.size(),"players":players.size()}))
+	if bridge and tick%120==0:bridge.performance_sample(JSON.stringify({"fps":Engine.get_frames_per_second(),"frameMs":1000.0/maxf(1,Engine.get_frames_per_second()),"p95FrameMs":sampled_p95,"sampleFrames":frame_samples.size(),"staticMemory":Performance.get_monitor(Performance.MEMORY_STATIC),"drawCalls":Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME),"objects":objects.size(),"players":players.size()}))
 	if snapshot_timer>2 and host:
 		snapshot_timer=0
 		send({"type":"world","epoch":epoch,"world":save_world(),"strokes":strokes})
@@ -687,7 +696,7 @@ func handle_event(e:Dictionary):
 			for action in key_bindings:
 				var code=OS.find_keycode_from_string(String(e.get("bindings",{}).get(action,"")))
 				if code!=KEY_NONE and code!=KEY_ESCAPE:key_bindings[action]=code
-		"resume":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+		"resume":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED if e.get("capture",true) else Input.MOUSE_MODE_VISIBLE
 		"visibility":
 			if host:
 				frozen=transfer_frozen or bool(e.hidden)
@@ -1370,7 +1379,7 @@ func placement_offset(kind:String) -> float:
 	return placement_size(kind).y*.5+.008 if kind in ["book","crate","marker","gun","shield","plate"] else 0.0
 
 func placement_ok(p,kind:String,point:Vector3,angle:float,move_id:String="") -> bool:
-	if p.eye().distance_to(point)>4 or point.y < -.25 or point.y>7:return false
+	if p.eye().distance_to(point)>4 or point.y < -3.85 or point.y>25:return false
 	if zone_at(point) in ["hall","upper_hall","personal-gallery","basketball","football","vestibule"]:return false
 	for area in layout.protected:
 		if area.has("p") and point.distance_to(vec(area.p))<float(area.radius):return false
@@ -1708,8 +1717,8 @@ func update_room_lighting(dt:float):
 	var eye=player.eye()
 	room_lights.sort_custom(func(a,b):return a.global_position.distance_squared_to(eye)<b.global_position.distance_squared_to(eye))
 	var low=bridge and String(bridge.graphics_quality())=="low"
-	get_viewport().scaling_3d_scale=.65 if low else 1.0
-	get_viewport().msaa_3d=Viewport.MSAA_DISABLED if low else Viewport.MSAA_2X
+	get_viewport().scaling_3d_scale=.65 if low else (1.0 if playing() else .8)
+	get_viewport().msaa_3d=Viewport.MSAA_DISABLED if low or not playing() else Viewport.MSAA_2X
 	if sunlight:sunlight.shadow_enabled=not low
 	for i in range(room_lights.size()):
 		var light=room_lights[i]

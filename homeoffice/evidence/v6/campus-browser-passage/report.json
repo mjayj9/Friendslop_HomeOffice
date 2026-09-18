@@ -1,0 +1,4009 @@
+{
+  "environment": "Actual Chromium WebGL, walking and physical F interaction; no teleport or fixture authority.",
+  "checks": [],
+  "errors": [],
+  "buildId": "7778bf57-2e12-49d5-b606-0f5a0122035b",
+  "failure": "Error: Walking route blocked toward 17.5,-10: [17.4632625579834,-0.174921989440918,1.74895286560059]\n    at move (file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v6-campus-browser.mjs:8:232)\n    at async file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v6-campus-browser.mjs:13:152\n    at async check (file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v6-campus-browser.mjs:10:31)\n    at async file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v6-campus-browser.mjs:13:2",
+  "final": {
+    "campus": {
+      "cctv": false,
+      "directory": [
+        {
+          "id": "B1",
+          "title": "지원 · 주차"
+        },
+        {
+          "id": "1F",
+          "title": "도착 · 카페"
+        },
+        {
+          "id": "2F",
+          "title": "회의 · 공동작업"
+        },
+        {
+          "id": "3F",
+          "title": "프로젝트 스튜디오"
+        },
+        {
+          "id": "4F",
+          "title": "집중 · 개인 작업"
+        },
+        {
+          "id": "5F",
+          "title": "운영 · 방송"
+        },
+        {
+          "id": "6F",
+          "title": "식사 · 커뮤니티"
+        },
+        {
+          "id": "RF",
+          "title": "하늘 정원"
+        }
+      ],
+      "feed": 0,
+      "floor": "",
+      "lifts": {
+        "passenger": {
+          "elapsed": 51.166666666665,
+          "floor": "1F",
+          "occupants": [],
+          "open": 0,
+          "queue": [],
+          "reason": "",
+          "state": "IDLE",
+          "target": "1F",
+          "tripId": 0,
+          "y": 0
+        },
+        "service": {
+          "elapsed": 51.166666666665,
+          "floor": "1F",
+          "occupants": [],
+          "open": 0,
+          "queue": [],
+          "reason": "",
+          "state": "IDLE",
+          "target": "1F",
+          "tripId": 0,
+          "y": 0
+        }
+      },
+      "stored": [],
+      "taps": {
+        "campus-wc-1F": false,
+        "campus-wc-2F": false,
+        "campus-wc-3F": false,
+        "campus-wc-4F": false,
+        "campus-wc-5F": false,
+        "campus-wc-6F": false,
+        "campus-wc-B1": false,
+        "campus-wc-RF": false
+      },
+      "zone": ""
+    },
+    "meetingWorkspace": {
+      "open": false,
+      "active": "",
+      "grant": null,
+      "rooms": []
+    },
+    "wardrobe": {
+      "open": false,
+      "previewOnly": false,
+      "undo": 0,
+      "redo": 0,
+      "busy": false,
+      "faceView": false,
+      "faceHash": ""
+    },
+    "placement": {
+      "open": false,
+      "dragging": false,
+      "dropped": 0,
+      "cancelled": 0,
+      "lastResult": {}
+    },
+    "roomAdmin": {
+      "configured": false,
+      "revision": null,
+      "policyFresh": false,
+      "courtAccess": false,
+      "locked": [],
+      "trust": "server-verified operator identity; P2P host is not administrator"
+    },
+    "messenger": {
+      "messages": 0,
+      "unread": 0,
+      "files": [],
+      "transfers": [],
+      "authority": {
+        "records": 0,
+        "transfers": 0
+      }
+    },
+    "lastCommandResult": null,
+    "replication": {
+      "rawBytes": 0,
+      "wireBytes": 0,
+      "keyframes": 0,
+      "deltas": 0,
+      "resyncs": 0,
+      "savedPercent": 0
+    },
+    "documents": {
+      "count": 0,
+      "revision": 0,
+      "rows": []
+    },
+    "avatarDiagnostics": {
+      "camera": "/root/MoyeoHouse/@CharacterBody3D@2490/@Camera3D@2493",
+      "commandResults": {
+        "accepted": 0,
+        "duplicates": 0,
+        "rejected": 0
+      },
+      "epoch": "79e9a68c-c02c-46b8-9cca-453f251b255c",
+      "instances": [
+        {
+          "appearance": {
+            "faceHash": "",
+            "revision": 0,
+            "shirt": ""
+          },
+          "cameraPosition": [
+            17.4632625579834,
+            1.44507801532745,
+            1.74895286560059
+          ],
+          "cameraRig": {
+            "actualDistance": 0,
+            "aiming": false,
+            "mode": "first",
+            "profile": "HOME",
+            "zoom": 3.2
+          },
+          "carry": {},
+          "contactErrors": {
+            "Thigh.L": 5.21540641784668e-8,
+            "Thigh.R": 5.21540641784668e-8
+          },
+          "contactSamples": {
+            "L": {
+              "authoredWeight": 1,
+              "error": 5.21540641784668e-8,
+              "foot": [
+                -0.070000022649765,
+                0.09000014513731,
+                9.49844741821289
+              ],
+              "target": [
+                -0.070000022649765,
+                0.0900000929832458,
+                9.49844741821289
+              ],
+              "weight": 1
+            },
+            "R": {
+              "authoredWeight": 1,
+              "error": 5.21540641784668e-8,
+              "foot": [
+                0.169999986886978,
+                0.09000014513731,
+                9.49844741821289
+              ],
+              "target": [
+                0.169999986886978,
+                0.0900000929832458,
+                9.49844741821289
+              ],
+              "weight": 1
+            }
+          },
+          "contactWeights": {
+            "L": 1,
+            "R": 1
+          },
+          "handContactErrors": {},
+          "id": "local",
+          "local": true,
+          "meshes": [
+            {
+              "aabb": "[P: (-0.294322, 0.0, -0.149918), S: (0.575777, 1.78, 0.321597)]",
+              "surfaces": 5,
+              "visible": false
+            }
+          ],
+          "motion": {
+            "actionId": "",
+            "changes": 21,
+            "clip": "idle",
+            "contactL": 1,
+            "contactR": 1,
+            "grounded": true,
+            "locomotion": "idle",
+            "mode": "combined",
+            "oneShot": "",
+            "phase": 0.049171940714339,
+            "posture": "standing",
+            "profile": "HOME",
+            "profileEntries": 0,
+            "snapshotTick": 3060,
+            "speedScale": 1,
+            "upperBody": ""
+          },
+          "position": [
+            17.4632625579834,
+            -0.174921989440918,
+            1.74895286560059
+          ],
+          "skeletonBones": 13,
+          "standingVisible": false
+        }
+      ],
+      "role": "host",
+      "stateAgeMs": 55908,
+      "stateCount": 0
+    },
+    "stateReceived": 0,
+    "roomCode": "",
+    "classroomSession": false,
+    "keyBindings": {
+      "forward": "KeyW",
+      "back": "KeyS",
+      "left": "KeyA",
+      "right": "KeyD",
+      "jump": "Space",
+      "run": "ShiftLeft",
+      "crouch": "ControlLeft",
+      "camera": "KeyC",
+      "interact": "KeyE",
+      "drop": "KeyQ",
+      "read": "KeyF",
+      "secondary": "KeyR",
+      "rest": "KeyZ",
+      "build": "KeyB",
+      "move": "KeyG",
+      "remove": "Delete",
+      "look_left": "ArrowLeft",
+      "look_right": "ArrowRight",
+      "look_up": "ArrowUp",
+      "look_down": "ArrowDown",
+      "talk": "KeyV",
+      "mute": "KeyM",
+      "chat": "Enter"
+    },
+    "presentation": {
+      "view": {
+        "selected": 0,
+        "page": 1,
+        "annotations": []
+      },
+      "presenter": "",
+      "pointer": null
+    },
+    "arcade": {
+      "mode": "",
+      "games": {},
+      "records": []
+    },
+    "performance": {
+      "drawCalls": 410,
+      "fps": 21,
+      "frameMs": 47.6190476190476,
+      "objects": 124,
+      "players": 1,
+      "staticMemory": 0
+    },
+    "graphicsQuality": "low",
+    "host": true,
+    "id": "local",
+    "epoch": "79e9a68c-c02c-46b8-9cca-453f251b255c",
+    "room": "",
+    "buildId": "7778bf57-2e12-49d5-b606-0f5a0122035b",
+    "playing": true,
+    "loaded": true,
+    "currentState": {
+      "basketballScore": [
+        0,
+        0
+      ],
+      "campusLifts": {
+        "passenger": {
+          "elapsed": 51.316666666665,
+          "floor": "1F",
+          "occupants": [],
+          "open": 0,
+          "queue": [],
+          "reason": "",
+          "state": "IDLE",
+          "target": "1F",
+          "tripId": 0,
+          "y": 0
+        },
+        "service": {
+          "elapsed": 51.316666666665,
+          "floor": "1F",
+          "occupants": [],
+          "open": 0,
+          "queue": [],
+          "reason": "",
+          "state": "IDLE",
+          "target": "1F",
+          "tripId": 0,
+          "y": 0
+        }
+      },
+      "campusStored": [],
+      "campusTaps": {
+        "campus-wc-1F": false,
+        "campus-wc-2F": false,
+        "campus-wc-3F": false,
+        "campus-wc-4F": false,
+        "campus-wc-5F": false,
+        "campus-wc-6F": false,
+        "campus-wc-B1": false,
+        "campus-wc-RF": false
+      },
+      "combat": {
+        "local": {
+          "deaths": 0,
+          "hp": 100,
+          "kills": 0,
+          "maxHp": 100,
+          "meter": 0,
+          "meterIdleMs": 0,
+          "protectedMs": 0,
+          "respawnMs": 0
+        }
+      },
+      "door": false,
+      "doors": {
+        "front-door": true,
+        "game-gate": false,
+        "meeting-door": true,
+        "office-1-door": true,
+        "sleep-door": true,
+        "terrace-door": true
+      },
+      "epoch": "79e9a68c-c02c-46b8-9cca-453f251b255c",
+      "facilities": {
+        "bath_light": true,
+        "flush_ground": false,
+        "flush_upper": false,
+        "home_light": true,
+        "office_light": true,
+        "tap_ground": false,
+        "tap_upper": false,
+        "toilet_ground": false,
+        "toilet_upper": false,
+        "vent": false
+      },
+      "footballScore": [
+        0,
+        0
+      ],
+      "objects": [
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-sofa-a",
+          "kind": "sofa",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11,
+            0,
+            8.80000019073486
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-sofa-b",
+          "kind": "sofa",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -13,
+            0,
+            6
+          ],
+          "r": [
+            0,
+            -1.57079601287842,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-sofa-c",
+          "kind": "sofa",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -7,
+            0,
+            6
+          ],
+          "r": [
+            0,
+            1.57079601287842,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-low-table",
+          "kind": "low_table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -10.399998664856,
+            -0.000595182180404663,
+            6.30000782012939
+          ],
+          "r": [
+            8.89816760718531e-7,
+            4.47094038236173e-7,
+            -9.9820431387343e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-book",
+          "kind": "book",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -10.3999996185303,
+            0.491900861263275,
+            6.30000829696655
+          ],
+          "r": [
+            9.63075763138477e-7,
+            0.0000383988626708742,
+            -0.00000109044378859835
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-chair",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -7.00000286102295,
+            -1.78813934326172e-7,
+            10.100001335144
+          ],
+          "r": [
+            8.8581452928338e-7,
+            -0.00000380243886866083,
+            2.12168885127539e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-table",
+          "kind": "table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -10,
+            -0.00000101327896118164,
+            -0.0000253130438068183
+          ],
+          "r": [
+            0.0000011800718766608,
+            -6.76742956784437e-7,
+            4.9155880788021e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11.1000032424927,
+            -1.78813934326172e-7,
+            1.05000066757202
+          ],
+          "r": [
+            8.85682140960853e-7,
+            -0.00000380244182451861,
+            2.12126053611428e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -10.3800029754639,
+            -1.78813934326172e-7,
+            1.05000066757202
+          ],
+          "r": [
+            8.85916449533397e-7,
+            -0.00000380232791030721,
+            2.12416480849242e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -9.66000270843506,
+            -1.78813934326172e-7,
+            1.05000066757202
+          ],
+          "r": [
+            8.85908548298175e-7,
+            -0.0000038024752484489,
+            2.1211695866441e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -8.94000244140625,
+            -1.78813934326172e-7,
+            1.05000066757202
+          ],
+          "r": [
+            8.85765075508971e-7,
+            -0.00000380244819098152,
+            2.1219103985004e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-4",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11.0999975204468,
+            -1.78813934326172e-7,
+            -1.05000066757202
+          ],
+          "r": [
+            8.85794406713103e-7,
+            3.14158916473389,
+            2.12195402582438e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-5",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -10.379997253418,
+            -1.78813934326172e-7,
+            -1.05000066757202
+          ],
+          "r": [
+            8.85795145677548e-7,
+            3.14158916473389,
+            2.1245776338219e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-6",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -9.65999698638916,
+            -1.78813934326172e-7,
+            -1.05000066757202
+          ],
+          "r": [
+            8.85859492427699e-7,
+            3.14158916473389,
+            2.12125982557154e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "dining-chair-7",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -8.93999671936035,
+            -1.78813934326172e-7,
+            -1.05000066757202
+          ],
+          "r": [
+            8.85719941834395e-7,
+            3.14158916473389,
+            2.12184730230547e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            3.77536025553127e-7,
+            0.0000182761650648899,
+            6.0798186041211e-7
+          ],
+          "id": "meeting-table-0",
+          "kind": "table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            6.5,
+            -0.0142219066619873,
+            7.00000047683716
+          ],
+          "r": [
+            -1.01424724618937e-7,
+            0.00000256688963418128,
+            1.20373314871358e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            -0.00000104601940620341,
+            6.24682570560253e-7,
+            0.0000305841058434453
+          ]
+        },
+        {
+          "av": [
+            -0.00000781103517510928,
+            0.0000015404687019327,
+            -0.00000104713944892865
+          ],
+          "id": "meeting-table-1",
+          "kind": "table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            6.5,
+            -0.0125541687011719,
+            9.40000057220459
+          ],
+          "r": [
+            -6.8489867999233e-8,
+            0.00000252762697527942,
+            8.21891248392603e-8
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            -3.29361682815943e-7,
+            0.00000218100103666075,
+            0.0000437202288594563
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            4.39999961853027,
+            -1.78813934326172e-7,
+            5.59999704360962
+          ],
+          "r": [
+            8.85700671915401e-7,
+            -1.57079982757568,
+            2.12163939750099e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            4.39999961853027,
+            -1.78813934326172e-7,
+            7.09999704360962
+          ],
+          "r": [
+            8.8581401769261e-7,
+            -1.57079982757568,
+            2.12061308957345e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            4.39999961853027,
+            -1.78813934326172e-7,
+            8.59999752044678
+          ],
+          "r": [
+            8.85824817942193e-7,
+            -1.57079982757568,
+            2.12529386089955e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            4.39999961853027,
+            -1.78813934326172e-7,
+            10.0999975204468
+          ],
+          "r": [
+            8.85729036781413e-7,
+            -1.57079982757568,
+            2.12113320685603e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-4",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            8.60000133514404,
+            -1.78813934326172e-7,
+            5.60000276565552
+          ],
+          "r": [
+            8.85674239725631e-7,
+            1.57079207897186,
+            2.12117853948257e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-5",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            8.60000133514404,
+            -1.78813934326172e-7,
+            7.10000276565552
+          ],
+          "r": [
+            8.85674239725631e-7,
+            1.57079207897186,
+            2.12117853948257e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-6",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            8.60000133514404,
+            -1.78813934326172e-7,
+            8.60000324249268
+          ],
+          "r": [
+            8.8596169689481e-7,
+            1.57079207897186,
+            2.12430975921052e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-chair-7",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            8.60000133514404,
+            -1.78813934326172e-7,
+            10.1000032424927
+          ],
+          "r": [
+            8.85803729033796e-7,
+            1.57079207897186,
+            2.12204682270567e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-marker",
+          "kind": "marker",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            6.50014591217041,
+            0.0949717536568642,
+            4.24993085861206
+          ],
+          "r": [
+            0.00096578587545082,
+            -0.00125711259897798,
+            -0.000923636136576533
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "free-table",
+          "kind": "table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            8,
+            -0.00000178813934326172,
+            -3.00001811981201
+          ],
+          "r": [
+            -0.00000111846532035997,
+            0.00000155332486428961,
+            0.00000125384178772947
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "free-crate-0",
+          "kind": "crate",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            6,
+            0.219999596476555,
+            0.00000213943485505297
+          ],
+          "r": [
+            0.00000154592260059871,
+            4.31461728567228e-7,
+            -3.20299136546964e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "free-crate-1",
+          "kind": "crate",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            6.57999992370605,
+            0.219999596476555,
+            0.00000224831342165999
+          ],
+          "r": [
+            0.00000156075384438736,
+            4.31183622140452e-7,
+            -3.52265942638041e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "free-crate-2",
+          "kind": "crate",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            7.15999984741211,
+            0.219999596476555,
+            0.00000213995394915401
+          ],
+          "r": [
+            0.00000154566384935606,
+            4.3140727257196e-7,
+            -3.20778553941636e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "free-crate-3",
+          "kind": "crate",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            7.73999977111816,
+            0.219999596476555,
+            0.00000223303368329653
+          ],
+          "r": [
+            0.00000149500533552782,
+            4.3116625647599e-7,
+            -2.92010014391053e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "free-book",
+          "kind": "book",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            7.59999990463257,
+            0.857497572898865,
+            -3
+          ],
+          "r": [
+            -1.21535791208771e-7,
+            -4.40553009184441e-7,
+            0.0000011380619753254
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "kitchen-fridge",
+          "kind": "fridge",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -13.8000001907349,
+            0,
+            -8.60000038146973
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cook-station",
+          "kind": "cooker",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11,
+            0,
+            -8.80000019073486
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sink-station",
+          "kind": "sink",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -7.80000019073486,
+            0,
+            -8.80000019073486
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "kitchen-island",
+          "kind": "counter",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -10.1999998092651,
+            0,
+            -5.69999980926514
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "plate-1",
+          "kind": "plate",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -9.80000019073486,
+            1.02999997138977,
+            -5.69999980926514
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "pan-1",
+          "kind": "pan",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11,
+            1.05498790740967,
+            -8.80000019073486
+          ],
+          "r": [
+            1.67711277754279e-7,
+            -0.0000361878046533093,
+            -2.44111433289618e-8
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-0",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -13.6999998092651,
+            3.59999990463257,
+            -10.3000001907349
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-1",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11.3000001907349,
+            3.59999990463257,
+            -10.3000001907349
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-2",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -8.89999961853027,
+            3.59999990463257,
+            -10.3000001907349
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-3",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -6.5,
+            3.59999990463257,
+            -10.3000001907349
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-4",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -13.6999998092651,
+            3.59999990463257,
+            -5.69999980926514
+          ],
+          "r": [
+            0,
+            3.14159297943115,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-5",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11.3000001907349,
+            3.59999990463257,
+            -5.69999980926514
+          ],
+          "r": [
+            0,
+            3.14159297943115,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-6",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -8.89999961853027,
+            3.59999990463257,
+            -5.69999980926514
+          ],
+          "r": [
+            0,
+            3.14159297943115,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "bed-7",
+          "kind": "bed",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -6.5,
+            3.59999990463257,
+            -5.69999980926514
+          ],
+          "r": [
+            0,
+            3.14159297943115,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "reading-sofa",
+          "kind": "sofa",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -12,
+            3.59999990463257,
+            0.800000011920929
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "reading-table",
+          "kind": "low_table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -12,
+            3.59940624237061,
+            -1.00001013278961
+          ],
+          "r": [
+            0.00000358018951374106,
+            1.50706043200444e-7,
+            5.90387401189219e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "reading-book",
+          "kind": "book",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -11.9999980926514,
+            4.09189987182617,
+            -1.0000125169754
+          ],
+          "r": [
+            0.00000450124116468942,
+            0.0000258914442383684,
+            -9.89988890864879e-8
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "basketball",
+          "kind": "basketball",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -7.00005865097046,
+            0.119999997317791,
+            30
+          ],
+          "r": [
+            0,
+            0,
+            0.0004462574434001
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "football",
+          "kind": "football",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            25,
+            0.109999999403954,
+            32
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "tag-gun-1",
+          "kind": "gun",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            22.9999618530273,
+            0.960006237030029,
+            -3.79983019828796
+          ],
+          "r": [
+            0.0000209553800232243,
+            -0.00337754166685045,
+            0.00000631590955890715
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "tag-gun-2",
+          "kind": "gun",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            23.9999332427979,
+            0.960013449192047,
+            -3.79982805252075
+          ],
+          "r": [
+            0.0000209298104891786,
+            -0.00305065279826522,
+            -2.12321467074617e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "tag-shield",
+          "kind": "shield",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            25.0006446838379,
+            1.27023327350616,
+            -3.79975938796997
+          ],
+          "r": [
+            -0.00266076531261206,
+            -0.0282840374857187,
+            0.00000555812357561081
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "toy-rack",
+          "kind": "table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            23.9999713897705,
+            -0.00498628616333008,
+            -3.79992389678955
+          ],
+          "r": [
+            0.0000210294838325353,
+            0.00000838740288600093,
+            0.00000698688108968781
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "arcade-maze",
+          "kind": "arcade",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            29,
+            0,
+            4.90000009536743
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "arcade-runner",
+          "kind": "arcade",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            32,
+            0,
+            4.90000009536743
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-storage",
+          "kind": "storage",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -5.84999990463257,
+            0,
+            8.14999961853027
+          ],
+          "r": [
+            0,
+            -1.57079637050629,
+            0
+          ],
+          "seats": {},
+          "state": {
+            "contents": [],
+            "open": false
+          },
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-drawer",
+          "kind": "drawer",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -13.6000003814697,
+            0,
+            10.75
+          ],
+          "r": [
+            0,
+            1.57079637050629,
+            0
+          ],
+          "seats": {},
+          "state": {
+            "contents": [],
+            "open": false
+          },
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "living-lamp",
+          "kind": "floor_lamp",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -13.7000074386597,
+            -7.15255737304688e-7,
+            4.14995241165161
+          ],
+          "r": [
+            2.81292187764848e-7,
+            -0.00000660022215015488,
+            -0.00000194816425391764
+          ],
+          "seats": {},
+          "state": {
+            "on": true
+          },
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-13--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            13.0000028610229,
+            -2.38418579101562e-7,
+            -17.0000019073486
+          ],
+          "r": [
+            -0.00000109409143078665,
+            0.0000014392902585314,
+            -1.50384224184563e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-b-13--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            13.0000028610229,
+            -2.08616256713867e-7,
+            -18.9999980926514
+          ],
+          "r": [
+            8.85841302533663e-7,
+            3.14158892631531,
+            2.12372668784155e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-17--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.9999980926514,
+            -1.78813934326172e-7,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65172095182243e-8,
+            -0.00000177103584064753,
+            6.97721418418951e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-b-17--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            17.0000019073486,
+            -2.08616256713867e-7,
+            -18.9999980926514
+          ],
+          "r": [
+            8.857256830197e-7,
+            3.14158892631531,
+            2.12140079725032e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-13--24",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            12.9999971389771,
+            -2.08616256713867e-7,
+            -23.0000019073486
+          ],
+          "r": [
+            8.85848578491277e-7,
+            -0.00000380233882424363,
+            2.12374516195268e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-b-13--24",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            13.0000028610229,
+            -2.08616256713867e-7,
+            -24.9999980926514
+          ],
+          "r": [
+            8.85841302533663e-7,
+            3.14158892631531,
+            2.12372668784155e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-27--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.0000019073486,
+            -2.38418579101562e-7,
+            -17.0000019073486
+          ],
+          "r": [
+            -0.00000109407881154766,
+            0.00000143927786666609,
+            -1.5042478196392e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-b-27--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.0000019073486,
+            -2.08616256713867e-7,
+            -18.9999980926514
+          ],
+          "r": [
+            8.857256830197e-7,
+            3.14158892631531,
+            2.12140079725032e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-29--24",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            28.9999980926514,
+            -2.08616256713867e-7,
+            -23.0000019073486
+          ],
+          "r": [
+            8.85737279077148e-7,
+            -0.00000380243091058219,
+            2.12149700473674e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "cafe-chair-b-29--24",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            29.0000019073486,
+            -2.08616256713867e-7,
+            -24.9999980926514
+          ],
+          "r": [
+            8.857256830197e-7,
+            3.14158892631531,
+            2.12140079725032e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-n-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            13.8000030517578,
+            3.59999966621399,
+            -20.1999988555908
+          ],
+          "r": [
+            8.85862675659155e-7,
+            3.14158892631531,
+            2.12372668784155e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-s-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            13.7999973297119,
+            3.59999966621399,
+            -16.8000011444092
+          ],
+          "r": [
+            8.85860686139495e-7,
+            -0.00000380233927899098,
+            2.12367723406715e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-n-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.0000028610229,
+            3.59999966621399,
+            -20.1999988555908
+          ],
+          "r": [
+            8.85699193986511e-7,
+            3.14158892631531,
+            2.1214067658093e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-s-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            14.9999971389771,
+            3.59999966621399,
+            -16.8000011444092
+          ],
+          "r": [
+            8.85775818915135e-7,
+            -0.00000380230835617112,
+            2.12451880088338e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-n-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.2000026702881,
+            3.59999966621399,
+            -20.1999988555908
+          ],
+          "r": [
+            8.85898657543294e-7,
+            3.14158892631531,
+            2.12124760423649e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-s-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.1999988555908,
+            3.59999966621399,
+            -16.8000011444092
+          ],
+          "r": [
+            8.85744441347924e-7,
+            -0.00000380240999220405,
+            2.12198941085262e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-n-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            17.4000015258789,
+            3.59999966621399,
+            -20.1999988555908
+          ],
+          "r": [
+            8.85808333350724e-7,
+            3.14158892631531,
+            2.12246789033088e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-s-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            17.3999977111816,
+            3.59999966621399,
+            -16.8000011444092
+          ],
+          "r": [
+            8.85734209532529e-7,
+            -0.00000380244296138699,
+            2.12230133911362e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-n-4",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            18.6000022888184,
+            3.59999966621399,
+            -20.1999988555908
+          ],
+          "r": [
+            8.85808333350724e-7,
+            3.14158892631531,
+            2.12246789033088e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "council-chair-s-4",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            18.5999984741211,
+            3.59999966621399,
+            -16.8000011444092
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "moss-chair-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.3499984741211,
+            3.59999966621399,
+            -18.4000015258789
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "moss-chair-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.6500015258789,
+            3.59999966621399,
+            -18.4000015258789
+          ],
+          "r": [
+            -0.00000109407028503483,
+            0.00000143927672979771,
+            -1.50432541090595e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "moss-chair-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.3500022888184,
+            3.59999966621399,
+            -20.3999977111816
+          ],
+          "r": [
+            8.85808333350724e-7,
+            3.14158892631531,
+            2.12246789033088e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "moss-chair-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.6500015258789,
+            3.59999966621399,
+            -20.3999977111816
+          ],
+          "r": [
+            -6.65623858253639e-8,
+            3.14159107208252,
+            6.97752966516418e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "clay-chair-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.3499984741211,
+            3.59999966621399,
+            -26.8000011444092
+          ],
+          "r": [
+            8.85780877979414e-7,
+            -0.00000380243864128715,
+            2.122097555457e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "clay-chair-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.6500015258789,
+            3.59999966621399,
+            -26.8000011444092
+          ],
+          "r": [
+            -0.00000109422046534746,
+            0.00000143933141316666,
+            -1.50395194964403e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "clay-chair-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.3500022888184,
+            3.59999966621399,
+            -28.7999973297119
+          ],
+          "r": [
+            8.85808333350724e-7,
+            3.14158892631531,
+            2.12246789033088e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "clay-chair-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.6499977111816,
+            3.59999966621399,
+            -28.7999973297119
+          ],
+          "r": [
+            -0.00000109418829197239,
+            -3.14159107208252,
+            -1.50340909499391e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "seminar-chair-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.4999971389771,
+            3.59999966621399,
+            -27.5000019073486
+          ],
+          "r": [
+            8.85744441347924e-7,
+            -0.00000380240999220405,
+            2.12198941085262e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "seminar-chair-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.5999984741211,
+            3.59999966621399,
+            -27.5000019073486
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "seminar-chair-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            17.6999988555908,
+            3.59999966621399,
+            -27.5000019073486
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "seminar-chair-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.4999971389771,
+            3.59999966621399,
+            -28.7000026702881
+          ],
+          "r": [
+            8.85744441347924e-7,
+            -0.00000380240999220405,
+            2.12198941085262e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "seminar-chair-4",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.5999984741211,
+            3.59999966621399,
+            -28.7000026702881
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "seminar-chair-5",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            17.6999988555908,
+            3.59999966621399,
+            -28.7000026702881
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-3F-0-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.0000019073486,
+            7.19999980926514,
+            -17.0000019073486
+          ],
+          "r": [
+            -0.00000109409404558392,
+            0.00000143927854878712,
+            -1.50430849998884e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-3F-0-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            19.9999980926514,
+            7.19999980926514,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65240023067781e-8,
+            -0.00000177103686382907,
+            6.97752511769067e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-3F-0-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.9999980926514,
+            7.19999980926514,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65240023067781e-8,
+            -0.00000177103686382907,
+            6.97752511769067e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-3F-1-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.9999971389771,
+            7.19999980926514,
+            -26.9000015258789
+          ],
+          "r": [
+            8.85744441347924e-7,
+            -0.00000380240999220405,
+            2.12198941085262e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-3F-1-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            19.9999980926514,
+            7.19999980926514,
+            -26.9000015258789
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-3F-1-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.9999980926514,
+            7.19999980926514,
+            -26.9000015258789
+          ],
+          "r": [
+            8.85939186900941e-7,
+            -0.00000380247570319625,
+            2.12133599575282e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-4F-0-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.0000019073486,
+            10.8000001907349,
+            -17.0000019073486
+          ],
+          "r": [
+            -0.00000109415464066842,
+            0.00000143924739859358,
+            -1.50497783124592e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-4F-0-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            19.9999980926514,
+            10.8000001907349,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65809380961946e-8,
+            -0.00000177104050180787,
+            6.97832604146242e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-4F-0-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.9999980926514,
+            10.8000001907349,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65809380961946e-8,
+            -0.00000177104050180787,
+            6.97832604146242e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-4F-1-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.9999971389771,
+            10.8000001907349,
+            -26.9000015258789
+          ],
+          "r": [
+            8.85850397480681e-7,
+            -0.0000038024511468393,
+            2.1210725265064e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-4F-1-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            19.9999980926514,
+            10.8000001907349,
+            -26.9000015258789
+          ],
+          "r": [
+            8.85703173025831e-7,
+            -0.00000380237884201051,
+            2.1241334025035e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "studio-chair-4F-1-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.9999980926514,
+            10.8000001907349,
+            -26.9000015258789
+          ],
+          "r": [
+            8.85703173025831e-7,
+            -0.00000380237884201051,
+            2.1241334025035e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "operations-chair-0",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            14.5000019073486,
+            14.3999996185303,
+            -16.8999977111816
+          ],
+          "r": [
+            4.91603273644614e-8,
+            2.10393395150277e-7,
+            -0.00000106821153167402
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "operations-chair-1",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.6999969482422,
+            14.3999996185303,
+            -16.9000015258789
+          ],
+          "r": [
+            8.85880581336096e-7,
+            -0.0000038023363231332,
+            2.12420118828049e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "operations-chair-2",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.8999977111816,
+            14.3999996185303,
+            -16.9000015258789
+          ],
+          "r": [
+            8.85703173025831e-7,
+            -0.00000380237884201051,
+            2.1241334025035e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "operations-chair-3",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            18.0999984741211,
+            14.3999996185303,
+            -16.9000015258789
+          ],
+          "r": [
+            8.85703173025831e-7,
+            -0.00000380237884201051,
+            2.1241334025035e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-a-15--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            14.9999980926514,
+            18,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.66048265429708e-8,
+            -0.00000177103981968685,
+            6.97760413004289e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-b-15--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.0000028610229,
+            18,
+            -18.9999980926514
+          ],
+          "r": [
+            8.85807708073116e-7,
+            3.14158892631531,
+            2.12010135669516e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-a-19--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            18.9999980926514,
+            18,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65157600110433e-8,
+            -0.00000177103947862634,
+            6.97739608312986e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-b-19--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            19.0000019073486,
+            18,
+            -18.9999980926514
+          ],
+          "r": [
+            8.85738586475782e-7,
+            3.14158892631531,
+            2.12146773037603e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-a-27--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.9999980926514,
+            18,
+            -17.0000019073486
+          ],
+          "r": [
+            -6.65157600110433e-8,
+            -0.00000177103947862634,
+            6.97739608312986e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-b-27--18",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.0000019073486,
+            18,
+            -18.9999980926514
+          ],
+          "r": [
+            8.85738586475782e-7,
+            3.14158892631531,
+            2.12146773037603e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-a-16--28",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            15.9999971389771,
+            18,
+            -27.0000019073486
+          ],
+          "r": [
+            8.85777524217701e-7,
+            -0.00000380241567654593,
+            2.12190258253031e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-b-16--28",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            16.0000019073486,
+            18,
+            -28.9999980926514
+          ],
+          "r": [
+            8.85940323769319e-7,
+            3.14158892631531,
+            2.12411649158639e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-a-27--28",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            26.9999980926514,
+            18,
+            -27.0000019073486
+          ],
+          "r": [
+            8.85979090980982e-7,
+            -0.00000380232131647062,
+            2.12405993238463e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "sky-seat-b-27--28",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            27.0000019073486,
+            18,
+            -28.9999980926514
+          ],
+          "r": [
+            8.85738586475782e-7,
+            3.14158892631531,
+            2.12146773037603e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "meeting-laser",
+          "kind": "laser",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            8.59999465942383,
+            0.0149994073435664,
+            8.19999980926514
+          ],
+          "r": [
+            0.00000455072995464434,
+            -0.00000553016661797301,
+            -0.0000103309212136082
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "office-1-desk",
+          "kind": "table",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -3.80000042915344,
+            3.59999847412109,
+            -15.9999837875366
+          ],
+          "r": [
+            0.00000111847668904375,
+            0.00000155333395923662,
+            -0.00000125390170069295
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "office-1-chair",
+          "kind": "chair",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -3.80000257492065,
+            3.59999966621399,
+            -14.899998664856
+          ],
+          "r": [
+            8.85706867848057e-7,
+            -0.00000380243204745057,
+            2.12158411727614e-7
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "av": [
+            0,
+            0,
+            0
+          ],
+          "id": "office-1-book",
+          "kind": "book",
+          "occupant": "",
+          "owner": "",
+          "p": [
+            -3.79999995231628,
+            4.45749807357788,
+            -16
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "seats": {},
+          "state": {},
+          "v": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "paused": false,
+      "players": [
+        {
+          "ack": 3080,
+          "actionStamp": 0,
+          "activity": "",
+          "crouch": false,
+          "displayName": "친구",
+          "dribble": false,
+          "dribbleLeft": false,
+          "gesture": "",
+          "grounded": true,
+          "hold": "",
+          "id": "local",
+          "lookYaw": 6.30000000000002,
+          "p": [
+            17.4632625579834,
+            -0.174921989440918,
+            1.74895286560059
+          ],
+          "pitch": 0,
+          "posture": "standing",
+          "seat": "",
+          "seatIndex": 0,
+          "seatYaw": 0,
+          "v": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0.0168146882206202,
+          "zone": "garden"
+        }
+      ],
+      "protocolVersion": 4,
+      "revision": 2,
+      "roomSlots": [
+        {
+          "label": "친구의 작업실",
+          "memberSlotId": "slot-1",
+          "moduleIndex": 0,
+          "personalRoomId": "office-1",
+          "side": 0
+        }
+      ],
+      "rounds": {
+        "basketball": {
+          "mode": "practice",
+          "phase": "practice",
+          "seconds": 0
+        },
+        "football": {
+          "mode": "practice",
+          "phase": "practice",
+          "seconds": 0
+        },
+        "tag": {
+          "mode": "practice",
+          "phase": "practice",
+          "seconds": 0
+        }
+      },
+      "shots": 0,
+      "sports": {
+        "balls": {
+          "basketball": {
+            "kind": "basketball",
+            "lastTouch": "",
+            "matchBall": true,
+            "state": "LOOSE_BALL"
+          },
+          "football": {
+            "kind": "football",
+            "lastTouch": "",
+            "matchBall": true,
+            "state": "LOOSE_BALL"
+          }
+        },
+        "rules": "청팀은 +X 골대, 주황팀은 -X 골대를 공격합니다. 농구는 모두 2점, 축구는 1점. 자유 연습에는 팀 제한이 없습니다.",
+        "teams": {
+          "basketball": {},
+          "football": {},
+          "tag": {}
+        }
+      },
+      "tick": 3080,
+      "type": "state",
+      "voiceOcclusion": {}
+    },
+    "boardStrokes": [],
+    "collaboration": {
+      "report": "",
+      "revision": 0,
+      "brainstorm": {},
+      "mindmap": {},
+      "questions": {},
+      "tasks": {},
+      "agenda": "",
+      "decisions": "",
+      "composing": false,
+      "presence": []
+    },
+    "stt": {
+      "enabled": false,
+      "running": false,
+      "provider": "local",
+      "language": "ko-KR",
+      "measuredAccuracy": null,
+      "local": {
+        "ready": false,
+        "enabled": false,
+        "busy": false,
+        "provider": "Whisper tiny q8 · local WASM worker",
+        "downloadBytes": 0,
+        "metrics": []
+      }
+    },
+    "broadcast": {
+      "speaker": "",
+      "scope": "session",
+      "revision": 0
+    },
+    "voicePolicy": {
+      "mode": "near",
+      "broadcast": [],
+      "modes": {
+        "local": "near"
+      },
+      "openMic": false,
+      "hidden": false,
+      "stateAge": 75.90000000596046
+    },
+    "voiceTracks": [],
+    "connections": [],
+    "mic": false,
+    "muted": true,
+    "voiceIncoming": 0,
+    "voiceOutgoing": 0,
+    "recoveryTime": ""
+  },
+  "video": "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v6\\campus-browser-passage\\page@5a17bab0be771bb2ab295dc34bd3b659.webm"
+}

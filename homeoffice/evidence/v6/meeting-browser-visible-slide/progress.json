@@ -1,0 +1,27 @@
+{
+  "environment": "Four independent Chromium processes, real Godot WebGL and local WebRTC. Korean composition uses Chromium IME protocol, not a human OS keyboard. No real microphones or external document accounts.",
+  "checks": [
+    {
+      "name": "Four real peers join one meeting and type into one report",
+      "ok": true
+    },
+    {
+      "name": "Korean composition survives another peer inserting text",
+      "ok": true
+    },
+    {
+      "name": "Four participants share a real image slide, laser, question and task",
+      "ok": true
+    },
+    {
+      "name": "Two concurrent meetings isolate report, board and agenda",
+      "ok": true
+    },
+    {
+      "name": "Undo removes my edit while preserving the other participant",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "buildId": "996f5c47-3faf-4f07-b853-a411d1c102bf"
+}

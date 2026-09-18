@@ -1,0 +1,392 @@
+{
+  "checks": [
+    {
+      "label": "B1 public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9863147735596,
+        -3.60451102256775,
+        -29.825309753418
+      ]
+    },
+    {
+      "label": "B1 accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0142860412598,
+        -3.60399985313416,
+        -35.1415786743164
+      ]
+    },
+    {
+      "label": "B1 local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0142860412598,
+        -3.60399985313416,
+        -35.1415786743164
+      ]
+    },
+    {
+      "label": "B1 real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.6698951721191,
+        -3.60400009155273,
+        -35.4167976379395
+      ]
+    },
+    {
+      "label": "B1 cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.139274597168,
+        -3.60400009155273,
+        -35.3152122497559
+      ]
+    },
+    {
+      "label": "1F public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789333343506,
+        -0.00484377145767212,
+        -29.8378791809082
+      ]
+    },
+    {
+      "label": "1F accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0138359069824,
+        -0.00399987073615193,
+        -35.147216796875
+      ]
+    },
+    {
+      "label": "1F local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0138359069824,
+        -0.00399987073615193,
+        -35.147216796875
+      ]
+    },
+    {
+      "label": "1F real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.6877136230469,
+        -0.00399988517165184,
+        -35.4161491394043
+      ]
+    },
+    {
+      "label": "1F cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1331329345703,
+        -0.00399988517165184,
+        -35.3145408630371
+      ]
+    },
+    {
+      "label": "2F public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789333343506,
+        3.59515595436096,
+        -29.8378791809082
+      ]
+    },
+    {
+      "label": "2F accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0138359069824,
+        3.5959997177124,
+        -35.147216796875
+      ]
+    },
+    {
+      "label": "2F local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0138359069824,
+        3.5959997177124,
+        -35.147216796875
+      ]
+    },
+    {
+      "label": "2F real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.689079284668,
+        3.59600019454956,
+        -35.4161491394043
+      ]
+    },
+    {
+      "label": "2F cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1322746276855,
+        3.59600019454956,
+        -35.3144683837891
+      ]
+    },
+    {
+      "label": "3F public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789295196533,
+        7.19515609741211,
+        -29.8378410339355
+      ]
+    },
+    {
+      "label": "3F accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.013843536377,
+        7.19600009918213,
+        -35.1471214294434
+      ]
+    },
+    {
+      "label": "3F local washroom door opens",
+      "ok": true,
+      "position": [
+        32.013843536377,
+        7.19600009918213,
+        -35.1471214294434
+      ]
+    },
+    {
+      "label": "3F real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.6901626586914,
+        7.19600009918213,
+        -35.416145324707
+      ]
+    },
+    {
+      "label": "3F cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1315956115723,
+        7.19600009918213,
+        -35.3144111633301
+      ]
+    },
+    {
+      "label": "4F public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789237976074,
+        10.7951555252075,
+        -29.8378028869629
+      ]
+    },
+    {
+      "label": "4F accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0138549804688,
+        10.7960004806519,
+        -35.1470069885254
+      ]
+    },
+    {
+      "label": "4F local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0138549804688,
+        10.7960004806519,
+        -35.1470069885254
+      ]
+    },
+    {
+      "label": "4F real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.6901931762695,
+        10.7960004806519,
+        -35.416145324707
+      ]
+    },
+    {
+      "label": "4F cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1316566467285,
+        10.7960004806519,
+        -35.3144493103027
+      ]
+    },
+    {
+      "label": "5F public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789161682129,
+        14.3951559066772,
+        -29.8377456665039
+      ]
+    },
+    {
+      "label": "5F accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0138702392578,
+        14.3959999084473,
+        -35.1468315124512
+      ]
+    },
+    {
+      "label": "5F local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0138702392578,
+        14.3959999084473,
+        -35.1468315124512
+      ]
+    },
+    {
+      "label": "5F real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.690559387207,
+        14.3959999084473,
+        -35.416145324707
+      ]
+    },
+    {
+      "label": "5F cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1314086914063,
+        14.3959999084473,
+        -35.3144416809082
+      ]
+    },
+    {
+      "label": "6F public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789123535156,
+        17.9951591491699,
+        -29.8377075195313
+      ]
+    },
+    {
+      "label": "6F accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0138702392578,
+        17.9960021972656,
+        -35.1467323303223
+      ]
+    },
+    {
+      "label": "6F local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0138702392578,
+        17.9960021972656,
+        -35.1467323303223
+      ]
+    },
+    {
+      "label": "6F real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.6909103393555,
+        17.9960021972656,
+        -35.416145324707
+      ]
+    },
+    {
+      "label": "6F cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1311416625977,
+        17.9960021972656,
+        -35.3144302368164
+      ]
+    },
+    {
+      "label": "RF public corridor reaches washroom",
+      "ok": true,
+      "position": [
+        31.9789066314697,
+        21.5951595306396,
+        -29.8376693725586
+      ]
+    },
+    {
+      "label": "RF accessible aisle reaches back cubicle",
+      "ok": true,
+      "position": [
+        32.0138778686523,
+        21.5960025787354,
+        -35.1466217041016
+      ]
+    },
+    {
+      "label": "RF local washroom door opens",
+      "ok": true,
+      "position": [
+        32.0138778686523,
+        21.5960025787354,
+        -35.1466217041016
+      ]
+    },
+    {
+      "label": "RF real capsule enters cubicle without clipping",
+      "ok": true,
+      "position": [
+        33.6913070678711,
+        21.5960025787354,
+        -35.416145324707
+      ]
+    },
+    {
+      "label": "RF cubicle exit stays walkable",
+      "ok": true,
+      "position": [
+        32.1308784484863,
+        21.5960025787354,
+        -35.3144035339355
+      ]
+    },
+    {
+      "label": "Simulation host cannot open administrator room",
+      "ok": true,
+      "position": [
+        15.5,
+        14.3999996185303,
+        -23.2999992370605
+      ]
+    },
+    {
+      "label": "Simulation host does not activate CCTV",
+      "ok": true,
+      "position": [
+        13.0,
+        14.3999996185303,
+        -20.0
+      ]
+    },
+    {
+      "label": "Closed unauthorized CCTV never renders",
+      "ok": true,
+      "position": [
+        13.0,
+        14.3999996185303,
+        -20.0
+      ]
+    }
+  ],
+  "fixture": true
+}

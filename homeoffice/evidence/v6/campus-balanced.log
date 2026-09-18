@@ -1,0 +1,4 @@
+PASS Walk from retained HOME through real entrance to new campus
+PASS Physical lift call and passenger ride to meeting floor
+PASS Walk through meeting doorway and open its physical workspace
+{"buildId":"f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa","completed":true,"checks":[{"name":"Walk from retained HOME through real entrance to new campus","ok":true},{"name":"Physical lift call and passenger ride to meeting floor","ok":true},{"name":"Walk through meeting doorway and open its physical workspace","ok":true}],"errors":[]}

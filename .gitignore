@@ -25,3 +25,12 @@ homeoffice/evidence/v5/**/page@*.webm
 !homeoffice/evidence/v5/retained-v4-browser-wardrobe-build/page@*.webm
 !homeoffice/evidence/v5/seating-browser-front/page@*.webm
 !homeoffice/evidence/v5/publication/**/page@*.webm
+
+# V6 repeated recordings remain local; reviewed publication captures are selected explicitly.
+homeoffice/evidence/v6/**/page@*.webm
+!homeoffice/evidence/v6/meeting-browser-final/page@*.webm
+!homeoffice/evidence/v6/campus-browser-final/page@*.webm
+!homeoffice/evidence/v6/publication/**/page@*.webm
+
+!homeoffice/evidence/v6/retained-wardrobe/page@*.webm
+!homeoffice/evidence/v6/retained-placement/page@*.webm
