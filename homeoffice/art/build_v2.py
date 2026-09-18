@@ -217,8 +217,10 @@ for side in [-1,1]:
 # New authored catalog assets. Each mesh has purposeful shape and separate colliders/anchors.
 begin('low_table');box('top',[0,.42,0],[1.65,.08,.8],'oak',True)
 for x in [-.65,.65]:
- for z in [-.26,.26]:cyl('leg',[x,.2,z],.045,.4,'walnut')
-finish('low_table',{'work_surface':[0,.47,0]},.015)
+ for z in [-.26,.26]:
+  cyl('leg',[x,.2,z],.045,.4,'walnut')
+  collisions.append(dict(position=[x,.2,z],size=[.09,.4,.09],yaw=0))
+finish('low_table',{'work_surface':[0,.47,0],'grip_left':[-.28,.4,.36],'grip_right':[.28,.4,.36]},.015)
 begin('bed');box('bed frame',[0,.25,0],[1.15,.3,2.1],'oak',True);box('mattress',[0,.5,0],[1.1,.24,2.04],'cloth',True);box('headboard',[0,.72,-1.04],[1.19,1.1,.1],'walnut',True);box('duvet',[0,.645,.28],[1.08,.1,1.42],'sage');box('pillow',[0,.67,-.65],[.78,.15,.43],'white')
 finish('bed',{'lie':[0,.69,0],'stand':[.9,0,.25]},.055)
 for kind in ['counter','cooker','sink','fridge']:

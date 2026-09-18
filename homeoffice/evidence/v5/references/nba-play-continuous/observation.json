@@ -1,0 +1,156 @@
+{
+  "url": "https://www.youtube.com/watch?v=uNhzALVGrB4",
+  "method": "Actual continuous browser playback from beginning, muted, no seeking. Recorded frames do not imply each frame has been visually reviewed.",
+  "frames": [
+    {
+      "time": 1.976146,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "000.jpg"
+    },
+    {
+      "time": 4.062876,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "001.jpg"
+    },
+    {
+      "time": 6.144502,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "002.jpg"
+    },
+    {
+      "time": 8.231982,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "003.jpg"
+    },
+    {
+      "time": 10.321643,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "004.jpg"
+    },
+    {
+      "time": 12.392116,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "005.jpg"
+    },
+    {
+      "time": 14.477081,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "006.jpg"
+    },
+    {
+      "time": 16.569139,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "007.jpg"
+    },
+    {
+      "time": 18.642744,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "008.jpg"
+    },
+    {
+      "time": 20.740174,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "009.jpg"
+    },
+    {
+      "time": 22.83639,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "010.jpg"
+    },
+    {
+      "time": 24.91692,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "011.jpg"
+    },
+    {
+      "time": 27.001537,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "012.jpg"
+    },
+    {
+      "time": 29.087078,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "013.jpg"
+    },
+    {
+      "time": 31.165741,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "014.jpg"
+    },
+    {
+      "time": 33.255081,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "015.jpg"
+    },
+    {
+      "time": 35.338876,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "016.jpg"
+    },
+    {
+      "time": 37.441803,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "017.jpg"
+    },
+    {
+      "time": 39.527144,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "018.jpg"
+    },
+    {
+      "time": 41.62129,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "019.jpg"
+    },
+    {
+      "time": 0,
+      "rate": 1,
+      "paused": true,
+      "readyState": 0,
+      "file": "020.jpg"
+    }
+  ],
+  "title": "Nba Live 19 Xbox Series S Gameplay No commentary - YouTube",
+  "publisher": "day at work vlog with Roy\n구독자 2.66만명\n구독",
+  "failure": "Playback stopped or lost media data"
+}

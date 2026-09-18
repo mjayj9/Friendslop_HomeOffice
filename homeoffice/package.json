@@ -17,7 +17,11 @@
     "test:publication": "python tests/site-artifact.test.py",
     "build": "powershell -File tools/build.ps1",
     "test:v4:browser": "cd .. && node homeoffice/tests/v4-browser-flow.mjs",
-    "dev:signal": "node tools/serve.mjs --port 5173 --artifact build --local-signaling"
+    "dev:signal": "node tools/serve.mjs --port 5173 --artifact build --local-signaling",
+    "test:v5:policy": "node --test tests/v5-admin-policy.test.mjs",
+    "test:v5:placement": "cd .. && node homeoffice/tests/v5-placement-browser.mjs",
+    "test:v5:seating": "cd .. && node homeoffice/tests/v5-seating-browser.mjs",
+    "test:v5:wardrobe": "cd .. && node homeoffice/tests/v5-wardrobe-browser.mjs"
   },
   "dependencies": {
     "@huggingface/transformers": "4.2.0",

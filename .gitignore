@@ -17,3 +17,11 @@ PRIVATE_*
 
 # Repeated local QA captures stay local; selected report videos are explicitly tracked.
 homeoffice/evidence/v4/**/page@*.webm
+
+# Keep repeated V5 recordings local; retain the reviewed evidence and public smoke runs.
+homeoffice/evidence/v5/**/page@*.webm
+!homeoffice/evidence/v5/wardrobe-browser-final/page@*.webm
+!homeoffice/evidence/v5/placement-browser-wardrobe-build/page@*.webm
+!homeoffice/evidence/v5/retained-v4-browser-wardrobe-build/page@*.webm
+!homeoffice/evidence/v5/seating-browser-front/page@*.webm
+!homeoffice/evidence/v5/publication/**/page@*.webm

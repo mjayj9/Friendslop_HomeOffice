@@ -1,5 +1,13 @@
 extends "res://scripts/avatar.gd"
 
+const Appearance=preload("res://scripts/wardrobe/appearance.gd")
+var appearance_profile=Appearance.defaults()
+
+func set_appearance(profile:Dictionary):
+	appearance_profile=profile.duplicate(true)
+	for visual in [standing,sitting,lying,hands]:
+		if is_instance_valid(visual):Appearance.apply(visual,appearance_profile)
+
 var nickname="친구"
 var name_label:Label3D
 var lying:Node3D
@@ -22,6 +30,7 @@ var transition_until=0
 var transition_clip=""
 var sleep_blend=0.0
 var collider:CollisionShape3D
+var motion_graph=preload("res://scripts/player/motion_graph.gd").new()
 var camera_rig=preload("res://scripts/player/camera_rig.gd").new()
 
 func aim_point() -> Vector3:
@@ -34,7 +43,7 @@ func _ready():
 	super._ready()
 	for n in standing.find_children("*","AnimationPlayer",true,false):animator=n;break
 	if animator:
-		var manifest=JSON.parse_string(FileAccess.get_file_as_string("res://assets/characters/animation-manifest-v3.json"))
+		var manifest=JSON.parse_string(FileAccess.get_file_as_string("res://assets/characters/animation-manifest-v5.json"))
 		for clip in manifest.clips:
 			if animator.has_animation(clip.name):animator.get_animation(clip.name).loop_mode=Animation.LOOP_LINEAR if clip.loop else Animation.LOOP_NONE
 	contact_ik=load("res://scripts/player/contact_ik.gd").new();contact_ik.avatar=self;skeleton.add_child(contact_ik)
@@ -57,6 +66,7 @@ func _ready():
 	hand_skeleton=find_skeleton(hands)
 	hand_ik=load("res://scripts/player/contact_ik.gd").new();hand_ik.avatar=self;hand_ik.arms_only=true;hand_skeleton.add_child(hand_ik)
 	hands.visible=false
+	motion_graph.setup(self)
 
 func eye() -> Vector3:
 	var h=.92 if posture in ["lying","sleeping"] else (1.25 if seated!="" else (1.10 if crouching else 1.62))
@@ -72,6 +82,10 @@ func simulate(dt:float):
 	collider.shape.height=1.2 if crouching else 1.75
 	collider.position.y=.61 if crouching else .88
 	if seated!="":
+		if posture=="seated":
+			collider.shape.height=.9;collider.position.y=.97
+			var seating_world=get_parent();var item=seating_world.objects.get(seated)
+			if item and not seating_world.seat_contacts.contact(seating_world,item,seat_index).is_empty():position=seating_world.seat_contacts.origin(seating_world,item,seat_index)
 		rotation.y=seat_yaw
 		camera.rotation=Vector3(float(command.pitch),float(command.yaw)-rotation.y,0)
 		camera.position.y=move_toward(camera.position.y,eye().y-global_position.y,dt*4)
@@ -129,57 +143,15 @@ func animate(dt:float):
 			for part in ["UpperArm.","Forearm."]:
 				var index=hand_skeleton.find_bone(part+side)
 				if index>=0:hand_skeleton.set_bone_pose_rotation(index,hand_skeleton.get_bone_rest(index).basis.get_rotation_quaternion()*Quaternion(Vector3.RIGHT,-1.0 if part=="UpperArm." else -.45))
-	contact_ik.active=standing.visible
-	hand_ik.active=hands.visible
-	var speed=Vector2(velocity.x,velocity.z).length()
-	var clip="idle"
-	if seated!="":clip="sleep_idle" if sleeping else "sit_idle"
-	elif crouching:clip="crouch"
-	elif speed>.15:clip="run" if speed>3.5 else "walk"
-	elif holding!="":clip="carry"
-	var local_velocity=global_basis.inverse()*Vector3(velocity.x,0,velocity.z)
-	if clip in ["walk","run"]:
-		if absf(local_velocity.x)>absf(local_velocity.z)*1.2:clip+="_right" if local_velocity.x>0 else "_left"
-		elif local_velocity.z>.2:clip+="_back"
-	if speed>.2 and previous_speed<.1:motion_clip="start";motion_until=now+180
-	if speed<.1 and previous_speed>.3:motion_clip="stop";motion_until=now+230
-	if not is_on_floor() and absf(velocity.y)>.5:clip="jump" if velocity.y>1 else "air"
-	elif not grounded_before:motion_clip="land";motion_until=now+220
-	if speed<.12 and absf(angle_difference(previous_yaw,rotation.y))>.015 and seated=="":clip="turn_left" if angle_difference(previous_yaw,rotation.y)>0 else "turn_right"
-	if now<motion_until and seated=="":clip=motion_clip
-	grounded_before=is_on_floor();previous_speed=speed;previous_yaw=rotation.y
-	var world=get_parent()
-	if holding!="" and world.definitions.has(holding):
-		var kind=world.definitions[holding].kind
-		if kind=="shield":clip="shield"
-		elif kind=="gun" and speed<.2:clip="aim"
-		elif kind in ["chair","table","low_table","floor_lamp"] and speed<.2:clip="carry_heavy"
-	if get_meta("dribble",false):clip="dribble_left" if get_meta("dribble_left",false) else "dribble"
-
-	var activity=String(get_meta("activity",""))
-	if activity=="book":clip="book_read"
-	elif activity=="broadcast":clip="broadcast"
-	elif activity in ["report","documents","brainstorm","mindmap","meeting"] and seated!="":clip="work"
-	var gesture=String(get_meta("gesture","")) if now<int(get_meta("gesture_until",0)) else remote_gesture
-	if gesture!="":clip=gesture
-	if posture!=previous_posture:
-		if sleeping:transition_clip="sleep_enter";transition_until=now+1400
-		elif previous_posture in ["lying","sleeping"]:transition_clip="wake";transition_until=now+1200
-		elif seated!="":transition_clip="sit_enter";transition_until=now+900
-		else:transition_clip="sit_exit";transition_until=now+800
-		previous_posture=posture
-	if now<transition_until:clip=transition_clip
-	if animator:
-		var name="v3_"+clip
-		if not animator.has_animation(name):
-			for candidate in animator.get_animation_list():
-				if String(candidate).ends_with(name):name=candidate;break
-		if name!=last_clip and animator.has_animation(name):animator.play(name,.12);last_clip=name
-		animator.speed_scale=clampf(speed/(5.2 if clip.begins_with("run") else 3.1),.45,1.6) if clip.begins_with("walk") or clip.begins_with("run") else 1.0
+	contact_ik.active=standing.visible and motion_graph.debug_mode!="animation_only"
+	hand_ik.active=hands.visible and motion_graph.debug_mode!="animation_only"
+	motion_graph.update(dt)
 	if local_player:camera_rig.update(self,dt,sleeping)
 
 func state() -> Dictionary:
 	var s=super.state()
+	s.grounded=is_on_floor() or seated!=""
+	s.actionStamp=int(get_meta("gesture_until",0))
 	s.displayName=nickname
 	s.posture=posture
 	s.seatIndex=seat_index

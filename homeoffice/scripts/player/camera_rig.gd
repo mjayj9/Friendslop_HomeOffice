@@ -7,6 +7,21 @@ var actual_distance=0.0
 var initialized=false
 var last_sleeping=false
 
+var profile="HOME"
+var saved_view={}
+
+func activity_profile(next:String):
+	if next==profile:return
+	var sports=next in ["BASKETBALL","FOOTBALL"]
+	var was_sports=profile in ["BASKETBALL","FOOTBALL"]
+	if sports and not was_sports:
+		saved_view={"third":third_person,"distance":distance}
+	if sports:
+		third_person=true;distance=4.2 if next=="BASKETBALL" else 4.6
+	elif was_sports and not saved_view.is_empty():
+		third_person=saved_view.third;distance=saved_view.distance;saved_view.clear()
+	profile=next;initialized=false
+
 func toggle():
 	third_person=not third_person
 	initialized=false
@@ -59,4 +74,4 @@ func update(p,dt:float,sleeping:bool):
 	p.hands.visible=not p.standing.visible and p.holding!="" and not sleeping
 
 func diagnostics() -> Dictionary:
-	return {"mode":"third" if third_person else "first","zoom":distance,"actualDistance":actual_distance,"aiming":aiming}
+	return {"mode":"third" if third_person else "first","zoom":distance,"actualDistance":actual_distance,"aiming":aiming,"profile":profile}

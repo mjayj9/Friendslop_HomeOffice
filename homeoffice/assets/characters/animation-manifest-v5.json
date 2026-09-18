@@ -1,0 +1,661 @@
+{
+  "clips": [
+    {
+      "name": "v3_idle",
+      "seconds": 2.0,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_walk",
+      "seconds": 0.92,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_run",
+      "seconds": 0.64,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_crouch",
+      "seconds": 1.1,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_jump",
+      "seconds": 0.65,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_land",
+      "seconds": 0.25,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_carry",
+      "seconds": 1,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_pickup",
+      "seconds": 0.65,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_drop",
+      "seconds": 0.45,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_throw",
+      "seconds": 0.5,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_sit_enter",
+      "seconds": 0.9,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_sit_idle",
+      "seconds": 2,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_sit_exit",
+      "seconds": 0.8,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_sleep_enter",
+      "seconds": 1.4,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_sleep_idle",
+      "seconds": 3,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_wake",
+      "seconds": 1.2,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_aim",
+      "seconds": 1,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_fire",
+      "seconds": 0.22,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_reload",
+      "seconds": 1.4,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_hit",
+      "seconds": 0.3,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_ko",
+      "seconds": 0.6,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_respawn",
+      "seconds": 0.6,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_dribble",
+      "seconds": 0.6,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_pass",
+      "seconds": 0.5,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_shot",
+      "seconds": 0.85,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_steal",
+      "seconds": 0.55,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_kick",
+      "seconds": 0.55,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_work",
+      "seconds": 2,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_switch",
+      "seconds": 0.6,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_cook",
+      "seconds": 1.5,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_eat",
+      "seconds": 1.5,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "New Blender keyframe poses on existing male rig",
+      "validation": "Pending in-game pose/contact review"
+    },
+    {
+      "name": "v3_walk_back",
+      "seconds": 0.92,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_run_back",
+      "seconds": 0.64,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_walk_left",
+      "seconds": 0.92,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_run_left",
+      "seconds": 0.64,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_walk_right",
+      "seconds": 0.92,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_run_right",
+      "seconds": 0.64,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_start",
+      "seconds": 0.25,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_stop",
+      "seconds": 0.3,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_turn_left",
+      "seconds": 0.4,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_turn_right",
+      "seconds": 0.4,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_air",
+      "seconds": 0.8,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_stairs",
+      "seconds": 0.9,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_carry_heavy",
+      "seconds": 1.3,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_book_read",
+      "seconds": 2.5,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_marker_write",
+      "seconds": 1,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_marker_erase",
+      "seconds": 1,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_clean",
+      "seconds": 1,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_shield",
+      "seconds": 1.5,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_block",
+      "seconds": 0.3,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_crossover",
+      "seconds": 0.65,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_dribble_left",
+      "seconds": 0.6,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_foot_touch",
+      "seconds": 0.45,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_receive",
+      "seconds": 0.45,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_foot_pass",
+      "seconds": 0.45,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_foot_steal",
+      "seconds": 0.45,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_sofa_relax",
+      "seconds": 3,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_broadcast",
+      "seconds": 2,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_door_use",
+      "seconds": 0.7,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_drawer_use",
+      "seconds": 0.7,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_plate",
+      "seconds": 0.7,
+      "loop": false,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v3_carry_food",
+      "seconds": 0.7,
+      "loop": true,
+      "rootMotion": false,
+      "bones": 13,
+      "source": "Authored Blender poses on inherited male mesh",
+      "validation": "Engine import and pose/contact simulation required",
+      "transition": "Avatar animation state selects by speed, direction, tool and action"
+    },
+    {
+      "name": "v5_basketball_ready",
+      "seconds": 1.8,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_basketball_jog",
+      "seconds": 0.72,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_basketball_pivot_left",
+      "seconds": 0.42,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_basketball_pivot_right",
+      "seconds": 0.42,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_football_ready",
+      "seconds": 1.8,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_football_jog",
+      "seconds": 0.72,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_football_pivot_left",
+      "seconds": 0.42,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    },
+    {
+      "name": "v5_football_pivot_right",
+      "seconds": 0.42,
+      "loop": true,
+      "rootMotion": false,
+      "source": "V5 authored no-ball readiness on preserved male rig",
+      "validation": "Requires game visual/contact review; clip existence is not acceptance"
+    }
+  ],
+  "limitations": [
+    "Inherited 13-bone rig has no fingers; foot stride/contact and body fitting require further visual review."
+  ],
+  "originalAnimations": []
+}

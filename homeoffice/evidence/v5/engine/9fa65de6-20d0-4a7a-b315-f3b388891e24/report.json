@@ -1,0 +1,82 @@
+{
+  "buildId": "9fa65de6-20d0-4a7a-b315-f3b388891e24",
+  "sourceDigest": "74c8afce2b641b594aa5598ff4fe1f43eb070adc9d68be0c3249f86c9bc08b68",
+  "scope": "Headless fixture checks; not browser, human, artwork or full V5 acceptance",
+  "testedAt": "2026-09-17T13:41:35.429402+00:00",
+  "suites": [
+    {
+      "script": "tests/v5-table-support.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/table-support.log",
+      "checks": 7,
+      "passed": 7,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/table-support.json",
+      "ok": true
+    },
+    {
+      "script": "tests/v5-motion-matrix.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/motion-matrix.log",
+      "checks": 14,
+      "passed": 14,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/motion-matrix.json",
+      "ok": true,
+      "countSource": "Actual PASS/FAIL entries in archived Godot log; fixture JSON stores failures and frame samples."
+    },
+    {
+      "script": "tests/v5-court-access.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/court-access.log",
+      "checks": 35,
+      "passed": 35,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/court-access.json",
+      "ok": true
+    },
+    {
+      "script": "tests/v5-carry-volume.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/carry-volume.log",
+      "checks": 6,
+      "passed": 6,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/carry-volume.json",
+      "ok": true
+    },
+    {
+      "script": "tests/v5-seat-contacts.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/seat-contacts.log",
+      "checks": 20,
+      "passed": 20,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/seat-contacts.json",
+      "ok": true
+    },
+    {
+      "script": "tests/v5-placement.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/placement.log",
+      "checks": 10,
+      "passed": 10,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/placement.json",
+      "ok": true
+    },
+    {
+      "script": "tests/v5-retained-living-props.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/retained-living-props.log",
+      "checks": 12,
+      "passed": 12,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/retained-living-props.json",
+      "ok": true
+    },
+    {
+      "script": "tests/v5-wardrobe.gd",
+      "exitCode": 0,
+      "log": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/wardrobe.log",
+      "checks": 21,
+      "passed": 21,
+      "result": "engine/9fa65de6-20d0-4a7a-b315-f3b388891e24/wardrobe-engine.json",
+      "ok": true
+    }
+  ],
+  "passed": true
+}

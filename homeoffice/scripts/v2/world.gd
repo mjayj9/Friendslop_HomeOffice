@@ -10,6 +10,8 @@ const Avatar=preload("res://scripts/v2/avatar.gd")
 const Board=preload("res://scripts/v2/board.gd")
 var layout={}
 var v2_manifest={}
+var seat_contacts=preload("res://scripts/interaction/seat_contacts.gd").new()
+var furniture_carry=preload("res://scripts/interaction/furniture_carry.gd").new()
 var doors={}
 var door_states={}
 var room_access=preload("res://scripts/security/room_access.gd").new()
@@ -539,6 +541,17 @@ func update_held(dt:float):
 		if p.holding=="":continue
 		var o=objects.get(p.holding)
 		if not o:continue
+		var carry_kind=definitions[p.holding].kind
+		if carry_kind in furniture_carry.KINDS:
+			o.remove_collision_exception_with(p);p.remove_collision_exception_with(o)
+			var pose=furniture_carry.target(self,p,o)
+			var delta=pose.position-o.global_position
+			if delta.length()>3:release(p,false);continue
+			var rotation=pose.basis.get_rotation_quaternion()*o.quaternion.inverse()
+			if rotation.w<0:rotation=-rotation
+			o.angular_velocity=(rotation.get_axis()*rotation.get_angle()*8).limit_length(4)
+			o.linear_velocity=(delta*10).limit_length(4);o.sleeping=false
+			continue
 		var grip=p.eye()+p.direction()*.43+Vector3(0,-.38,0)
 		if definitions[p.holding].kind in ["laser","marker"]:grip=p.eye()+p.direction()*.43+Vector3(0,-.22,0)+p.global_basis*Vector3(.15,0,0)
 		var anchor_height=float({"chair":.55,"table":.78,"low_table":.42,"floor_lamp":.85}.get(definitions[p.holding].kind,0))
@@ -739,6 +752,9 @@ func handle_packet(sender:String,m):
 				p.posture=s.get("posture","standing")
 				p.set_meta("activity",s.get("activity",""))
 				p.remote_gesture=String(s.get("gesture",""))
+				p.set_meta("authority_grounded",bool(s.get("grounded",absf(float(s.v[1]))<.5)))
+				p.set_meta("snapshot_tick",int(m.tick))
+				p.set_meta("remote_action_stamp",int(s.get("actionStamp",0)))
 				p.set_meta("dribble",s.get("dribble",false));p.set_meta("dribble_left",s.get("dribbleLeft",false))
 				p.crouching=bool(s.get("crouch",false))
 				p.seat_index=s.get("seatIndex",0)
@@ -1059,6 +1075,10 @@ func stand_up(p) -> bool:
 	var o=objects.get(p.seated)
 	if not o:return false
 	var points=[Vector3(.9,0,.25),Vector3(-.9,0,.25)] if definitions[p.seated].kind=="bed" else [Vector3((p.seat_index-1)*.77 if definitions[p.seated].kind=="sofa" else 0,0,-1.15),Vector3(0,0,.95),Vector3(.9,0,0),Vector3(-.9,0,0)]
+	var authored_exits=seat_contacts.exits(self,o,p.seat_index)
+	if not authored_exits.is_empty():
+		points=[]
+		for exit_point in authored_exits:points.append(vec(exit_point))
 	for offset in points:
 		var point=o.global_transform*offset
 		if safe_stand(point,p):
@@ -1184,7 +1204,8 @@ func perform(id:String,m:Dictionary):
 		var st=o.get_meta("state",{});st.on=not st.get("on",true);o.set_meta("state",st);revision+=1;return
 	if kind in ["chair","sofa","bed"]:
 		var seats=o.get_meta("seats",{})
-		var seat_index=clampi(int(round((o.to_local(p.position).x+.77)/.77)),0,2) if kind=="sofa" else 0
+		var seat_index=seat_contacts.select_slot(self,o,p) if kind=="sofa" else 0
+		if seat_index<0:return reject(id,"좌석 앞의 빈 접근 공간에서 사용해 주세요")
 		if o.get_meta("lying","")!="" or seats.has(str(seat_index)) or (kind=="bed" and o.get_meta("occupant","")!=""):return reject(id,"이미 다른 사람이 사용 중입니다")
 		if p.holding!="" and not definitions[p.holding].kind in ["plate","meal","book"]:release(p,false)
 		seats[str(seat_index)]=id
@@ -1194,7 +1215,7 @@ func perform(id:String,m:Dictionary):
 		p.seat_index=seat_index
 		p.posture="lying" if kind=="bed" else "seated"
 		p.seat_yaw=o.rotation.y
-		p.position=o.global_transform*Vector3((seat_index-1)*.77 if kind=="sofa" else 0,0,0)
+		p.position=seat_contacts.origin(self,o,seat_index) if kind=="sofa" else o.global_position
 		p.rotation.y=o.rotation.y
 		p.command.yaw=o.rotation.y
 		if id==local_id:yaw=o.rotation.y
@@ -1341,20 +1362,24 @@ func fire_tag(id:String):
 
 
 func placement_size(kind:String) -> Vector3:
-	var sizes={"chair":Vector3(.58,1.18,.58),"table":Vector3(2.8,.84,1.2),"sofa":Vector3(2.65,1.15,1.1),"bed":Vector3(1.2,1.3,2.15),"storage":Vector3(1.28,1.65,1.05),"drawer":Vector3(.96,.86,1.10),"floor_lamp":Vector3(.5,1.7,.5)}
+	var sizes={"chair":Vector3(.58,1.18,.58),"table":Vector3(2.8,.84,1.2),"sofa":Vector3(2.65,1.15,1.1),"bed":Vector3(1.2,1.3,2.15),"storage":Vector3(1.28,1.65,1.05),"drawer":Vector3(.96,.86,1.10),"floor_lamp":Vector3(.5,1.7,.5),"book":Vector3(.24,.075,.32),"crate":Vector3(.44,.44,.44),"marker":Vector3(.03,.19,.03),"gun":Vector3(.12,.3,.45),"shield":Vector3(.7,.92,.16),"plate":Vector3(.4,.04,.4)}
 	return sizes.get(kind,Vector3(.48,.48,.48))
 
+
+func placement_offset(kind:String) -> float:
+	return placement_size(kind).y*.5+.008 if kind in ["book","crate","marker","gun","shield","plate"] else 0.0
 
 func placement_ok(p,kind:String,point:Vector3,angle:float,move_id:String="") -> bool:
 	if p.eye().distance_to(point)>4 or point.y < -.25 or point.y>7:return false
 	if zone_at(point) in ["hall","upper_hall","personal-gallery","basketball","football","vestibule"]:return false
 	for area in layout.protected:
 		if area.has("p") and point.distance_to(vec(area.p))<float(area.radius):return false
-	var floor_ray=PhysicsRayQueryParameters3D.create(point+Vector3.UP*.15,point-Vector3.UP*.25,1)
-	var ground=get_world_3d().direct_space_state.intersect_ray(floor_ray)
-	if ground.is_empty() or ground.normal.y<.7:return false
 	var excluded=[p.get_rid()]
 	if objects.has(move_id):excluded.append(objects[move_id].get_rid())
+	var floor_ray=PhysicsRayQueryParameters3D.create(point+Vector3.UP*.15,point-Vector3.UP*.25,1|4,excluded)
+	var ground=get_world_3d().direct_space_state.intersect_ray(floor_ray)
+	if ground.is_empty() or ground.normal.y<.85:return false
+	if ground.collider is RigidBody3D and kind not in ["book","crate","marker","gun","shield","plate"]:return false
 	var ray=PhysicsRayQueryParameters3D.create(p.eye(),point+Vector3.UP*.3,1,excluded)
 	if not get_world_3d().direct_space_state.intersect_ray(ray).is_empty():return false
 	var q=PhysicsShapeQueryParameters3D.new()
@@ -1382,7 +1407,7 @@ func place_object(id:String,data:Dictionary):
 	var angle=snappedf(float(data.yaw),PI/4)
 	if not placement_ok(p,kind,point,angle,move_id):return reject(id,"충돌, 거리 또는 보호 구역으로 설치할 수 없습니다")
 	var object_id="placed-"+str(revision)+"-"+str(objects.size())
-	if kind in ["book","crate","marker","gun","shield","plate"]:point.y+=.25
+	point.y+=placement_offset(kind)
 	if move_id!="":
 		objects[move_id].position=point;objects[move_id].rotation.y=angle
 		if objects[move_id] is RigidBody3D:objects[move_id].linear_velocity=Vector3.ZERO;objects[move_id].angular_velocity=Vector3.ZERO
@@ -1422,7 +1447,7 @@ func update_build_preview():
 	projected.z=snappedf(projected.z,.25)
 	build_point=projected
 	build_valid=placement_ok(p,build_kind,build_point,build_angle,build_move_id)
-	build_preview.position=build_point
+	build_preview.position=build_point+Vector3.UP*placement_offset(build_kind)
 	build_preview.rotation.y=build_angle
 	for node in build_preview.find_children("*","MeshInstance3D",true,false):node.material_override.albedo_color=Color(.25,.9,.65,.48) if build_valid else Color(1,.25,.18,.48)
 
@@ -1579,7 +1604,8 @@ func apply_checkpoint(e:Dictionary):
 		for player in players.values():
 			if player.holding!="" and objects.has(player.holding):
 				var held=objects[player.holding]
-				held.gravity_scale=0;held.add_collision_exception_with(player);player.add_collision_exception_with(held)
+				held.gravity_scale=0
+				if definitions.get(player.holding,{}).get("kind","") not in furniture_carry.KINDS:held.add_collision_exception_with(player);player.add_collision_exception_with(held)
 		member_slots=checkpoint.memberSlots.duplicate(true)
 		member_identity=checkpoint.memberIdentity.duplicate(true)
 		room_claims=checkpoint.roomClaims.duplicate(true)

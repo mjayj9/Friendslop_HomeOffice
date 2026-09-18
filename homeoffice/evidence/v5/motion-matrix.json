@@ -1,0 +1,5179 @@
+{
+  "failures": [],
+  "fixture": true,
+  "modes": {
+    "animation_only": {
+      "clips": {
+        "v3_idle": 7,
+        "v3_walk": 113
+      },
+      "frames": [
+        {
+          "actionId": "",
+          "changes": 1,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            9.44833374023438
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            9.44833374023438
+          ],
+          "frame": 0,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "idle",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.00819672143962299,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 0,
+          "speedScale": 1.0,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 1,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            9.2933349609375
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            9.2933349609375
+          ],
+          "frame": 3,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "idle",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.032786885758492,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 1,
+          "speedScale": 1.0,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 1,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            9.13833618164063
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            9.13833618164063
+          ],
+          "frame": 6,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "idle",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.057377050077361,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 2,
+          "speedScale": 1.0,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.108554571866989,
+            8.81597518920898
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.152073174715042,
+            9.25962543487549
+          ],
+          "frame": 9,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.0517241390158199,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 3,
+          "speedScale": 0.999999988852106,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.11822070994113,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.135146617889404,
+            8.56906890869141
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.229154467582703,
+            9.23113822937012
+          ],
+          "frame": 12,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.103448277601263,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 4,
+          "speedScale": 0.999999981743894,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.711779334378047,
+          "contactR": 0.0800413849321109,
+          "footL": [
+            -1.12000012397766,
+            0.129429578781128,
+            8.42950534820557
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.195399522781372,
+            9.03590965270996
+          ],
+          "frame": 15,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.155172415912285,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 5,
+          "speedScale": 0.999999977211499,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.931382772074972,
+          "footL": [
+            -1.12000000476837,
+            0.10782265663147,
+            8.35240459442139
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.127735942602158,
+            8.74747467041016
+          ],
+          "frame": 18,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.20689655404833,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 6,
+          "speedScale": 0.999999974321516,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0931743979454041,
+            8.2926721572876
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0944888889789581,
+            8.44626331329346
+          ],
+          "frame": 21,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.258620692072803,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 7,
+          "speedScale": 0.999999972478781,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.831575847944704,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0911233127117157,
+            8.2498664855957
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0907942652702332,
+            8.17297267913818
+          ],
+          "frame": 24,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.310344830026136,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 8,
+          "speedScale": 0.999999971303802,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0343034418644003,
+          "contactR": 0.516248248452876,
+          "footL": [
+            -1.12000000476837,
+            0.112336039543152,
+            8.23293304443359
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.101979315280914,
+            7.91679573059082
+          ],
+          "frame": 27,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.362068967934107,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 9,
+          "speedScale": 0.999999970554602,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00386896513129313,
+          "footL": [
+            -1.11999988555908,
+            0.169519633054733,
+            8.21928882598877
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.121706753969193,
+            7.67876625061035
+          ],
+          "frame": 30,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.413793105813155,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 10,
+          "speedScale": 0.999999970076891,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.246938481926918,
+            8.16972160339355
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.143116563558578,
+            7.46254014968872
+          ],
+          "frame": 33,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.46551724367376,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 11,
+          "speedScale": 0.999999969772289,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539720535278,
+            8.05319118499756
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            7.284104347229
+          ],
+          "frame": 36,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.517241381522605,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 12,
+          "speedScale": 0.999999969578066,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00105517276019706,
+          "footL": [
+            -1.11999988555908,
+            0.287539750337601,
+            7.89819097518921
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            7.12910413742065
+          ],
+          "frame": 39,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.568965519363953,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 13,
+          "speedScale": 0.999999969454224,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.319324161586852,
+          "footL": [
+            -1.11999988555908,
+            0.220072776079178,
+            7.67383480072021
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.136023491621017,
+            7.01592826843262
+          ],
+          "frame": 42,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.620689657200519,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 14,
+          "speedScale": 0.999999969375259,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.463693148929846,
+          "contactR": 0.866758637740611,
+          "footL": [
+            -1.12000000476837,
+            0.147064417600632,
+            7.40048933029175
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.114816516637802,
+            6.92827749252319
+          ],
+          "frame": 45,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.672413795034037,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 15,
+          "speedScale": 0.999999969324909,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.101703196763992,
+            7.09993457794189
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0968725681304932,
+            6.8646388053894
+          ],
+          "frame": 48,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.72413793286561,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 16,
+          "speedScale": 0.999999969292804,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.81334352493286
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.81334352493286
+          ],
+          "frame": 51,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.775862070695945,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 17,
+          "speedScale": 0.999999969272333,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.86675860630288,
+          "contactR": 0.463693065073117,
+          "footL": [
+            -1.12000000476837,
+            0.0968725681304932,
+            6.55463886260986
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.101702988147736,
+            6.7899341583252
+          ],
+          "frame": 54,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.827586208525489,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 18,
+          "speedScale": 0.99999996925928,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.31932412012077,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.114816516637802,
+            6.30827665328979
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.147064417600632,
+            6.78048849105835
+          ],
+          "frame": 57,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.879310346354529,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 19,
+          "speedScale": 0.999999969250957,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0010551721812939,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.136023491621017,
+            6.08592748641968
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.220072537660599,
+            6.74383354187012
+          ],
+          "frame": 60,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.931034484183248,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 20,
+          "speedScale": 0.99999996924565,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.15307879447937,
+            5.88910245895386
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.287539690732956,
+            6.65818929672241
+          ],
+          "frame": 63,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.982758622011762,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 21,
+          "speedScale": 0.999999969242266,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.156836271286011,
+            5.7258768081665
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.303616642951965,
+            6.51619338989258
+          ],
+          "frame": 66,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.0344827598401456,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 22,
+          "speedScale": 0.999999969240109,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.00386896569949035,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.153078764677048,
+            5.57910203933716
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.287539690732956,
+            6.34818887710571
+          ],
+          "frame": 69,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.0862068976684457,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 23,
+          "speedScale": 0.999999969238733,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.516248287360893,
+          "contactR": 0.0343034509656265,
+          "footL": [
+            -1.12000012397766,
+            0.136023491621017,
+            5.46592617034912
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.220072567462921,
+            6.12383270263672
+          ],
+          "frame": 72,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.137931035496693,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 24,
+          "speedScale": 0.999999969237856,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.831575867343215,
+          "footL": [
+            -1.12000012397766,
+            0.11481648683548,
+            5.3782753944397
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.147064417600632,
+            5.85048723220825
+          ],
+          "frame": 75,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.189655173324906,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 25,
+          "speedScale": 0.999999969237296,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0968725681304932,
+            5.31463670730591
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.101702988147736,
+            5.5499324798584
+          ],
+          "frame": 78,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.241379311153097,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 26,
+          "speedScale": 0.99999996923694,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.931382754537194,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.26334142684937
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.26334142684937
+          ],
+          "frame": 81,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.293103448981275,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 27,
+          "speedScale": 0.999999969236712,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0800413777119066,
+          "contactR": 0.711779303511456,
+          "footL": [
+            -1.12000000476837,
+            0.101702988147736,
+            5.2399320602417
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0968725681304932,
+            5.00463676452637
+          ],
+          "frame": 84,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.344827586809444,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 28,
+          "speedScale": 0.999999969236567,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.118220683826946,
+          "footL": [
+            -1.12000000476837,
+            0.147064417600632,
+            5.23048639297485
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.114816516637802,
+            4.7582745552063
+          ],
+          "frame": 87,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.396551724637608,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 29,
+          "speedScale": 0.999999969236475,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.220072537660599,
+            5.19383144378662
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.136023491621017,
+            4.53592538833618
+          ],
+          "frame": 90,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.448275862465767,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 30,
+          "speedScale": 0.999999969236416,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539720535278,
+            5.10818719863892
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            4.33910036087036
+          ],
+          "frame": 93,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.500000000293925,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 31,
+          "speedScale": 0.999999969236378,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539720535278,
+            4.95318698883057
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.153078764677048,
+            4.18410015106201
+          ],
+          "frame": 96,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.551724138122081,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 32,
+          "speedScale": 0.999999969236354,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.118220690683555,
+          "footL": [
+            -1.11999988555908,
+            0.246938541531563,
+            4.75971746444702
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.143116533756256,
+            4.05253553390503
+          ],
+          "frame": 99,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.603448275950236,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 33,
+          "speedScale": 0.999999969236339,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.0800413792713153,
+          "contactR": 0.711779310177975,
+          "footL": [
+            -1.11999988555908,
+            0.169519662857056,
+            4.49928379058838
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.121706753969193,
+            3.95876097679138
+          ],
+          "frame": 102,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.655172413778391,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 34,
+          "speedScale": 0.999999969236329,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.931382757939968,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.112336039543152,
+            4.20292806625366
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.101979315280914,
+            3.88679051399231
+          ],
+          "frame": 105,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.706896551606545,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 35,
+          "speedScale": 0.999999969236323,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0911233127117157,
+            3.90986227989197
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0907942652702332,
+            3.83296871185303
+          ],
+          "frame": 108,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.758620689434699,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 36,
+          "speedScale": 0.999999969236319,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.831575863940798,
+          "footL": [
+            -1.12000000476837,
+            0.0931743979454041,
+            3.64266896247864
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0944888889789581,
+            3.79625988006592
+          ],
+          "frame": 111,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.810344827262853,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 37,
+          "speedScale": 0.999999969236317,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.516248280695913,
+          "contactR": 0.034303449406578,
+          "footL": [
+            -1.12000000476837,
+            0.10782265663147,
+            3.39240264892578
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.127735912799835,
+            3.78747272491455
+          ],
+          "frame": 114,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.862068965091007,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 38,
+          "speedScale": 0.999999969236315,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 2,
+          "clip": "walk",
+          "contactL": 0.00386896560359308,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.129429578781128,
+            3.15950465202332
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.19539949297905,
+            3.76590847969055
+          ],
+          "frame": 117,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "animation_only",
+          "oneShot": "",
+          "phase": 0.91379310291916,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 39,
+          "speedScale": 0.999999969236314,
+          "upperBody": ""
+        }
+      ]
+    },
+    "combined": {
+      "clips": {
+        "v3_walk": 120
+      },
+      "frames": [
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000000476837,
+            0.0909626185894012,
+            9.40999317169189
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0932728052139282,
+            9.51335334777832
+          ],
+          "frame": 0,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0172413797325779,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 0,
+          "speedScale": 0.999999995714863,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.00105517263273994,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000000476837,
+            0.104905903339386,
+            9.14307689666748
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.139404296875,
+            9.54153060913086
+          ],
+          "frame": 3,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0689655185829653,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 1,
+          "speedScale": 0.999999986119782,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.319324159981945,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.12702801823616,
+            8.90260601043701
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.200828820466995,
+            9.50409603118896
+          ],
+          "frame": 6,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.05862632766366
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.120689657062924,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 2,
+          "speedScale": 0.999999980001688,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.866758640148658,
+          "contactR": 0.46369315535305,
+          "footL": [
+            -1.12000012397766,
+            0.121706753969193,
+            8.76375865936279
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.169519662857056,
+            9.30428123474121
+          ],
+          "frame": 9,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.028896851465106,
+            "Thigh.R": 0.15758715569973
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.172413795306687,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 3,
+          "speedScale": 0.999999976100619,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.101979315280914,
+            8.6917896270752
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.112336039543152,
+            9.00792694091797
+          ],
+          "frame": 12,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.224137933399844,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 4,
+          "speedScale": 0.999999973613187,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0907942652702332,
+            8.63796901702881
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0911233127117157,
+            8.71486282348633
+          ],
+          "frame": 15,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.00309112435206771
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.275862071396972,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 5,
+          "speedScale": 0.999999972027131,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.463693046052555,
+          "contactR": 0.866758599172107,
+          "footL": [
+            -1.12000000476837,
+            0.0944888889789581,
+            8.60126113891602
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0931743979454041,
+            8.44767093658447
+          ],
+          "frame": 18,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0514313243329525
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.327586209332868,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 6,
+          "speedScale": 0.999999971015817,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.319324109912528,
+          "footL": [
+            -1.12000000476837,
+            0.127735912799835,
+            8.59247589111328
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.10782265663147,
+            8.19740581512451
+          ],
+          "frame": 21,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.379310347229722,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 7,
+          "speedScale": 0.999999970370974,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00105517203140582,
+          "footL": [
+            -1.11999988555908,
+            0.19539949297905,
+            8.57091331481934
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.129429578781128,
+            7.96450901031494
+          ],
+          "frame": 24,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.43103448510168,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 8,
+          "speedScale": 0.999999969959805,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.26678454875946,
+            8.49952220916748
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.147993415594101,
+            7.76077604293823
+          ],
+          "frame": 27,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.482758622957765,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 9,
+          "speedScale": 0.999999969697631,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539690732956,
+            8.36319160461426
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            7.5941047668457
+          ],
+          "frame": 30,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.534482760803728,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 10,
+          "speedScale": 0.999999969530462,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00386896585857636,
+          "footL": [
+            -1.11999988555908,
+            0.266784608364105,
+            8.18952178955078
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.147993385791779,
+            7.45077610015869
+          ],
+          "frame": 33,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.586206898643238,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 11,
+          "speedScale": 0.999999969423871,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0343034535705148,
+          "contactR": 0.516248298496869,
+          "footL": [
+            -1.11999988555908,
+            0.195399701595306,
+            7.95091438293457
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.129429548978806,
+            7.34451007843018
+          ],
+          "frame": 36,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.101784110069275,
+            "Thigh.R": 0.0436124317348003
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.637931036478632,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 12,
+          "speedScale": 0.999999969355905,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.831575873053847,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.12773597240448,
+            7.66247797012329
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.107822686433792,
+            7.26740789413452
+          ],
+          "frame": 39,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.00231970334425569
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.689655174311402,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 13,
+          "speedScale": 0.999999969312568,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0944888889789581,
+            7.36126470565796
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0931743979454041,
+            7.20767402648926
+          ],
+          "frame": 42,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0689990520477295,
+            "Thigh.R": 0.0130394408479333
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.7413793121425,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 14,
+          "speedScale": 0.999999969284935,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.931382748799014,
+          "footL": [
+            -1.12000000476837,
+            0.0907942652702332,
+            7.08797311782837
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0911233127117157,
+            7.16486644744873
+          ],
+          "frame": 45,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0549126975238323
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.793103449972531,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 15,
+          "speedScale": 0.999999969267315,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.711779292256426,
+          "contactR": 0.0800413750791697,
+          "footL": [
+            -1.12000000476837,
+            0.101979315280914,
+            6.83179473876953
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.112336039543152,
+            7.1479320526123
+          ],
+          "frame": 48,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.175253957509995
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.844827587801881,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 16,
+          "speedScale": 0.999999969256081,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.118220672242375,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.121706753969193,
+            6.5937647819519
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.169519633054733,
+            7.13428735733032
+          ],
+          "frame": 51,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.135527729988098
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.896551725630798,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 17,
+          "speedScale": 0.999999969248917,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.143116563558578,
+            6.37753868103027
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.246938481926918,
+            7.08472061157227
+          ],
+          "frame": 54,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.948275863459438,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 18,
+          "speedScale": 0.99999996924435,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.154944241046906,
+            6.194983959198
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.295521169900894,
+            6.97477626800537
+          ],
+          "frame": 57,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.00000000128790178521854,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 19,
+          "speedScale": 0.999999969241437,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.156836271286011,
+            6.0358772277832
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.303616642951965,
+            6.82619380950928
+          ],
+          "frame": 60,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0517241391162532,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 20,
+          "speedScale": 0.99999996923958,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.118220702281031,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.147993385791779,
+            5.9007740020752
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.266784608364105,
+            6.63952016830444
+          ],
+          "frame": 63,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0573999658226967
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.103448276944533,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 21,
+          "speedScale": 0.999999969238396,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.711779321454994,
+          "contactR": 0.0800413819091959,
+          "footL": [
+            -1.12000012397766,
+            0.129429578781128,
+            5.79450798034668
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.195399522781372,
+            6.40091228485107
+          ],
+          "frame": 66,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0349413119256496,
+            "Thigh.R": 0.124327398836613
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.155172414772767,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 22,
+          "speedScale": 0.999999969237641,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.931382763696505,
+          "footL": [
+            -1.12000000476837,
+            0.10782265663147,
+            5.71740579605103
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.12773597240448,
+            6.11247587203979
+          ],
+          "frame": 69,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.00219246023334563
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.206896552600972,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 23,
+          "speedScale": 0.999999969237159,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0931743979454041,
+            5.65767192840576
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0944888889789581,
+            5.81126260757446
+          ],
+          "frame": 72,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0205993596464396
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.258620690429158,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 24,
+          "speedScale": 0.999999969236852,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.831575858183955,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0911233127117157,
+            5.61486434936523
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0907942652702332,
+            5.53797101974487
+          ],
+          "frame": 75,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0582337528467178
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.310344828257332,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 25,
+          "speedScale": 0.999999969236657,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.034303446768388,
+          "contactR": 0.516248269417572,
+          "footL": [
+            -1.12000000476837,
+            0.112336039543152,
+            5.59792995452881
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.101979315280914,
+            5.28179264068604
+          ],
+          "frame": 78,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0226784236729145
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.362068966085499,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 26,
+          "speedScale": 0.999999969236532,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00386896544129051,
+          "footL": [
+            -1.11999988555908,
+            0.169519633054733,
+            5.58428525924683
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.121706753969193,
+            5.04376268386841
+          ],
+          "frame": 81,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.413793103913661,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 27,
+          "speedScale": 0.999999969236452,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.246938481926918,
+            5.53471851348877
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.143116563558578,
+            4.82753658294678
+          ],
+          "frame": 84,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.46551724174182,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 28,
+          "speedScale": 0.999999969236402,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539720535278,
+            5.41818761825562
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            4.64910078048706
+          ],
+          "frame": 87,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.517241379569977,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 29,
+          "speedScale": 0.999999969236369,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00105517243937528,
+          "footL": [
+            -1.11999988555908,
+            0.287539750337601,
+            5.26318740844727
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            4.49410057067871
+          ],
+          "frame": 90,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.568965517398133,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 30,
+          "speedScale": 0.999999969236349,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.319324138559421,
+          "footL": [
+            -1.11999988555908,
+            0.220072776079178,
+            5.03883123397827
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.136023491621017,
+            4.38092517852783
+          ],
+          "frame": 93,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0462298691272736
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.620689655226288,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 31,
+          "speedScale": 0.999999969236335,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.463693102293773,
+          "contactR": 0.866758620256834,
+          "footL": [
+            -1.12000000476837,
+            0.147064417600632,
+            4.7654857635498
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.114816516637802,
+            4.29327392578125
+          ],
+          "frame": 96,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.166739121079445,
+            "Thigh.R": 0.0172212179750204
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.672413793054442,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 32,
+          "speedScale": 0.999999969236327,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.101702988147736,
+            4.46493148803711
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0968725681304932,
+            4.22963523864746
+          ],
+          "frame": 99,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0130061851814389,
+            "Thigh.R": 0.0061277886852622
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.724137930882596,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 33,
+          "speedScale": 0.999999969236322,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.17833995819092
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.17833995819092
+          ],
+          "frame": 102,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0364582017064095
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.77586206871075,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 34,
+          "speedScale": 0.999999969236318,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.866758623848399,
+          "contactR": 0.463693111873881,
+          "footL": [
+            -1.12000000476837,
+            0.0968725681304932,
+            3.91963505744934
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.101702988147736,
+            4.15493059158325
+          ],
+          "frame": 105,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.133033514022827
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.827586206538904,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 35,
+          "speedScale": 0.999999969236316,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.319324143302639,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.114816516637802,
+            3.67327308654785
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.147064417600632,
+            4.14548492431641
+          ],
+          "frame": 108,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0579144395887852
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.879310344367058,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 36,
+          "speedScale": 0.999999969236315,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.00105517250574153,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.136023461818695,
+            3.45092368125916
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.220072716474533,
+            4.10882997512817
+          ],
+          "frame": 111,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.931034482195211,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 37,
+          "speedScale": 0.999999969236314,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.153078764677048,
+            3.25409889221191
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.287539720535278,
+            4.02318572998047
+          ],
+          "frame": 114,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.982758620023365,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 38,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.156836271286011,
+            3.09087324142456
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.303616642951965,
+            3.88118982315063
+          ],
+          "frame": 117,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0344827578515184,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 39,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        }
+      ]
+    },
+    "ik_only": {
+      "clips": {
+        "v3_idle": 120
+      },
+      "frames": [
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000012397766,
+            0.135146647691727,
+            9.18906402587891
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.22915443778038,
+            9.85113334655762
+          ],
+          "frame": 0,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0450700148940086,
+            "Thigh.R": 0.116111814975739
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.0081967212225857,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 0,
+          "speedScale": 0.99999997352145,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000012397766,
+            0.108554571866989,
+            9.12597274780273
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.152073174715042,
+            9.56962299346924
+          ],
+          "frame": 3,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0142274750396609
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.0327868850554747,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 1,
+          "speedScale": 0.999999983116531,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0918318927288055,
+            9.08543491363525
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.096143513917923,
+            9.22744274139404
+          ],
+          "frame": 6,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.00362717243842781
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.0573770490644691,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 2,
+          "speedScale": 0.999999989234625,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.98333740234375
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.98333740234375
+          ],
+          "frame": 9,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.028347834944725,
+            "Thigh.R": 0.0389343798160553
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.0819672131857534,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 3,
+          "speedScale": 0.999999993135694,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.82833862304688
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.82833862304688
+          ],
+          "frame": 12,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0445528738200665
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.106557377378637,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 4,
+          "speedScale": 0.999999995623125,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.67333984375
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.67333984375
+          ],
+          "frame": 15,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.131147541617174,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 5,
+          "speedScale": 0.999999997209181,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.51834106445313
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.51834106445313
+          ],
+          "frame": 18,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.155737705884821,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 6,
+          "speedScale": 0.999999998220496,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.36334228515625
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.36334228515625
+          ],
+          "frame": 21,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0343431867659092
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.180327870171029,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 7,
+          "speedScale": 0.999999998865338,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.20834350585938
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.20834350585938
+          ],
+          "frame": 24,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.03293077647686,
+            "Thigh.R": 0.034337479621172
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.204918034469073,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 8,
+          "speedScale": 0.999999999276508,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.0533447265625
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.0533447265625
+          ],
+          "frame": 27,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.028584998100996
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.229508198774663,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 9,
+          "speedScale": 0.999999999538681,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            7.89834499359131
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            7.89834499359131
+          ],
+          "frame": 30,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.254098363085065,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 10,
+          "speedScale": 0.99999999970585,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            7.74334478378296
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            7.74334478378296
+          ],
+          "frame": 33,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.278688527398536,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 11,
+          "speedScale": 0.999999999812442,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            7.58834457397461
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            7.58834457397461
+          ],
+          "frame": 36,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0343417637050152
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.303278691713962,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 12,
+          "speedScale": 0.999999999880408,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            7.43334436416626
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            7.43334436416626
+          ],
+          "frame": 39,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.028585372492671,
+            "Thigh.R": 0.0300705581903458
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.327868856030636,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 13,
+          "speedScale": 0.999999999923744,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            7.27834415435791
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            7.27834415435791
+          ],
+          "frame": 42,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0285854861140251
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.352459020348106,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 14,
+          "speedScale": 0.999999999951377,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            7.12334394454956
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            7.12334394454956
+          ],
+          "frame": 45,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.377049184666082,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 15,
+          "speedScale": 0.999999999968997,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.96834373474121
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.96834373474121
+          ],
+          "frame": 48,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.401639348984382,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 16,
+          "speedScale": 0.999999999980231,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.81334352493286
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.81334352493286
+          ],
+          "frame": 51,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0300952214747667
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.426229513302888,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 17,
+          "speedScale": 0.999999999987395,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.65834331512451
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.65834331512451
+          ],
+          "frame": 54,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0285854022949934,
+            "Thigh.R": 0.0300971232354641
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.450819677621526,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 18,
+          "speedScale": 0.999999999991963,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.50334310531616
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.50334310531616
+          ],
+          "frame": 57,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0285854022949934
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.475409841940247,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 19,
+          "speedScale": 0.999999999994875,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.34834289550781
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.34834289550781
+          ],
+          "frame": 60,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.500000006259022,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 20,
+          "speedScale": 0.999999999996732,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.19334268569946
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.19334268569946
+          ],
+          "frame": 63,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.524590170577831,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 21,
+          "speedScale": 0.999999999997916,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            6.03834247589111
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            6.03834247589111
+          ],
+          "frame": 66,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0300957057625055
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.549180334896662,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 22,
+          "speedScale": 0.999999999998672,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.88334226608276
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.88334226608276
+          ],
+          "frame": 69,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0285854022949934,
+            "Thigh.R": 0.0343427136540413
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.573770499215507,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 23,
+          "speedScale": 0.999999999999153,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.72834205627441
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.72834205627441
+          ],
+          "frame": 72,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0329293645918369
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.59836066353436,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 24,
+          "speedScale": 0.99999999999946,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.57334184646606
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.57334184646606
+          ],
+          "frame": 75,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.622950827853219,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 25,
+          "speedScale": 0.999999999999656,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.41834163665771
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.41834163665771
+          ],
+          "frame": 78,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.647540992172082,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 26,
+          "speedScale": 0.999999999999781,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.26334142684937
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.26334142684937
+          ],
+          "frame": 81,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0301013961434364
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.672131156490947,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 27,
+          "speedScale": 0.99999999999986,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            5.10834121704102
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            5.10834121704102
+          ],
+          "frame": 84,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0285854674875736,
+            "Thigh.R": 0.0343427136540413
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.696721320809813,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 28,
+          "speedScale": 0.999999999999911,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.95334100723267
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.95334100723267
+          ],
+          "frame": 87,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0285854022949934
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.721311485128681,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 29,
+          "speedScale": 0.999999999999943,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.79834079742432
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.79834079742432
+          ],
+          "frame": 90,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.745901649447549,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 30,
+          "speedScale": 0.999999999999964,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.64334058761597
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.64334058761597
+          ],
+          "frame": 93,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.770491813766417,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 31,
+          "speedScale": 0.999999999999977,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.48834037780762
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.48834037780762
+          ],
+          "frame": 96,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0343488939106464
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.795081978085285,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 32,
+          "speedScale": 0.999999999999985,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.33334016799927
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.33334016799927
+          ],
+          "frame": 99,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0285853277891874,
+            "Thigh.R": 0.0300890654325485
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.819672142404154,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 33,
+          "speedScale": 0.999999999999991,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.17833995819092
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.17833995819092
+          ],
+          "frame": 102,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0285854022949934
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.844262306723023,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 34,
+          "speedScale": 0.999999999999994,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            4.02333974838257
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            4.02333974838257
+          ],
+          "frame": 105,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.868852471041892,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 35,
+          "speedScale": 0.999999999999996,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            3.86833953857422
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            3.86833953857422
+          ],
+          "frame": 108,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.893442635360761,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 36,
+          "speedScale": 0.999999999999998,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            3.71333932876587
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            3.71333932876587
+          ],
+          "frame": 111,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0300971232354641
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.91803279967963,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 37,
+          "speedScale": 0.999999999999998,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            3.55833911895752
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            3.55833911895752
+          ],
+          "frame": 114,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0285854022949934,
+            "Thigh.R": 0.0300938040018082
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.942622963998499,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 38,
+          "speedScale": 0.999999999999999,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 3,
+          "clip": "idle",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            3.40333890914917
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            3.40333890914917
+          ],
+          "frame": 117,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0285854022949934
+          },
+          "locomotion": "walk",
+          "mode": "ik_only",
+          "oneShot": "",
+          "phase": 0.967213128317368,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 39,
+          "speedScale": 0.999999999999999,
+          "upperBody": ""
+        }
+      ]
+    },
+    "remote_interpolation": {
+      "clips": {
+        "v3_walk": 120
+      },
+      "frames": [
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.00386896537492247,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.153078764677048,
+            9.14409351348877
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.287539720535278,
+            9.91318035125732
+          ],
+          "frame": 0,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.086206895679672,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 0,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.516248264805548,
+          "contactR": 0.0343034456895596,
+          "footL": [
+            -1.12000012397766,
+            0.136023491621017,
+            9.03091907501221
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.220072567462921,
+            9.6888256072998
+          ],
+          "frame": 3,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0513030998408794,
+            "Thigh.R": 0.125610560178757
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.137931033507826,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 1,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.831575855829716,
+          "footL": [
+            -1.12000012397766,
+            0.11481648683548,
+            8.94326972961426
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.147064447402954,
+            9.41548156738281
+          ],
+          "frame": 6,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.00274174241349101,
+            "Thigh.R": 0.20033398270607
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.189655171335979,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 2,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0968725681304932,
+            8.8796329498291
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.101702988147736,
+            9.11492824554443
+          ],
+          "frame": 9,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0111766075715423
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.241379309164133,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 3,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.931382766051054,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0900003015995026,
+            8.82833862304688
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0900003015995026,
+            8.82833862304688
+          ],
+          "frame": 12,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0517797842621803,
+            "Thigh.R": 0.0020003616809845
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.293103446992286,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 4,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0800413829883375,
+          "contactR": 0.711779326068357,
+          "footL": [
+            -1.12000000476837,
+            0.101702988147736,
+            8.80493068695068
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0968725681304932,
+            8.56963539123535
+          ],
+          "frame": 15,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0752272605895996
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.34482758482044,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 5,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.118220707026808,
+          "footL": [
+            -1.12000000476837,
+            0.147064417600632,
+            8.79548645019531
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.114816516637802,
+            8.32327461242676
+          ],
+          "frame": 18,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0262670926749706
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.396551722648593,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 6,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.220072716474533,
+            8.75883293151855
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.136023491621017,
+            8.10092639923096
+          ],
+          "frame": 21,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.448275860476747,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 7,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539690732956,
+            8.67319011688232
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            7.90410327911377
+          ],
+          "frame": 24,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.4999999983049,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 8,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539720535278,
+            8.51819133758545
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.153078764677048,
+            7.74910449981689
+          ],
+          "frame": 27,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.551724136133054,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 9,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.118220667483524,
+          "footL": [
+            -1.11999988555908,
+            0.246938541531563,
+            8.32472229003906
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.143116533756256,
+            7.61754035949707
+          ],
+          "frame": 30,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0529149435460567
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.603448273961207,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 10,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.080041373994817,
+          "contactR": 0.711779287620786,
+          "footL": [
+            -1.11999988555908,
+            0.169519692659378,
+            8.06428909301758
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.121706753969193,
+            7.52376556396484
+          ],
+          "frame": 33,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.113219998776913,
+            "Thigh.R": 0.0317723490297794
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.655172411789361,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 11,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.931382746425868,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.112336039543152,
+            7.7679328918457
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.101979315280914,
+            7.45179510116577
+          ],
+          "frame": 36,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.00253940583206713
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.706896549617515,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 12,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0911233127117157,
+            7.47486686706543
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0907942652702332,
+            7.39797353744507
+          ],
+          "frame": 39,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.10054874420166,
+            "Thigh.R": 0.023189689964056
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.758620687445668,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 13,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.831575875454901,
+          "footL": [
+            -1.12000000476837,
+            0.0931743979454041,
+            7.20767402648926
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0944888889789581,
+            7.36126470565796
+          ],
+          "frame": 42,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0813935324549675
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.810344825273822,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 14,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.516248303253119,
+          "contactR": 0.0343034546830801,
+          "footL": [
+            -1.12000000476837,
+            0.10782265663147,
+            6.95740747451782
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.127735912799835,
+            7.35247755050659
+          ],
+          "frame": 45,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0194370038807392,
+            "Thigh.R": 0.216100513935089
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.862068963101975,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 15,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.00386896592820298,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.129429578781128,
+            6.72450923919678
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.19539949297905,
+            7.33091354370117
+          ],
+          "frame": 48,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.913793100930129,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 16,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.147993415594101,
+            6.52077484130859
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.26678454875946,
+            7.25952100753784
+          ],
+          "frame": 51,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.965517238758282,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 17,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.156836271286011,
+            6.3458776473999
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.303616642951965,
+            7.13619422912598
+          ],
+          "frame": 54,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0172413765864359,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 18,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.00105517195246099,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.154944211244583,
+            6.19498348236084
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.295521169900894,
+            6.97477626800537
+          ],
+          "frame": 57,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0689655144145894,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 19,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.319324103759354,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.143116533756256,
+            6.06753826141357
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.246938526630402,
+            6.77472019195557
+          ],
+          "frame": 60,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0542654171586037
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.120689652242743,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 20,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.866758593906158,
+          "contactR": 0.463693032006209,
+          "footL": [
+            -1.12000012397766,
+            0.121706753969193,
+            5.97376394271851
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.169519662857056,
+            6.51428651809692
+          ],
+          "frame": 63,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0197468772530556,
+            "Thigh.R": 0.169575542211533
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.172413790070897,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 21,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.101979315280914,
+            5.90179347991943
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.112336039543152,
+            6.21793079376221
+          ],
+          "frame": 66,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.00501616904512048
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.22413792789905,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 22,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0907942652702332,
+            5.84797143936157
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0911233127117157,
+            5.92486476898193
+          ],
+          "frame": 69,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0331701748073101
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.275862065727204,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 23,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.463693182161474,
+          "contactR": 0.866758650199085,
+          "footL": [
+            -1.12000000476837,
+            0.0944888889789581,
+            5.81126260757446
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0931743979454041,
+            5.65767192840576
+          ],
+          "frame": 72,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0732417553663254
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.327586203555357,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 24,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.319324178102731,
+          "footL": [
+            -1.12000000476837,
+            0.127735912799835,
+            5.8024754524231
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.10782265663147,
+            5.40740537643433
+          ],
+          "frame": 75,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.379310341383511,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 25,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00105517299265639,
+          "footL": [
+            -1.11999988555908,
+            0.19539949297905,
+            5.78091144561768
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.129429578781128,
+            5.17450714111328
+          ],
+          "frame": 78,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.431034479211664,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 26,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.26678454875946,
+            5.70951890945435
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.147993415594101,
+            4.9707727432251
+          ],
+          "frame": 81,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.482758617039818,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 27,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.11999988555908,
+            0.287539690732956,
+            5.57318782806396
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.15307879447937,
+            4.80410099029541
+          ],
+          "frame": 84,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.534482754867971,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 28,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.00386896488800759,
+          "footL": [
+            -1.11999988555908,
+            0.266784608364105,
+            5.39951848983765
+          ],
+          "footR": [
+            -0.880000114440918,
+            0.147993385791779,
+            4.6607723236084
+          ],
+          "frame": 87,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.586206892696125,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 29,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0343034377748059,
+          "contactR": 0.516248230969737,
+          "footL": [
+            -1.11999988555908,
+            0.195399701595306,
+            5.16091060638428
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.129429548978806,
+            4.55450630187988
+          ],
+          "frame": 90,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.101784110069275,
+            "Thigh.R": 0.0416067317128181
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.637931030524278,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 30,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.831575838558558,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.12773597240448,
+            4.872474193573
+          ],
+          "footR": [
+            -0.880000054836273,
+            0.107822686433792,
+            4.47740411758423
+          ],
+          "frame": 93,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.00231970334425569
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.689655168352432,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 31,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 1.0,
+          "footL": [
+            -1.12000000476837,
+            0.0944888889789581,
+            4.57126092910767
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0931743979454041,
+            4.41767024993896
+          ],
+          "frame": 96,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0689990445971489,
+            "Thigh.R": 0.0130394408479333
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.741379306180586,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 32,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 1.0,
+          "contactR": 0.931382783322211,
+          "footL": [
+            -1.12000000476837,
+            0.0907942652702332,
+            4.29796934127808
+          ],
+          "footR": [
+            -0.879999995231628,
+            0.0911233127117157,
+            4.37486267089844
+          ],
+          "frame": 99,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.0549126975238323
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.793103444008739,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 33,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.711779359904168,
+          "contactR": 0.0800413909030911,
+          "footL": [
+            -1.12000000476837,
+            0.101979315280914,
+            4.04179096221924
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.112336039543152,
+            4.35792827606201
+          ],
+          "frame": 102,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.R": 0.161073267459869
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.844827581836893,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 34,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.118220741826901,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.121706753969193,
+            3.80376100540161
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.169519633054733,
+            4.34428358078003
+          ],
+          "frame": 105,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.141207069158554
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.896551719665046,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 35,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.143116563558578,
+            3.58753490447998
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.246938318014145,
+            4.29471683502197
+          ],
+          "frame": 108,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.9482758574932,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 36,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.154944241046906,
+            3.40498018264771
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.295521169900894,
+            4.18477249145508
+          ],
+          "frame": 111,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.999999995321353,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 37,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.0,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.156836271286011,
+            3.24587345123291
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.303616642951965,
+            4.03619003295898
+          ],
+          "frame": 114,
+          "grounded": true,
+          "ikErrors": {
+
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.0517241331495069,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 38,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        },
+        {
+          "actionId": "",
+          "changes": 4,
+          "clip": "walk",
+          "contactL": 0.118220632683431,
+          "contactR": 0.0,
+          "footL": [
+            -1.12000012397766,
+            0.147993385791779,
+            3.11076998710632
+          ],
+          "footR": [
+            -0.879999935626984,
+            0.266784608364105,
+            3.84951639175415
+          ],
+          "frame": 117,
+          "grounded": true,
+          "ikErrors": {
+            "Thigh.L": 0.0574000552296638
+          },
+          "locomotion": "walk",
+          "mode": "combined",
+          "oneShot": "",
+          "phase": 0.10344827097766,
+          "posture": "standing",
+          "profile": "HOME",
+          "profileEntries": 0,
+          "snapshotTick": 39,
+          "speedScale": 0.999999969236313,
+          "upperBody": ""
+        }
+      ]
+    }
+  }
+}

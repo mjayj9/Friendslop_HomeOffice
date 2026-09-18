@@ -30,7 +30,7 @@ func _ready():
 	shape.shape=capsule
 	shape.position.y=.88
 	add_child(shape)
-	standing=load("res://assets/characters/male-animated-v3.glb").instantiate()
+	standing=load("res://assets/characters/male-animated-v5.glb").instantiate()
 	standing.rotation.y=PI
 	add_child(standing)
 	skeleton=find_skeleton(standing)

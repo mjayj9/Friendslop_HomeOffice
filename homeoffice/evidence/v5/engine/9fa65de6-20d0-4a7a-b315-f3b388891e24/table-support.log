@@ -1,0 +1,10 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS living-low-table rests on supports { "originY": -0.0005951821804, "expected": 0.0 }
+PASS reading-table rests on supports { "originY": 3.59940624237061, "expected": 3.6 }
+PASS dining-table rests on supports { "originY": -0.00000101327896, "expected": 0.0 }
+PASS Legacy buried table and supported book recover together { "tableY": -0.00000086426735, "bookY": 0.49749892950058 }
+PASS Repair preserves IDs, room slots and board {  }
+PASS Restore does not mutate the imported source {  }
+PASS Repair is idempotent {  }

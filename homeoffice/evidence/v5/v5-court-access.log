@@ -1,0 +1,38 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Global gun exists in retained world
+PASS basketball denies open-door
+PASS basketball denial preserves global weapon
+PASS basketball denies jump
+PASS basketball denial preserves global weapon
+PASS basketball denies restore
+PASS basketball denial preserves global weapon
+PASS basketball denies spawn
+PASS basketball denial preserves global weapon
+PASS basketball denies host-transfer
+PASS basketball denial preserves global weapon
+PASS football denies open-door
+PASS football denial preserves global weapon
+PASS football denies jump
+PASS football denial preserves global weapon
+PASS football denies restore
+PASS football denial preserves global weapon
+PASS football denies spawn
+PASS football denial preserves global weapon
+PASS football denies host-transfer
+PASS football denial preserves global weapon
+PASS Simulation host and nickname are not administrator
+PASS Explicit in-memory operator fixture enters basketball
+PASS No-ball ready pose before a match: basketball
+PASS No phantom ball action: basketball
+PASS Profile enters once: basketball
+PASS Dedicated camera: basketball
+PASS Explicit in-memory operator fixture enters football
+PASS No-ball ready pose before a match: football
+PASS No phantom ball action: football
+PASS Profile enters once: football
+PASS Dedicated camera: football
+PASS Leaving courts restores previous camera once
+PASS Expired authority ejects safely
+PASS Session reset removes authority

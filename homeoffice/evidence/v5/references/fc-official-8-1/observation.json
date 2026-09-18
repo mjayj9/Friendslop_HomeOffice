@@ -1,0 +1,235 @@
+{
+  "url": "https://www.youtube.com/watch?v=AFDS_2Fy9bg",
+  "start": 8,
+  "requestedSeconds": 16,
+  "rate": 1,
+  "frames": [
+    {
+      "time": 9.968609,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "000.jpg"
+    },
+    {
+      "time": 10.557936,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "001.jpg"
+    },
+    {
+      "time": 11.133038,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "002.jpg"
+    },
+    {
+      "time": 11.720699,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "003.jpg"
+    },
+    {
+      "time": 12.297289,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "004.jpg"
+    },
+    {
+      "time": 12.88759,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "005.jpg"
+    },
+    {
+      "time": 13.466686,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "006.jpg"
+    },
+    {
+      "time": 14.054187,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "007.jpg"
+    },
+    {
+      "time": 14.631347,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "008.jpg"
+    },
+    {
+      "time": 15.223314,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "009.jpg"
+    },
+    {
+      "time": 15.798175,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "010.jpg"
+    },
+    {
+      "time": 16.390681,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "011.jpg"
+    },
+    {
+      "time": 16.964326,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "012.jpg"
+    },
+    {
+      "time": 17.547549,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "013.jpg"
+    },
+    {
+      "time": 18.140594,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "014.jpg"
+    },
+    {
+      "time": 18.725514,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "015.jpg"
+    },
+    {
+      "time": 19.315951,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "016.jpg"
+    },
+    {
+      "time": 19.893767,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "017.jpg"
+    },
+    {
+      "time": 20.481757,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "018.jpg"
+    },
+    {
+      "time": 21.074099,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "019.jpg"
+    },
+    {
+      "time": 21.664271,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "020.jpg"
+    },
+    {
+      "time": 22.252211,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "021.jpg"
+    },
+    {
+      "time": 22.833111,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "022.jpg"
+    },
+    {
+      "time": 23.427448,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "023.jpg"
+    },
+    {
+      "time": 24.018002,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "024.jpg"
+    },
+    {
+      "time": 24.608079,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "025.jpg"
+    },
+    {
+      "time": 25.200059,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "026.jpg"
+    },
+    {
+      "time": 25.791363,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "027.jpg"
+    },
+    {
+      "time": 26.382806,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "028.jpg"
+    },
+    {
+      "time": 26.972429,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "029.jpg"
+    },
+    {
+      "time": 27.546959,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "030.jpg"
+    },
+    {
+      "time": 28.136168,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "031.jpg"
+    }
+  ],
+  "environment": "Actual muted browser playback; screenshots, no transcript substitution. No audio observation.",
+  "title": "나만의 스타일로 즐겨라! 손차강! 볼타 정규시즌 오픈 [피파온라인4](피파4) - YouTube",
+  "publisher": "EA SPORTS FC 온라인\n구독자 35.4만명\n구독"
+}

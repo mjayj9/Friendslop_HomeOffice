@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-17 13:01:46 UTC",
+  "source": "Actual BlenderMCP tool responses",
+  "addon": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"up_to_date\": false,\n  \"protocol_version\": 5,\n  \"expected_protocol_version\": 7,\n  \"addon_version\": [\n    1,\n    6\n  ],\n  \"capabilities\": [\n    \"drain_human_activity\",\n    \"execute_code\",\n    \"get_addon_info\",\n    \"get_object_info\",\n    \"get_scene_info\",\n    \"get_telemetry_consent\",\n    \"get_viewport_screenshot\",\n    \"get_world_state_snapshot\",\n    \"set_telemetry_consent\"\n  ],\n  \"blender_version\": \"5.2.1 LTS\",\n  \"source\": \"native\",\n  \"warning\": \"Blender addon protocol 5 is behind expected 7. Run `uvx blender-mcp install-addon` to update it, then restart Blender or disable/enable 'Interface: MCP for Blender', then Start MCP Server. Trajectory still works via fallbacks.\",\n  \"telemetry_consent\": true,\n  \"update_command\": \"uvx blender-mcp install-addon\",\n  \"after_install\": \"If the addon file was updated: in Blender, Preferences \\u2192 Add-ons \\u2192 disable/enable 'Interface: Blender MCP', or restart Blender, then Start MCP Server.\"\n}"
+        }
+      ],
+      "structuredContent": {
+        "result": "{\n  \"up_to_date\": false,\n  \"protocol_version\": 5,\n  \"expected_protocol_version\": 7,\n  \"addon_version\": [\n    1,\n    6\n  ],\n  \"capabilities\": [\n    \"drain_human_activity\",\n    \"execute_code\",\n    \"get_addon_info\",\n    \"get_object_info\",\n    \"get_scene_info\",\n    \"get_telemetry_consent\",\n    \"get_viewport_screenshot\",\n    \"get_world_state_snapshot\",\n    \"set_telemetry_consent\"\n  ],\n  \"blender_version\": \"5.2.1 LTS\",\n  \"source\": \"native\",\n  \"warning\": \"Blender addon protocol 5 is behind expected 7. Run `uvx blender-mcp install-addon` to update it, then restart Blender or disable/enable 'Interface: MCP for Blender', then Start MCP Server. Trajectory still works via fallbacks.\",\n  \"telemetry_consent\": true,\n  \"update_command\": \"uvx blender-mcp install-addon\",\n  \"after_install\": \"If the addon file was updated: in Blender, Preferences \\u2192 Add-ons \\u2192 disable/enable 'Interface: Blender MCP', or restart Blender, then Start MCP Server.\"\n}"
+      },
+      "isError": false
+    }
+  },
+  "scene": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"name\": \"COMMONS_V5_Catalog\",\n  \"object_count\": 3,\n  \"objects\": [\n    {\n      \"name\": \"V5_Catalog_Camera\",\n      \"type\": \"CAMERA\",\n      \"location\": [\n        3.0,\n        4.0,\n        3.24\n      ]\n    },\n    {\n      \"name\": \"V5_Catalog_Light\",\n      \"type\": \"LIGHT\",\n      \"location\": [\n        -2.0,\n        -3.0,\n        4.54\n      ]\n    },\n    {\n      \"name\": \"V2_sofa_batched\",\n      \"type\": \"MESH\",\n      \"location\": [\n        -0.9,\n        -0.15,\n        0.79\n      ]\n    }\n  ],\n  \"materials_count\": 60\n}"
+        }
+      ],
+      "structuredContent": {
+        "result": "{\n  \"name\": \"COMMONS_V5_Catalog\",\n  \"object_count\": 3,\n  \"objects\": [\n    {\n      \"name\": \"V5_Catalog_Camera\",\n      \"type\": \"CAMERA\",\n      \"location\": [\n        3.0,\n        4.0,\n        3.24\n      ]\n    },\n    {\n      \"name\": \"V5_Catalog_Light\",\n      \"type\": \"LIGHT\",\n      \"location\": [\n        -2.0,\n        -3.0,\n        4.54\n      ]\n    },\n    {\n      \"name\": \"V2_sofa_batched\",\n      \"type\": \"MESH\",\n      \"location\": [\n        -0.9,\n        -0.15,\n        0.79\n      ]\n    }\n  ],\n  \"materials_count\": 60\n}"
+      },
+      "isError": false
+    }
+  }
+}

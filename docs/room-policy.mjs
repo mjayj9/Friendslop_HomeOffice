@@ -12,6 +12,7 @@ export function createPolicyVerifier({publicKey,clock=Date.now}){
    if(session===p.session&&p.revision<revision)throw Error('이전 관리 정책은 적용할 수 없습니다.');
    if(!p.rooms||Object.keys(p.rooms).length!==Object.keys(ROOM_LABELS).length||Object.keys(p.rooms).some(zone=>!ROOM_LABELS[zone]||typeof p.rooms[zone]?.locked!=='boolean'||typeof p.rooms[zone]?.configured!=='boolean'))throw Error('방별 정책 형식 오류');
    if(!p.broadcasters||Object.entries(p.broadcasters).some(([id,expiry])=>!/^[A-Za-z0-9_-]{1,100}$/.test(id)||!Number.isFinite(expiry)||expiry>p.issuedAt+10*60000))throw Error('방송 관리자 임대 형식 오류');
+   if(p.administrators!==undefined&&(!p.administrators||typeof p.administrators!=='object'||Array.isArray(p.administrators)||Object.keys(p.administrators).length>8||Object.entries(p.administrators).some(([id,expiry])=>!/^[A-Za-z0-9_-]{1,100}$/.test(id)||!Number.isFinite(expiry)||expiry>p.issuedAt+30000)))throw Error('관리자 참가자 임대 형식 오류');
    session=p.session;revision=p.revision;latest=p;return p;
   }
  };

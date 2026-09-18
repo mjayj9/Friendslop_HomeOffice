@@ -60,7 +60,7 @@ box('Back shell',(0,.85,.23),(.54,.57,.07),'oak',.045)
 box('Back cushion',(0,.85,.18),(.47,.40,.055),'cloth',.035)
 for x in [-.20,.20]:
     for z in [-.20,.20]:box('Tapered leg',(x,.23,z),(.055,.46,.055),'oak',.012)
-finish('chair',{'sit':(0,.56,0),'stand':(0,0,-.85)})
+finish('chair',{'sit':(0,.56,0),'stand':(0,0,-.85),'grip_left':(-.25,.78,.26),'grip_right':(.25,.78,.26)})
 begin()
 box('Tabletop',(0,.76,0),(2.8,.12,1.2),'paleoak',.07,True)
 for x in [-1.12,1.12]:
@@ -76,6 +76,8 @@ for x in [-1.02,1.02]:
 for x in [-.9,.9]:
     p=box('Accent pillow',(x,.79,.15),(.42,.37,.16),'orange',.06);p.rotation_euler[1]=.2
 finish('sofa',{'sit_left':(-.77,.60,-.05),'sit_right':(.77,.60,-.05),'stand':(0,0,-1.1)})
+assets['sofa']['seatContactVersion']=1
+assets['sofa']['seatContacts']=[dict(id=str(i),pelvis=[x,.64,-.1],feet={'L':[x-.12,.09,-.54],'R':[x+.12,.09,-.54]},back=[x,.96,.22],approach=[x,0,-1.12],exits=[[x,0,-1.15],[x,0,-1.5]],width=.65) for i,x in enumerate([-.77,0,.77])]
 begin()
 box('Crate',(0,0,0),(.44,.44,.44),'paleoak',.015)
 for y in [-.17,.17]:

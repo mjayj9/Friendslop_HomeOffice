@@ -24,11 +24,11 @@ export function createPolicyHttpServer({policy,origins}){
    if(req.method==='GET'&&url.pathname==='/state')return respond(200,await policy.state({session:url.searchParams.get('session'),challenge:url.searchParams.get('challenge')}));
    const token=req.headers.authorization?.replace(/^Bearer /,'');
    if(req.method==='POST'&&url.pathname==='/identity')return respond(200,await policy.identify(token));
-   if(req.method!=='POST'||url.pathname!=='/command')throw new PolicyError(404,'지원하지 않는 요청');
+   if(req.method!=='POST'||!['/command','/actor'].includes(url.pathname))throw new PolicyError(404,'지원하지 않는 요청');
    if(!req.headers['content-type']?.startsWith('application/json'))throw new PolicyError(415,'JSON 요청이 필요합니다.');
    const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>8192)throw new PolicyError(413,'요청 크기 제한');chunks.push(chunk);}
    let input;try{input=JSON.parse(Buffer.concat(chunks).toString('utf8'));}catch{throw new PolicyError(400,'요청 형식 오류');}
-   respond(200,await policy.command({...input,token}));
+   respond(200,await (url.pathname==='/actor'?policy.bindActor({...input,token}):policy.command({...input,token})));
   }catch(e){respond(e instanceof PolicyError?e.status:500,{error:e instanceof PolicyError?e.message:'관리 서비스 처리 실패'});}
   // Do not log Authorization, request bodies, PINs, or internal exceptions.
  });

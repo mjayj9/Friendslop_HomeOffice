@@ -1,0 +1,90 @@
+{
+	"checks": [
+		{
+			"name": "world has actual imported wardrobe and station colliders",
+			"ok": true
+		},
+		{
+			"name": "outside cannot open by action",
+			"ok": true
+		},
+		{
+			"name": "outside cannot apply without station session",
+			"ok": true
+		},
+		{
+			"name": "default profile accepted",
+			"ok": true
+		},
+		{
+			"name": "privilege or unknown fields rejected",
+			"ok": true
+		},
+		{
+			"name": "material code rejected",
+			"ok": true
+		},
+		{
+			"name": "SVG and non-PNG rejected",
+			"ok": true
+		},
+		{
+			"name": "real decoded PNG hash accepted",
+			"ok": true
+		},
+		{
+			"name": "raster hash mismatch rejected",
+			"ok": true
+		},
+		{
+			"name": "oversized header rejected before decompression",
+			"ok": true
+		},
+		{
+			"name": "other avatar profile remains default",
+			"ok": true
+		},
+		{
+			"name": "material instances are not shared",
+			"ok": true
+		},
+		{
+			"name": "inside bounds recognized",
+			"ok": true
+		},
+		{
+			"name": "valid own active session applies",
+			"ok": true
+		},
+		{
+			"name": "one-time apply cannot replay",
+			"ok": true
+		},
+		{
+			"name": "leaving room expires edit session",
+			"ok": true
+		},
+		{
+			"name": "original furnished V4 world fits wardrobe partitions",
+			"ok": true
+		},
+		{
+			"name": "old custom furniture in new wall detected before mutation",
+			"ok": true
+		},
+		{
+			"name": "conflicting restore preserves current world",
+			"ok": true
+		},
+		{
+			"name": "handoff retains decoded appearance profile",
+			"ok": true
+		},
+		{
+			"name": "handoff invalidates old edit sessions",
+			"ok": true
+		}
+	],
+	"passed": true,
+	"scope": "Engine fixture; synthetic actor positioning is not physical browser entry proof"
+}

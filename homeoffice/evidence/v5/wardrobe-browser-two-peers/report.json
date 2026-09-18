@@ -1,0 +1,67 @@
+{
+  "environment": "Real Godot WebGL; physical stair route, canvas click, brush, undo, preview, save and reload",
+  "checks": [
+    {
+      "name": "Remote menu command outside does not open editor",
+      "ok": true
+    },
+    {
+      "name": "Independent WebGL browser joins same session",
+      "ok": true
+    },
+    {
+      "name": "Walked upstairs and into physical wardrobe without teleport",
+      "ok": true
+    },
+    {
+      "name": "Drawing preview does not mutate committed actor",
+      "ok": true
+    },
+    {
+      "name": "Remote observer receives no face draft",
+      "ok": true
+    },
+    {
+      "name": "Brush undo and redo operate on canvas history",
+      "ok": true
+    },
+    {
+      "name": "Eraser and erase undo",
+      "ok": true
+    },
+    {
+      "name": "Cancel discards face draft after 3D rotation",
+      "ok": true
+    },
+    {
+      "name": "Apply commits own decoded face PNG and clothes material",
+      "ok": true
+    },
+    {
+      "name": "Applied face reaches remote actor while observer material remains unchanged",
+      "ok": true
+    },
+    {
+      "name": "Observer physically walks to inspect applied avatar in same room",
+      "ok": true
+    },
+    {
+      "name": "Escape closes edit session",
+      "ok": true
+    },
+    {
+      "name": "Same browser identity restores applied profile on reconnect",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "buildId": "f7d50875-6374-4013-86df-eebafce513b9",
+  "applied": {
+    "faceHash": "809d8f6626429ff3e9f2caa25694687c0515e3292420891a44efe8dfa85dedc8",
+    "revision": 1,
+    "shirt": "#216d58"
+  },
+  "remoteVideo": "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v5\\wardrobe-browser-two-peers\\page@391be71c581ce9263861db78f74ca893.webm",
+  "completed": true,
+  "video": "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v5\\wardrobe-browser-two-peers\\page@c29617d388013a5eac5a88f2ab675f49.webm"
+}

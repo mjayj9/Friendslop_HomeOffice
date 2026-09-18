@@ -1,0 +1,9 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+PASS Chair lifts at authored two-hand grip height { "position": [0.0, 0.41999989748001, 5.29999876022339] }
+PASS Entire chair envelope stays outside carrier capsule { "minimumDistance": 0.42000126838684 }
+PASS Furniture retains collision with its holder {  }
+PASS Fast reversal cannot carry chair straight through torso { "before": [0.0, 0.41999989748001, 5.29999876022339], "after": [-0.02213373035192, 0.34937551617622, 5.44191884994507] }
+PASS Handoff does not reintroduce furniture-holder collision exceptions {  }
+PASS Release restores owner and gravity without leftover exceptions {  }

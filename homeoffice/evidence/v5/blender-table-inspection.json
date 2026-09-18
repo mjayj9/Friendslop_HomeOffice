@@ -1,0 +1,26 @@
+{
+  "version": "5.2.1 LTS",
+  "originalScenePreserved": true,
+  "scene": "COMMONS_V5_Table_Inspection",
+  "objects": [
+    {
+      "object": "V2_low_table_oak.005",
+      "vertices": 134,
+      "bottom": 0.3799999952316284,
+      "top": 0.46000000834465027
+    },
+    {
+      "object": "V2_low_table_walnut.005",
+      "vertices": 1159,
+      "bottom": 0.0,
+      "top": 0.4000000059604645
+    },
+    {
+      "object": "V2_table_batched",
+      "vertices": 612,
+      "bottom": 0.0,
+      "top": 0.8199999928474426
+    }
+  ],
+  "source": "Exact V4 GLBs imported in a separate scene; no mesh changes"
+}

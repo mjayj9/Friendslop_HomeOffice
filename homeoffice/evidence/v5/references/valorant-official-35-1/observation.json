@@ -1,0 +1,319 @@
+{
+  "url": "https://www.youtube.com/watch?v=g8amyzDHOKw",
+  "start": 35,
+  "requestedSeconds": 22,
+  "rate": 1,
+  "frames": [
+    {
+      "time": 35.482665,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "000.jpg"
+    },
+    {
+      "time": 36.22264,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "001.jpg"
+    },
+    {
+      "time": 36.849468,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "002.jpg"
+    },
+    {
+      "time": 37.455616,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "003.jpg"
+    },
+    {
+      "time": 38.046123,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "004.jpg"
+    },
+    {
+      "time": 38.636982,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "005.jpg"
+    },
+    {
+      "time": 39.225381,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "006.jpg"
+    },
+    {
+      "time": 39.817118,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "007.jpg"
+    },
+    {
+      "time": 40.407831,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "008.jpg"
+    },
+    {
+      "time": 41.002543,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "009.jpg"
+    },
+    {
+      "time": 41.590061,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "010.jpg"
+    },
+    {
+      "time": 42.185029,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "011.jpg"
+    },
+    {
+      "time": 42.773829,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "012.jpg"
+    },
+    {
+      "time": 43.35858,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "013.jpg"
+    },
+    {
+      "time": 43.950228,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "014.jpg"
+    },
+    {
+      "time": 44.551302,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "015.jpg"
+    },
+    {
+      "time": 45.144524,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "016.jpg"
+    },
+    {
+      "time": 45.734593,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "017.jpg"
+    },
+    {
+      "time": 46.325093,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "018.jpg"
+    },
+    {
+      "time": 46.916625,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "019.jpg"
+    },
+    {
+      "time": 47.494131,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "020.jpg"
+    },
+    {
+      "time": 48.086688,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "021.jpg"
+    },
+    {
+      "time": 48.682116,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "022.jpg"
+    },
+    {
+      "time": 49.264049,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "023.jpg"
+    },
+    {
+      "time": 49.841334,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "024.jpg"
+    },
+    {
+      "time": 50.42743,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "025.jpg"
+    },
+    {
+      "time": 51.016835,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "026.jpg"
+    },
+    {
+      "time": 51.606516,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "027.jpg"
+    },
+    {
+      "time": 52.197259,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "028.jpg"
+    },
+    {
+      "time": 52.781941,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "029.jpg"
+    },
+    {
+      "time": 53.357492,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "030.jpg"
+    },
+    {
+      "time": 53.948036,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "031.jpg"
+    },
+    {
+      "time": 54.525496,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "032.jpg"
+    },
+    {
+      "time": 55.113659,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "033.jpg"
+    },
+    {
+      "time": 55.689778,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "034.jpg"
+    },
+    {
+      "time": 56.277824,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "035.jpg"
+    },
+    {
+      "time": 56.869002,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "036.jpg"
+    },
+    {
+      "time": 57.46014,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "037.jpg"
+    },
+    {
+      "time": 58.049105,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "038.jpg"
+    },
+    {
+      "time": 58.623716,
+      "rate": 1,
+      "paused": false,
+      "readyState": 4,
+      "file": "039.jpg"
+    },
+    {
+      "time": 0,
+      "rate": 1,
+      "paused": true,
+      "readyState": 0,
+      "file": "040.jpg"
+    },
+    {
+      "time": 0,
+      "rate": 1,
+      "paused": true,
+      "readyState": 0,
+      "file": "041.jpg"
+    },
+    {
+      "time": 0,
+      "rate": 1,
+      "paused": true,
+      "readyState": 0,
+      "file": "042.jpg"
+    },
+    {
+      "time": 0,
+      "rate": 1,
+      "paused": true,
+      "readyState": 0,
+      "file": "043.jpg"
+    }
+  ],
+  "environment": "Actual muted browser playback; screenshots, no transcript substitution. No audio observation.",
+  "title": "The Round // Gameplay Preview - VALORANT - YouTube",
+  "publisher": "VALORANT\n구독자 295만명\n구독"
+}

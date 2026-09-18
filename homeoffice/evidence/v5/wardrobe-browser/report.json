@@ -1,0 +1,50 @@
+{
+  "environment": "Real Godot WebGL; physical stair route, canvas click, brush, undo, preview, save and reload",
+  "checks": [
+    {
+      "name": "Remote menu command outside does not open editor",
+      "ok": true
+    },
+    {
+      "name": "Walked upstairs and into physical wardrobe without teleport",
+      "ok": true
+    },
+    {
+      "name": "Drawing preview does not mutate committed actor",
+      "ok": true
+    },
+    {
+      "name": "Brush undo and redo operate on canvas history",
+      "ok": true
+    },
+    {
+      "name": "Eraser and erase undo",
+      "ok": true
+    },
+    {
+      "name": "Cancel discards face draft after 3D rotation",
+      "ok": true
+    },
+    {
+      "name": "Apply commits own decoded face PNG and clothes material",
+      "ok": true
+    },
+    {
+      "name": "Escape closes edit session",
+      "ok": true
+    },
+    {
+      "name": "Same browser identity restores applied profile on reconnect",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "buildId": "b056711b-124f-4557-8cd3-789a9bad508c",
+  "applied": {
+    "faceHash": "809d8f6626429ff3e9f2caa25694687c0515e3292420891a44efe8dfa85dedc8",
+    "revision": 1,
+    "shirt": "#216d58"
+  },
+  "completed": true,
+  "video": "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v5\\wardrobe-browser\\page@57a44ee942f0cc555049d10495fec424.webm"
+}

@@ -1,0 +1,53 @@
+{
+  "environment": "Three independent headless Chromium processes on one Windows PC, actual Godot WebGL and HTML input. Local PeerJS signaling. Synthetic test files; clipboard via real browser API/key input, drop via synthetic DOM DataTransfer; no real microphone, external accounts or human acceptance.",
+  "buildId": "b05f64ce-57a2-4c37-ad95-804e449acc8c",
+  "failure": "page.waitForFunction: Timeout 20000ms exceeded.\n    at wait (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:11:39)\n    at C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:42:1293\n    at async check (C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\tests\\v4-browser-flow.mjs:10:54)\n    at async file:///C:/Users/admin/Documents/ChatGPT/3D_%EB%AA%A8%EC%9E%84/deployment/Friendslop_HomeOffice/homeoffice/tests/v4-browser-flow.mjs:41:2",
+  "results": [
+    {
+      "name": "Three clients instantiate visible remote bodies on the same build",
+      "passed": true,
+      "ms": 699
+    },
+    {
+      "name": "Real C input switches ordinary third and first person",
+      "passed": true,
+      "ms": 2044
+    },
+    {
+      "name": "Mouse wheel zoom is applied to the running camera",
+      "passed": true,
+      "ms": 946
+    },
+    {
+      "name": "Chat focus blocks WASD and camera bindings",
+      "passed": true,
+      "ms": 3225
+    },
+    {
+      "name": "Actual Korean DM reaches B while C receives no chat payload",
+      "passed": true,
+      "ms": 2432
+    },
+    {
+      "name": "Reaction and author edit propagate to the other recipient",
+      "passed": true,
+      "ms": 3417
+    },
+    {
+      "name": "Reply, conversation search and author deletion update both actual messenger views",
+      "passed": true,
+      "ms": 2848
+    },
+    {
+      "name": "File chooser transfers real file bytes and verified download matches sender SHA-256",
+      "passed": true,
+      "ms": 4884
+    }
+  ],
+  "errors": [],
+  "videos": [
+    "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v5\\retained-v4-browser\\page@4bd1aed999c44fbb2b96909f89f97cb3.webm",
+    "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v5\\retained-v4-browser\\page@a5c6999fb6eb82a1d8b23bd3e4a2cfb5.webm",
+    "C:\\Users\\admin\\Documents\\ChatGPT\\3D_모임\\deployment\\Friendslop_HomeOffice\\homeoffice\\evidence\\v5\\retained-v4-browser\\page@d0d1a25256e0a923542ed1f6c07da051.webm"
+  ]
+}

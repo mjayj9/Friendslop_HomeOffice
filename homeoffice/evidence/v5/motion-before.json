@@ -1,0 +1,230 @@
+{
+  "clips": {
+    "v3_land": 119,
+    "v3_start": 1
+  },
+  "fixture": "Remote position interpolation, constant ground truth grounded=true and 3.1m/s. Character does not call move_and_slide, as in real remote path.",
+  "frames": [
+    {
+      "authorityGrounded": true,
+      "clip": "v3_start",
+      "frame": 0,
+      "ikErrors": {
+        "Thigh.L": 0.00200030207633972,
+        "Thigh.R": 0.00200030207633972
+      },
+      "localFloorQuery": false,
+      "phase": 0.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 6,
+      "ikErrors": {
+        "Thigh.L": 0.00273167644627392,
+        "Thigh.R": 0.0606461055576801
+      },
+      "localFloorQuery": false,
+      "phase": 0.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 12,
+      "ikErrors": {
+        "Thigh.L": 0.000000149011611938477,
+        "Thigh.R": 0.0000000341428503247698
+      },
+      "localFloorQuery": false,
+      "phase": 0.342902102776411
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 18,
+      "ikErrors": {
+        "Thigh.L": 0.0000000600685012841495,
+        "Thigh.R": 0.0000000596046447753906
+      },
+      "localFloorQuery": false,
+      "phase": 0.676235422864268
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 24,
+      "ikErrors": {
+        "Thigh.L": 0.0231485664844513,
+        "Thigh.R": 0.00777965411543846
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 30,
+      "ikErrors": {
+        "Thigh.L": 0.0170622020959854,
+        "Thigh.R": 0.00368782342411578
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 36,
+      "ikErrors": {
+        "Thigh.L": 0.00872964411973953,
+        "Thigh.R": 0.00200030207633972
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 42,
+      "ikErrors": {
+        "Thigh.L": 0.00368781550787389,
+        "Thigh.R": 0.0606462247669697
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 48,
+      "ikErrors": {
+        "Thigh.L": 0.00200030207633972,
+        "Thigh.R": 0.0431659072637558
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 54,
+      "ikErrors": {
+        "Thigh.L": 0.0606463626027107,
+        "Thigh.R": 0.0285853445529938
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 60,
+      "ikErrors": {
+        "Thigh.L": 0.0431659072637558,
+        "Thigh.R": 0.0170621797442436
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 66,
+      "ikErrors": {
+        "Thigh.L": 0.0285853445529938,
+        "Thigh.R": 0.00872967392206192
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 72,
+      "ikErrors": {
+        "Thigh.L": 0.0170621797442436,
+        "Thigh.R": 0.00368781550787389
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 78,
+      "ikErrors": {
+        "Thigh.L": 0.00872958544641733,
+        "Thigh.R": 0.00200030207633972
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 84,
+      "ikErrors": {
+        "Thigh.L": 0.00368783110752702,
+        "Thigh.R": 0.0606463626027107
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 90,
+      "ikErrors": {
+        "Thigh.L": 0.00200030207633972,
+        "Thigh.R": 0.0431659072637558
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 96,
+      "ikErrors": {
+        "Thigh.L": 0.0606463626027107,
+        "Thigh.R": 0.0285853445529938
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 102,
+      "ikErrors": {
+        "Thigh.L": 0.0431659072637558,
+        "Thigh.R": 0.0170621797442436
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 108,
+      "ikErrors": {
+        "Thigh.L": 0.0285853445529938,
+        "Thigh.R": 0.00872964318841696
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    },
+    {
+      "authorityGrounded": true,
+      "clip": "v3_land",
+      "frame": 114,
+      "ikErrors": {
+        "Thigh.L": 0.0170621797442436,
+        "Thigh.R": 0.00368783110752702
+      },
+      "localFloorQuery": false,
+      "phase": 1.0
+    }
+  ],
+  "transitions": 2
+}

@@ -1,86 +1,69 @@
-# COMMONS WORKSPACE — 진행 상태
+# COMMONS WORKSPACE V5 — 현재 작업 상태
 
-2026-09-17 KST. **V4 전체 미완료. 사용자가 현재 변경의 커밋·푸시·기존 Pages 검토 배포를 승인했다. Firebase/별도 인증 서버 변경은 포함하지 않는다.** 최신 통합 명세를 유지하며 기존 세계를 작은 시제품으로 교체하지 않았다.
+2026-09-18 KST. **V5 전체 미완료. 최신 사용자 요청과 V5 통합 명세가 기준이다.** 원래 V4 세계·자료·계정 설정을 보존하며 점진적으로 수리했다. 아래 결과는 제한된 로컬 검수이며 완성형 제품 출시 판정이 아니다.
 
-## 현재 빌드
+[최신 통합 명세](homeoffice/docs/v5/master-spec-ko.md) · [N01–N34 / T01–T48](homeoffice/docs/v5/verification-ko.md) · [결함 수리 기록](homeoffice/docs/v5/repair-log-ko.md) · [실제 영상/자료 관찰](homeoffice/docs/v5/research-observations-ko.md) · [건축/저장 이동 설계](homeoffice/docs/v5/architecture-and-migration-ko.md) · [상호작용 도면](homeoffice/docs/v5/architecture-plan.html) · [실제 의상방/얼굴 검수](homeoffice/docs/v5/wardrobe-review-ko.md)
 
-| 항목 | 값 |
+## 사용자 테스트를 위한 공개 배포
+
+2026-09-18 사용자가 이 저장소에 커밋·푸시하고 Pages에 실제 반영하도록 명시적으로 요청했다. 검수한 `9fa65de6-20d0-4a7a-b315-f3b388891e24`를 기존 Pages 설정 `codex/homeoffice-v3:/docs`로 게시한다. 아래의 공개 기준값은 게시 전 V4 조사 이력이며, 게시 후 결과는 `homeoffice/evidence/v5/publication/receipt.json`과 별도 배포 기록에 남긴다. 이 요청은 정적 Pages 게시에 적용되며 운영 인증 서버·Firebase·관리자 설정 변경으로 확대하지 않는다.
+
+## 게시 전 기준과 실제 배포
+
+| 항목 | 확인 값 |
 |---|---|
-| 실제 저장소 | `deployment/Friendslop_HomeOffice` |
-| 작업 브랜치 | `codex/commons-workspace-v4` |
-| V4 작업 시작 기준 HEAD | `d67dd929cc719fb3e7e72626e59fc9bd9050a2d9` |
-| 검토 배포 Build ID | `cc2f8fbd-ba33-4601-b716-82bb26422424` |
-| 이번 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
-| 엔진 / 프로토콜 / 자산 / 저장 | Godot 4.6.1 / 4 / 3 / 2 |
-| 로컬 export | 73파일 hash 일치, `homeoffice/build` |
-| 검증된 공개 Pages Build ID | `cc2f8fbd-ba33-4601-b716-82bb26422424` |
-| 검증된 공개 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
-| 기존 Pages 배포 ref | `codex/homeoffice-v3`, URL 유지 |
+| 작업 디렉터리 | `deployment/Friendslop_HomeOffice/homeoffice` |
+| 로컬 / 원격 HEAD | `27dccb8adeccb51690a5f5c4abbebebf339b850c` (이번에 재조회) |
+| 로컬 브랜치 | `codex/commons-workspace-v5` — 미커밋 변경 있음 |
+| 실제 공개 배포 ref / commit | `codex/homeoffice-v3` / `968554abb7e19802085ef2c43abec2df628d0eda` |
+| 확인한 Pages run | `35205066858` |
+| 공개 Build ID | `cc2f8fbd-ba33-4601-b716-82bb26422424` |
+| 공개 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
+| 최신 로컬 Build ID | `9fa65de6-20d0-4a7a-b315-f3b388891e24` |
+| 최신 로컬 source digest | `74c8afce2b641b594aa5598ff4fe1f43eb070adc9d68be0c3249f86c9bc08b68` |
+| 엔진 / protocol / asset / save | Godot 4.6.1 / 4 / 3 / 2 |
+| 로컬 artifact | 88파일, `homeoffice/build` — source 포함 verify 통과 |
 
-배포 전 기록: 2026-09-17 02:30 KST 공개 main·Pages 응답 재확인. `/pages` 관리 API는 404로 설정 자체 미확인. 공개 67파일은 별도 hash 검증 통과. [원격 증거](homeoffice/evidence/v4/remote-audit.json), [로컬 manifest](homeoffice/evidence/v4/build-info.json).
+공개 PCK/WASM/JS/자산 73개를 실제 다운로드해 크기·SHA를 대조하고 공개 앱을 실제 WebGL로 실행했다. HEAD와 실제 Pages 배포 ref를 혼동하지 않는다. 2026-09-17 로컬 검수 종료 시점에는 V5 push/배포/운영 인증 서버/Firebase/관리자 설정 변경을 하지 않았다. 예전 V4 배포 승인에 관한 기록은 [보존된 이전 상태](homeoffice/docs/v4/task-state-before-v5.md)에 있으며, 그 역사 기록을 이번 새 운영 설정 변경의 승인으로 사용하지 않았다.
 
-명세: [최신 원본](homeoffice/docs/v4/master-spec-ko.md), [이전 감사](homeoffice/docs/v4/prior-audit-ko.md), [Q01–Q32](homeoffice/docs/v4/verification-ko.md), [모듈/저장 경계](homeoffice/docs/v4/implementation-map-ko.md), [미술 기준](homeoffice/docs/v4/art-direction-ko.md).
+## 이번에 반영한 수리
 
-## 최근 구현과 직접 관찰
+- `living-low-table` 지지대가 바닥 아래로 묻히는 원인을 상판만 있는 충돌체로 재현했다. 원본 GLB 지지대는 있었다. 네 다리 충돌체와 제한적인 idempotent 저장 보정을 추가했다. 집 `dining-table` 지지대는 원래 존재했다.
+- 원격 avatar의 로컬 floor 판정 오용으로 land가 반복 선택되는 경우를 분리했다. 단일 AnimationTree, locomotion phase, 상체 filter, authority grounded, contact weight와 진단을 연결했다. 완전한 보행 미술/지연망 품질 판정은 남아 있다.
+- 남자 V3 원본과 GLB를 보존하고 V5 파생 Blender/GLB를 만들었다. 13개 bone 원본의 손가락·체형 fitting 한계를 기록했다. 클립 개수를 완료 근거로 사용하지 않는다.
+- 농구/축구 ADMIN_ONLY와 actor별 서명 lease를 연결했다. 실제 운영 관리자를 검증할 수 없으면 잠금 유지. simulation host, nickname, 열린 문, 총 소유는 입장권이 아니다. 무볼 활동 프로필은 경기 시작과 분리했다.
+- 전체 의자 부피와 양손 grip 기준 운반, holder 충돌 유지, 급회전 경계 검사를 추가했다.
+- 소파 세 슬롯의 골반·발·등받이 기준·접근/퇴실 계약과 seated 발 IK를 연결했다. 기본 체형으로 실제 10회 왕복했다. 다리가 곧게 보이는 자세·체형 극단·옆 사람·부드러운 진입과 등받이 접촉 완성은 남아 있다.
+- 물건 설치 버튼·옆 패널·실제 GLB 썸네일·screen raycast preview·회전/스냅·지지면/문/좌석/관리 구역 검증을 연결했다. Tab으로 포인터 해제, 드래그/재포커스 클릭은 사격으로 전달되지 않는다.
+- 의상방은 기존 2층 독서 가구를 보존한 5×7m 구획에 실제 Blender GLB·충돌·거울·옷장·콘솔·조명·피팅 벤치를 추가했다. 현장 직접 클릭, 위치/세션 검사, 512px 얼굴 UV·2레이어·브러시/지우개·Undo/Redo·회전 가능한 실제 3D preview·적용/취소를 연결했다. 확정 얼굴/옷 색은 actor별로 동기화하고 같은 브라우저에 저장한다. 체형/옷 메시 교체, 계정 연동, 전체 파일 프로필 복원은 남아 있다.
+- 방장 인계가 의자/테이블의 holder collision exception을 다시 추가하던 결함을 수정했고, 확정 외형을 인계에 포함했다.
+- 입장 하단의 정확한 교육용 문구를 순수 표시 모듈로 분리하고 카피 교체/숨김이 정책을 바꾸지 않는지 시험했다. 교육 규칙·과제·진도·퀴즈·학교 승인 표시를 추가하지 않았다.
 
-- 기본 3인칭/C 전환/휠 줌/구체 카메라 충돌/어깨 조준/카메라 기준 이동을 기존 avatar에 조합했다. `scripts/player/camera_rig.gd`, `scripts/v2/avatar.gd`. V4 세계 상속 클래스는 추가하지 않았다.
-- E/Q/F/좌클릭/R 우선순위를 유지하고 C/Ctrl 바인딩, UI 포커스 해제·연사 취소를 연결했다. `web/bridge.mjs`, `key-bindings.mjs`, `scripts/v3/world.gd`.
-- 활성 V2/V3 경로의 개인 entry/weapon grants, 구역 사격 금지, 교실 무기 차단, 자동 회수/이전 승인 UI를 제거했다. 총 소유권·세션·쿨다운·벽·방패·HP/KO는 유지했다.
-- 방별 정책/실제 관리자 신원+PIN 검증 서버를 분리했다. 공개 서명 검증, 만료/nonce/revision, PIN KDF, 실패 제한, 방송 lease, 퇴실/공용 경로, 문 점유, 잠긴 방 KO 복귀 보호를 구현했다. `server/*`, `web/room-*.mjs`, `scripts/security/room_access.gd`.
-- 사용자 답변에 따라 Clerk JavaScript/Node.js adapter를 준비했다. 사용자가 지정한 `app_3JPx7wBJ683SFfndYIqhAHGOKeX`의 실제 Clerk 개발 공개 설정은 연결했다. 관리자 UID·PIN 검증 서버는 아직 미설정이다. 현재 게임의 잠금·관리 방송은 비활성이며 원인을 UI에 표시한다. [설정 순서](homeoffice/docs/v4/clerk-setup-ko.md).
-- 메신저를 세션/공간/DM, 읽음/답장/반응/수정/삭제/검색, P2P 파일/썸네일/다운로드/취소/이어받기/오프라인 안내로 교체했다. 비수신자 DM 중계 차단. 호스트는 DM을 읽을 수 있고 세계 저장에는 포함하지 않는다. `web/messenger.mjs`, `chat-protocol.mjs`, `attachment-policy.mjs`.
-- BlenderMCP 9876에서 실제 author/export 실행, 회의실 테이블/의자/흡음 패널/선형 조명/사인을 기존 상호작용과 결합했다. Blender 5.2.1 LTS, addon protocol 5 / server 기대 7 차이를 기록하고 임의 업데이트하지 않았다. 기존 씬을 보존했다. `art/author_v4_meeting.py`, `pack_export.py`, `.blend`, `assets/v4`, `scripts/world/meeting_finish.gd`.
-- 원본 남성 GLB 5개와 13 bones / 62 animations 파생본이 있다. 추가 업로드를 요청하지 않았다. 이 개수를 접촉 품질 인수로 삼지 않는다.
+## 실제 실행과 한계
 
-## 최근 실행 결과
+BlenderMCP 장면 조회·Python·수입/내보내기·렌더·화면 캡처가 성공했다. Blender 5.2.1 LTS / addon 1.6 / protocol 5, 실제 Blender 프로세스가 127.0.0.1:9876 수신 중이다. [연결 증거](homeoffice/evidence/v5/blender-connection.json), [포트](homeoffice/evidence/v5/blender-listener.json). 원본이 있으므로 업로드를 요청하지 않는다.
 
-- **공개 검토 배포 성공**: 게임 커밋 `968554abb7e19802085ef2c43abec2df628d0eda`, Pages run `35205066858`. main·기존 배포 브랜치 CI도 통과. 실제 공개 origin의 73파일 SHA-256 일치, 실제 Clerk 창/두 브라우저 원격 시그널링·초대/카메라·한국어 채팅 **3/3** 통과. [공개 결과](homeoffice/evidence/v4/published/report.json), [바이트 검사](homeoffice/evidence/v4/published/artifact-verification.json). 검수 스크립트의 생성 전 배열 접근을 수정한 재검사이며 게임 artifact는 그대로다.
+현재 소스 fixture는 table 7, motion 14, court 35, carry 6, seat 20, placement 10, 생활 12, wardrobe 21 — 총 125개 제한된 판정이 통과했다. [현재 빌드별 실행 묶음](homeoffice/evidence/v5/engine-regression.json)에 source digest와 개별 로그/JSON 경로를 보존했다. 실행 전 source 포함 artifact verify를 통과했다. Node 33검사와 별도 V5 관리자 1검사도 통과했으며 V4+V5 정책 묶음은 7개다(중복 집계하지 않는다). 이 숫자는 T48 전체 합격이 아니다.
 
-- 사용자 요청의 검토 배포를 위해 현재 `cc2f8fbd…`에서 실제 UI **26/26(14+5+7)**, Node **33/33**, artifact 회귀 **6/6**, Clerk 합성 JWT **1/1**, 실제 PCK **318경로/금지 0**을 다시 확인했다. `docs/`와 로컬 export 모두 **73파일/source hash 일치**. [배포 기록](homeoffice/docs/v4/review-deployment-ko.md), [집계](homeoffice/evidence/v4/review-deployment.json). 이전 빌드 결과와 합산해 새 빌드 통과 수를 부풀리지 않는다.
+실제 UI: 공개와 수리 로컬 보행/테이블, 기본 소파 10회 왕복, 물건 설치 10검사, 독립 Chromium 3개에서 메신저/시점 14검사. 최신 빌드의 [의상방 두 브라우저 13검사](homeoffice/evidence/v5/wardrobe-browser-final/report.json)에는 실제 계단 보행·현장 클릭·초안 미전송·확정 얼굴 동기화·상대 재질 보존·재접속이 있다. 정면 거울과 상대 앞쪽 화면을 직접 열어 확인했다. [최신 메신저 결과](homeoffice/evidence/v5/retained-v4-browser-wardrobe-build/report.json), [최신 설치 결과](homeoffice/evidence/v5/placement-browser-wardrobe-build/report.json), [소파 전면 결과](homeoffice/evidence/v5/seating-browser-front/report.json). 각 결과에 해당 Build ID·화면·WebM을 연결했다. 일부 증거는 이전 로컬 빌드이므로 최신 빌드에서 수행한 것처럼 바꾸지 않는다.
 
-- 현재 Clerk 연동 Build ID `cc2f8fbd-ba33-4601-b716-82bb26422424`: 정확한 `http://localhost:5173/`에서 실제 Clerk SDK/로그인/가입/게임 입력 차단 **4/4**, 합성 구성 UI **2/2**, Node 회귀 **33/33** 통과. [실제 Clerk 화면/영상 보고서](homeoffice/evidence/v4/clerk-local/report.json). 실제 사용자 계정 로그인 완료와 관리자 권한 검증은 아직 확인 대기다.
-- Clerk CLI 3.3.0 설치, 사용자 브라우저 인증 완료, 지정 앱 link 완료. `init`은 `framework_undetected`로 기존 Godot를 자동 scaffold하지 못해 공식 JavaScript CDN 방식으로 연결했다. `doctor`는 인증/앱 연결 정상, production 미설정·env 파일 없음 경고 2개. Secret Key/env 파일을 만들지 않았으며 공개 JS 설정만 사용한다.
-- 직전 통합 Build ID `fa3e62b2-1222-43f9-bbcc-662894987f1e`의 실제 UI: 메신저/카메라 **14/14**, 회의실 **5/5**, 전역 사격 **7/7** 통과, 브라우저 console/page 오류 0. [최종 집계](homeoffice/evidence/v4/final-verification.json).
-- 직전 통합 빌드 엔진: 9개 실행 묶음, **112개 assertion + 드리블 물리 측정** 통과, 종료/스크립트 오류 0. 사람 플레이를 대신하는 결과가 아님.
-- 실제 회의실 UI에서 내보낸 67개 사물/2개 개인실 슬롯/내장 한국어 문서 파일을 복원. 저장 schema가 PIN/토큰/채팅/roomLocks 삽입을 거절. 이번 저장 파일의 발표 첨부는 0개이므로 첨부 전체 왕복 통과로 표시하지 않음.
-- Node 회귀 33/33, 공식 Clerk SDK 합성 JWT 1/1, Clerk 연결 단계 UI fixture 2/2 통과. 실제 Clerk 계정 로그인 성공이 아니다.
-- 실제 PCK를 빈 프로젝트에 탑재해 318개 경로 검사. server/art/tests/evidence/web/비공개 설정/PEM 경로 0. 실제 초기 PIN 값을 읽거나 비교하지 않았다. [PCK 검사](homeoffice/evidence/v4/package-audit.json)
-- 현재 source/export 73파일 및 기존 공개 V3 export 67파일 hash 각각 통과. `git diff --check` 종료 0 (Windows EOL 정규화 경고만 있음).
-- 시험 방식: 한 PC 독립 Chromium의 실제 키/마우스·WebGL·WebRTC. 자동 플레이이며 실제 두 사람/외부 계정/마이크/WAN 검증이 아니다. 각 보고서의 Build ID와 영상 경로를 확인한다.
+큰 파일 이어받기 첫 시도는 20초 timeout이었다. 전송 상태를 보존하고 제한을 60초로 늘려 실제 완료·SHA 검증했다. 지연은 남는 성능 관찰이다. NBA/FC/VALORANT는 실제로 재생했으나 FC 주요 접촉 사건과 완결 경기 관찰은 부족하다. 음소거였으므로 소리 관찰은 없다. 실제 마이크, 외부 두 계정 문서 편집, 운영 관리자 계정, 8인+STT 동시 성능 인수는 미실행이다.
 
-## 발견 → 수정 → 재시험
+## 아직 완성되지 않은 핵심
 
-- 발신자 퇴장 후 DM 선택 목록에서 이력이 숨겨짐 → 오프라인 수신자 유지 → 실제 제공자 프로세스 종료 후 이력/파일 안내 통과.
-- `ea7d95ca-…`에서 전송률 갱신마다 전체 DOM을 교체해 취소 클릭 시간 초과 → 진행률 텍스트만 갱신 → `d37cc7c9-…`에서 같은 취소 버튼 보존/취소/이어받기/완료 통과.
-- KO 복귀가 잠긴 게임방으로 들어갈 수 있음 → 공개 홀 대체 복귀 → 잠금/해제 두 상태 엔진 회귀 통과.
-- 회의실 편집용 개별 mesh의 비용 → Blender 원본 보존 후 export용 material surface 통합. 기능을 실제 게임에서 재검증. 전체 미술 인수와 성능 목표 달성으로 간주하지 않음.
+1. 전체 건물 GLB·문/창·재료/음향·위생 시설·실제 U 계단·정교한 가구 배치 및 안전한 전체 layoutVersion 마이그레이션. 전체 도면은 설계만이며, 기존 세계의 의상방 구획만 별도로 런타임에 반영했다. 새 구획과 충돌하는 옛 가구는 복원 전에 거절하여 현재 세계와 원본 파일을 유지한다. 자동 재배치는 미구현이다.
+2. 보행/스포츠/소파/의자/침대 접촉 미술, 30/60/고FPS와 실제 원격 지연 비교, 최소/기본/최대 체형 조합.
+3. 농구 전체 플레이, 축구 실제 발-공 접촉 impulse, 훈련/봇·경기 완결. 기존 구현을 삭제하거나 없다고 판단하지 않았지만 V5 품질에 충분하다고 인정하지 않았다.
+4. 자체 전술 지도와 한 라운드, 무기 1/3인칭 프레젠테이션·피격·복귀 완성.
+5. 체형·옷 메시 교체/fitting, 계정·다른 기기 외형 연동, 전체 .homeworld의 프로필/래스터 복원. 현장 클릭/얼굴 UV 편집/옷 색/같은 브라우저 저장·세션 동기화는 실제 검수했다.
+6. 실제 완결 회의·원본 두 계정 편집·레이저/보드·전체 생활·한국어 마이크/방송·고정 교실·개인실 확장·전체 저장 회귀.
 
-## 우선 결함·미완료와 재현
+## 이어서 작업할 위치
 
-| 우선 | 담당 파일 | 재현/남은 조건 |
-|---|---|---|
-| P0 운영 인증 연결 | `server/*`, `web/admin-config.mjs`, `room-admin.mjs` | Clerk 앱/계정 UI는 연결됨. 첫 화면에서 실제 게임 계정 로그인/UID 확인 후 PIN 서버·HTTPS 운영 경로를 연결해야 함. 비용·호스팅 범위를 확정하기 전 서비스 생성 안 함 |
-| P1 대표 미술/성능 | `art/*v4*`, `world/meeting_finish.gd`, 기존 world 조명 | 회의실 좌석·스크린 프레임의 재질/접촉 그림자/글자 대비 부족. 균형 품질 두 브라우저의 FPS 샘플은 정식 부하 기준 미달 판단을 해소하지 못함 |
-| P1 신체/조작 품질 | `v2/avatar.gd`, `player/contact_ik.gd`, `camera_rig.gd` | 손 그립·발 접촉·계단/천장·회전·스포츠/요리 전이를 사람 영상으로 검수해야 함 |
-| P1 실제 협업 | documents/collaboration/presentation/board | 내장 한국어 회의록 성공. Google Docs/Slides/Excel 원본 공동편집/임베드·외부 창 전환·3D 레이저는 실제 계정/기기 검증 남음 |
-| P1 스포츠·러너 | `scripts/sports/*`, `web/arcade.mjs` | 기존 물리/규칙 회귀는 통과. 이번 빌드에서 두 사람의 농구·축구 완결 경기와 러너 시작→실패→재시작→관전 미실행 |
-| P1 음성·방송 | bridge/captions/broadcast/room-admin | 실제 마이크/CER/지연·전체/근거리/방송 종료 및 첨부 동시 부하 미실행 |
-| P2 메신저 확장 | messenger/chat-protocol | 멘션·장기 보존·알림 설정·Office 첨부 미구현. 호스트 이전 시 기존 이력은 각 수신자의 읽기 전용, 진행 전송 중단/새 대화 재공유 필요 |
-| P2 전체 생활·구조 | V2/V3 world, bridge, save | 전 공간 미술·개인실 반복 확장·선택 공개 첨부 내보내기·책임 추가 분리·장시간 8인 부하 남음 |
+기존 통합은 `scripts/v3/world.gd` → `scripts/v2/world.gd`이며 새 v5 world 상속층을 만들지 않는다. 다음에는 설계에 실제 가구·문/창·단면 계약과 layout migration을 완성해 건축을 적용하고, 기본 소파의 무릎 각도/등받이 접촉과 원격 동작 시각 검수를 보강한다. 축구는 현재 `kick_ball`의 즉시 속도 변경과 `_physics_process`의 root 거리 impulse가 남아 있어 실제 foot phase/contact 이벤트로 바꿔야 한다. 의상방은 얼굴 편집과 옷 색까지 실행됐지만 체형/옷 메시 fitting과 전체 파일 프로필 보관은 남아 있다. 원본 13본의 한계를 해결하고 최소/기본/최대 조합을 실제 접촉까지 검수하기 전 체형 slider를 공개하지 않는다.
 
-## 바로 다음 작업
+로컬 검수 서버: `http://127.0.0.1:5173/homeoffice/?signal=local`. 사용자의 기존 프로세스를 종료하지 않는다. 브라우저 조작은 실제 Playwright Chromium/WebGL로 검수했다. CUA 및 view_image 도구는 이 환경 ACL 오류가 있었으며 이를 사용 성공으로 기록하지 않았다.
 
-공개 검토 배포와 공개 원본 3개 검사는 완료했다. 사용자가 [실제 게임](https://mjayj9.github.io/Friendslop_HomeOffice/)에서 품질을 분석하고 피드백할 수 있다. `node homeoffice/tests/v4-public-smoke.mjs`는 이후 재검증 명령이며 이번 결과는 `evidence/v4/published/`에 선별 기록했다.
+명령: `npm test`, `npm run test:v5:policy`, Godot `--headless --path homeoffice --script res://tests/v5-*.gd`(baseline은 전/후 비교 전용), `tools/build.ps1 -Godot <4.6.1 console> -LocalOnly`, `python tools/site_artifact.py verify build --source`. 현재 shell 기본 sandbox의 ACL helper 오류 때문에 승인된 require_escalated 로컬 실행을 사용했다. 미승인 원격 변경은 하지 않는다.
 
-인증의 다음 단계는 사용자가 **http://localhost:5173/** 첫 화면에서 회원가입/로그인해 `로그인됨`과 자신의 사용자 ID를 확인한다. 현재 CLI 로그인은 완료됐지만 게임 계정 로그인은 별개다. 이 실제 사용자 UID를 서버 관리자 allowlist에 명시적으로 연결한다. 첫 시뮬레이션 참가자에게 자동 관리자 권한을 주지 않는다. 이후 비공개 PIN 서버를 로컬에서 검증하고, 원격 배포는 비용·저장소·도메인·변경 영향이 구체화된 뒤 승인된 범위에서 수행한다.
-
-인증 정보와 무관하게 진행할 다음 구현은 대표 회의실 재질·접촉 그림자·발표 화면 대비와 실측 성능의 개선이다. 원래 명세의 다른 항목을 삭제하거나 완료로 간주하지 않는다. 이 파일은 다음 실행의 상태 기록이며 대화 종료 뒤 작업을 계속한다는 의미가 아니다.
-
-## 실행 위치와 명령
-
-- 모든 경로는 실제 저장소 기준. Godot 실행 파일은 바깥 workspace의 `homeoffice/.runtime/godot/Godot_v4.6.1-stable_win64_console.exe`다.
-- 로컬 새 빌드: `homeoffice/tools/build.ps1 -Godot <위 실행 파일> -LocalOnly`.
-- 검증: `python homeoffice/tools/site_artifact.py verify homeoffice/build --source`; 공개 V3만 검사할 때는 `verify docs`.
-- 단위 회귀: `cd homeoffice; npm test`. UI는 저장소 루트에서 `node homeoffice/tests/v4-browser-flow.mjs`, `v4-meeting-flow.mjs`, `v4-play-flow.mjs`.
-- 2026-09-17 17:18 KST 재연결: 5173/8065/9001 수신 프로세스가 없고 localhost 연결 거부를 확인. 같은 빌드로 **`http://localhost:5173/`** HTTP와 9001 로컬 signaling을 Node PID 24808로 재실행했다. 두 서비스 HTTP 200, 실제 Godot 로딩/Clerk 로그인 창 표시/브라우저 page 오류 0을 새 독립 Chromium에서 확인했다. 사용자 로그인 세션은 검사하지 않았다. 복구 결과는 `homeoffice/.runtime/reconnect-check.json`. 후속 배포 검수에서 8065 보조 서버를 PID 26236으로 실행했다. 기준 V3 8064 서버는 실행하지 않았다.
-- Windows sandbox helper ACL 오류 때문에 CUA/이미지 도구 실행이 실패해 승인된 shell의 Playwright·실제 화면 캡처를 사용했다. 도구 실패를 숨기거나 Blender 뷰포트를 게임 캡처로 바꾸지 않았다.
+최근 검수: `python homeoffice/tools/verify_v5_engine.py --godot <exe>`는 빌드 소스 일치 확인 후 8개 엔진 suite를 빌드별 아카이브에 남긴다. `V5_WARDROBE_PEER=yes`로 `homeoffice/tests/v5-wardrobe-browser.mjs`를 실행하면 독립 브라우저 2개로 검수한다. 최근 로컬 Build ID는 위 표가 기준이며 공개 원격 HEAD도 종료 전 재조회해 27dccb8 그대로였다.

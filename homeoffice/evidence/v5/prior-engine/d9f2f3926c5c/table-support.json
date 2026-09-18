@@ -1,0 +1,69 @@
+{
+  "build": {
+    "assetVersion": 3.0,
+    "buildId": "c00c12f0-20d5-4fed-a106-1cbf8a1deca4",
+    "builtAt": "2026-09-17T12:41:34.019270+00:00",
+    "commit": "27dccb8adeccb51690a5f5c4abbebebf339b850c",
+    "dirty": true,
+    "exportTemplatesVersion": "4.6.1.stable",
+    "godotVersion": "4.6.1.stable",
+    "protocolVersion": 4.0,
+    "schemaVersion": 2.0
+  },
+  "environment": "Actual Godot 4.6.1/Jolt physics; synthetic legacy save fixture, not human acceptance",
+  "results": [
+    {
+      "details": {
+        "expected": 0.0,
+        "originY": -0.000595182180404663
+      },
+      "name": "living-low-table rests on supports",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 3.6,
+        "originY": 3.59940624237061
+      },
+      "name": "reading-table rests on supports",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 0.0,
+        "originY": -0.00000101327896118164
+      },
+      "name": "dining-table rests on supports",
+      "passed": true
+    },
+    {
+      "details": {
+        "bookY": 0.49749892950058,
+        "tableY": -0.000000864267349243164
+      },
+      "name": "Legacy buried table and supported book recover together",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "Repair preserves IDs, room slots and board",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "Restore does not mutate the imported source",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "Repair is idempotent",
+      "passed": true
+    }
+  ]
+}

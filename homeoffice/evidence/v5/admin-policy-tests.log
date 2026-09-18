@@ -1,0 +1,15 @@
+✔ Student host / URL role / asserted administrator cannot unlock; authenticated operator changes one room (1103.228ms)
+✔ Wrong PIN attempt budget is shared across rooms; correct PIN cannot bypass lockout (1292.1298ms)
+✔ Nonce replay, stale revision, signature mutation, cross-session and expiry are rejected (1064.9934ms)
+✔ Independent salted room PIN change persists privately; public state and stale world cannot replace it (1193.7099ms)
+✔ Broadcast authorization binds the authenticated operator to a session actor and expires (1065.5488ms)
+✔ HTTP rejects foreign origins, emits no credentials, and verifies signed state through an actual socket (1058.7636ms)
+✔ Only server-verified operator can bind court identity; session, actor, signature and expiry are enforced (7.1143ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6871.7656

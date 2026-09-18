@@ -1,0 +1,24 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+HOMEoffice_READY Godot 4.6.1-stable (official)
+world has actual imported wardrobe and station colliders true
+outside cannot open by action true
+outside cannot apply without station session true
+default profile accepted true
+privilege or unknown fields rejected true
+material code rejected true
+SVG and non-PNG rejected true
+real decoded PNG hash accepted true
+raster hash mismatch rejected true
+oversized header rejected before decompression true
+other avatar profile remains default true
+material instances are not shared true
+inside bounds recognized true
+valid own active session applies true
+one-time apply cannot replay true
+leaving room expires edit session true
+original furnished V4 world fits wardrobe partitions true
+old custom furniture in new wall detected before mutation true
+conflicting restore preserves current world true
+handoff retains decoded appearance profile true
+handoff invalidates old edit sessions true

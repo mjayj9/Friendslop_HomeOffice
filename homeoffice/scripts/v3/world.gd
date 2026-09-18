@@ -3,6 +3,7 @@ extends "res://scripts/v2/world.gd"
 const Combat=preload("res://scripts/combat/combat_state.gd")
 const BallProfile=preload("res://scripts/sports/ball_profile.gd")
 const Capabilities=preload("res://scripts/interaction/prop_capabilities.gd")
+var wardrobe=preload("res://scripts/wardrobe/station.gd").new()
 var toy_effects
 var combat=Combat.new()
 var sports=preload("res://scripts/sports/match_rules.gd").new()
@@ -13,6 +14,9 @@ var local_charge_ms=0
 var avatar_state_count=0
 var classroom=false
 var laser_clock=0.0
+var placement_clearance=preload("res://scripts/interaction/placement_clearance.gd").new()
+var placement_pointer=preload("res://scripts/interaction/placement_pointer.gd").new()
+var furniture_support=preload("res://scripts/interaction/furniture_support.gd").new()
 var facilities:Node3D
 var facilities_cache={}
 var last_extra_tick=-1
@@ -24,6 +28,7 @@ func _ready():
 	toy_effects=load("res://scripts/combat/toy_effects.gd").new();add_child(toy_effects)
 	facilities=load("res://scripts/world/campus_details.gd").new();add_child(facilities)
 	super._ready()
+	add_child(wardrobe);wardrobe.setup(self)
 	add_child(load("res://scripts/world/meeting_finish.gd").new())
 	add_child(load("res://scripts/sports/hoop_feedback.gd").new())
 	rounds.tag={"phase":"practice","mode":"practice","seconds":0.0}
@@ -101,6 +106,8 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_RIGHT:
 		request_action("crossover");return
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:
+		var pointed=players.get(local_id)
+		if event.pressed and pointed and wardrobe.can_open(pointed):request_action("wardrobe_open");return
 		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 		var p=players.get(local_id)
 		if not p:return
@@ -120,6 +127,19 @@ func execute_action(id:String,m:Dictionary):
 	if not combat.alive(id) and action not in ["trigger_up","input_cancel"]:actions[id]=order;return reject(id,"KO 상태입니다. 곧 안전한 위치에서 복귀합니다.")
 	if action=="input_cancel":
 		actions[id]=order;p.set_meta("trigger_held",false);p.remove_meta("charge_started");p.remove_meta("kick_started");return
+	if action.begins_with("wardrobe_"):
+		actions[id]=order
+		var reason=wardrobe.action(id,action,m.get("data",{}))
+		if reason!="":return reject(id,reason)
+		return
+	var sport_action=action in ["kick_start","kick","crossover"] or (action=="round" and m.get("data",{}).get("game","") in ["basketball","football"])
+	var request_target_id=String(m.get("targetId",""))
+	var target_kind=String(definitions.get(request_target_id,{}).get("kind",""))
+	var held_kind=String(definitions.get(p.holding,{}).get("kind",""))
+	if target_kind in ["basketball","football"] or held_kind in ["basketball","football"]:sport_action=true
+	if action in ["carry","use","throw","secondary"] and room_access.restricted_zone(self,p.position)!="":sport_action=true
+	if sport_action and not room_access.is_administrator(id):
+		actions[id]=order;return reject(id,"농구·축구 활동은 검증된 운영 관리자만 사용할 수 있습니다.")
 	if action=="activity":
 		actions[id]=order
 		var mode=String(m.get("data",{}).get("mode",""))
@@ -145,7 +165,7 @@ func execute_action(id:String,m:Dictionary):
 		if focused in ["meeting-table-0","meeting-table-1"]:return reject(id,"컴퓨터가 설치된 회의 책상은 고정되어 있습니다. 다른 책상은 집을 수 있습니다.")
 		if not o is RigidBody3D or object_in_use(focused):return reject(id,"다른 사람이 사용 중이거나 내용물이 있는 사물입니다.")
 		o.set_meta("owner",id);p.holding=focused;o.gravity_scale=0
-		o.add_collision_exception_with(p);p.add_collision_exception_with(o)
+		if kind not in furniture_carry.KINDS:o.add_collision_exception_with(p);p.add_collision_exception_with(o)
 		p.set_meta("gesture","pickup");p.set_meta("gesture_until",Time.get_ticks_msec()+650)
 		if kind in ["basketball","football"]:sports.transition(focused,"HELD",id);o.set_meta("scored",false)
 		revision+=1;return
@@ -306,6 +326,7 @@ func respawn_position() -> Vector3:
 
 func _physics_process(dt):
 	for player in players.values():
+		room_access.guard(self,player,player.position)
 		var bubble=player.get_node_or_null("MessageBubble")
 		if bubble and Time.get_ticks_msec()>int(bubble.get_meta("until",0)):bubble.visible=false
 	for object_id in objects:
@@ -316,6 +337,7 @@ func _physics_process(dt):
 		if objects.has(fixed_id):objects[fixed_id].freeze=true
 	super._physics_process(dt)
 	if not ready_to_play:return
+	wardrobe.maintain()
 	var now=Time.get_ticks_msec()
 	if host and not frozen:
 		for id in combat.advance(now,dt):
@@ -327,7 +349,7 @@ func _physics_process(dt):
 			if now-p.last_input_ms>300:p.set_meta("trigger_held",false)
 			if id==local_id and not playing():p.set_meta("trigger_held",false)
 			if p.get_meta("trigger_held",false) and p.holding!="" and definitions[p.holding].kind=="gun":fire_tag(id)
-			if zone_at(p.position)=="football" and p.holding=="" and Vector2(p.velocity.x,p.velocity.z).length()>.2:
+			if zone_at(p.position)=="football" and room_access.is_administrator(p.actor_id) and p.holding=="" and Vector2(p.velocity.x,p.velocity.z).length()>.2:
 				var ball=nearest_football(p,1.0)
 				if ball and now>=int(ball.get_meta("touch_until",0)) and absf(ball.position.y-p.position.y)<.4:
 					var desired=p.position+Vector3(p.velocity.x,0,p.velocity.z).normalized()*.75-ball.position
@@ -357,6 +379,15 @@ func network_state() -> Dictionary:
 	return s
 
 func handle_packet(sender:String,m):
+	if m is Dictionary and String(m.get("type","")).begins_with("wardrobe-"):
+		if not host:wardrobe.receive(m)
+		return
+	if m is Dictionary and m.get("type")=="appearance-init":
+		if host and m.get("epoch")==epoch:wardrobe.initialize_profile(sender,m.get("profile"))
+		return
+	if m is Dictionary and m.get("type")=="appearance-update":
+		if not host and m.get("epoch")==epoch:wardrobe.update_profile(String(m.get("actor","")),m.get("profile"))
+		return
 	if not host and m is Dictionary and m.get("type")=="toy_effect":
 		if m.get("epoch")==epoch:toy_effects.show_shot(String(m.get("shotId","")),vec(m.from),vec(m.to))
 		return
@@ -366,9 +397,16 @@ func handle_packet(sender:String,m):
 		sports.restore(m.get("sports",{}))
 		facilities.restore(m.get("facilities",{}))
 		for p in players.values():p.set_meta("ko",int(m.get("combat",{}).get(p.actor_id,{}).get("hp",100))<=0)
+		wardrobe.apply_pending()
 		avatar_state_count+=1;combat_view=m.get("combat",{});shot_serial=int(m.get("shots",0))
 
 func handle_event(e:Dictionary):
+	if e.get("type")=="wardrobe":wardrobe.event(e);return
+	if e.get("type")=="appearance_bootstrap":
+		if host:wardrobe.initialize_profile(local_id,e.get("profile"))
+		else:send({"type":"appearance-init","epoch":epoch,"profile":e.get("profile")})
+		return
+	if e.get("type")=="placement":placement_pointer.handle(self,e);return
 	if e.get("type")=="room_policy":room_access.apply_policy(e);return
 	if e.get("type")=="chat_bubble":
 		var speaker=players.get(String(e.get("sender","")))
@@ -394,13 +432,16 @@ func handle_event(e:Dictionary):
 	if e.get("type")=="start":room_access.reset();classroom=bool(e.get("classroom",false));command_ledger.clear();combat.reset();last_extra_tick=-1
 	if e.get("type")=="restore":combat.reset()
 	super.handle_event(e)
+	if e.get("type")=="start":wardrobe.reset_session()
+	if e.get("type")=="join" and host:wardrobe.sync(String(e.id))
+	if e.get("type")=="leave":wardrobe.initialized.erase(String(e.id))
 
 func avatar_diagnostics() -> Dictionary:
 	var rows=[]
 	for p in players.values():
 		var meshes=[]
 		for n in p.standing.find_children("*","MeshInstance3D",true,false):meshes.append({"visible":n.is_visible_in_tree(),"surfaces":n.mesh.get_surface_count() if n.mesh else 0,"aabb":str(n.get_aabb())})
-		rows.append({"id":p.actor_id,"local":p.local_player,"position":arr(p.position),"standingVisible":p.standing.is_visible_in_tree(),"cameraRig":p.camera_rig.diagnostics(),"cameraPosition":arr(p.camera.global_position),"contactErrors":p.contact_ik.errors,"handContactErrors":p.hand_ik.errors,"skeletonBones":p.skeleton.get_bone_count() if p.skeleton else 0,"meshes":meshes})
+		rows.append({"id":p.actor_id,"local":p.local_player,"position":arr(p.position),"standingVisible":p.standing.is_visible_in_tree(),"appearance":{"revision":p.appearance_profile.revision,"faceHash":p.appearance_profile.faceHash,"shirt":p.appearance_profile.shirt},"cameraRig":p.camera_rig.diagnostics(),"cameraPosition":arr(p.camera.global_position),"motion":p.motion_graph.diagnostics(),"contactWeights":p.contact_ik.contact_weights,"contactSamples":p.contact_ik.contact_samples,"carry":furniture_carry.traces.get(p.actor_id,{}),"contactErrors":p.contact_ik.errors,"handContactErrors":p.hand_ik.errors,"skeletonBones":p.skeleton.get_bone_count() if p.skeleton else 0,"meshes":meshes})
 	return {"commandResults":command_results,"role":"host" if host else "guest","epoch":epoch,"stateCount":avatar_state_count,"stateAgeMs":Time.get_ticks_msec()-last_snapshot_ms,"instances":rows,"camera":str(get_viewport().get_camera_3d().get_path())}
 
 func target(p) -> Dictionary:
@@ -440,13 +481,15 @@ func update_hint():
 		var kind=definitions[focused].kind
 		var verbs={"chair":"앉기","sofa":"앉기","bed":"취침","table":"회의 자료 / 컴퓨터","low_table":"회의 자료 / 컴퓨터","floor_lamp":"전등 켜기/끄기","arcade":"공룡 러너","storage":"수납","drawer":"서랍","fridge":"재료 꺼내기","sink":"설거지","cooker":"조리","counter":"담기"}
 		label=("E 집기 · " if Capabilities.can_carry(kind) else "고정 시설 · ")+"F "+verbs.get(kind,"사용")
+	elif focused in wardrobe.station_ids:label="빈손으로 클릭 · 꾸미기 시작"
 	elif facilities.fixtures.has(focused):label="F "+{"toilet_ground":"변기 뚜껑 열기/닫기","toilet_upper":"변기 뚜껑 열기/닫기","flush_ground":"물내림","flush_upper":"물내림","vent":"환기 켜기/끄기","tap_ground":"수도 켜기/끄기","tap_upper":"수도 켜기/끄기","broadcast_console":"방송석","meeting_computer":"회의 자료 / 컴퓨터"}.get(focused,"조명 켜기/끄기")
 	elif doors.has(focused):label="F 문 열기 / 닫기"
 	elif focused=="presentation":label="F 발표 자료 · PDF/이미지"
 	elif focused=="board":label="F 보드 확대 · 마카를 들고 클릭해 쓰기"
 	if zone_at(p.position)=="football" and p.holding=="":label="발 드리블 · 클릭 충전/슛 · Q 패스 · F 가로채기"
 	elif zone_at(p.position)=="basketball" and p.holding=="":label+=" · F 드리블 공 스틸"
-	if build_kind!="":label=("클릭 설치" if build_valid else "충돌/보호 구역 · 설치 불가")+" · R 회전 · B 취소"
+	if placement_pointer.token!="":label=("놓으면 설치" if build_valid else "유효한 지지면으로 이동")+" · R 회전 · Esc 취소"
+	elif build_kind!="":label=("클릭 설치" if build_valid else "충돌/보호 구역 · 설치 불가")+" · R 회전 · B 취소"
 	hint.text=label
 	if bridge:bridge.hint(label)
 
@@ -454,8 +497,12 @@ func save_world() -> Dictionary:
 	var w=super.save_world();w.facilities=facilities.states.duplicate(true);return w
 
 func restore_world(w:Dictionary):
+	var conflicts=wardrobe.restore_conflicts(w)
+	if not conflicts.is_empty():
+		if bridge:bridge.status("기존 사물이 의상방 구조와 겹쳐 복원을 중단했습니다. 현재 공간과 원본 파일을 유지합니다: "+", ".join(conflicts))
+		return
 	sports=preload("res://scripts/sports/match_rules.gd").new();command_ledger.clear()
-	super.restore_world(w)
+	super.restore_world(furniture_support.prepare_restore(self,w))
 	if facilities:facilities.reset();facilities.restore(w.get("facilities",{}),true)
 	combat.reset()
 	for p in players.values():combat.add(p.actor_id);p.set_meta("ko",false);p.set_meta("trigger_held",false);p.set_meta("gesture","");p.set_meta("gesture_until",0)
@@ -487,6 +534,8 @@ func update_sports(_dt:float):
 		if kind not in ["basketball","football"]:continue
 		if object_id!=kind and rounds[kind].phase=="play":continue
 		var ball=objects[object_id];var at=ball.position;var previous=ball_previous.get(object_id,at)
+		var toucher=String(sports.ball_states.get(object_id,{}).get("lastTouch",""))
+		if not room_access.is_administrator(toucher):ball_previous[object_id]=at;continue
 		if ball.get_meta("owner","")!="":ball_previous[object_id]=at;continue
 		if kind=="basketball":
 			if rounds.basketball.phase in ["practice","play"] and not ball.get_meta("scored",false):
@@ -513,6 +562,11 @@ func apply_checkpoint(e:Dictionary):
 	command_ledger.clear()
 	super.apply_checkpoint(e)
 	last_extra_tick=-1
+	wardrobe.reset_session()
+	var appearances=e.get("checkpoint",{}).get("appearances",{})
+	if appearances is Dictionary and appearances.size()<=8:
+		for actor in appearances:
+			if players.has(actor):wardrobe.update_profile(actor,appearances[actor])
 	if host:
 		var snapshot=e.get("checkpoint",{}).get("state",{})
 		sports.restore(snapshot.get("sports",{}))
@@ -525,7 +579,7 @@ func request_action(kind:String,data:Dictionary={}):
 	var actor=players.get(local_id)
 	var target_id=String(target(actor).get("id","")) if actor else ""
 	if actor and actor.holding!="" and kind in ["throw","carry","trigger_down","trigger_up","secondary"]:target_id=actor.holding
-	var message={"type":"action","actor":local_id,"requestId":local_id+":"+str(seq),"epoch":epoch,"seq":seq,"targetId":target_id,"action":kind,"data":data}
+	var message={"type":"action","actor":local_id,"requestId":local_id+":place:"+String(data.placementId) if kind=="place" and data.has("placementId") else local_id+":"+str(seq),"epoch":epoch,"seq":seq,"targetId":target_id,"action":kind,"data":data}
 	if host:perform(local_id,message)
 	else:send(message)
 
@@ -539,7 +593,7 @@ func perform(id:String,m:Dictionary):
 	if not validation.cached.is_empty():
 		command_results.duplicates+=1;send_command_result(id,validation.cached);return
 	active_request={"type":"action-result","requestId":m.requestId,"actor":id,"epoch":epoch,"targetId":m.get("targetId",""),"accepted":true,"reason":"","stateRevision":revision}
-	var allowed=["carry","throw","use","trigger_down","trigger_up","kick_start","kick","secondary","crossover","activity","rest","eat","place","remove_object","input_cancel","round","stroke","undo","board_update","board_delete"]
+	var allowed=["wardrobe_open","wardrobe_apply","wardrobe_cancel","carry","throw","use","trigger_down","trigger_up","kick_start","kick","secondary","crossover","activity","rest","eat","place","remove_object","input_cancel","round","stroke","undo","board_update","board_delete"]
 	if frozen:reject(id,"방장 이전 중에는 조작을 잠시 기다려 주세요.")
 	elif int(m.seq)<=int(actions.get(id,-1)):reject(id,"이미 처리된 순서의 요청입니다.")
 	elif not m.get("action","") in allowed:reject(id,"지원하지 않는 동작입니다.")
@@ -564,3 +618,21 @@ func emit_toy_effect(from:Vector3,to:Vector3):
 	var shot_id=epoch+":"+str(shot_serial)
 	toy_effects.show_shot(shot_id,from,to)
 	send({"type":"toy_effect","epoch":epoch,"shotId":shot_id,"from":arr(from),"to":arr(to)})
+
+func update_build_preview():
+	if placement_pointer.token!="":placement_pointer.update(self)
+	else:super.update_build_preview()
+
+func placement_ok(p,kind:String,point:Vector3,angle:float,move_id:String="") -> bool:
+	return super.placement_ok(p,kind,point,angle,move_id) and placement_clearance.valid(self,p,kind,point,angle,move_id)
+
+
+func zone_at(pos:Vector3) -> String:
+	if pos.y>3.3 and pos.y<4.1 and pos.x> -9.9 and pos.x< -5.0 and pos.z> -3.9 and pos.z<2.9:return "wardrobe"
+	return super.zone_at(pos)
+
+func make_checkpoint() -> Dictionary:
+	var checkpoint=super.make_checkpoint()
+	checkpoint.appearances={}
+	for actor in players:checkpoint.appearances[actor]=players[actor].appearance_profile.duplicate(true)
+	return checkpoint

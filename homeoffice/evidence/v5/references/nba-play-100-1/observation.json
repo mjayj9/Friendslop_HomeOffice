@@ -1,0 +1,11 @@
+{
+  "url": "https://www.youtube.com/watch?v=uNhzALVGrB4",
+  "start": 100,
+  "requestedSeconds": 16,
+  "rate": 1,
+  "frames": [],
+  "environment": "Actual muted browser playback; screenshots, no transcript substitution. No audio observation.",
+  "title": "Nba Live 19 Xbox Series S Gameplay No commentary - YouTube",
+  "publisher": "day at work vlog with Roy\n구독자 2.66만명\n구독",
+  "failure": "locator.evaluate: AbortError: The play() request was interrupted by a new load request. https://goo.gl/LdLk22"
+}

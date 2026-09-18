@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "label": "Empty supported living-room floor accepts chair",
+      "ok": true
+    },
+    {
+      "label": "Public corridor stays clear",
+      "ok": true
+    },
+    {
+      "label": "Open terrace door reserves its passage",
+      "ok": true
+    },
+    {
+      "label": "Sofa approach stays clear",
+      "ok": true
+    },
+    {
+      "label": "Unsupported floating furniture is rejected",
+      "ok": true
+    },
+    {
+      "label": "Administrator court cannot be bypassed by placement",
+      "ok": true
+    },
+    {
+      "label": "Screen-centre ray hits actual chosen support",
+      "ok": true
+    },
+    {
+      "label": "Cancel removes preview without spawning",
+      "ok": true
+    },
+    {
+      "label": "Valid authoritative drop creates exactly one object",
+      "ok": true
+    },
+    {
+      "label": "Duplicate request returns cached result without a second object",
+      "ok": true
+    }
+  ],
+  "fixture": true
+}

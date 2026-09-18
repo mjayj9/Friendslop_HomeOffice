@@ -17,3 +17,8 @@ homeoffice/docs/requirements-v2/** -whitespace
 
 # Preserve exported bytes so manifest hashes survive Git checkout/staging.
 docs/** -text
+
+# Keep raw verification output and supplied Markdown hard breaks intact.
+homeoffice/evidence/v5/** -text -whitespace
+homeoffice/docs/v5/master-spec-ko.md -whitespace
+homeoffice/docs/v5/prior-audit-ko.md -whitespace
