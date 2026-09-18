@@ -1,8 +1,8 @@
-# COMMONS V6 — 사용자 테스트 게시 준비 (2026-09-19)
+# COMMONS V6 — 사용자 테스트 공개 반영 (2026-09-19)
 
 최신 기준: [V6 명세](homeoffice/docs/v6/master-spec-ko.md), [네 이미지 분석](homeoffice/docs/v6/design-decisions-ko.md), [OBS 원문](USER_OBSERVATIONS.md), [V6-T01–56](homeoffice/docs/v6/verification-ko.md). 기존 V5 이력은 아래에 그대로 보존한다. **전체 V6 인수 완료가 아니다.**
 
-검수 빌드 `f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa` / source `3704c4ccdd712215f6fafbddc719bd7e537153612aabea07e1a9b5a0bf468861`. 시작 HEAD 7cab26a, 실제 Pages codex/homeoffice-v3 및 기존 공개 9fa65de6을 확인했다. 같은 export를 docs/로 복사했다. 사용자는 같은 저장소 commit/push/Pages 게시를 명시적으로 요청했다. 실제 게시 증거는 [영수증](homeoffice/evidence/v6/publication/receipt.json)에 기록한다. 인증 서비스·Firebase·PIN·관리자 설정 변경 없음.
+검수 빌드 `f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa` / source `3704c4ccdd712215f6fafbddc719bd7e537153612aabea07e1a9b5a0bf468861`. 시작 HEAD 7cab26a, 실제 Pages codex/homeoffice-v3 및 기존 공개 9fa65de6을 확인했다. 같은 export를 docs/로 복사하여 6bfcc2b 커밋을 실제 Pages ref에 푸시했다. Pages/CI 성공, 공개 91파일 일치, 공개 온라인 회의 9흐름·보행/승강기 4흐름을 같은 Build ID로 재검수했다. 사용자는 같은 저장소 commit/push/Pages 게시를 명시적으로 요청했다. 실제 게시 증거는 [영수증](homeoffice/evidence/v6/publication/receipt.json)에 기록한다. 인증 서비스·Firebase·PIN·관리자 설정 변경 없음.
 
 구현: 원본을 보존한 BlenderMCP 제작, 크림/우드/세이지 팔레트와 차양·식재, OFFICE B1~RF 8개층, 두 실제 승강기/두 U계단/층별 화장실, 4층 고정 개인실 8슬롯, 2층 4개 회의의 문서·보드·자료·발표 분리, 오프라인 초안 재접속/참여 중지, 이전 저장 좌표와 미배치 보관함. [평면](homeoffice/docs/v6/campus-plan.html), [책임/저장 경계](homeoffice/docs/v6/implementation-map-ko.md), [제작 출처](homeoffice/docs/v6/art-and-assets-ko.md).
 

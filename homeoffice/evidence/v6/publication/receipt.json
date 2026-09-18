@@ -1,0 +1,57 @@
+{
+  "verifiedAt": "2026-09-18T18:32:37.707781+00:00",
+  "publicURL": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "pagesRef": "codex/homeoffice-v3",
+  "runtimeCommit": "6bfcc2bbfc64095f0bbfdba55efc33b056b2596b",
+  "buildId": "f38c2ed4-11dd-46f5-8cd5-11dbb3a032aa",
+  "sourceDigest": "3704c4ccdd712215f6fafbddc719bd7e537153612aabea07e1a9b5a0bf468861",
+  "publicFilesVerified": 91,
+  "sourceFilesVerifiedInGitIndex": 277,
+  "githubRuns": [
+    {
+      "conclusion": "success",
+      "databaseId": 35379948854,
+      "headSha": "6bfcc2bbfc64095f0bbfdba55efc33b056b2596b",
+      "name": "Verify published HomeOffice export",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 35379947495,
+      "headSha": "6bfcc2bbfc64095f0bbfdba55efc33b056b2596b",
+      "name": "pages build and deployment",
+      "status": "completed"
+    }
+  ],
+  "publicBrowser": {
+    "meeting": {
+      "checks": 9,
+      "errors": [],
+      "report": "meeting-browser/report.json"
+    },
+    "campus": {
+      "checks": 4,
+      "errors": [],
+      "report": "campus-browser/report.json"
+    }
+  },
+  "localChecks": {
+    "engine": 348,
+    "node": 39,
+    "wardrobeUI": 9,
+    "placementUI": 10,
+    "campusLowUI": 4,
+    "campusBalancedUI": 3,
+    "meetingUI": 9
+  },
+  "productionAuthConfigurationChanged": false,
+  "originalAssetsModifiedOrRemoved": false,
+  "fullV6Acceptance": false,
+  "unexecutedOrIncomplete": [
+    "Actual four-person use, microphones/CER, two external document accounts, production administrator CCTV/broadcast",
+    "Intentional shared internal project document across meetings, complete attachment handoff",
+    "2/4/8-person combined performance; walking frame rate below target",
+    "Fine art/lighting finish and remaining V5 body fitting, contact, sport quality",
+    "User observations acceptance"
+  ]
+}
