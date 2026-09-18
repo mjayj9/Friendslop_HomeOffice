@@ -64,7 +64,13 @@ spec=(D/'master-spec-ko.md').read_text(encoding='utf-8');labels={}
 for line in spec.splitlines():
     match=re.match(r'\| ([NT]\d\d) \| ([^|]+) \|',line)
     if match:labels[match[1]]=match[2].strip()
-lines=['# V5 N01–N34 / T01–T48 추적표','','전체 상태: **미완료**. 각 행은 이번에 실제 수행한 범위만 설명한다. 기존 기능이 있다는 사실, fixture 통과, 실제 브라우저 UI, 실제 사람/계정 인수를 구분한다.','',f'현재 로컬 Build ID `{build["buildId"]}` / source digest `{build["source"]["digest"]}`. 공개 배포는 `cc2f8fbd-ba33-4601-b716-82bb26422424`로 유지했다. 증거가 다른 빌드에서 만들어졌으면 아래 링크의 Build ID가 기준이다.','', '## N 대조표','','| ID | 요구 | 연결된 실제 결과 |','|---|---|---|']
+receipt_path=E/'publication/receipt.json'
+publication='공개 배포는 `cc2f8fbd-ba33-4601-b716-82bb26422424`인 게시 전 조사 기준이다.'
+if receipt_path.exists():
+    receipt=json.loads(receipt_path.read_text(encoding='utf-8'))
+    publication=f'공개 Build ID `{receipt["buildId"]}` / Pages commit `{receipt["deploymentCommit"]}`. [실제 공개 배포 검수](publication-ko.md).'
+    T[1]=('공개 배포 검수','publication/receipt.json','새 공개 Pages에서 88개 파일 bytes/SHA 대조와 실제 WebGL 의상방/설치 조작을 수행했다. 최초 V4 기준과 새 배포의 commit/ref/Build ID를 구분한다. 전체 제품 미술 합격으로 사용하지 않음.')
+lines=['# V5 N01–N34 / T01–T48 추적표','','전체 상태: **미완료**. 각 행은 이번에 실제 수행한 범위만 설명한다. 기존 기능이 있다는 사실, fixture 통과, 실제 브라우저 UI, 실제 사람/계정 인수를 구분한다.','',f'현재 로컬 Build ID `{build["buildId"]}` / source digest `{build["source"]["digest"]}`. {publication} 증거가 다른 빌드에서 만들어졌으면 아래 링크의 Build ID가 기준이다.','', '## N 대조표','','| ID | 요구 | 연결된 실제 결과 |','|---|---|---|']
 for n,ts in N_to_T.items():
     refs=' · '.join(f'[T{t:02}](#t{t:02}) {T[t][0]}' for t in ts)
     lines.append(f'| N{n:02} | {labels[f"N{n:02}"]} | {refs} |')

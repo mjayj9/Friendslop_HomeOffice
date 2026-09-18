@@ -1,30 +1,28 @@
 # COMMONS WORKSPACE V5 — 현재 작업 상태
 
-2026-09-18 KST. **V5 전체 미완료. 최신 사용자 요청과 V5 통합 명세가 기준이다.** 원래 V4 세계·자료·계정 설정을 보존하며 점진적으로 수리했다. 아래 결과는 제한된 로컬 검수이며 완성형 제품 출시 판정이 아니다.
+2026-09-18 KST. **V5 전체 미완료. 최신 사용자 요청과 V5 통합 명세가 기준이다.** 원래 V4 세계·자료·계정 설정을 보존하며 점진적으로 수리했다. 아래 결과는 제한된 로컬 및 공개 페이지 검수이며 완성형 제품 출시 판정이 아니다.
 
 [최신 통합 명세](homeoffice/docs/v5/master-spec-ko.md) · [N01–N34 / T01–T48](homeoffice/docs/v5/verification-ko.md) · [결함 수리 기록](homeoffice/docs/v5/repair-log-ko.md) · [실제 영상/자료 관찰](homeoffice/docs/v5/research-observations-ko.md) · [건축/저장 이동 설계](homeoffice/docs/v5/architecture-and-migration-ko.md) · [상호작용 도면](homeoffice/docs/v5/architecture-plan.html) · [실제 의상방/얼굴 검수](homeoffice/docs/v5/wardrobe-review-ko.md)
 
 ## 사용자 테스트를 위한 공개 배포
 
-2026-09-18 사용자가 이 저장소에 커밋·푸시하고 Pages에 실제 반영하도록 명시적으로 요청했다. 검수한 `9fa65de6-20d0-4a7a-b315-f3b388891e24`를 기존 Pages 설정 `codex/homeoffice-v3:/docs`로 게시한다. 아래의 공개 기준값은 게시 전 V4 조사 이력이며, 게시 후 결과는 `homeoffice/evidence/v5/publication/receipt.json`과 별도 배포 기록에 남긴다. 이 요청은 정적 Pages 게시에 적용되며 운영 인증 서버·Firebase·관리자 설정 변경으로 확대하지 않는다.
-
-## 게시 전 기준과 실제 배포
+2026-09-18 사용자가 커밋·푸시와 Pages 반영을 명시적으로 요청했다. 기존 Pages 설정으로 게시했고 GitHub 배포·CI와 실제 공개 Chromium/WebGL 검수를 완료했다. [배포/직접 테스트 안내](homeoffice/docs/v5/publication-ko.md) · [검증 영수증](homeoffice/evidence/v5/publication/receipt.json). 운영 인증 서버·Firebase·관리자 설정은 변경하지 않았다.
 
 | 항목 | 확인 값 |
 |---|---|
 | 작업 디렉터리 | `deployment/Friendslop_HomeOffice/homeoffice` |
-| 로컬 / 원격 HEAD | `27dccb8adeccb51690a5f5c4abbebebf339b850c` (이번에 재조회) |
-| 로컬 브랜치 | `codex/commons-workspace-v5` — 미커밋 변경 있음 |
-| 실제 공개 배포 ref / commit | `codex/homeoffice-v3` / `968554abb7e19802085ef2c43abec2df628d0eda` |
-| 확인한 Pages run | `35205066858` |
-| 공개 Build ID | `cc2f8fbd-ba33-4601-b716-82bb26422424` |
-| 공개 source digest | `d3f3b1f7bc2bd3343825fd5705089bd5a7807f1fb7cb8ccc3e333d5c12a62514` |
-| 최신 로컬 Build ID | `9fa65de6-20d0-4a7a-b315-f3b388891e24` |
-| 최신 로컬 source digest | `74c8afce2b641b594aa5598ff4fe1f43eb070adc9d68be0c3249f86c9bc08b68` |
+| 로컬 작업 브랜치 | `codex/commons-workspace-v5` |
+| 실제 공개 배포 ref / commit | `codex/homeoffice-v3` / `4713d4142391a5ce38332a8802bc421449879210` |
+| Pages / CI run | `35352390257` / `35352392152` — 모두 성공 |
+| 공개 및 로컬 Build ID | `9fa65de6-20d0-4a7a-b315-f3b388891e24` |
+| 공개 및 로컬 source digest | `74c8afce2b641b594aa5598ff4fe1f43eb070adc9d68be0c3249f86c9bc08b68` |
 | 엔진 / protocol / asset / save | Godot 4.6.1 / 4 / 3 / 2 |
-| 로컬 artifact | 88파일, `homeoffice/build` — source 포함 verify 통과 |
+| 실제 공개 파일 | 88개 HTTP·크기·SHA256 일치 |
+| 이번 공개 UI | 설치 10 / 의상방 9개, pageerror 0개 |
 
-공개 PCK/WASM/JS/자산 73개를 실제 다운로드해 크기·SHA를 대조하고 공개 앱을 실제 WebGL로 실행했다. HEAD와 실제 Pages 배포 ref를 혼동하지 않는다. 2026-09-17 로컬 검수 종료 시점에는 V5 push/배포/운영 인증 서버/Firebase/관리자 설정 변경을 하지 않았다. 예전 V4 배포 승인에 관한 기록은 [보존된 이전 상태](homeoffice/docs/v4/task-state-before-v5.md)에 있으며, 그 역사 기록을 이번 새 운영 설정 변경의 승인으로 사용하지 않았다.
+제작 당시 source base `27dccb8…`와 dirty 표시는 검수 export에 그대로 보존했다. 게시 커밋은 위 `4713d41`이며 Git index의 소스 244개도 manifest와 대조했다.
+
+게시 전 V4 조사 기준은 HEAD `27dccb8adeccb51690a5f5c4abbebebf339b850c`, 실제 배포 `968554abb7e19802085ef2c43abec2df628d0eda`, Pages run `35205066858`, Build ID `cc2f8fbd-ba33-4601-b716-82bb26422424`다. 당시 73개 파일과 실제 앱을 관찰한 증거는 원래 값으로 보존한다. 이전 승인 이력은 [V4 상태](homeoffice/docs/v4/task-state-before-v5.md)에 있으며 이번 게시의 승인은 2026-09-18 새 사용자 요청이다.
 
 ## 이번에 반영한 수리
 
@@ -66,4 +64,4 @@ BlenderMCP 장면 조회·Python·수입/내보내기·렌더·화면 캡처가 
 
 명령: `npm test`, `npm run test:v5:policy`, Godot `--headless --path homeoffice --script res://tests/v5-*.gd`(baseline은 전/후 비교 전용), `tools/build.ps1 -Godot <4.6.1 console> -LocalOnly`, `python tools/site_artifact.py verify build --source`. 현재 shell 기본 sandbox의 ACL helper 오류 때문에 승인된 require_escalated 로컬 실행을 사용했다. 미승인 원격 변경은 하지 않는다.
 
-최근 검수: `python homeoffice/tools/verify_v5_engine.py --godot <exe>`는 빌드 소스 일치 확인 후 8개 엔진 suite를 빌드별 아카이브에 남긴다. `V5_WARDROBE_PEER=yes`로 `homeoffice/tests/v5-wardrobe-browser.mjs`를 실행하면 독립 브라우저 2개로 검수한다. 최근 로컬 Build ID는 위 표가 기준이며 공개 원격 HEAD도 종료 전 재조회해 27dccb8 그대로였다.
+최근 검수: `python homeoffice/tools/verify_v5_engine.py --godot <exe>`는 빌드 소스 일치 확인 후 8개 엔진 suite를 빌드별 아카이브에 남긴다. `V5_WARDROBE_PEER=yes`로 `homeoffice/tests/v5-wardrobe-browser.mjs`를 실행하면 독립 브라우저 2개로 검수한다. 현재 공개/로컬 Build ID는 위 표와 publication/receipt.json이 기준이다. 배포 후 기록만 추가하는 커밋은 실제 Pages export 커밋과 구분한다.

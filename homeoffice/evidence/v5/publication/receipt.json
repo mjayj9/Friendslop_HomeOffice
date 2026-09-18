@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-18T13:55:31.863960+00:00",
+  "base": "https://mjayj9.github.io/Friendslop_HomeOffice/",
+  "buildId": "9fa65de6-20d0-4a7a-b315-f3b388891e24",
+  "sourceDigest": "74c8afce2b641b594aa5598ff4fe1f43eb070adc9d68be0c3249f86c9bc08b68",
+  "deploymentCommit": "4713d4142391a5ce38332a8802bc421449879210",
+  "deploymentBranch": "codex/homeoffice-v3",
+  "deploymentPath": "/docs",
+  "pagesRun": {
+    "id": 35352390257,
+    "conclusion": "success",
+    "url": "https://github.com/mjayj9/Friendslop_HomeOffice/actions/runs/35352390257"
+  },
+  "verifyRun": {
+    "id": 35352392152,
+    "conclusion": "success",
+    "url": "https://github.com/mjayj9/Friendslop_HomeOffice/actions/runs/35352392152"
+  },
+  "buildMetadata": {
+    "commit": "27dccb8adeccb51690a5f5c4abbebebf339b850c",
+    "dirty": true,
+    "note": "The reviewed export was preserved byte-for-byte. This is its pre-publication source base; deploymentCommit identifies the published Git tree, whose 244 source hashes were verified from the staged index."
+  },
+  "integrity": {
+    "report": "integrity.json",
+    "verified": 88,
+    "passed": true
+  },
+  "publicUi": [
+    {
+      "report": "placement/report.json",
+      "passed": 10,
+      "errors": []
+    },
+    {
+      "report": "wardrobe/report.json",
+      "passed": 9,
+      "errors": []
+    }
+  ],
+  "environment": "Actual public GitHub Pages; fresh independent Chromium/WebGL browsers using real keyboard and mouse input, isolated solo worlds, no production administrator fixture.",
+  "visualReview": [
+    "wardrobe/physical-room.png",
+    "placement/02-placed-chair.png"
+  ],
+  "priorPublicBuildId": "cc2f8fbd-ba33-4601-b716-82bb26422424",
+  "fullV5AcceptanceComplete": false,
+  "productionAdminConfigurationChanged": false
+}
